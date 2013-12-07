@@ -12,10 +12,11 @@
 */
 class VM14_Single_Link_Widget extends WP_Widget {
 	function print_link($post) {
-		// TODO: Implement full HTML for image et c
-		printf('<a href="%s">%s</a>',
-			get_permalink($post->ID),
-			$post->post_title);
+		printf('<a href="%s">', get_permalink($post->ID));
+		printf('<h4 class="widgettitle">%s</h4>', $post->post_title);
+		printf($post->post_excerpt); // TODO: Replace with custom field?
+		printf(get_the_post_thumbnail($post->ID));
+		printf('</a>');
 	}
 }
 
