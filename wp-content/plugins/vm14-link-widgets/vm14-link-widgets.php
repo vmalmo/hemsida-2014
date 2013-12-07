@@ -75,19 +75,8 @@ class VM14_Dynamic_Link_Widget extends VM14_Link_Widget {
 	function widget($args, $instance) {
 		extract($args);
 
-		$query = array(
-			'posts_per_page' => 1,
-			'category' => $instance['category_id']
-		);
+		$posts = $this->query($instance);
 
-		switch ($instance['criterion']) {
-			case 'recent':
-				$query['orderby'] = 'post_date';
-				$query['order'] = 'DESC';
-				break;
-		}
-
-		$posts = get_posts($query);
 		if (sizeof($posts)==1) {
 			$post = $posts[0];
 
@@ -146,6 +135,23 @@ class VM14_Dynamic_Link_Widget extends VM14_Link_Widget {
 		}
 
 		printf('</select>');
+	}
+
+
+	protected function query($instance) {
+		$query = array(
+			'posts_per_page' => is_numeric($instance['count'])? $instance['count'] : 1,
+			'category' => $instance['category_id']
+		);
+
+		switch ($instance['criterion']) {
+			case 'recent':
+				$query['orderby'] = 'post_date';
+				$query['order'] = 'DESC';
+				break;
+		}
+
+		return get_posts($query);
 	}
 }
 
