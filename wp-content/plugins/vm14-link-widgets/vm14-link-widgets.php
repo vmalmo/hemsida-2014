@@ -34,18 +34,19 @@ class VM14_Static_Link_Widget extends WP_Widget {
 
 	function form($instance) {
 		$pages = get_pages();
-?>
-		<select class="widefat" id="<?php echo $this->get_field_id('page_id'); ?>" name="<?php echo $this->get_field_name('page_id'); ?>">
-		<?php
+		
+		printf('<select class="widefat" id="%s" name="%s">',
+			$this->get_field_id('page_id'),
+			$this->get_field_name('page_id'));
+
 		foreach ($pages as $page) {
 			printf('<option value="%s" %s>%s</option>', 
 				intval($page->ID),
 				selected($instance['page_id'], $page->ID, false),
 				$page->post_title);
 		}
-		?>
-		</select>
-<?php
+
+		printf('</select>');
 	}
 }
 
