@@ -156,9 +156,60 @@ class VM14_Dynamic_Link_Widget extends VM14_Link_Widget {
 }
 
 
+/**
+ * Dynamic list widget. Used to create a dynamically assembled list of links,
+ * chosen at render-time from a set of criteria.
+*/
+class VM14_Dynamic_List_Widget extends VM14_Dynamic_Link_Widget {
+	function __construct() {
+		$widget_ops = array('description' => __('Use this widget to create a list of dynamically assembled links, chosen from a set of criteria', 'vm14_link_widgets'));
+
+		// Invoke ancestor constructor. Invoking parent constructor would
+		// ignore parameters since parent is a concrete class.
+		WP_Widget::__construct('vm14_dynlist', __('Dynamic link list', 'vm14_link_widgets'), $widget_ops);
+	}
+
+	function widget($args, $instance) {
+		extract($args);
+
+		$posts = $this->query($instance);
+
+		printf('<ul class="vm14_dynlist">');
+
+		foreach ($posts as $post) {
+			printf('<li>');
+			$this->print_link($post);
+			printf('</li>');
+		}
+
+		printf('</ul>');
+	}
+
+	function update($new_instance, $old_instance) {
+		$old_instance = parent::update($new_instance, $old_instance);
+		$old_instance['count'] = is_numeric($old_instance['count'])? $old_instance['count'] : 5;
+		return $old_instance;
+	}
+
+	function form($instance) {
+		parent::form($instance);
+
+		printf('<label for="%s">%s:</label>',
+			$this->get_field_id('count'),
+			__('Max number of links', 'vm14_link_widgets'));
+
+		printf('<input type="text" id="%s" name="%s" value="%s">',
+			$this->get_field_id('count'),
+			$this->get_field_name('count'),
+			is_numeric($instance['count'])? $instance['count'] : 5);
+	}
+}
+
+
 function vm14_link_widgets_init() {
 	register_widget('VM14_Static_Link_Widget');
 	register_widget('VM14_Dynamic_Link_Widget');
+	register_widget('VM14_Dynamic_List_Widget');
 }
 
 add_action('widgets_init', 'vm14_link_widgets_init');
