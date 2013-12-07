@@ -10,7 +10,7 @@
 /**
  * Base class for single-link widgets.
 */
-class VM14_Single_Link_Widget extends WP_Widget {
+class VM14_Link_Widget extends WP_Widget {
 	function print_link($post) {
 		printf('<a href="%s">', get_permalink($post->ID));
 		printf('<h4 class="widgettitle">%s</h4>', $post->post_title);
@@ -23,7 +23,7 @@ class VM14_Single_Link_Widget extends WP_Widget {
 /**
  * Static link widget. Used to create static hard link to single page.
 */
-class VM14_Static_Link_Widget extends VM14_Single_Link_Widget {
+class VM14_Static_Link_Widget extends VM14_Link_Widget {
 	function __construct() {
 		$widget_ops = array('description' => __('Use this widget to create a static link to another page.', 'vm14_link_widgets'));
 		parent::__construct('vm14_statlink', __('Static link', 'vm14_link_widgets'), $widget_ops);
@@ -66,7 +66,7 @@ class VM14_Static_Link_Widget extends VM14_Single_Link_Widget {
  * Dynamic link widget. Used to create a link to a single page which is
  * chosen dynamically at render-time from a set of criteria.
 */
-class VM14_Dynamic_Link_Widget extends VM14_Single_Link_Widget {
+class VM14_Dynamic_Link_Widget extends VM14_Link_Widget {
 	function __construct() {
 		$widget_ops = array('description' => __('Use this widget to create a dynamic link to another page, chosen from a set a criteria.', 'vm14_link_widgets'));
 		parent::__construct('vm14_dynlink', __('Dynamic link', 'vm14_link_widgets'), $widget_ops);
