@@ -8,7 +8,6 @@ class VM14_Contact_Person_Posttype extends VM14_Posttype {
         ), /* end of arrays */
         'description' => __( 'Contact persons in Vänsterpartiet Malmö', 'vm14' ), /* Custom Type Description */
         'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-        'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
         'rewrite'	=> array( 'slug' => 'contact_person', 'with_front' => false ), /* you can specify its url slug */
         'has_archive' => 'contact_persons', /* you can rename the slug here */
       )
@@ -99,3 +98,4 @@ class VM14_Contact_Person_Posttype extends VM14_Posttype {
     ));
   }
 }
+$vm14_contact_person_posttype = new VM14_Contact_Person_Posttype();
