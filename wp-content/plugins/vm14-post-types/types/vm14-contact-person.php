@@ -7,8 +7,8 @@ class VM14_Contact_Person_Posttype extends VM14_Posttype {
         ), /* end of arrays */
         'description' => __( 'Contact persons in Vänsterpartiet Malmö', 'vm14' ), /* Custom Type Description */
         'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-        'rewrite'	=> array( 'slug' => 'contact_person', 'with_front' => false ), /* you can specify its url slug */
-        'has_archive' => 'contact_persons', /* you can rename the slug here */
+        'rewrite'	=> array( 'slug' => __('contact_person'), 'with_front' => false ), /* you can specify its url slug */
+        'has_archive' => __('contact_persons'), /* you can rename the slug here */
       )
     );
   }

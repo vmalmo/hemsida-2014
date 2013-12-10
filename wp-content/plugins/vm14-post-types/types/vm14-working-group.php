@@ -7,8 +7,8 @@ class VM14_Working_Group_Posttype extends VM14_Posttype {
         ), /* end of arrays */
         'description' => __( 'Working groups in Vänsterpartiet Malmö', 'vm14' ), /* Custom Type Description */
         'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */ 
-        'rewrite'	=> array( 'slug' => 'working_group', 'with_front' => false ), /* you can specify its url slug */
-        'has_archive' => 'working_groups', /* you can rename the slug here */
+        'rewrite'	=> array( 'slug' => __('working_group'), 'with_front' => false ), /* you can specify its url slug */
+        'has_archive' => __('working_groups'), /* you can rename the slug here */
       )
     );
   }
