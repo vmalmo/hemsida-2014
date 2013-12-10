@@ -1,4 +1,7 @@
 <?php
+define( 'ACF_LITE' , true );
+include_once('acf/acf.php' );
+
 abstract class VM14_Posttype {
   protected $posttype;
   protected $show_in_nav_menu = false;
@@ -37,16 +40,15 @@ abstract class VM14_Posttype {
       'not_found_in_trash' => __('Nothing found in Trash', 'vm14'),
     );
     add_action('init', array($this, 'register'));
-    add_filter( 'cmb_meta_boxes', array($this, 'register_metaboxes' ));
   }
 
   function register() {
-    if ( !class_exists( 'cmb_Meta_Boxx' ) ) {
-      require_once( 'metabox/init.php' );
-    }
     $this->posttype_data['labels'] = array_merge($this->default_labels, $this->posttype_data['labels']);
     $this->posttype_data = array_merge($this->default_properties, $this->posttype_data);
     register_post_type($this->posttype, $this->posttype_data);
+    if(function_exists('register_field_group')) {
+      $this->register_acf();
+    }
   }
-
+  function register_acf(){}
 }
