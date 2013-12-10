@@ -3,7 +3,7 @@ define( 'ACF_LITE' , true );
 include_once('acf/acf.php' );
 
 abstract class VM14_Posttype {
-  protected $posttype;
+  public $posttype;
   protected $show_in_nav_menu = false;
   protected $registration_data;
   protected $posttype_data;
@@ -46,6 +46,8 @@ abstract class VM14_Posttype {
     $this->posttype_data['labels'] = array_merge($this->default_labels, $this->posttype_data['labels']);
     $this->posttype_data = array_merge($this->default_properties, $this->posttype_data);
     register_post_type($this->posttype, $this->posttype_data);
+    register_taxonomy_for_object_type( 'category', $this->posttype);
+    register_taxonomy_for_object_type( 'post_tag', $this->posttype);
     if(function_exists('register_field_group')) {
       $this->register_acf();
     }

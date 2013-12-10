@@ -6,7 +6,7 @@ class VM14_Working_Group_Posttype extends VM14_Posttype {
           'all_items' => __( 'All working groups', 'vm14' ), /* the all items menu item */
         ), /* end of arrays */
         'description' => __( 'Working groups in Vänsterpartiet Malmö', 'vm14' ), /* Custom Type Description */
-        'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+        'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */ 
         'rewrite'	=> array( 'slug' => 'working_group', 'with_front' => false ), /* you can specify its url slug */
         'has_archive' => 'working_groups', /* you can rename the slug here */
       )
@@ -59,6 +59,3 @@ class VM14_Working_Group_Posttype extends VM14_Posttype {
     ));
   }
 }
-// dunno if this works in this project, but nice to skip
-// bunch of lines that just says new
-$vm14_working_group_posttype = new VM14_Working_Group_Posttype();

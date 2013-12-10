@@ -108,4 +108,3 @@ class VM14_Calendar_Event_Posttype extends VM14_Posttype {
     ));
   }
 }
-$vm14_calendar_event_posttype = new VM14_Calendar_Event_Posttype();

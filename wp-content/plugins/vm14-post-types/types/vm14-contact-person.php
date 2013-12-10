@@ -1,6 +1,5 @@
 <?php
 class VM14_Contact_Person_Posttype extends VM14_Posttype {
-
   function __construct() {
     VM14_Posttype::__construct( 'contact_person', __('Contact Person'),
       array( 'labels' => array(
@@ -98,4 +97,3 @@ class VM14_Contact_Person_Posttype extends VM14_Posttype {
     ));
   }
 }
-$vm14_contact_person_posttype = new VM14_Contact_Person_Posttype();
