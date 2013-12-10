@@ -30,13 +30,6 @@ class VM14_Calendar_Event_Posttype extends VM14_Posttype {
           'name' => $this->posttype.'_end_date',
           'type' => 'date_picker',
         ),
-        array (
-          'key' => $this->posttype.'_working_group_key',
-          'label' => __('Working group'),
-          'name' => $this->posttype.'_working_group',
-          'instructions' => __('(Optional)'),
-          'type' => 'date_picker',
-        ),
       ),
       'location' => array (
         array (
@@ -70,6 +63,28 @@ class VM14_Calendar_Event_Posttype extends VM14_Posttype {
           'center_lng' => '',
           'zoom' => '',
           'height' => '',
+        ),
+        array (
+          'key' => $this->posttype.'_working_group_key',
+          'label' => __('Working group'),
+          'name' => $this->posttype.'_working_group',
+          'instructions' => __('(Optional)'),
+          'type' => 'relationship',
+          'return_format' => 'object',
+          'post_type' => array (
+            0 => 'working_group',
+          ),
+          'taxonomy' => array (
+            0 => 'all',
+          ),
+          'filters' => array (
+            0 => 'search',
+          ),
+          'result_elements' => array (
+            0 => 'post_type',
+            1 => 'post_title',
+          ),
+          'max' => '',
         ),
       ),
       'location' => array (
