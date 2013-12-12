@@ -7,8 +7,8 @@ class VM14_Calendar_Event_Posttype extends VM14_Posttype {
         ), /* end of arrays */
         'description' => __( 'Calendar events in Vänsterpartiet Malmö', 'vm14' ), /* Custom Type Description */
         'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-        'rewrite'	=> array( 'slug' => __('event'), 'with_front' => false ), /* you can specify its url slug */
-        'has_archive' => __('events'), /* you can rename the slug here */
+        'rewrite'	=> array( 'slug' => __('handelse'), 'with_front' => false ), /* you can specify its url slug */
+        'has_archive' => __('handelser'), /* you can rename the slug here */
       )
     );
   }
