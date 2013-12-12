@@ -59,6 +59,7 @@ class VM14_Working_Group_Posttype extends VM14_Posttype {
       ),
       'options' => array (
         'position' => 'normal',
+        'layout' => 'no_box',
         'hide_on_screen' => array (
         ),
       ),
