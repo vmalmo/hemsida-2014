@@ -18,6 +18,13 @@ class VM14_Working_Group_Posttype extends VM14_Posttype {
       'title' => __($this->posttype_name).'s contact person',
       'fields' => array (
         array (
+          'key' => $this->posttype.'_ingress_key',
+          'label' => __('Ingress'),
+          'name' => $this->posttype.'_ingress',
+          'type' => 'wysiwyg',
+          'media_upload' => false,
+        ),
+        array (
           'key' => $this->posttype.'_contact_person_key',
           'label' => '',
           'name' => '',

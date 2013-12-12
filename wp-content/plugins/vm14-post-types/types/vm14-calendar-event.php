@@ -55,6 +55,13 @@ class VM14_Calendar_Event_Posttype extends VM14_Posttype {
       'title' => __($this->posttype_name),
       'fields' => array (
         array (
+          'key' => $this->posttype.'_ingress_key',
+          'label' => __('Ingress'),
+          'name' => $this->posttype.'_ingress',
+          'type' => 'wysiwyg',
+          'media_upload' => false,
+        ),
+        array (
           'key' => $this->posttype.'_location_key',
           'label' => __('Location'),
           'name' => $this->posttype.'_location',

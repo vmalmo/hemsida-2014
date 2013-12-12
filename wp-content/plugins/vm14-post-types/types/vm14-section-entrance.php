@@ -12,4 +12,38 @@ class VM14_Section_Entrance_Posttype extends VM14_Posttype {
       )
     );
   }
+
+  function register_acf() {
+    register_field_group(array (
+      'id' => 'acf_normal_'. $this->posttype,
+      'title' => __($this->posttype_name),
+      'fields' => array (
+        array (
+          'key' => $this->posttype.'_ingress_key',
+          'label' => __('Ingress'),
+          'name' => $this->posttype.'_ingress',
+          'type' => 'wysiwyg',
+          'media_upload' => false,
+        ),
+      ),
+      'location' => array (
+        array (
+          array (
+            'param' => 'post_type',
+            'operator' => '==',
+            'value' => $this->posttype,
+            'order_no' => 0,
+            'group_no' => 0,
+          ),
+        ),
+      ),
+      'options' => array (
+        'position' => 'normal',
+        'layout' => 'no_box',
+        'hide_on_screen' => array (
+        ),
+      ),
+      'menu_order' => 0,
+    ));
+  }
 }
