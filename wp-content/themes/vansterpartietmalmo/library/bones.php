@@ -211,7 +211,8 @@ function bones_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+			'footer-links' => __( 'Footer Links', 'bonestheme' ), // secondary nav in footer
+			'top-corner' => __( 'Top Corner', 'bonestheme' ) // secondary nav in footer
 		)
 	);
 } /* end bones theme support */
@@ -257,6 +258,22 @@ function bones_footer_links() {
 	));
 } /* end bones footer link */
 
+function bones_top_corner() {
+	// display the wp3 menu if available
+	wp_nav_menu(array(
+		'container' => false,                           // remove nav container
+		'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
+		'menu' => __( 'Top Corner', 'bonestheme' ),  // nav name
+		'menu_class' => 'nav top-nav-corner clearfix',         // adding custom nav class
+		'theme_location' => 'top-corner',                 // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
+	));
+} /* end bones main nav */
 // this is the fallback for header menu
 function bones_main_nav_fallback() {
 	wp_page_menu( array(

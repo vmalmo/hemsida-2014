@@ -118,3 +118,129 @@ be set to display none.
 @media print {
 	@import "print";
 }
+
+.sidebarHome > div:first-child {
+margin-left: 0;
+}
+.sidebarHome > div {
+    float: left;
+    width: 25%;
+}
+.homenavi ul {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    text-align: center;
+}
+.homenavi .nav li {
+    display: inline-block;
+        float: none;
+    }
+.videoplayer {
+    background: none repeat scroll 0 0 #ED1B24;
+    min-height: 400px;
+}
+.nav.footer-nav {
+    margin: 0;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.footer-nav li ul.sub-menu {
+    display: block;
+    position: relative;
+      border: 0 none;
+}
+.footer-nav li ul li {
+    float: none;
+
+}
+.nav li ul.sub-menu li a, .nav li ul.children li a{
+	background: 0;
+	border: 0;
+	font-size: 14px;
+}
+
+ul.footer-nav a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.sidebarHome div img {
+    max-width: 100%;
+}
+.nav.top-nav.clearfix {
+    margin: 0;
+}
+.allpage{
+	  position: relative;
+}
+.right.corner {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.section-b {
+    background: none repeat scroll 0 0 #CCCCCC;
+    padding: 10% 0 0;
+}
+.right.corner ul {
+    margin: 0;
+}
+.undermenu li {
+    display: inline-block;
+     margin: 0 20px;
+}
+.undermenu > ul {
+    text-align: center;
+
+}
+.undermenu {
+    background: none repeat scroll 0 0 #DDDDDD;
+    padding: 0;
+}
+.lista img {
+    float: left;
+     margin-right: 20px;
+}
+.lista li:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.lista h3 {
+    margin: 0.5em;
+}
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 22;
+}
+.alfabet {
+    background: none repeat scroll 0 0 #DDDDDD;
+    padding: 10px;
+}
+.sortera {
+    padding: 10px 0;
+    text-align: right;
+}
+.sortera span{
+    cursor: pointer;
+}
+.sortera > span:last-child:after {
+    content: "";
+}
+.sortera > span:after {
+    content: " | ";
+    margin: 0 5px;
+}
+.filter > span {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border-radius: 5px;
+    line-height: 35px;
+    padding: 5px 10px;
+}
+.filter span.active {
+    background: none repeat scroll 0 0 #666666;
+    color: #FFFFFF;
+}
+.toppad {
+    padding-top: 60px;
+}
+

@@ -2,11 +2,16 @@
 
 				<div id="inner-footer" class="wrap clearfix">
 
-					<nav role="navigation">
+					<div class="fourcol first" >
+						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
+						Like /tweet <br />
+						Kontakta....
+					</div>
+					<nav role="navigation" class="eightcol last">
 							<?php bones_footer_links(); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					
 
 				</div>
 

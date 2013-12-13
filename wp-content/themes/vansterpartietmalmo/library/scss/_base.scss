@@ -237,13 +237,18 @@ and more scalable.
 
 } /* end .nav */
 
-
+.topcorner ul {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 2.2em;
+
 }
 
 		.hentry {
@@ -282,6 +287,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
+			margin: 30px 0;
 
 			p {}
 
@@ -759,6 +765,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	background: none repeat scroll 0 0 #DDDDDD;
+    padding-top: 40px;
 }
 
 	/*
@@ -782,4 +790,7 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+
+
 
