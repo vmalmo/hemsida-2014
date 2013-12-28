@@ -24,6 +24,18 @@ class VM14_Post_Type_Field {
 abstract class VM14_Post_Type {
     protected $post_data;
 
+    private static $default_options = array(
+        'public' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_in_nav_menus' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
+    );
+
     function __construct($data) {
         $this->post_data = $data;
     }
@@ -33,6 +45,46 @@ abstract class VM14_Post_Type {
         $signature = get_class_vars($class);
 
         $meta = self::prepare_meta($class, $signature);
+
+        static::register_type($meta);
+        static::register_fields($meta, $signature);
+    }
+
+    static function register_type(&$meta) {
+        $options = array();
+        $options['labels'] = array(
+            'name' => __($meta['name'], 'vm14'),
+            'singular_name' => __($meta['name'], 'vm14'),
+            'all_items' => __('All '.$meta['name_plural'], 'vm14'),
+            'add_new' => __('Add New', 'vm14'),
+            'add_new_item' => __('Add New '.$meta['name'], 'vm14'),
+            'edit_item' => __('Edit '.$meta['name'], 'vm14'),
+            'new_item' => __('New '.$meta['name'], 'vm14'),
+            'view_item' => __('View '.$meta['name'], 'vm14'),
+            'search_items' => __('Search '.$meta['name_plural']),
+            'parent_item_colon' => '',
+            'edit' => __('Edit', 'vm14'),
+            'not_found' =>  __('Nothing found in the Database.', 'vm14'),
+            'not_found_in_trash' => __('Nothing found in Trash', 'vm14'),
+        );
+
+        $options['description'] = 'Hej';
+        $options['menu_position'] = 4;
+
+        $options['rewrite'] = array(
+            'slug' => __($meta['slug'], 'vm14'),
+            'with_front' => false,
+        );
+
+        $options['has_archive'] = __($meta['slug_plural'], 'vm14');
+
+        $options = array_merge(self::$default_options, $options);
+        register_post_type($meta['id'], $options);
+        register_taxonomy_for_object_type('category', $meta['id']);
+        register_taxonomy_for_object_type('post_tag', $meta['id']);
+    }
+
+    static function register_fields(&$meta, &$signature) {
         $fields = array();
 
         foreach ($signature as $name => $field) {
