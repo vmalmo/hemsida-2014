@@ -80,6 +80,18 @@ abstract class VM14_Post_Type {
             return $meta['id'];
         });
 
+        self::meta($signature, 'name_plural', $meta, function(&$meta) {
+            return $meta['name'].'s';
+        });
+
+        self::meta($signature, 'slug', $meta, function(&$meta) {
+            return $meta['id'];
+        });
+
+        self::meta($signature, 'slug_plural', $meta, function(&$meta) {
+            return $meta['id'].'s';
+        });
+
         return $meta;
     }
 
