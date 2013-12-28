@@ -46,7 +46,7 @@ abstract class VM14_Post_Type {
 
         register_field_group(array(
             'id' => 'acf_normal_'.$meta['id'],
-            'title' => __($meta['title']),
+            'title' => __($meta['name']),
             'fields' => $fields,
             'location' => array (
               array (
@@ -76,7 +76,7 @@ abstract class VM14_Post_Type {
             return strtolower(substr($class, 5, strlen($class) - 15));
         });
 
-        self::meta($signature, 'title', $meta, function($meta) {
+        self::meta($signature, 'name', $meta, function(&$meta) {
             return $meta['id'];
         });
 
