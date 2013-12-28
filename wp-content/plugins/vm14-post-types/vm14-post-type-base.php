@@ -2,6 +2,98 @@
 define( 'ACF_LITE' , true );
 include_once('acf/acf.php' );
 
+class VM14_Post_Type_Field {
+    private $widget;
+    private $media_upload = false;
+
+    function __construct(array $params) {
+        $this->widget = $params['widget'];
+    }
+
+    function get_config($prefix, $name) {
+        return array(
+            'key' => sprintf('%s_%s_key', $prefix, $name),
+            'label' => __($name), # TODO: Use field meta
+            'name' => sprintf('%s_%s', $prefix, $name),
+            'type' => $this->widget,
+            'media_upload' => $this->media_upload
+        );
+    }
+}
+
+abstract class VM14_Post_Type {
+    protected $post_data;
+
+    function __construct($data) {
+        $this->post_data = $data;
+    }
+
+    static function register() {
+        $class = get_called_class();
+        $signature = get_class_vars($class);
+
+        $meta = self::prepare_meta($class, $signature);
+        $fields = array();
+
+        foreach ($signature as $name => $field) {
+            if (get_class($field) == VM14_Post_Type_Field) {
+                array_push($fields, $field->get_config($meta['id'], $name));
+            }
+            else if (get_class($field) == VM14_Post_Type_Group) {
+                $field->register();
+            }
+        }
+
+        register_field_group(array(
+            'id' => 'acf_normal_'.$meta['id'],
+            'title' => __($meta['title']),
+            'fields' => $fields,
+            'location' => array (
+              array (
+                array (
+                  'param' => 'post_type',
+                  'operator' => '==',
+                  'value' => $meta['id'],
+                  'order_no' => 0,
+                  'group_no' => 0,
+                ),
+              ),
+            ),
+            'options' => array (
+              'position' => 'normal',
+              'layout' => 'no_box',
+              'hide_on_screen' => array (
+              ),
+            ),
+            'menu_order' => 0,
+        ));
+    }
+
+    static private function prepare_meta($class, $signature) {
+        $meta = array();
+
+        self::meta($signature, 'id', $meta, function() use ($class) {
+            return strtolower(substr($class, 5, strlen($class) - 15));
+        });
+
+        self::meta($signature, 'title', $meta, function($meta) {
+            return $meta['id'];
+        });
+
+        return $meta;
+    }
+
+    static private function meta($signature, $name, &$meta, $lambda) {
+        $key_name = 'meta_'.$name;
+        if (array_key_exists($key_name, $signature)) {
+            $meta[$name] = $signature[$key_name];
+        }
+        else {
+            $meta[$name] = $lambda($meta);
+        }
+    }
+}
+
 abstract class VM14_Posttype {
   public $posttype;
   protected $show_in_nav_menu = false;
