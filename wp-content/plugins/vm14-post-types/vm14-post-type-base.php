@@ -60,6 +60,27 @@ class VM14_Post_Type_Field {
     }
 }
 
+class VM14_Post_Type_Relationship extends VM14_Post_Type_Field {
+    private $other;
+
+    function __construct($other, array $params = null) {
+        parent::__construct($params);
+
+        $this->other = $other;
+    }
+
+    function get_config($prefix, $id) {
+        $config = parent::get_config($prefix, $id);
+        $config['type'] = 'relationship';
+        $config['return_format'] = 'object';
+        $config['post_type'] = array($this->other);
+        $config['taxonomy'] = array('all');
+        $config['result_elements'] = array('post_type', 'post_title');
+
+        return $config;
+    }
+}
+
 abstract class VM14_Post_Type {
     protected $post_data;
 
@@ -127,11 +148,8 @@ abstract class VM14_Post_Type {
         $fields = array();
 
         foreach ($signature as $name => $field) {
-            if (get_class($field) == VM14_Post_Type_Field) {
+            if (is_a($field, VM14_Post_Type_Field)) {
                 array_push($fields, $field->get_config($meta['id'], $name));
-            }
-            else if (get_class($field) == VM14_Post_Type_Group) {
-                $field->register();
             }
         }
 
