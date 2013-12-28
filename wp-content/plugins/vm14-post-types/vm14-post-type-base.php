@@ -129,7 +129,12 @@ abstract class VM14_Post_Type {
         });
 
         self::meta($signature, 'name', $meta, function(&$meta) {
-            return $meta['id'];
+            $words = explode('_', $meta['id']);
+            for ($i=0; $i<sizeof($words); $i++) {
+                $words[$i] = ucfirst($words[$i]);
+            }
+
+            return implode(' ', $words);
         });
 
         self::meta($signature, 'name_plural', $meta, function(&$meta) {
