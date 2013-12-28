@@ -20,5 +20,5 @@ $vm14_calendar_event_posttype = new VM14_Calendar_Event_Posttype();
 $vm14_contact_person_posttype = new VM14_Contact_Person_Posttype();
 $vm14_working_group_posttype = new VM14_Working_Group_Posttype();
 $vm14_section_entrance_posttype = new VM14_Section_Entrance_Posttype();
-$vm14_basic_page_posttype = new VM14_Basic_Page_Posttype();
+VM14_Page_Post_Type::register();
 
