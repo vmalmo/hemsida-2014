@@ -16,12 +16,11 @@ require_once('types/vm14-working-group.php');
 require_once('types/vm14-section-entrance.php');
 require_once('types/vm14-basic-page.php');
 
-$vm14_working_group_posttype = new VM14_Working_Group_Posttype();
-
 add_action('init', function() {
     VM14_Section_Entrance_Post_Type::register();
     VM14_Calendar_Event_Post_Type::register();
     VM14_Contact_Person_Post_Type::register();
+    VM14_Working_Group_Post_Type::register();
     VM14_Page_Post_Type::register();
 });
 
