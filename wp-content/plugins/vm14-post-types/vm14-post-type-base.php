@@ -4,20 +4,54 @@ include_once('acf/acf.php' );
 
 class VM14_Post_Type_Field {
     private $widget;
+    private $params;
     private $media_upload = false;
 
     function __construct(array $params) {
+        $this->params = $params;
         $this->widget = $params['widget'];
     }
 
-    function get_config($prefix, $name) {
+    function get_config($prefix, $id) {
+        $meta = $this->prepare_meta($id, $this->params);
+
         return array(
-            'key' => sprintf('%s_%s_key', $prefix, $name),
-            'label' => __($name), # TODO: Use field meta
-            'name' => sprintf('%s_%s', $prefix, $name),
+            'key' => sprintf('%s_%s_key', $prefix, $id),
+            'label' => __($meta['name']),
+            'name' => sprintf('%s_%s', $prefix, $id),
             'type' => $this->widget,
             'media_upload' => $this->media_upload
         );
+    }
+
+    private function prepare_meta($id, $params) {
+        $meta = array();
+        $meta['id'] = $id;
+
+        self::meta($params, 'name', $meta, function(&$meta) {
+            $words = explode('_', $meta['id']);
+            for ($i=0; $i<sizeof($words); $i++) {
+                $words[$i] = ucfirst($words[$i]);
+            }
+
+            return implode(' ', $words);
+        });
+
+        self::meta($params, 'name_plural', $meta, function(&$meta) {
+            return $meta['name'].'s';
+        });
+
+        return $meta;
+    }
+
+    static private function meta($signature, $name, &$meta, $lambda) {
+        $key_name = 'meta_'.$name;
+        if (array_key_exists($key_name, $signature)) {
+            $meta[$name] = $signature[$key_name];
+        }
+        else {
+            $meta[$name] = $lambda($meta);
+        }
     }
 }
 
