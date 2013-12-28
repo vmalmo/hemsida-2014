@@ -3,13 +3,18 @@ define( 'ACF_LITE' , true );
 include_once('acf/acf.php' );
 
 class VM14_Post_Type_Field {
-    private $widget;
+    private $widget = 'text';
     private $params;
     private $media_upload = false;
 
-    function __construct(array $params) {
-        $this->params = $params;
-        $this->widget = $params['widget'];
+    function __construct(array $params = null) {
+        if ($params) {
+            $this->params = $params;
+            $this->widget = $params['widget'];
+        }
+        else {
+            $this->params = array();
+        }
     }
 
     function get_config($prefix, $id) {
