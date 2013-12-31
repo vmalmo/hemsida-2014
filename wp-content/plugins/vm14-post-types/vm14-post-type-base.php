@@ -82,6 +82,7 @@ class VM14_Post_Type_Relationship extends VM14_Post_Type_Field {
 }
 
 abstract class VM14_Post_Type {
+    protected $post;
     protected $post_data;
 
     private static $default_options = array(
@@ -96,9 +97,45 @@ abstract class VM14_Post_Type {
         'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
     );
 
-    function __construct($data) {
-        $this->post_data = $data;
+    function __construct($post) {
+        $this->post = $post;
+
+        if ($this->post) {
+            // Transfer fields to a separate array to be used for dynamic look-up
+            $this->post_data = array();
+            $this->post_data['id'] = $post->ID;
+            $this->post_data['title'] = $post->post_title;
+            $this->post_data['content'] = $post->post_content;
+
+            // TODO: Probably a performance hog, delay until necessary?
+            $class = get_called_class();
+            $signature = get_class_vars($class);
+            $custom_data = get_post_custom($post->ID);
+
+            // Transfer custom fields from special array to the post_data array,
+            // so that they can be retrieved using normal field look-up.
+            foreach ($signature as $name => $field) {
+                if (is_a($field, VM14_Post_Type_Field)) {
+                    $key_name = 'page_'.$name;
+                    if (array_key_exists($key_name, $custom_data)) {
+                        $value = $custom_data[$key_name];
+                        if (is_array($value) && count($value)==1) {
+                            $value = $value[0];
+                        }
+
+                        $this->post_data[$name] = $value;
+                    }
+                }
+            }
+        }
     }
+
+
+    function __get($name) {
+        if (array_key_exists($name, $this->post_data))
+            return $this->post_data[$name];
+    }
+
 
     static function register() {
         $class = get_called_class();
