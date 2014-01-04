@@ -106,6 +106,8 @@ abstract class VM14_Post_Type {
             $this->post_data['id'] = $post->ID;
             $this->post_data['title'] = $post->post_title;
             $this->post_data['content'] = $post->post_content;
+            $this->post_data['image_id'] = get_post_thumbnail_id($post->ID);
+            $this->post_data['image_url'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
             // TODO: Probably a performance hog, delay until necessary?
             $class = get_called_class();
@@ -136,6 +138,9 @@ abstract class VM14_Post_Type {
             return $this->post_data[$name];
     }
 
+    function image_url($size = 'medium') {
+      return wp_get_attachment_image_src($this->post_data['image_id'], $size)[0];
+    }
 
     static function register() {
         $class = get_called_class();
