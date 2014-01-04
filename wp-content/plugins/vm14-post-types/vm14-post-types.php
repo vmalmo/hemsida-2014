@@ -20,6 +20,16 @@ require_once('types/vm14-post.php');
 function vm14_post($post) {
     // TODO: Better way of figuring out the right post type?
     switch ($post->post_type) {
+        case 'contact_person':
+            return new VM14_Contact_Person_Post_Type($post);
+        case 'calendar_event':
+            return new VM14_Calendar_Event_Post_Type($post);
+        case 'working_group':
+            return new VM14_Working_Group_Post_Type($post);
+        case 'section_entrance':
+            return new VM14_Section_Entrance_Post_Type($post);
+        case 'page':
+            return new VM14_Page_Post_Type($post);
         default:
             return new VM14_Post_Post_Type($post);
     }
