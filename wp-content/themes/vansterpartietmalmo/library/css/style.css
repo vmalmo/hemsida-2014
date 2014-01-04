@@ -975,6 +975,30 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+/* line 156, ../scss/_base.scss */
+#logo {
+  margin: 0.5em;
+  float: left;
+  font-size: 1.4em;
+}
+/* line 160, ../scss/_base.scss */
+#logo span {
+  float: left;
+  line-height: 2em;
+  font-size: 1.8;
+}
+/* line 165, ../scss/_base.scss */
+#logo img {
+  float: left;
+  margin-right: 0.3em;
+  max-height: 2em;
+}
+
+/* line 171, ../scss/_base.scss */
+.topcorner {
+  float: right;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -985,7 +1009,7 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-/* line 169, ../scss/_base.scss */
+/* line 187, ../scss/_base.scss */
 .nav {
   border: 1px solid #ccc;
   border-bottom: 0;

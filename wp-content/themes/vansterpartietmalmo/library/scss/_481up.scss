@@ -70,6 +70,10 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+/* top image */
+.hero, .videoplayer, .top-image {
+    min-height: 400px;
+}
 
 /* entry content */
 .entry-content {
