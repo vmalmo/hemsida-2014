@@ -21,6 +21,10 @@ body {
 	line-height: 1.5;
 	color: #565656;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /********************
 WORDPRESS BODY CLASSES
@@ -153,22 +157,8 @@ HEADER STYLES
 
 .header {}
 
-#logo {
-    margin: 0.5em;
-    float: left;
-    font-size: 1.4em;
-    span {
-        float: left;
-        line-height: 2em;
-        font-size: 1.8;
-    }
-    img {
-        float: left;
-        margin-right: 0.3em;
-        max-height: 2em;
-    }
-}
 .topcorner {
+    display: none;
     float: right;
 }
 
@@ -750,6 +740,15 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
+#frontpage-blurbs {
+    margin-top: 2em;
+    a {
+        width: $four_col_grid_width;
+        margin-left: $four_col_grid_margin;
+        margin-right: 0;
+    }
+}
+
 .sidebar {}
 
 	.widgettitle {}
@@ -784,29 +783,4 @@ FOOTER STYLES
 	background: none repeat scroll 0 0 #DDDDDD;
     padding-top: 40px;
 }
-
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-	.footer-links {
-
-		ul {
-
-			li {}
-
-		}
-
-	} /* end .footer-links */
-
-
-	.copyright {}
-
-
-
 
