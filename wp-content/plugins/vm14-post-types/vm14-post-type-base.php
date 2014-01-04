@@ -118,7 +118,7 @@ abstract class VM14_Post_Type {
             // so that they can be retrieved using normal field look-up.
             foreach ($signature as $name => $field) {
                 if (is_a($field, VM14_Post_Type_Field)) {
-                    $key_name = 'page_'.$name;
+                    $key_name = 'post_'.$name;
                     if (array_key_exists($key_name, $custom_data)) {
                         $value = $custom_data[$key_name];
                         if (is_array($value) && count($value)==1) {
