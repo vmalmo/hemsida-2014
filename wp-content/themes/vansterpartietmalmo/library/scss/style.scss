@@ -10,7 +10,6 @@ and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
 
-
 //
 // IMPORTING STYLES
 //
@@ -31,6 +30,7 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in base.scss
 @import "base";
 
+@import "vm14_site_header";
 @import "vm14_post_header";
 
 /*
@@ -121,6 +121,7 @@ be set to display none.
 	@import "print";
 }
 
+
 .sidebarHome > div:first-child {
 margin-left: 0;
 }
@@ -128,14 +129,6 @@ margin-left: 0;
     float: left;
     width: 25%;
 }
-.homenavi ul {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    text-align: center;
-}
-.homenavi .nav li {
-    display: inline-block;
-        float: none;
-    }
 .nav.footer-nav {
     margin: 0;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);

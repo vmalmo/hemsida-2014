@@ -1,5 +1,4 @@
 <!doctype html>
-
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
@@ -43,33 +42,23 @@
 
 		<div id="container">
 
-			<header class="header" role="banner">
-				<?php
-					if ( is_front_page() ) { ?><div class="topcorner"><?php bones_top_corner(); ?></div>
-				<?php } ?>
-				<div id="inner-header" class="wrap clearfix">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> 
-					/* <p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p> */
-					?>
-					
-					<?php
-					if ( is_front_page() ) { ?>
-
-						<nav role="navigation" class="homenavi">
-							<?php bones_main_nav(); ?>
-						</nav>
-						
-					<?php } else {?>
-
-						<nav role="navigation" class="allpage">
-							<?php bones_main_nav(); ?><div class="right corner"><?php bones_top_corner(); ?></div>
-						</nav>
-						
-					<?php } ?>
-
-
-
-				</div>
-
+            <header class="header" role="banner">
+                <a id="logo" href="<?php echo home_url(); ?>" rel="nofollow">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="vänsterpartiet" />
+                  <span>
+                    <?php bloginfo('name'); ?>
+                  </span>
+                </a>
+                <?php if ( is_front_page() ) { ?>
+                    <div class="topcorner"><?php bones_top_corner(); ?></div>
+                        <nav role="navigation" class="home-navigation">
+                            <?php bones_main_nav(); ?>
+                        </nav>
+                <?php } else {?>
+                    <div id="inner-header" class="wrap clearfix">
+                        <nav role="navigation" class="allpage">
+                            <?php bones_main_nav(); ?><div class="right corner"><?php bones_top_corner(); ?></div>
+                        </nav>
+                    </div>
+                <?php } ?>
 			</header>

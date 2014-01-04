@@ -1,3 +1,4 @@
+@import "compass/css3";
 /******************************************************************
 Site Name:
 Author:
@@ -14,7 +15,6 @@ A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
 
 ******************************************************************/
-
 /*********************
 CLEARFIXIN'
 *********************/
@@ -62,7 +62,9 @@ $white:             #fff;
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
 
-$link-color:        $bones-pink;
+$red:               #ED1B24;
+$red-darken:      darken($red, 15%);
+$link-color:        #000000;
 $link-hover:        darken($link-color, 9%);
 
 /*
@@ -247,4 +249,7 @@ BUTTONS
 	&:active {
 		@include css-gradient( darken($bones-blue, 5%), $bones-blue );
 	}
+}
+.red-gradient {
+    @include background(linear-gradient(bottom, $red-darken, $red));
 }

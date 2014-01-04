@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans_serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
@@ -78,6 +78,7 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+    text-decoration: none;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -152,7 +153,24 @@ HEADER STYLES
 
 .header {}
 
-	#logo {}
+#logo {
+    margin: 0.5em;
+    float: left;
+    font-size: 1.4em;
+    span {
+        float: left;
+        line-height: 2em;
+        font-size: 1.8;
+    }
+    img {
+        float: left;
+        margin-right: 0.3em;
+        max-height: 2em;
+    }
+}
+.topcorner {
+    float: right;
+}
 
 /*********************
 NAVIGATION STYLES
@@ -176,8 +194,6 @@ and more scalable.
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
