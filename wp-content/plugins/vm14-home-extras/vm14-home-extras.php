@@ -29,7 +29,6 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
         $media_id = null;
         $media_src = '';
 
-        error_log($instance['media_id']);
         if (is_numeric($instance['media_id'])) {
             $attachment = get_post($instance['media_id']);
             if ($attachment) {
