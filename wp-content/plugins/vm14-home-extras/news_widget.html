@@ -1,0 +1,18 @@
+<div class="vm14_news_widget">
+    <div class="vm14_widget_header">
+        <h2><?php echo $instance['header']; ?></h2>
+        <ul class="vm14_widget_header_options">
+            <li><a href="#">Show all</a></li>
+        </ul>
+    </div>
+
+    <ul class="vm14_news_widget_item_list">
+    <?php foreach ($items as $item): ?>
+        <li>
+            <h3><a href="#"><?php echo $item->title; ?></a></h3>
+            <a href="#"><?php echo $item->summary; ?></a>
+            <span class="vm14_news_widget_item_meta">PUBLISHED <?php echo $item->post_date; ?></span>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+</div>

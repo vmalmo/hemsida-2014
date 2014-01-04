@@ -74,8 +74,39 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
 }
 
 
+
+class VM14_News_Widget extends WP_Widget {
+    function __construct() {
+        $widget_ops = array('description' => __('News widget (half-width) for home page.', 'vm14_home_extras'));
+        parent::__construct('vm14_newswidget', __('News widget', 'vm14_home_extras'), $widget_ops);
+    }
+
+    function widget($args, $instance) {
+        $items = vm14_get_posts();
+        include('news_widget.html');
+    }
+
+    function update($new_instance, $old_instance) {
+        $old_instance['header'] = $new_instance['header'];
+        return $old_instance;
+    }
+
+    function form($instance) {
+        printf('<label for="%s">%s:</label> ',
+            $this->get_field_id('header'),
+            __('Header text', 'vm14_home_extras'));
+        
+        printf('<input type="text" id="%s" name="%s" value="%s">',
+            $this->get_field_id('header'),
+            $this->get_field_name('header'),
+            $instance['header']);
+    }
+}
+
+
 function vm14_home_extras_widgets() {
     register_widget('VM14_Custom_Blurb_Widget');
+    register_widget('VM14_News_Widget');
 }
 
 add_action('admin_head', array('VM14_Custom_Blurb_Widget', 'setup_head'));
