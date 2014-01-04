@@ -51,9 +51,10 @@
                 </a>
                 <?php if ( is_front_page() ) { ?>
                     <div class="topcorner"><?php bones_top_corner(); ?></div>
-                        <nav role="navigation" class="home-navigation">
-                            <?php bones_main_nav(); ?>
-                        </nav>
+                    <div class="mobile-menu">meny</div>
+                    <nav role="navigation" class="home-navigation">
+                        <?php bones_main_nav(); ?>
+                    </nav>
                 <?php } else {?>
                     <div id="inner-header" class="wrap clearfix">
                         <nav role="navigation" class="allpage">

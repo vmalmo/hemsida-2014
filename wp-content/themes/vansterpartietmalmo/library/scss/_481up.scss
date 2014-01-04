@@ -15,11 +15,16 @@ upon your base.scss styles.
 
 ******************************************************************/
 
-
 	
 /*********************
 NAVIGATION STYLES
 *********************/
+.home-navigation {
+    display: block;
+}
+.mobile-menu {
+    display: none;
+}
 
 .nav {}
 
@@ -66,6 +71,13 @@ NAVIGATION STYLES
 			}  /* end current highlighters */
 		} /* end .menu ul */
 	} /* end .menu */
+.topcorner {
+    display: block;
+}
+
+.hero, .videoplayer, .top-image {
+    float: none;
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -98,6 +110,15 @@ POSTS & CONTENT STYLES
 	}
 			
 } /* end .entry-content */
+/****************
+***************/
+#frontpage-blurbs {
+    a {
+        width:  $two_col_grid_width;
+        margin-left: $four_col_grid_margin;
+        margin-right: 0;
+    }
+}
 
 /*********************
 FOOTER STYLES

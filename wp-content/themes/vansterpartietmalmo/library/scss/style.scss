@@ -20,6 +20,9 @@ of the styles inside media queries.
 // import mixins
 @import "mixins";
 
+// import variable
+@import "variables";
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -32,6 +35,8 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 
 @import "vm14_site_header";
 @import "vm14_post_header";
+@import "vm14_front_page";
+
 
 /*
 LARGER MOBILE DEVICES
@@ -121,14 +126,6 @@ be set to display none.
 	@import "print";
 }
 
-
-.sidebarHome > div:first-child {
-margin-left: 0;
-}
-.sidebarHome > div {
-    float: left;
-    width: 25%;
-}
 .nav.footer-nav {
     margin: 0;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -152,9 +149,6 @@ ul.footer-nav a {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-.sidebarHome div img {
-    max-width: 100%;
-}
 .nav.top-nav.clearfix {
     margin: 0;
 }
@@ -197,11 +191,6 @@ ul.footer-nav a {
 }
 .lista h3 {
     margin: 0.5em;
-}
-.header {
-    position: absolute;
-    width: 100%;
-    z-index: 22;
 }
 .alfabet {
     background: none repeat scroll 0 0 #DDDDDD;

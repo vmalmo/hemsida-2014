@@ -1,4 +1,40 @@
+.header {
+    width: 100%;
+    z-index: 22;
+    position: absolute;
+}
+.mobile-menu {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    //TODO: add icon
+}
+.mobile-home-nav {
+    display: none;
+    li {
+        border-bottom: solid 1px #DDD;
+    }
+}
+
+#logo {
+    margin: 0.5em;
+    float: left;
+    font-size: 1.2em;
+    width: 100%;
+    span {
+        float: left;
+        line-height: 2em;
+        font-size: 1.8;
+    }
+    img {
+        float: left;
+        margin-right: 0.3em;
+        max-height: 2em;
+    }
+}
+
 .home-navigation {
+    display: none;
     float: left;
     width: 100%;
     text-align: center;

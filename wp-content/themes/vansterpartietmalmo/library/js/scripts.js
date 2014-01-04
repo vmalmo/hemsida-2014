@@ -42,7 +42,8 @@ jQuery(document).ready(function($) {
 	
 	/* if is below 481px */
 	if (responsive_viewport < 481) {
-	
+        $('.header').before('<div class="mobile-home-nav">'+$('.home-navigation').html()+'</div>');
+        $('.mobile-home-nav').find('.red-gradient').removeClass('red-gradient');
 	} /* end smallest screen */
 	
 	/* if is larger than 481px */
@@ -67,6 +68,10 @@ jQuery(document).ready(function($) {
 	
 	
 	// add all your scripts here
+    $('.mobile-menu').on('click touchstart', function(e) {
+        e.stopPropagation();
+        $('.mobile-home-nav').slideToggle();
+    });
 	
  
 }); /* end of as page load scripts */

@@ -1,0 +1,19 @@
+#frontpage-blurbs {
+    margin-top: 1em;
+    a {
+        display: block;
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 1em;
+        position: relative;
+        &:first-child {
+            margin-left: 0;
+        }
+        p {
+            margin: 0;
+            font-size: 1.6em;
+        }
+    }
+}
