@@ -139,7 +139,8 @@ abstract class VM14_Post_Type {
     }
 
     function image_url($size = 'medium') {
-      return wp_get_attachment_image_src($this->post_data['image_id'], $size)[0];
+      $src = wp_get_attachment_image_src($this->post_data['image_id'], $size);
+      return $src[0];
     }
 
     static function register() {
