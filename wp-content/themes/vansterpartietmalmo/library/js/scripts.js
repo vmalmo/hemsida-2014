@@ -68,9 +68,10 @@ jQuery(document).ready(function($) {
 	
 	
 	// add all your scripts here
-    $('.mobile-menu').on('click touchstart', function(e) {
+    $('.mobile-menu').on('touchstart', function(e) {
         e.stopPropagation();
         $('.mobile-home-nav').slideToggle();
+        return false;
     });
 	
  
