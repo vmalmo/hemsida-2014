@@ -1509,7 +1509,7 @@ FOOTER STYLES
 
 /* top image used on front page */
 /* line 2, ../scss/_vm14_post_header.scss */
-.hero, .videoplayer, .top-image {
+.article-header, .videoplayer, .top-image {
   background: none no-repeat scroll 0 0 #ED1B24;
   background-size: cover;
   min-height: 200px;
@@ -1609,7 +1609,7 @@ tweeners.
   }
 
   /* line 78, ../scss/_481up.scss */
-  .hero, .videoplayer, .top-image {
+  .article-header, .videoplayer, .top-image {
     float: none;
   }
 
@@ -1972,7 +1972,7 @@ you can add resource intensive styles.
   *********************/
   /* top image */
   /* line 16, ../scss/_1030up.scss */
-  .hero, .videoplayer, .top-image {
+  .article-header, .videoplayer, .top-image {
     min-height: 700px;
   }
 }
@@ -2187,80 +2187,74 @@ ul.footer-nav a {
 }
 
 /* line 164, ../scss/style.scss */
-.section-b {
-  background: none repeat scroll 0 0 #CCCCCC;
-  padding: 10% 0 0;
-}
-
-/* line 168, ../scss/style.scss */
 .right.corner ul {
   margin: 0;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 .undermenu li {
   display: inline-block;
   margin: 0 20px;
 }
 
-/* line 175, ../scss/style.scss */
+/* line 171, ../scss/style.scss */
 .undermenu > ul {
   text-align: center;
 }
 
-/* line 179, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 .undermenu {
   background: none repeat scroll 0 0 #DDDDDD;
   padding: 0;
 }
 
-/* line 183, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .lista img {
   float: left;
   margin-right: 20px;
 }
 
-/* line 187, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .lista li:after {
   clear: both;
   content: "";
   display: table;
 }
 
-/* line 192, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .lista h3 {
   margin: 0.5em;
 }
 
-/* line 195, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 .alfabet {
   background: none repeat scroll 0 0 #DDDDDD;
   padding: 10px;
 }
 
-/* line 199, ../scss/style.scss */
+/* line 195, ../scss/style.scss */
 .sortera {
   padding: 10px 0;
   text-align: right;
 }
 
-/* line 203, ../scss/style.scss */
+/* line 199, ../scss/style.scss */
 .sortera span {
   cursor: pointer;
 }
 
-/* line 206, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 .sortera > span:last-child:after {
   content: "";
 }
 
-/* line 209, ../scss/style.scss */
+/* line 205, ../scss/style.scss */
 .sortera > span:after {
   content: " | ";
   margin: 0 5px;
 }
 
-/* line 213, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 .filter > span {
   background: none repeat scroll 0 0 #CCCCCC;
   border-radius: 5px;
@@ -2268,13 +2262,13 @@ ul.footer-nav a {
   padding: 5px 10px;
 }
 
-/* line 219, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 .filter span.active {
   background: none repeat scroll 0 0 #666666;
   color: #FFFFFF;
 }
 
-/* line 223, ../scss/style.scss */
+/* line 219, ../scss/style.scss */
 .toppad {
   padding-top: 60px;
 }

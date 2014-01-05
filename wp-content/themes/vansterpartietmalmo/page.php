@@ -4,8 +4,9 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+                                <?php $post = vm14_get_post($post->ID); ?>
 							
-								<header class="article-header clearfix section-b">
+								<header class="article-header clearfix responsive-image" data-image-large="<?php echo $post->image_url('large') ?>"  style="background-image: url('<?php echo $post->image_url('medium') ?>');"> </div>
 									<div class="wrap">
 										<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 									</div>
