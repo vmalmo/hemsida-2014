@@ -29,22 +29,9 @@ if (!window.getComputedStyle) {
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
-
-	/*
-	Responsive jQuery is a tricky thing.
-	There's a bunch of different ways to handle
-	it, so be sure to research and find the one
-	that works for you best.
-	*/
 	
 	/* getting viewport width */
 	var responsive_viewport = $(window).width();
-	
-	/* if is below 481px */
-	if (responsive_viewport < 481) {
-        $('.header').before('<div class="mobile-home-nav">'+$('.home-navigation').html()+'</div>');
-        $('.mobile-home-nav').find('.red-gradient').removeClass('red-gradient');
-	} /* end smallest screen */
 	
 	/* if is larger than 481px */
 	if (responsive_viewport > 481) {
@@ -68,12 +55,6 @@ jQuery(document).ready(function($) {
 	
 	
 	// add all your scripts here
-    $('.mobile-menu').on('touchstart', function(e) {
-        e.stopPropagation();
-        $('.mobile-home-nav').slideToggle();
-        return false;
-    });
-	
  
 }); /* end of as page load scripts */
 
