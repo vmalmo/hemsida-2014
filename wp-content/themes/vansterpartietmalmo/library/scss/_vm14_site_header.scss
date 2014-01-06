@@ -1,23 +1,18 @@
 .header {
+    float: left;
     width: 100%;
     z-index: 22;
-    position: absolute;
-}
-.mobile-menu {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    //TODO: add icon
-}
-.mobile-home-nav {
-    display: none;
-    li {
-        border-bottom: solid 1px #DDD;
+    @include black-gradient();
+    a {
+        color: #FFF;
+        &:hover {
+            color: #EFEFEF;
+        }
     }
 }
 
 #logo {
-    margin: 0.5em;
+    margin: 0.5em 1%;
     float: left;
     font-size: 1.2em;
     width: 100%;
@@ -33,10 +28,30 @@
     }
 }
 
+.allpage {
+    display: none;
+    position: relative;
+    float: left;
+    width: 68%;
+    margin: 0.5em 0;
+}
+
+.right.corner {
+    display: none;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8em;
+    line-height: 3em;
+}
+.right.corner ul {
+    margin: 0;
+}
 .home-navigation {
     display: none;
     float: left;
-    width: 100%;
+    width: 75%;
     text-align: center;
 }
 .home-navigation ul {
@@ -45,9 +60,6 @@
     border-radius: 5px;
     display: inline-block;
     @include box-shadow(0px 1px 2px rgba(0, 0, 0, 0.4));
-    a {
-        color: #FFF;
-    }
 }
 .home-navigation .nav li {
     display: inline-block;
@@ -55,5 +67,30 @@
     border-left: solid 1px rgba(#000, 0.1);
     &:first-child {
         border: none;
+    }
+}
+
+/*************
+* Mobile menu
+*************/
+.mobile-menu {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    //TODO: add icon
+}
+.mobile-home-nav {
+    background: #FFF;
+    display: none;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    li {
+        border-bottom: solid 1px #DDD;
+    }
+    .right.corner {
+        float: right;
+        position: static;
+        width: 100%;
     }
 }

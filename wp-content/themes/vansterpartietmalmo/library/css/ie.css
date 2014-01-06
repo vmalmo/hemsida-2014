@@ -1,96 +1,723 @@
-/*
-Syntax error: Undefined variable: "$two_col_grid_width".
-        on line 117 of /Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/_481up.scss
-        from line 25 of /Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/ie.scss
+/******************************************************************
+Site Name: 
+Author: 
 
-Backtrace:
-/Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/_481up.scss:117
-/Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/ie.scss:25
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/script/variable.rb:49:in `_perform'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/script/node.rb:40:in `perform'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `map'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/bin/compass:44:in `call'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/bin/compass:19:in `load'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/bin/compass:19:in `<main>'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/bin/ruby_noexec_wrapper:14:in `eval'
-/Users/jon/.rvm/gems/ruby-1.9.3-p327/bin/ruby_noexec_wrapper:14:in `<main>'
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$two_col_grid_width\".\A         on line 117 of /Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/_481up.scss\A         from line 25 of /Users/jon/Sites/v.jon/public_html/wp-content/themes/vansterpartietmalmo/library/scss/ie.scss"; }
+/* import mixins */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* line 23, ../scss/_mixins.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 25, ../scss/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 26, ../scss/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*********************
+TOOLS
+*********************/
+/* line 34, ../scss/_mixins.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 41, ../scss/_mixins.scss */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 111, ../scss/_mixins.scss */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/* line 117, ../scss/_mixins.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 118, ../scss/_mixins.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 119, ../scss/_mixins.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 123, ../scss/_mixins.scss */
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 129, ../scss/_mixins.scss */
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 135, ../scss/_mixins.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 141, ../scss/_mixins.scss */
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 147, ../scss/_mixins.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BUTTONS
+*********************/
+/* line 209, ../scss/_mixins.scss */
+.button, .button:visited {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid black;
+  border-top-color: black;
+  border-left-color: black;
+  padding: 4px 12px;
+  color: white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  border-radius: 4px;
+  background-color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+}
+/* line 228, ../scss/_mixins.scss */
+.button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  color: white;
+  border: 1px solid black;
+  border-top-color: black;
+  border-left-color: black;
+  background-color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+}
+/* line 236, ../scss/_mixins.scss */
+.button:active, .button:visited:active {
+  background-color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+}
+
+/* line 241, ../scss/_mixins.scss */
+.blue-button, .blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+/* line 247, ../scss/_mixins.scss */
+.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+/* line 251, ../scss/_mixins.scss */
+.blue-button:active, .blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+
+/* line 261, ../scss/_mixins.scss */
+.red-gradient {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
+  background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -moz-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: linear-gradient(bottom, #ae0e15, #ed1b24);
+}
+
+/* line 264, ../scss/_mixins.scss */
+.black-gradient {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #000000), color-stop(100%, #262626));
+  background: -webkit-linear-gradient(bottom, #000000, #262626);
+  background: -moz-linear-gradient(bottom, #000000, #262626);
+  background: -o-linear-gradient(bottom, #000000, #262626);
+  background: linear-gradient(bottom, #000000, #262626);
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+/* line 24, ../scss/_grid.scss */
+.onecol {
+  width: 5.801104972%;
+}
+
+/* 4.85%;  } /* grid_1  */
+/* line 25, ../scss/_grid.scss */
+.twocol {
+  width: 14.364640883%;
+}
+
+/* 13.45%; } /* grid_2  */
+/* line 26, ../scss/_grid.scss */
+.threecol {
+  width: 22.928176794%;
+}
+
+/* 22.05%; } /* grid_3  */
+/* line 27, ../scss/_grid.scss */
+.fourcol {
+  width: 31.491712705%;
+}
+
+/* 30.75%; } /* grid_4  */
+/* line 28, ../scss/_grid.scss */
+.fivecol {
+  width: 40.055248616%;
+}
+
+/* 39.45%; } /* grid_5  */
+/* line 29, ../scss/_grid.scss */
+.sixcol {
+  width: 48.618784527%;
+}
+
+/* 48%;    } /* grid_6  */
+/* line 30, ../scss/_grid.scss */
+.sevencol {
+  width: 57.182320438000005%;
+}
+
+/* 56.75%; } /* grid_7  */
+/* line 31, ../scss/_grid.scss */
+.eightcol {
+  width: 65.74585634900001%;
+}
+
+/* 65.4%;  } /* grid_8  */
+/* line 32, ../scss/_grid.scss */
+.ninecol {
+  width: 74.30939226%;
+}
+
+/* 74.05%; } /* grid_9  */
+/* line 33, ../scss/_grid.scss */
+.tencol {
+  width: 82.87292817100001%;
+}
+
+/* 82.7%;  } /* grid_10 */
+/* line 34, ../scss/_grid.scss */
+.elevencol {
+  width: 91.436464082%;
+}
+
+/* 91.35%; } /* grid_11 */
+/* line 35, ../scss/_grid.scss */
+.twelvecol {
+  width: 99.999999993%;
+}
+
+/* 100%;   } /* grid_12 */
+/* line 38, ../scss/_grid.scss */
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+
+/* line 44, ../scss/_grid.scss */
+.first {
+  margin-left: 0;
+}
+
+/* line 48, ../scss/_grid.scss */
+.last {
+  float: right;
+}
+
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 22, ../scss/_481up.scss */
+.home-navigation {
+  display: block;
+}
+
+/* .menu is clearfixed inside mixins.scss */
+/* line 29, ../scss/_481up.scss */
+.menu {
+  /* end .menu ul */
+}
+/* line 30, ../scss/_481up.scss */
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 31, ../scss/_481up.scss */
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 32, ../scss/_481up.scss */
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* top image */
+/* line 77, ../scss/_481up.scss */
+.article-header, .videoplayer, .top-image {
+  min-height: 400px;
+  float: none;
+}
+
+/* entry content */
+/* line 83, ../scss/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 87, ../scss/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 92, ../scss/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 97, ../scss/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/****************
+***************/
+/* line 108, ../scss/_481up.scss */
+#frontpage-blurbs a {
+  width: 48%;
+  margin-left: 2%;
+  margin-right: 0;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 26, ../scss/_768up.scss */
+.wrap {
+  max-width: 1140px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 34, ../scss/_768up.scss */
+.header {
+  position: fixed;
+}
+
+/* line 38, ../scss/_768up.scss */
+#logo {
+  width: 30%;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 45, ../scss/_768up.scss */
+.allpage {
+  display: block;
+}
+
+/* line 49, ../scss/_768up.scss */
+.mobile-menu {
+  display: none;
+}
+
+/* line 53, ../scss/_768up.scss */
+.right.corner {
+  display: block;
+}
+
+/* line 56, ../scss/_768up.scss */
+.nav {
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 59, ../scss/_768up.scss */
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 63, ../scss/_768up.scss */
+.nav li a {
+  border-bottom: 0;
+}
+/* line 74, ../scss/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+/* line 82, ../scss/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+/* line 84, ../scss/_768up.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 101, ../scss/_768up.scss */
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+/* line 123, ../scss/_768up.scss */
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 143, ../scss/_768up.scss */
+#frontpage-blurbs {
+  margin-top: 2em;
+}
+/* line 145, ../scss/_768up.scss */
+#frontpage-blurbs a {
+  width: 23.5%;
+  margin-left: 2%;
+  margin-right: 0;
+}
+
+/* line 152, ../scss/_768up.scss */
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+/* line 157, ../scss/_768up.scss */
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+/* line 162, ../scss/_768up.scss */
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+/* line 170, ../scss/_768up.scss */
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+POST STYLES
+*********************/
+/* top image */
+/* line 271, ../scss/_768up.scss */
+.article-header, .videoplayer, .top-image {
+  min-height: 500px;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 285, ../scss/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/*********************
+POST STYLES
+*********************/
+/* top image */
+/* line 16, ../scss/_1030up.scss */
+.article-header, .videoplayer, .top-image {
+  min-height: 700px;
+}
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

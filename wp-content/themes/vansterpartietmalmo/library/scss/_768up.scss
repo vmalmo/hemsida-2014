@@ -31,14 +31,28 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+    position: fixed;
+}
 
-	#logo {}
+#logo {
+    width: 30%;
+}
 
 /*********************
 NAVIGATION STYLES
 *********************/
+.allpage {
+    display: block;
+}
 
+.mobile-menu {
+    display: none;
+}
+
+.right.corner {
+    display: block;
+}
 .nav {
 	border: 0;
 
@@ -254,7 +268,7 @@ SIDEBARS & ASIDES
 POST STYLES
 *********************/
 /* top image */
-.hero, .videoplayer, .top-image {
+.article-header, .videoplayer, .top-image {
     min-height: 500px;
 }
 /*********************

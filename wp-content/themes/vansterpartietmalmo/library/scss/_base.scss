@@ -26,6 +26,11 @@ img {
     height: auto;
 }
 
+#container {
+    float: left;
+    width: 100%;
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -175,7 +180,6 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
 	border-bottom: 0;
 
 	li {

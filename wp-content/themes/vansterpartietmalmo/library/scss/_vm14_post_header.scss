@@ -5,4 +5,12 @@
     min-height: 200px;
     float: left;
     width: 100%;
+    position: relative;
+    .article-header-content {
+        width: 100%;
+        position: absolute;
+        margin: 0 auto;
+        bottom: 0;
+    }
 }
+

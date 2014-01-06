@@ -64,6 +64,8 @@ $bones-blue:        #1990db;
 
 $red:               #ED1B24;
 $red-darken:        darken($red, 15%);
+$black:             #000000;
+$black-light:       lighten($black, 15%);
 $link-color:        #000000;
 $link-hover:        darken($link-color, 9%);
 
@@ -250,6 +252,15 @@ BUTTONS
 		@include css-gradient( darken($bones-blue, 5%), $bones-blue );
 	}
 }
-.red-gradient {
+@mixin red-gradient() {
     @include background(linear-gradient(bottom, $red-darken, $red));
+}
+@mixin black-gradient() {
+    @include background(linear-gradient(bottom, $black, $black-light));
+}
+.red-gradient {
+    @include red-gradient();
+}
+.black-gradient {
+    @include black-gradient();
 }

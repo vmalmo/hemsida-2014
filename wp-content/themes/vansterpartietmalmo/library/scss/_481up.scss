@@ -22,9 +22,6 @@ NAVIGATION STYLES
 .home-navigation {
     display: block;
 }
-.mobile-menu {
-    display: none;
-}
 
 .nav {}
 
@@ -71,20 +68,15 @@ NAVIGATION STYLES
 			}  /* end current highlighters */
 		} /* end .menu ul */
 	} /* end .menu */
-.topcorner {
-    display: block;
-}
 
-.article-header, .videoplayer, .top-image {
-    float: none;
-}
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 /* top image */
-.hero, .videoplayer, .top-image {
+.article-header, .videoplayer, .top-image {
     min-height: 400px;
+    float: none;
 }
 
 /* entry content */

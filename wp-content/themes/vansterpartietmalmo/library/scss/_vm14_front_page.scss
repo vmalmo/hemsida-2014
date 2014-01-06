@@ -1,3 +1,31 @@
+/*********************
+* Menu for front page
+**********************/
+.home {
+    #container {
+        padding-top: 0;
+    }
+    .header {
+        position: absolute;
+        background: none;
+        a {
+            color: #000;
+        }
+    }
+    .home-navigation {
+        width: 100%;
+        ul {
+            @include red-gradient();
+            a {
+                color: #FFF;
+            }
+        }
+    }
+}
+
+/*********************
+* Blurbs !
+**********************/
 #frontpage-blurbs {
     margin-top: 1em;
     a {
