@@ -39,27 +39,23 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
+        <header class="header" role="banner">
+            <a id="logo" href="<?php echo home_url(); ?>" rel="nofollow">
+              <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="vänsterpartiet" />
+              <span>
+                <?php bloginfo('name'); ?>
+              </span>
+            </a>
+            <div class="mobile-menu">meny</div>
+            <?php if ( is_front_page() ) { ?>
+                <nav role="navigation" class="home-navigation">
+                    <?php bones_main_nav(); ?>
+                </nav>
+            <?php } else {?>
+                <nav role="navigation" class="allpage">
+                    <?php bones_main_nav(); ?>
+                </nav>
+            <?php } ?>
+            <div class="right corner"><?php bones_top_corner(); ?></div>
+        </header>
 		<div id="container">
-
-            <header class="header" role="banner">
-                <a id="logo" href="<?php echo home_url(); ?>" rel="nofollow">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="vänsterpartiet" />
-                  <span>
-                    <?php bloginfo('name'); ?>
-                  </span>
-                </a>
-                <?php if ( is_front_page() ) { ?>
-                    <div class="topcorner"><?php bones_top_corner(); ?></div>
-                    <div class="mobile-menu">meny</div>
-                    <nav role="navigation" class="home-navigation">
-                        <?php bones_main_nav(); ?>
-                    </nav>
-                <?php } else {?>
-                    <div id="inner-header" class="wrap clearfix">
-                        <nav role="navigation" class="allpage">
-                            <?php bones_main_nav(); ?><div class="right corner"><?php bones_top_corner(); ?></div>
-                        </nav>
-                    </div>
-                <?php } ?>
-			</header>
