@@ -9,7 +9,7 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
-/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -1627,7 +1627,7 @@ FOOTER STYLES
   margin-top: 1em;
 }
 /* line 31, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a {
+#frontpage-blurbs a, #frontpage-blurbs .widget {
   display: block;
   float: left;
   width: 100%;
@@ -1637,11 +1637,11 @@ FOOTER STYLES
   position: relative;
 }
 /* line 39, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a:first-child {
+#frontpage-blurbs a:first-child, #frontpage-blurbs .widget:first-child {
   margin-left: 0;
 }
 /* line 42, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a p {
+#frontpage-blurbs a p, #frontpage-blurbs .widget p {
   margin: 0;
   font-size: 1.6em;
 }
@@ -1742,7 +1742,7 @@ tweeners.
   /****************
   ***************/
   /* line 108, ../scss/_481up.scss */
-  #frontpage-blurbs a {
+  #frontpage-blurbs a, #frontpage-blurbs .widget {
     width: 48%;
     margin-left: 2%;
     margin-right: 0;
@@ -1999,7 +1999,7 @@ you can add resource intensive styles.
     margin-top: 2em;
   }
   /* line 145, ../scss/_768up.scss */
-  #frontpage-blurbs a {
+  #frontpage-blurbs a, #frontpage-blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
     margin-right: 0;

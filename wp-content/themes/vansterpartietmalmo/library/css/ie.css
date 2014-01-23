@@ -475,7 +475,7 @@ POSTS & CONTENT STYLES
 /****************
 ***************/
 /* line 108, ../scss/_481up.scss */
-#frontpage-blurbs a {
+#frontpage-blurbs a, #frontpage-blurbs .widget {
   width: 48%;
   margin-left: 2%;
   margin-right: 0;
@@ -613,7 +613,7 @@ SIDEBARS & ASIDES
   margin-top: 2em;
 }
 /* line 145, ../scss/_768up.scss */
-#frontpage-blurbs a {
+#frontpage-blurbs a, #frontpage-blurbs .widget {
   width: 23.5%;
   margin-left: 2%;
   margin-right: 0;

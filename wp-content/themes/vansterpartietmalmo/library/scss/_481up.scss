@@ -105,7 +105,7 @@ POSTS & CONTENT STYLES
 /****************
 ***************/
 #frontpage-blurbs {
-    a {
+    a, .widget {
         width:  $two_col_grid_width;
         margin-left: $four_col_grid_margin;
         margin-right: 0;
