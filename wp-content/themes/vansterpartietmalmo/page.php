@@ -1,11 +1,11 @@
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <?php $post = vm14_get_post($post->ID); ?>
-        <header class="article-header clearfix responsive-image" data-image-large="<?php echo $post->image_url('large') ?>"  style="background-image: url('<?php echo $post->image_url('medium') ?>');">
+        <?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
+        <?php $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
+        <header class="article-header clearfix responsive-image" data-image-large="<?php echo $image[0]; ?>"  style="background-image: url('<?php echo $medium_image[0]; ?>');">
             <div class="article-header-content">
                 <div class="wrap">
-                    <h1 class="page-title"><?php echo $post->title; ?></h1>
-                    <?php echo $post->summary; ?>
+                    <h1 class="page-title"><?php the_title(); ?></h1>
                 </div>
             </div>
         </header>
