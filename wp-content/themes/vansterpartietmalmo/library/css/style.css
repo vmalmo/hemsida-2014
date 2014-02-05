@@ -9,7 +9,7 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
-/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -1573,12 +1573,13 @@ FOOTER STYLES
 .article-header, .videoplayer, .top-image {
   background: none no-repeat scroll 0 0 #ED1B24;
   background-size: cover;
+  background-position: center center;
   min-height: 200px;
   float: left;
   width: 100%;
   position: relative;
 }
-/* line 9, ../scss/_vm14_post_header.scss */
+/* line 10, ../scss/_vm14_post_header.scss */
 .article-header .article-header-content, .videoplayer .article-header-content, .top-image .article-header-content {
   width: 100%;
   position: absolute;
@@ -2095,7 +2096,7 @@ you can add resource intensive styles.
   /* top image */
   /* line 16, ../scss/_1030up.scss */
   .article-header, .videoplayer, .top-image {
-    min-height: 700px;
+    min-height: 400px;
   }
 }
 /*
