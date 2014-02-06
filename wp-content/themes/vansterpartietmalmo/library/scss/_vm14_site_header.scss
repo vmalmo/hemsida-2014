@@ -77,8 +77,30 @@
     position: absolute;
     top: 1em;
     right: 1em;
-    //TODO: add icon
+
+    // ICON
+    padding: 0 0.5em;
+    border-radius: 5px;
+    @include red-gradient();
+    @include box-shadow(0px 1px 2px rgba(0, 0, 0, 0.4));
+
+    overflow: hidden;
+    width: 2em;
+    height: 1.8em;
+    text-indent: -9999px;
+
+    &:before {
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        content: "X";
+        width: 1em;
+        height: 1em;
+        background: transparent url('../images/menu-icon.png') no-repeat;
+        background-size: contain;
+    }
 }
+
 .mobile-home-nav {
     background: #FFF;
     display: none;
