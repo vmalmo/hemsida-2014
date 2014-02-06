@@ -140,6 +140,14 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
+.home-navigation .top-nav li a {
+    padding: 10px 30px;
+
+    &:hover {
+        color: black;
+    }
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
