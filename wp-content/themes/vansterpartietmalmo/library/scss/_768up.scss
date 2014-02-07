@@ -152,8 +152,22 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
 
+#home-intro {
+    max-width: 50%;
+    position: relative;
+    top: -100px;
+}
+
+#home-news-marquee {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 1em;
+}
+
 #frontpage-blurbs {
-    margin-top: 2em;
+    margin-top: -80px;
+
     a, .widget {
         width:  $four_col_grid_width;
         margin-left: $four_col_grid_margin;
