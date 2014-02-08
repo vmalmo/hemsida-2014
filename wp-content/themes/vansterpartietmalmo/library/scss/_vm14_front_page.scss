@@ -26,6 +26,22 @@
     {
         position: relative;
     }
+
+    #play-link {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        overflow: hidden;
+        background-image: url('../images/play-icon.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: -50px;
+        margin-top: -30px;
+        width: 100px;
+        height: 100px;
+        text-indent: -999px;
+    }
 }
 
 #home-intro {

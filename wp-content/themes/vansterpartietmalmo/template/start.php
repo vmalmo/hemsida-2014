@@ -8,7 +8,9 @@ Template Name: Start
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'original' ); ?>
         <?php $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
-        <div class="videoplayer responsive-image" data-height-ratio="0.75" data-image-large="<?php echo $large_image[0] ?>"  style="background-image: url('<?php echo $medium_image[0] ?>');"> </div>
+        <div class="videoplayer responsive-image" data-height-ratio="0.75" data-image-large="<?php echo $large_image[0] ?>"  style="background-image: url('<?php echo $medium_image[0] ?>');">
+            <a id="play-link" href="#">play</a>
+        </div>
         <div id="content">
             <div id="inner-content" class="wrap clearfix">
                 <div id="home-intro">
