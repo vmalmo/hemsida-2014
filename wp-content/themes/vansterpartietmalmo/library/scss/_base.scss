@@ -246,13 +246,12 @@ and more scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
-
-.topcorner ul {
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+#menu-top-corner {
+  li a{
+    padding: 14px 8px;
+  }
 }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
