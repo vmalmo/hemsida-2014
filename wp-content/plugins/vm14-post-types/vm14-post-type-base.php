@@ -149,23 +149,27 @@ abstract class VM14_Post_Type {
       return $src[0];
     }
 
-    function preview_html() {
+    function get_excerpt($len) {
         $excerpt = $this->excerpt;
         if (strlen($excerpt)==0) {
             $excerpt = $this->summary;
         }
         if (strlen($excerpt)==0) {
-            $text = strip_tags($this->content);
-            if (strlen($text)<300) {
-                $excerpt = $text;
-            }
-            else {
-                $last_ws = strrpos(substr($text, 0, 300), ' ');
-                error_log($last_ws);
-                $excerpt = substr($text, 0, $last_ws);
-                $excerpt .= '...';
-            }
+            $excerpt = strip_tags($this->content);
         }
+
+        if (strlen($excerpt)>$len) {
+            $last_ws = strrpos(substr($text, 0, $len), ' ');
+            error_log($last_ws);
+            $excerpt = substr($text, 0, $last_ws);
+            $excerpt .= '...';
+        }
+
+        return $excerpt;
+    }
+
+    function preview_html() {
+        $excerpt = $this->get_excerpt(300);
 
 	    $html  = sprintf('<a href="%s">', get_permalink($this->id));
 	    $html .= sprintf('<h4>%s</h4>', $this->title);
