@@ -74,6 +74,12 @@ POSTS & CONTENT STYLES
     max-height: 400px;
     float: none;
 }
+
+.article-header, .videoplayer, .top-image {
+  .article-header-content {
+    position: absolute;
+  }
+}
 /* section entrance */
 #section-entrance-content-widgets .widget{
   padding: 0;

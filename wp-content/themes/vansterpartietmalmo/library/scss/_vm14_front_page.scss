@@ -86,13 +86,11 @@
     margin-top: 1em;
     float: left;
     overflow: hidden;
-    a, .widget{
+    > a, .widget{
         display: block;
         float: left;
         width: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-bottom: 1em;
+        margin: 0 0% 1em 0;
         position: relative;
         &:first-child {
             margin-left: 0;
