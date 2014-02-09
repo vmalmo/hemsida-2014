@@ -5,8 +5,8 @@ Template Name: Section
 ?>
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php echo vm14_post_header(); ?>
         <?php $post = vm14_get_post($post->ID); ?>
-        <header class="article-header clearfix responsive-image" data-image-large="<?php echo $post->image_url('large') ?>"  style="background-image: url('<?php echo $post->image_url('medium') ?>');">
             <div class="article-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php echo $post->title; ?></h1>

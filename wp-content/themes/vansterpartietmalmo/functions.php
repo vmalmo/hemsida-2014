@@ -210,4 +210,20 @@ function vm14_customize_register($wpc) {
 }
 add_action('customize_register', 'vm14_customize_register');
 
+function vm14_post_header(){
+  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); 
+  $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
+  $classes = array('article-header', 'clearfix');
+  $end_header = '';
+  if ($large_image) {
+    array_push($classes, 'responsive-image');
+    $end_header = sprintf('data-image-large="%s"  style="background-image: url(%s);"',
+        $large_image[0],
+        $medium_image[0]);
+  }
+  printf('<header class="%s" %s>',
+    implode($classes, ' '),
+    $end_header);
+}
+
 ?>

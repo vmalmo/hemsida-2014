@@ -1619,9 +1619,19 @@ FOOTER STYLES
 }
 /* line 10, ../scss/_vm14_post_header.scss */
 .article-header .article-header-content, .videoplayer .article-header-content, .top-image .article-header-content {
+  color: #FFF;
   width: 100%;
   margin: 0 auto;
   bottom: 0;
+}
+
+/* line 19, ../scss/_vm14_post_header.scss */
+.responsive-image .article-header-content {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 /*********************

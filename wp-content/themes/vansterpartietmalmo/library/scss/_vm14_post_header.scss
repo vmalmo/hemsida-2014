@@ -8,9 +8,15 @@
     width: 100%;
     position: relative;
     .article-header-content {
+        color: #FFF;
         width: 100%;
         margin: 0 auto;
         bottom: 0;
     }
 }
 
+.responsive-image {
+  .article-header-content {
+    @include background-image(linear-gradient(bottom, rgba(black, 0.8), rgba(0, 0, 0, 0)));
+  }
+}
