@@ -1750,6 +1750,10 @@ FOOTER STYLES
   margin-left: 0;
 }
 /* line 100, ../scss/_vm14_front_page.scss */
+#blurbs a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
+  margin-left: 0;
+}
+/* line 103, ../scss/_vm14_front_page.scss */
 #blurbs a p, #blurbs .widget p {
   margin: 0;
   font-size: 1.6em;
@@ -1853,7 +1857,7 @@ tweeners.
   ***************/
   /* line 108, ../scss/_481up.scss */
   #blurbs a, #blurbs .widget {
-    width: 48%;
+    width: 49%;
     margin-left: 2%;
     margin-right: 0;
   }
@@ -2135,7 +2139,12 @@ you can add resource intensive styles.
     top: -100px;
   }
 
-  /* line 168, ../scss/_768up.scss */
+  /* line 167, ../scss/_768up.scss */
+  .home #blurbs {
+    margin-top: -80px;
+  }
+
+  /* line 171, ../scss/_768up.scss */
   #home-news-marquee {
     position: absolute;
     left: 50%;
@@ -2143,30 +2152,38 @@ you can add resource intensive styles.
     margin: 1em;
   }
 
-  /* line 176, ../scss/_768up.scss */
+  /* line 179, ../scss/_768up.scss */
   #blurbs a, #blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
     margin-right: 0;
   }
-
   /* line 183, ../scss/_768up.scss */
+  #blurbs a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
+    margin-left: 2%;
+  }
+  /* line 186, ../scss/_768up.scss */
+  #blurbs a:first-child, #blurbs .widget:first-child {
+    margin-left: 0;
+  }
+
+  /* line 194, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 188, ../scss/_768up.scss */
+  /* line 199, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 193, ../scss/_768up.scss */
+  /* line 204, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 201, ../scss/_768up.scss */
+  /* line 212, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2187,17 +2204,17 @@ you can add resource intensive styles.
   POST STYLES
   *********************/
   /* top image */
-  /* line 302, ../scss/_768up.scss */
+  /* line 313, ../scss/_768up.scss */
   .article-header, .videoplayer, .top-image {
     min-height: 500px;
     max-height: 99999px;
   }
 
-  /* line 309, ../scss/_768up.scss */
+  /* line 320, ../scss/_768up.scss */
   .home #inner-content {
     position: relative;
   }
-  /* line 313, ../scss/_768up.scss */
+  /* line 324, ../scss/_768up.scss */
   .home .play-btn {
     width: 150px;
     height: 150px;
@@ -2212,7 +2229,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 331, ../scss/_768up.scss */
+  /* line 342, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.

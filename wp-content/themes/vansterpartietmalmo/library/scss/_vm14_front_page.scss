@@ -97,6 +97,9 @@
         &:first-child {
             margin-left: 0;
         }
+        &:nth-child(2n+1) {
+            margin-left: 0;
+        }
         p {
             margin: 0;
             font-size: 1.6em;
