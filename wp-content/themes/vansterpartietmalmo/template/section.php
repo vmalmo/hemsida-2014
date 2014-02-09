@@ -29,22 +29,7 @@ Template Name: Section
 
     <?php endif; ?>
     <div class="content">
-        <div class="first twelvecol undermenu">
-                <ul>
-                <?php 
-                    $root_id = get_queried_object_id();
-                    $ancestors = get_post_ancestors($post->id);
-                    if (count($ancestors) > 0)
-                        $root_id = $ancestors[count($ancestors)-1];
-
-                    wp_list_pages(array(
-                        'child_of' =>$root_id,
-                        'title_li' => __(''),
-                        'depth' => 1
-                    ));
-                ?>
-                </ul>
-        </div>
+        <?php echo vm14_sub_menu($post->id);?>
         <div id="inner-content" class="wrap clearfix">
                 <?php get_sidebar(); ?>
             <?php echo vm14_breadcrumbs($post->id);?>
