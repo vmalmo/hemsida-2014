@@ -1,4 +1,5 @@
 			<footer class="footer" role="contentinfo">
+        <a name="footer"></a>
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="fourcol first" >
 						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />

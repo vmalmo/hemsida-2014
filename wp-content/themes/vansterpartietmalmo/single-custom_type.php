@@ -70,6 +70,11 @@ single-bookmarks.php
 						</div>
 
 						<?php get_sidebar(); ?>
+            <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
+                <ul id="blurbs">
+                    <?php dynamic_sidebar( 'blurbs' ); ?>
+                </ul>
+            <?php endif; ?>
 
 				</div>
 

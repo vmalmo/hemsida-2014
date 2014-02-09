@@ -12,6 +12,12 @@
             color: #000;
         }
     }
+    #menu-top-corner {
+        display: block;
+    }
+    .top-more {
+        display: none;
+    }
     .home-navigation {
         width: 100%;
         ul {
@@ -75,8 +81,11 @@
 /*********************
 * Blurbs !
 **********************/
-#frontpage-blurbs {
+#blurbs {
+    width: 100%;
     margin-top: 1em;
+    float: left;
+    overflow: hidden;
     a, .widget{
         display: block;
         float: left;

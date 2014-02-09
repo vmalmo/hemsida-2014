@@ -65,6 +65,9 @@
                     <?php bones_main_nav(); ?>
                 </nav>
             <?php } ?>
-            <div class="right corner"><?php bones_top_corner(); ?></div>
+            <div class="right corner">
+                <?php bones_top_corner(); ?>
+                <a class="top-more" href="#footer"><?php _e('More') ?></a>
+            </div>
         </header>
 		<div id="container">
