@@ -17,7 +17,21 @@ Template Name: Start
                     <?php the_content();?>
                 </div>
                 <div id="home-news-marquee">
-                    Här rullar senaste nyheter.
+                    <h2>SENASTE NYTT:</h2>
+                    <ul class="cycling-marquee">
+                    <?php
+                        $news = vm14_get_posts(array(
+                            'post_type' => 'post'
+                        ));
+                    ?>
+                    <?php foreach ($news as $item): ?>
+                        <li>
+                            <a href="<?php echo get_permalink($item->id);?>">
+                                <span class="date"><?php echo $item->date('M\<\b\r\>j');?></span>
+                                <?php echo $item->title;?>
+                                <small><?php echo $item->get_excerpt(50);?></small></a></li>
+                    <?php endforeach;?>
+                    </ul>
                 </div>
                 <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
                     <div id="blurbs">

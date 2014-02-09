@@ -15,7 +15,30 @@
         bindMenuEvents();
 
         initHomeVideo();
+        initMarquees();
     }
+
+    var initMarquees = function() {
+        $('.cycling-marquee').each(function() {
+            var marquee = $(this),
+                cur_idx = 0,
+                children;
+
+            children = marquee.children();
+            children.hide();
+
+            children.eq(0).fadeIn();
+
+            setInterval(function() {
+                children.eq(cur_idx).fadeOut(400);
+                cur_idx++;
+                if (cur_idx >= children.length)
+                    cur_idx = 0;
+
+                children.eq(cur_idx).delay(400).fadeIn();
+            }, 5000);
+        });
+    };
 
     var initHomeVideo = function() {
         if (document.getElementById('home-video')) {
