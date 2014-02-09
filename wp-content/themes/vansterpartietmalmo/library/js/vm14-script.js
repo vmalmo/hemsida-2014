@@ -92,11 +92,19 @@
                 var showVideo = function() {
                     $(iframe).fadeIn();
                     $(playBtn).hide();
+                    $('#menu-header').fadeOut();
+                    $('#home-intro').animate({
+                        'opacity': 0
+                    }, 400);
                 };
 
                 var hideVideo = function() {
                     $(iframe).fadeOut();
                     $(playBtn).show();
+                    $('#menu-header').fadeIn();
+                    $('#home-intro').animate({
+                        'opacity': 100
+                    }, 400);
                 };
 
                 $(playBtn).click(function() {
