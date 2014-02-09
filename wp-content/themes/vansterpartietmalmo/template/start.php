@@ -20,9 +20,9 @@ Template Name: Start
                     Här rullar senaste nyheter.
                 </div>
                 <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
-                    <ul id="blurbs">
+                    <div id="blurbs">
                         <?php dynamic_sidebar( 'blurbs' ); ?>
-                    </ul>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

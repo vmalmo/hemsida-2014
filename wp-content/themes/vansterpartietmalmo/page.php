@@ -36,9 +36,9 @@
     <?php endif; ?>
     <?php get_sidebar(); ?>
     <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
-        <ul id="blurbs">
+        <div id="blurbs">
             <?php dynamic_sidebar( 'blurbs' ); ?>
-        </ul>
+        </div>
     <?php endif; ?>
 </div><?php // ending  inner-content .wrap clearfix ?>
 <?php get_footer(); ?>
