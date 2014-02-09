@@ -27,10 +27,15 @@
         position: relative;
     }
 
-    #play-link {
+    #home-video iframe {
+        display: none;
+    }
+
+    .play-btn {
         position: absolute;
         left: 50%;
         top: 50%;
+        cursor: pointer;
         display: block;
         overflow: hidden;
         background-image: url('../images/play-icon.png');
