@@ -19,9 +19,9 @@ Template Name: Start
                 <div id="home-news-marquee">
                     Här rullar senaste nyheter.
                 </div>
-                <?php if ( is_active_sidebar( 'frontpage_blurbs' ) ) : ?>
-                    <ul id="frontpage-blurbs">
-                        <?php dynamic_sidebar( 'frontpage_blurbs' ); ?>
+                <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
+                    <ul id="blurbs">
+                        <?php dynamic_sidebar( 'blurbs' ); ?>
                     </ul>
                 <?php endif; ?>
             </div>

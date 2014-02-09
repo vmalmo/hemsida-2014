@@ -9,7 +9,7 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
-/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -1552,7 +1552,6 @@ FOOTER STYLES
   position: absolute;
   top: 1em;
   right: 1em;
-  text-align: center;
   padding: 0 0.5em;
   border-radius: 5px;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
@@ -1651,16 +1650,75 @@ FOOTER STYLES
 .home .home-navigation ul a {
   color: #FFF;
 }
+/* line 25, ../scss/_vm14_front_page.scss */
+.home #home-video {
+  overflow: hidden;
+}
+/* line 29, ../scss/_vm14_front_page.scss */
+.home #home-video iframe {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+/* line 36, ../scss/_vm14_front_page.scss */
+.home .play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  background-image: url("../images/play-icon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -50px;
+  margin-top: -30px;
+  width: 100px;
+  height: 100px;
+  text-indent: -999px;
+}
+
+/* line 54, ../scss/_vm14_front_page.scss */
+#home-intro {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
+  background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -moz-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: linear-gradient(bottom, #ae0e15, #ed1b24);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 20px 0;
+}
+/* line 61, ../scss/_vm14_front_page.scss */
+#home-intro h1 {
+  font-size: 36px;
+  margin: 0 0 0.5em;
+}
+/* line 66, ../scss/_vm14_front_page.scss */
+#home-intro * {
+  color: white;
+}
+
+/* line 71, ../scss/_vm14_front_page.scss */
+#home-news-marquee {
+  margin: 20px 0;
+}
 
 /*********************
 * Blurbs !
 **********************/
-/* line 29, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs {
+/* line 78, ../scss/_vm14_front_page.scss */
+#blurbs {
+  width: 100%;
   margin-top: 1em;
+  float: left;
+  overflow: hidden;
 }
-/* line 31, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a, #frontpage-blurbs .widget {
+/* line 83, ../scss/_vm14_front_page.scss */
+#blurbs a, #blurbs .widget {
   display: block;
   float: left;
   width: 100%;
@@ -1669,12 +1727,12 @@ FOOTER STYLES
   margin-bottom: 1em;
   position: relative;
 }
-/* line 39, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a:first-child, #frontpage-blurbs .widget:first-child {
+/* line 91, ../scss/_vm14_front_page.scss */
+#blurbs a:first-child, #blurbs .widget:first-child {
   margin-left: 0;
 }
-/* line 42, ../scss/_vm14_front_page.scss */
-#frontpage-blurbs a p, #frontpage-blurbs .widget p {
+/* line 94, ../scss/_vm14_front_page.scss */
+#blurbs a p, #blurbs .widget p {
   margin: 0;
   font-size: 1.6em;
 }
@@ -1776,7 +1834,7 @@ tweeners.
   /****************
   ***************/
   /* line 108, ../scss/_481up.scss */
-  #frontpage-blurbs a, #frontpage-blurbs .widget {
+  #blurbs a, #blurbs .widget {
     width: 48%;
     margin-left: 2%;
     margin-right: 0;
@@ -2043,33 +2101,44 @@ you can add resource intensive styles.
   SIDEBARS & ASIDES
   *********************/
   /* line 155, ../scss/_768up.scss */
-  #frontpage-blurbs {
-    margin-top: 2em;
+  #home-intro {
+    max-width: 50%;
+    position: relative;
+    top: -100px;
   }
-  /* line 157, ../scss/_768up.scss */
-  #frontpage-blurbs a, #frontpage-blurbs .widget {
+
+  /* line 161, ../scss/_768up.scss */
+  #home-news-marquee {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 1em;
+  }
+
+  /* line 169, ../scss/_768up.scss */
+  #blurbs a, #blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
     margin-right: 0;
   }
 
-  /* line 164, ../scss/_768up.scss */
+  /* line 176, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 169, ../scss/_768up.scss */
+  /* line 181, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 174, ../scss/_768up.scss */
+  /* line 186, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 182, ../scss/_768up.scss */
+  /* line 194, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2090,10 +2159,21 @@ you can add resource intensive styles.
   POST STYLES
   *********************/
   /* top image */
-  /* line 283, ../scss/_768up.scss */
+  /* line 295, ../scss/_768up.scss */
   .article-header, .videoplayer, .top-image {
     min-height: 500px;
     max-height: 99999px;
+  }
+
+  /* line 302, ../scss/_768up.scss */
+  .home #inner-content {
+    position: relative;
+  }
+  /* line 306, ../scss/_768up.scss */
+  .home .play-btn {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
   }
 
   /*********************
@@ -2104,7 +2184,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 298, ../scss/_768up.scss */
+  /* line 324, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.

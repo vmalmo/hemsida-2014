@@ -78,8 +78,8 @@ function bones_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'frontpage_blurbs',
-		'name' => __( 'Frontpage blurb area', 'bonestheme' ),
+		'id' => 'blurbs',
+		'name' => __( 'Blurb area', 'bonestheme' ),
 		'description' => __( 'Place add and arrange your blurb widgets.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
