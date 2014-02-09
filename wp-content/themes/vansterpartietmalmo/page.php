@@ -28,6 +28,7 @@
                 </ul>
         </div>
         <div id="inner-content" class="wrap clearfix">
+            <?php vm14_breadcrumbs($p->id); ?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">

@@ -110,6 +110,18 @@ a, a:visited {
 	}
 }
 
+.breadcrumbs {
+    a {
+        font-size: 10pt;
+        font-weight: bold;
+    } 
+
+    .breadcrumbs-delimiter {
+        margin: 0 4px;
+        color: #ccc;
+    }
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/

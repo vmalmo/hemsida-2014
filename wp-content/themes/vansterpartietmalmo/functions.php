@@ -151,6 +151,26 @@ function bones_wpsearch($form) {
 } // don't remove this bracket!
 
 
+function vm14_breadcrumbs($id) {
+    $ancestors = get_post_ancestors($id);
+    array_unshift($ancestors, $id);
+
+    $links = array();
+    array_push($links, sprintf('<a href="/"><img src="%s/library/images/home-icon.png" alt="Home"></a>',
+        get_template_directory_uri()));
+
+    for ($i=sizeof($ancestors)-1; $i>=0; $i--) {
+        array_push($links, sprintf('<a href="%s">%s</a>',
+            get_permalink($ancestors[$i]),
+            get_the_title($ancestors[$i])));
+    }
+
+    echo '<div class="breadcrumbs">';
+    echo implode('<span class="breadcrumbs-delimiter">»</span>', $links);
+    echo '</div>';
+}
+
+
 function vm14_customize_register($wpc) {
     $wpc->add_section('vm14_section_footer', array(
         'title' => __( 'Footer content', 'vm14' ),

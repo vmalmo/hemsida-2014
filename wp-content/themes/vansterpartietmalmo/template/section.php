@@ -47,6 +47,7 @@ Template Name: Section
         </div>
         <div id="inner-content" class="wrap clearfix">
                 <?php get_sidebar(); ?>
+            <?php echo vm14_breadcrumbs($post->id);?>
          </div>
     </div>
 
