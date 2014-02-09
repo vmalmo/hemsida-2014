@@ -300,6 +300,11 @@ POST STYLES
 }
 
 .home {
+    #inner-content
+    {
+        position: relative;
+    }
+
     .play-btn {
         width: 150px;
         height: 150px;

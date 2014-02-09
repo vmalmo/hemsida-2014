@@ -66,6 +66,29 @@
 
                 iframe = document.getElementById('home-video-player');
 
+                var updateSize = function() {
+                    var w, h;
+
+                    w = $(iframe).parent().width() + 16;
+                    h = $(iframe).parent().height() + 9;
+
+                    if (w/16 > h/9) {
+                        h = Math.ceil(w/16*9);
+                    }
+                    else if (w/16 < h/9) {
+                        w = Math.ceil(h/9*16);
+                    }
+
+                    player.setSize(w, h);
+                    $(iframe).css({
+                        'margin-left': -Math.ceil(w/2)+'px',
+                        'margin-top': -Math.ceil(h/2)+'px'
+                    });
+                };
+
+                updateSize();
+                $(window).resize(updateSize);
+
                 var showVideo = function() {
                     $(iframe).fadeIn();
                     $(playBtn).hide();

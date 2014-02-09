@@ -22,13 +22,15 @@
         }
     }
 
-    #inner-content
-    {
-        position: relative;
+    #home-video {
+        overflow: hidden;
     }
 
     #home-video iframe {
         display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
     }
 
     .play-btn {
