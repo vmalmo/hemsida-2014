@@ -32,7 +32,7 @@
             document.getElementById('home-video').appendChild(ctr);
 
             window.onYouTubeIframeAPIReady = function() {
-                var player, iframe, onStateChange, playBtn;
+                var player, iframe, onStateChange, playBtn, hasPlayed;
 
                 playBtn = document.createElement('a');
                 $(playBtn).addClass('play-btn');
@@ -102,15 +102,24 @@
                     $(iframe).fadeOut();
                     $(playBtn).show();
                     $('#menu-header').fadeIn();
-                    $('#home-intro').animate({
+                    $('#home-intro').stop(true).animate({
                         'opacity': 100
                     }, 400);
                 };
 
                 $(playBtn).click(function() {
+                    if (!hasPlayed && $(iframe).parent().height() > 480) {
+                        player.setPlaybackQuality('large');
+                    }
+
                     $(playBtn).fadeOut();
                     player.seekTo(0);
                     player.playVideo();
+                    $('#home-intro').delay(300).stop(true).animate({
+                        'opacity': 0
+                    }, 400);
+
+                    hasPlayed = true;
                 });
             };
         }
