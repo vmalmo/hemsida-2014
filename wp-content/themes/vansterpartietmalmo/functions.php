@@ -211,7 +211,7 @@ function vm14_customize_register($wpc) {
 add_action('customize_register', 'vm14_customize_register');
 
 function vm14_post_header(){
-  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); 
+  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'orginal' ); 
   $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
   $classes = array('article-header', 'clearfix');
   $end_header = '';
