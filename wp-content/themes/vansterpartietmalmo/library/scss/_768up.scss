@@ -322,24 +322,25 @@ POST STYLES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
+.footer {
+    nav {
+       @include columns(2);
+    }
+
 	ul {
 		li {
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid-column;
+            -ms-column-break-inside: avoid;
+            -o-column-break-inside: avoid;
+            column-break-inside: avoid;
+
+            float: none;
+
 			a {
 				&:hover {}
 			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
 		}
 	}
-} /* end .footer-links */
+}
 

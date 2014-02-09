@@ -187,6 +187,15 @@ really slow down your CSS. Don't overdo it.
 	background-image: linear-gradient(to bottom, $from, $to);
 }
 
+
+@mixin columns($count: 2) {
+    -webkit-column-count: $count;
+    -moz-column-count: $count;
+    -ms-column-count: $count;
+    -o-column-count: $count;
+    column-count: $count;
+}
+
 /*********************
 BOX SIZING
 *********************/

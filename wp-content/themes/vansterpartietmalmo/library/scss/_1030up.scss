@@ -16,3 +16,11 @@ POST STYLES
 .article-header, .videoplayer, .top-image {
     min-height: 400px;
 }
+
+
+.footer {
+    nav {
+        @include columns(3);
+    }
+
+}
