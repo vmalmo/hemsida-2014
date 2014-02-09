@@ -151,4 +151,26 @@ function bones_wpsearch($form) {
 } // don't remove this bracket!
 
 
+function vm14_customize_register($wpc) {
+    $wpc->add_section('vm14_section_footer', array(
+        'title' => __( 'Footer content', 'vm14' ),
+        'priority' => 30,
+    ));
+
+    $wpc->add_setting('vm14_footer_fb_id');
+    $wpc->add_control(new WP_Customize_Control($wpc, 'facebook_id', array(
+        'label' => __('Facebook Page ID', 'vm14'),
+        'section' => 'vm14_section_footer',
+        'settings' => 'vm14_footer_fb_id'
+    )));
+
+    $wpc->add_setting('vm14_footer_twitter_name');
+    $wpc->add_control(new WP_Customize_Control($wpc, 'twitter_name', array(
+        'label' => __('Twitter Name', 'vm14'),
+        'section' => 'vm14_section_footer',
+        'settings' => 'vm14_footer_twitter_name'
+    )));
+}
+add_action('customize_register', 'vm14_customize_register');
+
 ?>

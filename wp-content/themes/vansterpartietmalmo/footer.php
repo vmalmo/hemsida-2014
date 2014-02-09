@@ -2,8 +2,17 @@
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="fourcol first" >
 						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
-						Like /tweet <br />
-						Kontakta....
+
+                        <?php if (get_theme_mod('vm14_footer_twitter_name')):?>
+                        <a href="https://twitter.com/<?php echo get_theme_mod('vm14_footer_twitter_name');?>" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @<?php echo get_theme_mod('vm14_footer_twitter_name');?></a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <?php endif; ?>
+
+                        <?php if (get_theme_mod('vm14_footer_fb_id')):?>
+                        <div class="fb-like" data-href="http://facebook.com/<?php echo get_theme_mod('vm14_footer_fb_id');?>" data-width="240" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                        <?php endif;?>
+
+                        <?php echo get_theme_mod('vm14_footer_contact'); ?>
 					</div>
 					<nav role="navigation" class="eightcol last">
 							<?php bones_footer_links(); ?>
