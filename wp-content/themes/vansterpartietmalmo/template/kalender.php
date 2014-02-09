@@ -125,5 +125,10 @@ Template Name: Kalender
                 <span>Sjukvård</span>
             </div>
         </div>
+        <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
+            <ul id="blurbs">
+                <?php dynamic_sidebar( 'blurbs' ); ?>
+            </ul>
+        <?php endif; ?>
     </div><?php // ending  inner-content .wrap clearfix ?>
 <?php get_footer(); ?>
