@@ -180,6 +180,10 @@ abstract class VM14_Post_Type {
         return $html;
     }
 
+    function date($format) {
+        return get_the_time($format, $this->id);
+    }
+
     static function register() {
         $class = get_called_class();
         $signature = get_class_vars($class);
