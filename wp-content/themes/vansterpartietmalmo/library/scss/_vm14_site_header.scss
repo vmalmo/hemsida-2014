@@ -35,7 +35,6 @@
     width: 68%;
     margin: 0.5em 0;
 }
-
 .right.corner {
     display: none;
     float: right;
@@ -44,6 +43,12 @@
     top: 0;
     font-size: 0.8em;
     line-height: 3em;
+}
+.top-more {
+  padding: 1em 2em;
+}
+#menu-top-corner {
+  display: none;
 }
 .right.corner ul {
     margin: 0;

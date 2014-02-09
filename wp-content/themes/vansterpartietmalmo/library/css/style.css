@@ -1498,7 +1498,7 @@ FOOTER STYLES
   margin: 0.5em 0;
 }
 
-/* line 39, ../scss/_vm14_site_header.scss */
+/* line 38, ../scss/_vm14_site_header.scss */
 .right.corner {
   display: none;
   float: right;
@@ -1509,12 +1509,22 @@ FOOTER STYLES
   line-height: 3em;
 }
 
-/* line 48, ../scss/_vm14_site_header.scss */
+/* line 47, ../scss/_vm14_site_header.scss */
+.top-more {
+  padding: 1em 2em;
+}
+
+/* line 50, ../scss/_vm14_site_header.scss */
+#menu-top-corner {
+  display: none;
+}
+
+/* line 53, ../scss/_vm14_site_header.scss */
 .right.corner ul {
   margin: 0;
 }
 
-/* line 51, ../scss/_vm14_site_header.scss */
+/* line 56, ../scss/_vm14_site_header.scss */
 .home-navigation {
   display: none;
   float: left;
@@ -1522,7 +1532,7 @@ FOOTER STYLES
   text-align: center;
 }
 
-/* line 57, ../scss/_vm14_site_header.scss */
+/* line 62, ../scss/_vm14_site_header.scss */
 .home-navigation ul {
   text-align: center;
   padding: 0 0.5em;
@@ -1533,13 +1543,13 @@ FOOTER STYLES
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* line 64, ../scss/_vm14_site_header.scss */
+/* line 69, ../scss/_vm14_site_header.scss */
 .home-navigation .nav li {
   display: inline-block;
   float: none;
   border-left: solid 1px rgba(0, 0, 0, 0.1);
 }
-/* line 68, ../scss/_vm14_site_header.scss */
+/* line 73, ../scss/_vm14_site_header.scss */
 .home-navigation .nav li:first-child {
   border: none;
 }
@@ -1547,7 +1557,7 @@ FOOTER STYLES
 /*************
 * Mobile menu
 *************/
-/* line 76, ../scss/_vm14_site_header.scss */
+/* line 81, ../scss/_vm14_site_header.scss */
 .mobile-menu {
   position: absolute;
   top: 1em;
@@ -1567,7 +1577,7 @@ FOOTER STYLES
   height: 1.8em;
   text-indent: -9999px;
 }
-/* line 92, ../scss/_vm14_site_header.scss */
+/* line 97, ../scss/_vm14_site_header.scss */
 .mobile-menu:before {
   position: absolute;
   top: 0.5em;
@@ -1579,7 +1589,7 @@ FOOTER STYLES
   background-size: contain;
 }
 
-/* line 104, ../scss/_vm14_site_header.scss */
+/* line 109, ../scss/_vm14_site_header.scss */
 .mobile-home-nav {
   background: #FFF;
   display: none;
@@ -1587,12 +1597,12 @@ FOOTER STYLES
   width: 100%;
   overflow: hidden;
 }
-/* line 110, ../scss/_vm14_site_header.scss */
+/* line 115, ../scss/_vm14_site_header.scss */
 .mobile-home-nav li {
   border-bottom: solid 1px #DDD;
   text-align: center;
 }
-/* line 114, ../scss/_vm14_site_header.scss */
+/* line 119, ../scss/_vm14_site_header.scss */
 .mobile-home-nav .right.corner {
   float: right;
   position: static;
@@ -1635,10 +1645,18 @@ FOOTER STYLES
   color: #000;
 }
 /* line 15, ../scss/_vm14_front_page.scss */
+.home #menu-top-corner {
+  display: block;
+}
+/* line 18, ../scss/_vm14_front_page.scss */
+.home .top-more {
+  display: none;
+}
+/* line 21, ../scss/_vm14_front_page.scss */
 .home .home-navigation {
   width: 100%;
 }
-/* line 17, ../scss/_vm14_front_page.scss */
+/* line 23, ../scss/_vm14_front_page.scss */
 .home .home-navigation ul {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
   background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
@@ -1646,22 +1664,22 @@ FOOTER STYLES
   background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
   background: linear-gradient(bottom, #ae0e15, #ed1b24);
 }
-/* line 19, ../scss/_vm14_front_page.scss */
+/* line 25, ../scss/_vm14_front_page.scss */
 .home .home-navigation ul a {
   color: #FFF;
 }
-/* line 25, ../scss/_vm14_front_page.scss */
+/* line 31, ../scss/_vm14_front_page.scss */
 .home #home-video {
   overflow: hidden;
 }
-/* line 29, ../scss/_vm14_front_page.scss */
+/* line 35, ../scss/_vm14_front_page.scss */
 .home #home-video iframe {
   display: none;
   position: absolute;
   left: 50%;
   top: 50%;
 }
-/* line 36, ../scss/_vm14_front_page.scss */
+/* line 42, ../scss/_vm14_front_page.scss */
 .home .play-btn {
   position: absolute;
   left: 50%;
@@ -1679,7 +1697,7 @@ FOOTER STYLES
   text-indent: -999px;
 }
 
-/* line 54, ../scss/_vm14_front_page.scss */
+/* line 60, ../scss/_vm14_front_page.scss */
 #home-intro {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
   background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
@@ -1692,17 +1710,17 @@ FOOTER STYLES
   padding: 20px;
   margin: 20px 0;
 }
-/* line 61, ../scss/_vm14_front_page.scss */
+/* line 67, ../scss/_vm14_front_page.scss */
 #home-intro h1 {
   font-size: 36px;
   margin: 0 0 0.5em;
 }
-/* line 66, ../scss/_vm14_front_page.scss */
+/* line 72, ../scss/_vm14_front_page.scss */
 #home-intro * {
   color: white;
 }
 
-/* line 71, ../scss/_vm14_front_page.scss */
+/* line 77, ../scss/_vm14_front_page.scss */
 #home-news-marquee {
   margin: 20px 0;
 }
@@ -1710,14 +1728,14 @@ FOOTER STYLES
 /*********************
 * Blurbs !
 **********************/
-/* line 78, ../scss/_vm14_front_page.scss */
+/* line 84, ../scss/_vm14_front_page.scss */
 #blurbs {
   width: 100%;
   margin-top: 1em;
   float: left;
   overflow: hidden;
 }
-/* line 83, ../scss/_vm14_front_page.scss */
+/* line 89, ../scss/_vm14_front_page.scss */
 #blurbs a, #blurbs .widget {
   display: block;
   float: left;
@@ -1727,11 +1745,11 @@ FOOTER STYLES
   margin-bottom: 1em;
   position: relative;
 }
-/* line 91, ../scss/_vm14_front_page.scss */
+/* line 97, ../scss/_vm14_front_page.scss */
 #blurbs a:first-child, #blurbs .widget:first-child {
   margin-left: 0;
 }
-/* line 94, ../scss/_vm14_front_page.scss */
+/* line 100, ../scss/_vm14_front_page.scss */
 #blurbs a p, #blurbs .widget p {
   margin: 0;
   font-size: 1.6em;
@@ -2022,19 +2040,29 @@ you can add resource intensive styles.
     display: none;
   }
 
-  /* line 57, ../scss/_768up.scss */
-  .right.corner {
+  /* line 56, ../scss/_768up.scss */
+  .top-more {
     display: block;
   }
 
   /* line 60, ../scss/_768up.scss */
+  .right.corner {
+    display: block;
+  }
+
+  /* line 64, ../scss/_768up.scss */
+  .top-more {
+    display: block;
+  }
+
+  /* line 67, ../scss/_768up.scss */
   .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 63, ../scss/_768up.scss */
+  /* line 70, ../scss/_768up.scss */
   .nav li {
     float: left;
     position: relative;
@@ -2043,11 +2071,11 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 67, ../scss/_768up.scss */
+  /* line 74, ../scss/_768up.scss */
   .nav li a {
     border-bottom: 0;
   }
-  /* line 78, ../scss/_768up.scss */
+  /* line 85, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -2058,7 +2086,7 @@ you can add resource intensive styles.
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 86, ../scss/_768up.scss */
+  /* line 93, ../scss/_768up.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -2067,7 +2095,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 88, ../scss/_768up.scss */
+  /* line 95, ../scss/_768up.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -2076,23 +2104,23 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 105, ../scss/_768up.scss */
+  /* line 112, ../scss/_768up.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 127, ../scss/_768up.scss */
+  /* line 134, ../scss/_768up.scss */
   .nav li:hover ul {
     top: auto;
     display: block;
   }
 
   /* end .nav */
-  /* line 143, ../scss/_768up.scss */
+  /* line 150, ../scss/_768up.scss */
   .home-navigation .top-nav li a {
     padding: 10px 30px;
   }
-  /* line 146, ../scss/_768up.scss */
+  /* line 153, ../scss/_768up.scss */
   .home-navigation .top-nav li a:hover {
     color: black;
   }
@@ -2100,14 +2128,14 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 155, ../scss/_768up.scss */
+  /* line 162, ../scss/_768up.scss */
   #home-intro {
     max-width: 50%;
     position: relative;
     top: -100px;
   }
 
-  /* line 161, ../scss/_768up.scss */
+  /* line 168, ../scss/_768up.scss */
   #home-news-marquee {
     position: absolute;
     left: 50%;
@@ -2115,30 +2143,30 @@ you can add resource intensive styles.
     margin: 1em;
   }
 
-  /* line 169, ../scss/_768up.scss */
+  /* line 176, ../scss/_768up.scss */
   #blurbs a, #blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
     margin-right: 0;
   }
 
-  /* line 176, ../scss/_768up.scss */
+  /* line 183, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 181, ../scss/_768up.scss */
+  /* line 188, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 186, ../scss/_768up.scss */
+  /* line 193, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 194, ../scss/_768up.scss */
+  /* line 201, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2159,17 +2187,17 @@ you can add resource intensive styles.
   POST STYLES
   *********************/
   /* top image */
-  /* line 295, ../scss/_768up.scss */
+  /* line 302, ../scss/_768up.scss */
   .article-header, .videoplayer, .top-image {
     min-height: 500px;
     max-height: 99999px;
   }
 
-  /* line 302, ../scss/_768up.scss */
+  /* line 309, ../scss/_768up.scss */
   .home #inner-content {
     position: relative;
   }
-  /* line 306, ../scss/_768up.scss */
+  /* line 313, ../scss/_768up.scss */
   .home .play-btn {
     width: 150px;
     height: 150px;
@@ -2184,7 +2212,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 324, ../scss/_768up.scss */
+  /* line 331, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
@@ -2236,6 +2264,15 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+  /* line 12, ../scss/_1240up.scss */
+  #menu-top-corner {
+    display: block;
+  }
+
+  /* line 15, ../scss/_1240up.scss */
+  .top-more {
+    display: none;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
