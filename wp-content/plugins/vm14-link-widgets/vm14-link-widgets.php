@@ -11,13 +11,9 @@
  * Base class for single-link widgets.
 */
 class VM14_Link_Widget extends WP_Widget {
-	function print_link($post) {
-		printf('<a href="%s">', get_permalink($post->ID));
-		printf('<h4 class="widgettitle">%s</h4>', $post->post_title);
-		printf($post->post_excerpt); // TODO: Replace with custom field?
-		printf(get_the_post_thumbnail($post->ID));
-		printf('</a>');
-	}
+    function print_link($post) {
+        print($post->preview_html());
+    }
 }
 
 /**

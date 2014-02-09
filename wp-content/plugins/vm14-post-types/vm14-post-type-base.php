@@ -105,6 +105,7 @@ abstract class VM14_Post_Type {
             $this->post_data = array();
             $this->post_data['id'] = $post->ID;
             $this->post_data['title'] = $post->post_title;
+            $this->post_data['excerpt'] = $post->post_excerpt;
             $this->post_data['content'] = $post->post_content;
             $this->post_data['image_id'] = get_post_thumbnail_id($post->ID);
             $this->post_data['image_url'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
@@ -146,6 +147,33 @@ abstract class VM14_Post_Type {
     function image_url($size = 'medium') {
       $src = wp_get_attachment_image_src($this->post_data['image_id'], $size);
       return $src[0];
+    }
+
+    function preview_html() {
+        $excerpt = $this->excerpt;
+        if (strlen($excerpt)==0) {
+            $excerpt = $this->summary;
+        }
+        if (strlen($excerpt)==0) {
+            $text = strip_tags($this->content);
+            if (strlen($text)<300) {
+                $excerpt = $text;
+            }
+            else {
+                $last_ws = strrpos(substr($text, 0, 300), ' ');
+                error_log($last_ws);
+                $excerpt = substr($text, 0, $last_ws);
+                $excerpt .= '...';
+            }
+        }
+
+	    $html  = sprintf('<a href="%s">', get_permalink($this->id));
+	    $html .= sprintf('<h4>%s</h4>', $this->title);
+	    $html .= get_the_post_thumbnail($this->id);
+	    $html .= $excerpt;
+	    $html .= '</a>';
+
+        return $html;
     }
 
     static function register() {
