@@ -17,10 +17,22 @@ POST STYLES
     min-height: 400px;
 }
 
+#menu-top-corner {
+    display: block;
+    font-size: 0.9em;
+}
+
+.top-more {
+    display: none;
+}
+
+#logo {
+  width: 25%;
+}
 
 .footer {
     nav {
         @include columns(3);
     }
-
 }
+

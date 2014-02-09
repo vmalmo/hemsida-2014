@@ -165,6 +165,9 @@ SIDEBARS & ASIDES
     position: relative;
     top: -100px;
 }
+.home #blurbs {
+    margin-top: -80px;
+}
 
 #home-news-marquee {
     position: absolute;
@@ -178,7 +181,20 @@ SIDEBARS & ASIDES
         width:  $four_col_grid_width;
         margin-left: $four_col_grid_margin;
         margin-right: 0;
+        &:nth-child(2n+1) {
+            margin-left: $four_col_grid_margin;
+            clear: none;
+        }
+        &:nth-child(4n+1) {
+            margin-left: 0;
+            clear: left;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
     }
+
+
 }
 
 	.widgettitle {
@@ -304,6 +320,7 @@ POST STYLES
     min-height: 500px;
     max-height: 99999px;
 }
+
 
 .home {
     #inner-content

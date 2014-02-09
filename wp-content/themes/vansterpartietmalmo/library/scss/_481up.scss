@@ -74,6 +74,12 @@ POSTS & CONTENT STYLES
     max-height: 400px;
     float: none;
 }
+
+.article-header, .videoplayer, .top-image {
+  .article-header-content {
+    position: absolute;
+  }
+}
 /* section entrance */
 #section-entrance-content-widgets .widget{
   padding: 0;
@@ -107,7 +113,7 @@ POSTS & CONTENT STYLES
 #blurbs {
     a, .widget {
         width:  $two_col_grid_width;
-        margin-left: $four_col_grid_margin;
+        margin-left: $two_col_grid_margin;
         margin-right: 0;
     }
 }

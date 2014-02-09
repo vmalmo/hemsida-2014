@@ -124,5 +124,11 @@ Template Name: Företrädare lista
                 <span>Sjukvård</span>
             </div>
         </div> 	
+
+        <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
+            <div id="blurbs">
+                <?php dynamic_sidebar( 'blurbs' ); ?>
+            </div>
+        <?php endif; ?>
     </div><?php // ending  inner-content .wrap clearfix ?>
 <?php get_footer(); ?>
