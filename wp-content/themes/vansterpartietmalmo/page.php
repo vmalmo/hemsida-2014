@@ -1,14 +1,32 @@
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php $p = vm14_get_post($post->ID); ?>
         <?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
         <?php $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
         <header class="article-header clearfix responsive-image" data-image-large="<?php echo $image[0]; ?>"  style="background-image: url('<?php echo $medium_image[0]; ?>');">
             <div class="article-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php the_title(); ?></h1>
+                    <?php echo $p->summary; ?>
                 </div>
             </div>
         </header>
+        <div class="first twelvecol undermenu">
+                <ul>
+                <?php 
+                    $root_id = get_queried_object_id();
+                    $ancestors = get_post_ancestors($p->id);
+                    if (count($ancestors) > 0)
+                        $root_id = $ancestors[count($ancestors)-1];
+
+                    wp_list_pages(array(
+                        'child_of' => $root_id,
+                        'title_li' => __(''),
+                        'depth' => 1
+                    ));
+                ?>
+                </ul>
+        </div>
         <div id="inner-content" class="wrap clearfix">
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">

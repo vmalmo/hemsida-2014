@@ -32,9 +32,16 @@ Template Name: Section
         <div class="first twelvecol undermenu">
                 <ul>
                 <?php 
-                    $pageid = get_queried_object_id();
-                    $args = array('child_of' =>$pageid,'title_li'=> __('')); 
-                    wp_list_pages($args); 
+                    $root_id = get_queried_object_id();
+                    $ancestors = get_post_ancestors($post->id);
+                    if (count($ancestors) > 0)
+                        $root_id = $ancestors[count($ancestors)-1];
+
+                    wp_list_pages(array(
+                        'child_of' =>$root_id,
+                        'title_li' => __(''),
+                        'depth' => 1
+                    ));
                 ?>
                 </ul>
         </div>
