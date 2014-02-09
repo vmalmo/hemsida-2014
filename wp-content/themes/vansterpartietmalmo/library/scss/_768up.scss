@@ -320,6 +320,12 @@ POST STYLES
     max-height: 99999px;
 }
 
+.article-header, .videoplayer, .top-image {
+  .article-header-content {
+    position: absolute;
+  }
+}
+
 .home {
     #inner-content
     {
