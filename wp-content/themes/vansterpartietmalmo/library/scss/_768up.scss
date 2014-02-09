@@ -182,6 +182,11 @@ SIDEBARS & ASIDES
         margin-right: 0;
         &:nth-child(2n+1) {
             margin-left: $four_col_grid_margin;
+            clear: none;
+        }
+        &:nth-child(4n+1) {
+            margin-left: 0;
+            clear: left;
         }
         &:first-child {
             margin-left: 0;
