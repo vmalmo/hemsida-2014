@@ -10,7 +10,7 @@ Template Name: Section
             <div class="article-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php echo $post->title; ?></h1>
-                    <?php the_content(); ?>
+                    <?php echo $post->summary; ?>
                 </div>
             </div>
         </header>
@@ -31,8 +31,18 @@ Template Name: Section
     <div class="content">
         <?php echo vm14_sub_menu($post->id);?>
         <div id="inner-content" class="wrap clearfix">
-                <?php get_sidebar(); ?>
             <?php echo vm14_breadcrumbs($post->id);?>
+            <div id="main" class="eightcol first clearfix" role="main">
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+                    <section class="entry-content clearfix" itemprop="articleBody">
+                        <?php the_content(); ?>
+                    </section>
+                    <footer class="article-footer">
+                        <?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+                    </footer>
+                </article>
+            </div>
+            <?php get_sidebar(); ?>
          </div>
     </div>
 
