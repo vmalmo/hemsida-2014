@@ -12,6 +12,7 @@
 */
 class VM14_Link_Widget extends WP_Widget {
     function print_link($post) {
+        $post = vm14_get_post($post->ID);
         print($post->preview_html());
     }
 }
