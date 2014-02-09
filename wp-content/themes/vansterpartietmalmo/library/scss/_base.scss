@@ -16,10 +16,10 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $sans_serif;
-	font-size: 100%;
-	line-height: 1.5;
-	color: #565656;
+    font-family: $sans_serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #565656;
     background-color: #ddd;
 }
 img {
@@ -79,8 +79,9 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
-	margin: 0 auto;
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 1em;
 }
 
 /*********************
