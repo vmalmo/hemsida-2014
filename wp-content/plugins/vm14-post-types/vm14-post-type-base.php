@@ -151,17 +151,16 @@ abstract class VM14_Post_Type {
 
     function get_excerpt($len) {
         $excerpt = $this->excerpt;
-        if (strlen($excerpt)==0) {
+        if (!strlen($excerpt)) {
             $excerpt = $this->summary;
         }
-        if (strlen($excerpt)==0) {
+        if (!strlen($excerpt)) {
             $excerpt = strip_tags($this->content);
         }
 
         if (strlen($excerpt)>$len) {
-            $last_ws = strrpos(substr($text, 0, $len), ' ');
-            error_log($last_ws);
-            $excerpt = substr($text, 0, $last_ws);
+            $last_ws = strrpos(substr($excerpt, 0, $len), ' ');
+            $excerpt = substr($excerpt, 0, $last_ws);
             $excerpt .= '...';
         }
 
