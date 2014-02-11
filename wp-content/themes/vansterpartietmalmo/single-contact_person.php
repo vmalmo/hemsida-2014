@@ -6,16 +6,16 @@ Template Name: Företrädare
 <?php get_header(); ?>
 
 			<div id="content" class="wrap toppad clearfix">
+                <?php vm14_breadcrumbs($post->ID);?> 
 				<div id="main" class="eightcol first clearfix" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); $p = vm14_get_post($post->ID); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						<header class="article-header">
-
+						<header>
 							<h1 class="page-title"><?php the_title(); ?></h1>
-							
+                            <?php echo $p->summary;?>
 						</header>
 
 						<section class="entry-content clearfix" itemprop="articleBody">
@@ -42,7 +42,21 @@ Template Name: Företrädare
 					<?php endif; ?>
 					
 				</div>
-				<?php get_sidebar(); ?>
+				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
+                <?php
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
+                if ($image):?>
+                    <img src="<?php echo $image[0];?>">
+                <?php endif;?>
+                    
+
+					<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+
+						<?php dynamic_sidebar( 'sidebar' ); ?>
+
+					<?php endif; ?>
+
+				</div>
         <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
             <div id="blurbs">
                 <?php dynamic_sidebar( 'blurbs' ); ?>
