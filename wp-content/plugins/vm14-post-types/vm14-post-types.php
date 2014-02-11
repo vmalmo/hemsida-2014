@@ -44,8 +44,6 @@ function vm14_get_posts($args) {
     $posts = get_posts($args);
     for ($i=0; $i < count($posts); $i++) {
         $posts[$i] = vm14_post($posts[$i]);
-
-        error_log($posts[$i]->summary);
     }
 
     return $posts;
