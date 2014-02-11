@@ -117,10 +117,10 @@ abstract class VM14_Post_Type {
 
             // Transfer custom fields from special array to the post_data array,
             // so that they can be retrieved using normal field look-up.
-            $prefix = ($post->post_type=='page')? 'page_' : 'post_';
+            $prefix = $post->post_type;
             foreach ($signature as $name => $field) {
                 if (is_a($field, VM14_Post_Type_Field)) {
-                    $key_name = $prefix.$name;
+                    $key_name = $prefix.'_'.$name;
                     if (array_key_exists($key_name, $custom_data)) {
                         $value = $custom_data[$key_name];
                         if (is_array($value) && count($value)==1) {
