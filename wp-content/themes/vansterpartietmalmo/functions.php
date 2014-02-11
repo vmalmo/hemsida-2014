@@ -151,8 +151,15 @@ function bones_wpsearch($form) {
 } // don't remove this bracket!
 
 
-function vm14_breadcrumbs($id) {
+function vm14_breadcrumbs($id, $extra=null) {
     $ancestors = get_post_ancestors($id);
+
+    if ($extra) {
+        $extra_ancestors = get_post_ancestors($extra);
+        array_splice($ancestors, 0, 0, $extra_ancestors);
+        array_unshift($ancestors, $extra);
+    }
+
     array_unshift($ancestors, $id);
 
     $links = array();
