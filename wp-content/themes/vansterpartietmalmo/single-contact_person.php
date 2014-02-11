@@ -6,7 +6,7 @@ Template Name: Företrädare
 <?php get_header(); ?>
 
 			<div id="content" class="wrap toppad clearfix">
-                <?php vm14_breadcrumbs($post->ID);?> 
+                <?php vm14_breadcrumbs($post->ID, get_theme_mod('vm14_pages_reps'));?> 
 				<div id="main" class="eightcol first clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); $p = vm14_get_post($post->ID); ?>
