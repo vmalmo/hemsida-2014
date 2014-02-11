@@ -214,6 +214,20 @@ function vm14_customize_register($wpc) {
         'section' => 'vm14_section_footer',
         'settings' => 'vm14_footer_twitter_name'
     )));
+
+
+    $wpc->add_section('vm14_section_pages', array(
+        'title' => __('Special pages', 'vm14'),
+        'priority' => 30,
+    ));
+
+    $wpc->add_setting('vm14_pages_reps');
+    $wpc->add_control(new WP_Customize_Control($wpc, 'reps_page', array(
+        'label' => __('Representatives page', 'vm14'),
+        'section' => 'vm14_section_pages',
+        'settings' => 'vm14_pages_reps',
+        'type' => 'dropdown-pages'
+    )));
 }
 add_action('customize_register', 'vm14_customize_register');
 
