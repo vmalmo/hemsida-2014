@@ -1680,7 +1680,7 @@ FOOTER STYLES
   bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_post_header\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_post_header\.scss}line{font-family:\0000320}}
 .responsive-image .page-header-content {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
@@ -2297,11 +2297,17 @@ you can add resource intensive styles.
     min-height: 200px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003336}}
+  .article-header-content .wrap {
+    padding-right: 400px;
+    font-weight: bold;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003343}}
   .home #inner-content {
     position: relative;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003347}}
   .home .play-btn {
     width: 150px;
     height: 150px;
@@ -2311,7 +2317,7 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003359}}
   .footer nav {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -2319,7 +2325,7 @@ you can add resource intensive styles.
     -o-column-count: 2;
     column-count: 2;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003364}}
   .footer ul li {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid-column;
