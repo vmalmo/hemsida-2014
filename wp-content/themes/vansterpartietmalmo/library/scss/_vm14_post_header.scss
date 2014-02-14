@@ -1,5 +1,5 @@
 /* top image used on front page */
-.article-header, .videoplayer, .top-image {
+.page-header, .videoplayer, .top-image {
     background: none no-repeat scroll 0 0 #ED1B24;
     background-size: cover;
     background-position: center center;
@@ -7,7 +7,7 @@
     float: left;
     width: 100%;
     position: relative;
-    .article-header-content {
+    .page-header-content {
         position: absolute;
         color: #FFF;
         width: 100%;
@@ -17,7 +17,7 @@
 }
 
 .responsive-image {
-  .article-header-content {
+  .page-header-content {
     @include background-image(linear-gradient(bottom, rgba(black, 0.8), rgba(0, 0, 0, 0)));
   }
 }
