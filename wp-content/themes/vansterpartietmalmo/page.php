@@ -2,7 +2,7 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
         <?php $p = vm14_get_post($post->ID); ?>
-            <div class="article-header-content">
+            <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php the_title(); ?></h1>
                     <?php echo $p->summary; ?>
@@ -25,7 +25,7 @@
     <?php endwhile; else : ?>
         <div id="inner-content" class="wrap clearfix">
             <article id="post-not-found" class="hentry clearfix">
-                <header class="article-header">
+                <header class="page-header">
                     <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
                 </header>
                 <section class="entry-content">

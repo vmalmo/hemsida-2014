@@ -7,7 +7,7 @@ Template Name: Section
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php echo vm14_post_header(); ?>
         <?php $post = vm14_get_post($post->ID); ?>
-            <div class="article-header-content">
+            <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php echo $post->title; ?></h1>
                     <?php echo $post->summary; ?>
@@ -16,7 +16,7 @@ Template Name: Section
         </header>
     <?php endwhile; else : ?>
             <article id="post-not-found" class="hentry clearfix">
-                    <header class="article-header">
+                    <header class="page-header">
                         <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
                 </header>
                     <section class="entry-content">
