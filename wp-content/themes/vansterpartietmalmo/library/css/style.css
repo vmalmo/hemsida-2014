@@ -9,14 +9,14 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
-/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 /*
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
  */
-/* line 21, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000321}}
 article,
 aside,
 details,
@@ -34,7 +34,7 @@ summary {
 /*
  * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
  */
-/* line 31, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000331}}
 audio,
 canvas,
 video {
@@ -47,7 +47,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS5 devices.
  */
-/* line 42, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000342}}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -57,7 +57,7 @@ audio:not([controls]) {
  * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
  * Known issue: no IE6 support.
  */
-/* line 52, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000352}}
 [hidden] {
   display: none;
 }
@@ -71,7 +71,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 67, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000367}}
 html {
   font-size: 100%;
   /* 1 */
@@ -85,7 +85,7 @@ html {
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 82, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000382}}
 html,
 button,
 input,
@@ -97,7 +97,7 @@ textarea {
 /*
  * Addresses margins handled incorrectly in IE6/7.
  */
-/* line 90, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\0000390}}
 body {
   margin: 0;
 }
@@ -108,7 +108,7 @@ body {
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
-/* line 102, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003102}}
 a:focus {
   outline: thin dotted;
 }
@@ -117,7 +117,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers.
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-/* line 112, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003112}}
 a:active,
 a:hover {
   outline: 0;
@@ -130,37 +130,37 @@ a:hover {
  * Addresses font sizes and margins set differently in IE6/7.
  * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
  */
-/* line 125, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003125}}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 130, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003130}}
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-/* line 135, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003135}}
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 140, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003140}}
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 145, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003145}}
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 150, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003150}}
 h6 {
   font-size: 0.75em;
   margin: 2.33em 0;
@@ -169,7 +169,7 @@ h6 {
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
  */
-/* line 159, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003159}}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -177,13 +177,13 @@ abbr[title] {
 /*
  * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
  */
-/* line 168, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003168}}
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 172, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003172}}
 blockquote {
   margin: 1em 40px;
 }
@@ -191,7 +191,7 @@ blockquote {
 /*
  * Addresses styling not present in S5, Chrome.
  */
-/* line 180, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003180}}
 dfn {
   font-style: italic;
 }
@@ -199,7 +199,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9.
  */
-/* line 188, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003188}}
 mark {
   background: #ff0;
   color: #000;
@@ -208,7 +208,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7.
  */
-/* line 198, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003198}}
 p,
 pre {
   margin: 1em 0;
@@ -218,7 +218,7 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome.
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 210, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003210}}
 code,
 kbd,
 pre,
@@ -231,7 +231,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-/* line 220, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003220}}
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -241,7 +241,7 @@ pre {
 /*
  * Addresses CSS quotes not supported in IE6/7.
  */
-/* line 230, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003230}}
 q {
   quotes: none;
 }
@@ -249,14 +249,14 @@ q {
 /*
  * Addresses `quotes` property not supported in S4.
  */
-/* line 239, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003239}}
 q:before,
 q:after {
   content: '';
   content: none;
 }
 
-/* line 244, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003244}}
 small {
   font-size: 75%;
 }
@@ -265,7 +265,7 @@ small {
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  * gist.github.com/413930
  */
-/* line 254, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003254}}
 sub,
 sup {
   font-size: 75%;
@@ -274,12 +274,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 261, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003261}}
 sup {
   top: -0.5em;
 }
 
-/* line 265, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003265}}
 sub {
   bottom: -0.25em;
 }
@@ -290,7 +290,7 @@ sub {
 /*
  * Addresses margins set differently in IE6/7.
  */
-/* line 280, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003280}}
 dl,
 menu,
 ol,
@@ -298,7 +298,7 @@ ul {
   margin: 1em 0;
 }
 
-/* line 284, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003284}}
 dd {
   margin: 0 0 0 40px;
 }
@@ -306,7 +306,7 @@ dd {
 /*
  * Addresses paddings set differently in IE6/7.
  */
-/* line 294, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003294}}
 menu,
 ol,
 ul {
@@ -316,7 +316,7 @@ ul {
 /*
  * Corrects list images handled incorrectly in IE7.
  */
-/* line 303, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003303}}
 nav ul,
 nav ol {
   list-style: none;
@@ -331,7 +331,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7.
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 318, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003318}}
 img {
   border: 0;
   /* 1 */
@@ -342,7 +342,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9.
  */
-/* line 327, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003327}}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -353,7 +353,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11.
  */
-/* line 339, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003339}}
 figure {
   margin: 0;
 }
@@ -364,7 +364,7 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7.
  */
-/* line 351, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003351}}
 form {
   margin: 0;
 }
@@ -372,7 +372,7 @@ form {
 /*
  * Define consistent border, margin, and padding.
  */
-/* line 359, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003359}}
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -384,7 +384,7 @@ fieldset {
  * 2. Corrects text not wrapping in FF3.
  * 3. Corrects alignment displayed oddly in IE6/7.
  */
-/* line 371, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003371}}
 legend {
   border: 0;
   /* 1 */
@@ -400,7 +400,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
  * 3. Improves appearance and consistency in all browsers.
  */
-/* line 387, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003387}}
 button,
 input,
 select,
@@ -419,7 +419,7 @@ textarea {
  * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
  * UA stylesheet.
  */
-/* line 400, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003400}}
 button,
 input {
   line-height: normal;
@@ -434,7 +434,7 @@ input {
  * 4. Removes inner spacing in IE7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE6.
  */
-/* line 417, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003417}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -450,7 +450,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-/* line 428, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003428}}
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -462,7 +462,7 @@ input[disabled] {
  * 3. Removes excess padding in IE7.
  *    Known issue: excess padding remains in IE6.
  */
-/* line 440, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003440}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -480,7 +480,7 @@ input[type="radio"] {
  * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
  *    to future-proof).
  */
-/* line 453, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003453}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -493,7 +493,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X.
  */
-/* line 465, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003465}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -502,7 +502,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in FF3+.
  */
-/* line 474, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003474}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -513,7 +513,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9.
  * 2. Improves readability and alignment in all browsers.
  */
-/* line 484, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003484}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -527,7 +527,7 @@ textarea {
 /*
  * Remove most spacing between table cells.
  */
-/* line 497, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003497}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -539,7 +539,7 @@ I added these extra styles as a more personalized reset. Feel free
 to remove them if you like or add your own. If you want to update
 the normalize styles, make sure to edit from this point up.
 ******************************************************************/
-/* line 510, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003510}}
 p {
   -webkit-hyphens: auto;
   -epub-hyphens: auto;
@@ -547,33 +547,33 @@ p {
   hyphens: auto;
 }
 
-/* line 517, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003517}}
 b, strong, .strong {
   font-weight: bold;
 }
 
-/* line 519, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003519}}
 dfn, em, .em {
   font-style: italic;
 }
 
-/* line 521, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003521}}
 small, .small {
   font-size: 75%;
 }
 
-/* line 523, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003523}}
 ul, ol {
   padding: 0;
   list-style-type: none;
 }
 
-/* line 528, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003528}}
 dd {
   margin: 0;
 }
 
-/* line 534, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_normalize\.scss}line{font-family:\00003534}}
 .sidebar ul,
 .sidebar ol,
 .commentlist {
@@ -599,16 +599,16 @@ remember less is more.
 /*********************
 CLEARFIXIN'
 *********************/
-/* line 23, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\0000323}}
 .clearfix {
   zoom: 1;
 }
-/* line 25, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\0000325}}
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 26, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\0000326}}
 .clearfix:after {
   clear: both;
 }
@@ -616,14 +616,14 @@ CLEARFIXIN'
 /*********************
 TOOLS
 *********************/
-/* line 34, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\0000334}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 41, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\0000341}}
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -665,53 +665,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 111, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003111}}
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 117, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003117}}
 .text-left {
   text-align: left;
 }
 
-/* line 118, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003118}}
 .text-center {
   text-align: center;
 }
 
-/* line 119, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003119}}
 .text-right {
   text-align: right;
 }
 
-/* line 123, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003123}}
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 129, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003129}}
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 135, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003135}}
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 141, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003141}}
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 147, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003147}}
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -741,7 +741,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 209, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003218}}
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid black;
@@ -765,7 +765,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(to bottom, #000000, #000000);
 }
-/* line 228, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003237}}
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid black;
@@ -778,7 +778,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(to bottom, #000000, #000000);
 }
-/* line 236, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003245}}
 .button:active, .button:visited:active {
   background-color: black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
@@ -788,7 +788,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #000000, #000000);
 }
 
-/* line 241, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003250}}
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -800,7 +800,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 247, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003256}}
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -810,7 +810,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 251, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003260}}
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -820,7 +820,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
-/* line 261, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003270}}
 .red-gradient {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
   background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
@@ -829,7 +829,7 @@ BUTTONS
   background: linear-gradient(bottom, #ae0e15, #ed1b24);
 }
 
-/* line 264, ../scss/_mixins.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_mixins\.scss}line{font-family:\00003273}}
 .black-gradient {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #000000), color-stop(100%, #262626));
   background: -webkit-linear-gradient(bottom, #000000, #262626);
@@ -859,24 +859,56 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-/* line 18, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000318}}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
+  background-color: #ddd;
 }
 
-/* line 24, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000325}}
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 29, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000330}}
 #container {
   float: left;
   width: 100%;
+  background-color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000338}}
+#home-news-marquee h2 {
+  margin: -5px 10px 0 0;
+  font-weight: bold;
+  font-size: 8pt;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000344}}
+#home-news-marquee ul {
+  margin: 15px 0 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000348}}
+#home-news-marquee ul li .date {
+  font-size: 8pt;
+  display: block;
+  float: left;
+  background-color: white;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #bbb;
+  border-top: 5px solid #ed1b24;
+  color: #888;
+  padding: 4px 2px;
+  margin: -3px 6px 0 0;
+  min-width: 40px;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\0000363}}
+#home-news-marquee ul li small {
+  display: block;
 }
 
 /********************
@@ -921,16 +953,17 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 79, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003115}}
 .wrap {
   width: 96%;
   margin: 0 auto;
+  padding-bottom: 1em;
 }
 
 /*********************
 LINK STYLES
 *********************/
-/* line 88, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003125}}
 a, a:visited {
   color: black;
   text-decoration: none;
@@ -938,11 +971,11 @@ a, a:visited {
   /* on click */
   /* mobile tap color */
 }
-/* line 93, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003130}}
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: black;
 }
-/* line 103, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003140}}
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -952,10 +985,21 @@ a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003151}}
+.breadcrumbs a {
+  font-size: 10pt;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003156}}
+.breadcrumbs .breadcrumbs-delimiter {
+  margin: 0 4px;
+  color: #ccc;
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 117, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003166}}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -966,36 +1010,36 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 127, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003176}}
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 132, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003181}}
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 137, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003186}}
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 143, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003192}}
 h3, .h3 {
   font-size: 1.125em;
 }
 
-/* line 147, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003196}}
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 152, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003201}}
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -1006,7 +1050,7 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-/* line 165, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003214}}
 .topcorner {
   display: none;
   float: right;
@@ -1022,14 +1066,14 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-/* line 182, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003231}}
 .nav {
   border-bottom: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 185, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003234}}
 .nav li {
   /*
   so you really have to rethink your dropdowns for mobile.
@@ -1039,7 +1083,7 @@ and more scalable.
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
-/* line 187, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003236}}
 .nav li a {
   display: block;
   text-decoration: none;
@@ -1051,14 +1095,14 @@ and more scalable.
   keep this file as small as possible!
   */
 }
-/* line 219, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003268}}
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
 
 /* end .nav */
-/* line 250, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003299}}
 #menu-top-corner li a {
   padding: 14px 8px;
 }
@@ -1077,13 +1121,13 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 291, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003340}}
 .byline {
   color: #999;
 }
 
 /* entry content */
-/* line 298, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003347}}
 .entry-content {
   margin: 30px 0;
   /*
@@ -1093,25 +1137,25 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 334, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003383}}
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 341, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003390}}
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 357, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003406}}
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 362, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003411}}
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1119,20 +1163,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 370, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003419}}
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 376, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003425}}
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 382, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003431}}
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1146,17 +1190,17 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 420, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003469}}
 .pagination,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 423, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003472}}
 .pagination {
   text-align: center;
 }
-/* line 425, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003474}}
 .pagination ul {
   display: inline-block;
   white-space: nowrap;
@@ -1164,7 +1208,7 @@ PAGE NAVI STYLES
   clear: both;
   margin: 1px;
 }
-/* line 431, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003480}}
 .pagination ul li {
   padding: 0;
   margin: 0;
@@ -1172,7 +1216,7 @@ PAGE NAVI STYLES
   display: inline;
   overflow: hidden;
 }
-/* line 437, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003486}}
 .pagination ul li a, .pagination ul li span {
   margin: 0;
   text-decoration: none;
@@ -1184,24 +1228,24 @@ PAGE NAVI STYLES
   min-width: 1em;
   display: block;
 }
-/* line 448, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003497}}
 .pagination ul li span.current {
   font-weight: bold;
 }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 463, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003512}}
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 467, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003516}}
 .wp-prev-next .next-link {
   float: right;
 }
 
 /* end .wp-prev-next */
-/* line 474, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003523}}
 .videoplayer {
   max-height: 280px;
 }
@@ -1210,12 +1254,12 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 484, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003533}}
 #comments {
   /* number of comments span */
 }
 
-/* line 501, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003550}}
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -1226,7 +1270,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 503, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003552}}
 .commentlist li {
   position: relative;
   clear: both;
@@ -1236,63 +1280,63 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 511, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003560}}
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 515, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003564}}
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 533, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003582}}
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 537, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003586}}
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 542, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003591}}
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
   margin-left: -10px;
   margin-top: 0;
   padding-bottom: 0;
 }
-/* line 556, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003605}}
 .commentlist .odd {
   background: #eee;
 }
-/* line 559, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003608}}
 .commentlist .even {
   background: #fefefe;
 }
-/* line 574, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003623}}
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 577, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003626}}
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 585, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003634}}
 .commentlist .vcard time {
   float: right;
 }
-/* line 588, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003637}}
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 592, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003641}}
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 602, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003651}}
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -1300,17 +1344,17 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 627, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003676}}
 .commentlist .comment_content {
   margin-left: 50px;
 }
-/* line 630, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003679}}
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 639, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003688}}
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
@@ -1322,7 +1366,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 651, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003700}}
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -1331,27 +1375,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 663, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003712}}
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 667, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003716}}
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 670, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003719}}
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 676, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003725}}
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 684, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003733}}
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -1362,14 +1406,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 690, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003739}}
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 695, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003744}}
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -1382,14 +1426,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 708, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003757}}
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 713, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003762}}
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -1398,7 +1442,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 726, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003775}}
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -1406,13 +1450,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 739, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003788}}
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 744, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003793}}
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -1420,18 +1464,18 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 752, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003801}}
 #frontpage-blurbs {
   margin-top: 2em;
 }
-/* line 754, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003803}}
 #frontpage-blurbs a {
   width: 23.5%;
   margin-left: 2%;
   margin-right: 0;
 }
 
-/* line 769, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003818}}
 .widget ul li {
   /* deep nesting */
 }
@@ -1439,14 +1483,24 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 790, ../scss/_base.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003839}}
 .footer {
   clear: both;
   background: none repeat scroll 0 0 #DDDDDD;
-  padding-top: 40px;
+  padding: 40px 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003845}}
+.footer ul li {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003849}}
+.footer ul li a {
+  margin: 0;
+  padding: 0;
 }
 
-/* line 1, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\000031}}
 .header {
   float: left;
   width: 100%;
@@ -1457,36 +1511,36 @@ FOOTER STYLES
   background: -o-linear-gradient(bottom, #000000, #262626);
   background: linear-gradient(bottom, #000000, #262626);
 }
-/* line 6, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\000036}}
 .header a {
   color: #FFF;
 }
-/* line 8, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\000038}}
 .header a:hover {
   color: #EFEFEF;
 }
 
-/* line 14, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000314}}
 #logo {
   margin: 0.5em 1%;
   float: left;
   font-size: 1.2em;
   width: 100%;
 }
-/* line 19, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000319}}
 #logo span {
   float: left;
   line-height: 2em;
   font-size: 1.8;
 }
-/* line 24, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000324}}
 #logo img {
   float: left;
   margin-right: 0.3em;
   max-height: 2em;
 }
 
-/* line 31, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000331}}
 .allpage {
   display: none;
   position: relative;
@@ -1495,7 +1549,7 @@ FOOTER STYLES
   margin: 0.5em 0;
 }
 
-/* line 38, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000338}}
 .right.corner {
   display: none;
   float: right;
@@ -1506,22 +1560,22 @@ FOOTER STYLES
   line-height: 3em;
 }
 
-/* line 47, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000347}}
 .top-more {
   padding: 1em 2em;
 }
 
-/* line 50, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000350}}
 #menu-top-corner {
   display: none;
 }
 
-/* line 53, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000353}}
 .right.corner ul {
   margin: 0;
 }
 
-/* line 56, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000356}}
 .home-navigation {
   display: none;
   float: left;
@@ -1529,7 +1583,7 @@ FOOTER STYLES
   text-align: center;
 }
 
-/* line 62, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000362}}
 .home-navigation ul {
   text-align: center;
   padding: 0 0.5em;
@@ -1540,13 +1594,13 @@ FOOTER STYLES
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* line 69, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000369}}
 .home-navigation .nav li {
   display: inline-block;
   float: none;
   border-left: solid 1px rgba(0, 0, 0, 0.1);
 }
-/* line 73, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000373}}
 .home-navigation .nav li:first-child {
   border: none;
 }
@@ -1554,7 +1608,7 @@ FOOTER STYLES
 /*************
 * Mobile menu
 *************/
-/* line 81, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000381}}
 .mobile-menu {
   position: absolute;
   top: 1em;
@@ -1574,7 +1628,7 @@ FOOTER STYLES
   height: 1.8em;
   text-indent: -9999px;
 }
-/* line 97, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\0000397}}
 .mobile-menu:before {
   position: absolute;
   top: 0.5em;
@@ -1586,7 +1640,7 @@ FOOTER STYLES
   background-size: contain;
 }
 
-/* line 109, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\00003109}}
 .mobile-home-nav {
   background: #FFF;
   display: none;
@@ -1594,12 +1648,12 @@ FOOTER STYLES
   width: 100%;
   overflow: hidden;
 }
-/* line 115, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\00003115}}
 .mobile-home-nav li {
   border-bottom: solid 1px #DDD;
   text-align: center;
 }
-/* line 119, ../scss/_vm14_site_header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_site_header\.scss}line{font-family:\00003119}}
 .mobile-home-nav .right.corner {
   float: right;
   position: static;
@@ -1607,9 +1661,9 @@ FOOTER STYLES
 }
 
 /* top image used on front page */
-/* line 2, ../scss/_vm14_post_header.scss */
-.article-header, .videoplayer, .top-image {
-  background: none no-repeat scroll 0 0 #ED1B24;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_post_header\.scss}line{font-family:\000032}}
+.page-header, .videoplayer, .top-image {
+  background-color: black;
   background-size: cover;
   background-position: center center;
   min-height: 200px;
@@ -1617,16 +1671,17 @@ FOOTER STYLES
   width: 100%;
   position: relative;
 }
-/* line 10, ../scss/_vm14_post_header.scss */
-.article-header .article-header-content, .videoplayer .article-header-content, .top-image .article-header-content {
-  color: #FFF;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_post_header\.scss}line{font-family:\0000310}}
+.page-header .page-header-content, .videoplayer .page-header-content, .top-image .page-header-content {
+  position: absolute;
+  color: white;
   width: 100%;
   margin: 0 auto;
   bottom: 0;
 }
 
-/* line 19, ../scss/_vm14_post_header.scss */
-.responsive-image .article-header-content {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_post_header\.scss}line{font-family:\0000324}}
+.responsive-image .page-header-content {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
@@ -1637,32 +1692,32 @@ FOOTER STYLES
 /*********************
 * Menu for front page
 **********************/
-/* line 5, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\000035}}
 .home #container {
   padding-top: 0;
 }
-/* line 8, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\000038}}
 .home .header {
   position: absolute;
   background: none;
 }
-/* line 11, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000311}}
 .home .header a {
   color: #000;
 }
-/* line 15, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000315}}
 .home #menu-top-corner {
   display: block;
 }
-/* line 18, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000318}}
 .home .top-more {
   display: none;
 }
-/* line 21, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000321}}
 .home .home-navigation {
   width: 100%;
 }
-/* line 23, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000323}}
 .home .home-navigation ul {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
   background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
@@ -1670,22 +1725,22 @@ FOOTER STYLES
   background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
   background: linear-gradient(bottom, #ae0e15, #ed1b24);
 }
-/* line 25, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000325}}
 .home .home-navigation ul a {
   color: #FFF;
 }
-/* line 31, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000331}}
 .home #home-video {
   overflow: hidden;
 }
-/* line 35, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000335}}
 .home #home-video iframe {
   display: none;
   position: absolute;
   left: 50%;
   top: 50%;
 }
-/* line 42, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000342}}
 .home .play-btn {
   position: absolute;
   left: 50%;
@@ -1703,7 +1758,7 @@ FOOTER STYLES
   text-indent: -999px;
 }
 
-/* line 60, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000360}}
 #home-intro {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
   background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
@@ -1716,17 +1771,17 @@ FOOTER STYLES
   padding: 20px;
   margin: 20px 0;
 }
-/* line 67, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000367}}
 #home-intro h1 {
   font-size: 36px;
   margin: 0 0 0.5em;
 }
-/* line 72, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000372}}
 #home-intro * {
   color: white;
 }
 
-/* line 77, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000377}}
 #home-news-marquee {
   margin: 20px 0;
 }
@@ -1734,14 +1789,14 @@ FOOTER STYLES
 /*********************
 * Blurbs !
 **********************/
-/* line 84, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000384}}
 #blurbs {
   width: 100%;
   margin-top: 1em;
   float: left;
   overflow: hidden;
 }
-/* line 89, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000389}}
 #blurbs > a, #blurbs .widget {
   display: block;
   float: left;
@@ -1749,20 +1804,20 @@ FOOTER STYLES
   margin: 0 0% 1em 0;
   position: relative;
 }
-/* line 95, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000395}}
 #blurbs > a:first-child, #blurbs .widget:first-child {
   margin-left: 0;
 }
-/* line 98, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\0000398}}
 #blurbs > a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
   margin-left: 0;
   clear: left;
 }
-/* line 102, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\00003102}}
 #blurbs > a:nth-child(4n+1), #blurbs .widget:nth-child(4n+1) {
   margin-left: 0;
 }
-/* line 105, ../scss/_vm14_front_page.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_vm14_front_page\.scss}line{font-family:\00003105}}
 #blurbs > a p, #blurbs .widget p {
   margin: 0;
   font-size: 1.6em;
@@ -1795,23 +1850,23 @@ tweeners.
   NAVIGATION STYLES
   *********************/
   /* .menu is clearfixed inside mixins.scss */
-  /* line 25, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000325}}
   .menu {
     /* end .menu ul */
   }
-  /* line 26, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000326}}
   .menu ul {
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 27, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000327}}
   .menu ul li {
     /*
     plan your menus and drop-downs wisely.
     */
   }
-  /* line 28, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000328}}
   .menu ul li a {
     /*
     you can use hover styles here even though this size
@@ -1824,41 +1879,36 @@ tweeners.
   POSTS & CONTENT STYLES
   *********************/
   /* top image */
-  /* line 73, ../scss/_481up.scss */
-  .article-header, .videoplayer, .top-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000373}}
+  .page-header, .videoplayer, .top-image {
     max-height: 400px;
     float: none;
   }
 
-  /* line 79, ../scss/_481up.scss */
-  .article-header .article-header-content, .videoplayer .article-header-content, .top-image .article-header-content {
-    position: absolute;
-  }
-
   /* section entrance */
-  /* line 84, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000379}}
   #section-entrance-content-widgets .widget {
     padding: 0;
   }
 
   /* entry content */
-  /* line 89, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000384}}
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 93, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000388}}
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 98, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000393}}
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 103, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\0000398}}
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1869,7 +1919,7 @@ tweeners.
   /* end .entry-content */
   /****************
   ***************/
-  /* line 114, ../scss/_481up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_481up\.scss}line{font-family:\00003109}}
   #blurbs a, #blurbs .widget {
     width: 49%;
     margin-left: 2%;
@@ -1914,91 +1964,91 @@ you can add resource intensive styles.
   values are commented out on each line.
   
   ******************************************************************/
-  /* line 24, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000324}}
   .onecol {
     width: 5.801104972%;
   }
 
   /* 4.85%;  } /* grid_1  */
-  /* line 25, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000325}}
   .twocol {
     width: 14.364640883%;
   }
 
   /* 13.45%; } /* grid_2  */
-  /* line 26, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000326}}
   .threecol {
     width: 22.928176794%;
   }
 
   /* 22.05%; } /* grid_3  */
-  /* line 27, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000327}}
   .fourcol {
     width: 31.491712705%;
   }
 
   /* 30.75%; } /* grid_4  */
-  /* line 28, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000328}}
   .fivecol {
     width: 40.055248616%;
   }
 
   /* 39.45%; } /* grid_5  */
-  /* line 29, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000329}}
   .sixcol {
     width: 48.618784527%;
   }
 
   /* 48%;    } /* grid_6  */
-  /* line 30, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000330}}
   .sevencol {
     width: 57.182320438000005%;
   }
 
   /* 56.75%; } /* grid_7  */
-  /* line 31, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000331}}
   .eightcol {
     width: 65.74585634900001%;
   }
 
   /* 65.4%;  } /* grid_8  */
-  /* line 32, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000332}}
   .ninecol {
     width: 74.30939226%;
   }
 
   /* 74.05%; } /* grid_9  */
-  /* line 33, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000333}}
   .tencol {
     width: 82.87292817100001%;
   }
 
   /* 82.7%;  } /* grid_10 */
-  /* line 34, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000334}}
   .elevencol {
     width: 91.436464082%;
   }
 
   /* 91.35%; } /* grid_11 */
-  /* line 35, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000335}}
   .twelvecol {
     width: 99.999999993%;
   }
 
   /* 100%;   } /* grid_12 */
-  /* line 38, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000338}}
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
     position: relative;
     float: left;
     margin-left: 2.762430939%;
   }
 
-  /* line 44, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000344}}
   .first {
     margin-left: 0;
   }
 
-  /* line 48, ../scss/_grid.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_grid\.scss}line{font-family:\0000348}}
   .last {
     float: right;
   }
@@ -2022,7 +2072,7 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  /* line 26, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000326}}
   .wrap {
     max-width: 1140px;
   }
@@ -2030,12 +2080,22 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  /* line 34, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000334}}
   .header {
     position: fixed;
   }
 
-  /* line 38, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000337}}
+  #container {
+    padding-top: 60px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000340}}
+  .home #container {
+    padding-top: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000344}}
   #logo {
     width: 30%;
   }
@@ -2043,44 +2103,45 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 45, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000351}}
   .home-navigation {
     display: block;
+    margin-top: 50px;
   }
 
-  /* line 49, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000356}}
   .allpage {
     display: block;
   }
 
-  /* line 53, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000360}}
   .mobile-menu {
     display: none;
   }
 
-  /* line 56, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000363}}
   .top-more {
     display: block;
   }
 
-  /* line 60, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000367}}
   .right.corner {
     display: block;
   }
 
-  /* line 64, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000371}}
   .top-more {
     display: block;
   }
 
-  /* line 67, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000374}}
   .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 70, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000377}}
   .nav li {
     float: left;
     position: relative;
@@ -2089,11 +2150,11 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 74, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000381}}
   .nav li a {
     border-bottom: 0;
   }
-  /* line 85, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\0000392}}
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -2104,7 +2165,7 @@ you can add resource intensive styles.
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 93, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003100}}
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -2113,7 +2174,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 95, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003102}}
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -2122,23 +2183,23 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 112, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003119}}
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 134, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003141}}
   .nav li:hover ul {
     top: auto;
     display: block;
   }
 
   /* end .nav */
-  /* line 150, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003157}}
   .home-navigation .top-nav li a {
     padding: 10px 30px;
   }
-  /* line 153, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003160}}
   .home-navigation .top-nav li a:hover {
     color: black;
   }
@@ -2146,64 +2207,65 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 162, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003169}}
   #home-intro {
     max-width: 50%;
     position: relative;
     top: -100px;
   }
 
-  /* line 167, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003174}}
   .home #blurbs {
     margin-top: -80px;
   }
 
-  /* line 171, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003178}}
   #home-news-marquee {
     position: absolute;
+    width: 45%;
     left: 50%;
     top: 0;
     margin: 1em;
   }
 
-  /* line 179, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003187}}
   #blurbs a, #blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
     margin-right: 0;
   }
-  /* line 183, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003191}}
   #blurbs a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
     margin-left: 2%;
     clear: none;
   }
-  /* line 187, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003195}}
   #blurbs a:nth-child(4n+1), #blurbs .widget:nth-child(4n+1) {
     margin-left: 0;
     clear: left;
   }
-  /* line 191, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003199}}
   #blurbs a:first-child, #blurbs .widget:first-child {
     margin-left: 0;
   }
 
-  /* line 199, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003207}}
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 204, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003212}}
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 209, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003217}}
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 217, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003225}}
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2224,17 +2286,22 @@ you can add resource intensive styles.
   POST STYLES
   *********************/
   /* top image */
-  /* line 318, ../scss/_768up.scss */
-  .article-header, .videoplayer, .top-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003326}}
+  .page-header, .videoplayer, .top-image {
     min-height: 500px;
     max-height: 99999px;
   }
 
-  /* line 326, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003331}}
+  .page-header.no-image {
+    min-height: 200px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003338}}
   .home #inner-content {
     position: relative;
   }
-  /* line 330, ../scss/_768up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003342}}
   .home .play-btn {
     width: 150px;
     height: 150px;
@@ -2244,21 +2311,23 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  /* line 348, ../scss/_768up.scss */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003354}}
+  .footer nav {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
   }
-
-  /* end .footer-links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_768up\.scss}line{font-family:\00003359}}
+  .footer ul li {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid-column;
+    -ms-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    column-break-inside: avoid;
+    float: none;
+  }
 }
 /*
 DESKTOP
@@ -2281,25 +2350,34 @@ you can add resource intensive styles.
   POST STYLES
   *********************/
   /* top image */
-  /* line 16, ../scss/_1023up.scss */
-  .article-header, .videoplayer, .top-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000316}}
+  .page-header, .videoplayer, .top-image {
     min-height: 400px;
   }
 
-  /* line 20, ../scss/_1023up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000320}}
   #menu-top-corner {
     display: block;
     font-size: 0.9em;
   }
 
-  /* line 24, ../scss/_1023up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000325}}
   .top-more {
     display: none;
   }
 
-  /* line 27, ../scss/_1023up.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000329}}
   #logo {
     width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000334}}
+  .footer nav {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
   }
 }
 /*
@@ -2388,7 +2466,7 @@ be set to display none.
   though, go for it.
   
   ******************************************************************/
-  /* line 15, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000315}}
   * {
     background: transparent !important;
     color: black !important;
@@ -2397,44 +2475,44 @@ be set to display none.
     -ms-filter: none !important;
   }
 
-  /* line 23, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000323}}
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
-  /* line 28, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000328}}
   a:after, a:visited:after {
     content: " (" attr(href) ")";
   }
-  /* line 33, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000333}}
   a abbr[title]:after, a:visited abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 40, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000340}}
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 44, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000344}}
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 49, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000349}}
   thead {
     display: table-header-group;
   }
 
-  /* line 53, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000353}}
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 57, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000357}}
   img {
     max-width: 100% !important;
   }
@@ -2443,19 +2521,19 @@ be set to display none.
     margin: 0.5cm;
 }
 
-  /* line 65, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000365}}
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 71, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000371}}
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 80, ../scss/_print.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_print\.scss}line{font-family:\0000380}}
   .sidebar,
   .page-navigation,
   .wp-prev-next,
@@ -2464,105 +2542,105 @@ be set to display none.
     display: none;
   }
 }
-/* line 127, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003127}}
 .nav.footer-nav {
   margin: 0;
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-/* line 131, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003131}}
 .footer-nav li ul.sub-menu {
   display: block;
   position: relative;
   border: 0 none;
 }
 
-/* line 136, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003136}}
 .footer-nav li ul li {
   float: none;
 }
 
-/* line 140, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003140}}
 .nav li ul.sub-menu li a, .nav li ul.children li a {
   background: 0;
   border: 0;
   font-size: 14px;
 }
 
-/* line 146, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003146}}
 ul.footer-nav a {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-/* line 150, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003150}}
 .nav.top-nav.clearfix {
   margin: 0;
 }
 
-/* line 153, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003153}}
 .undermenu li {
   display: inline-block;
   margin: 0 20px;
 }
 
-/* line 157, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003157}}
 .undermenu > ul {
   text-align: center;
 }
 
-/* line 161, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003161}}
 .undermenu {
   background: none repeat scroll 0 0 #DDDDDD;
   padding: 0;
 }
 
-/* line 165, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003165}}
 .lista img {
   float: left;
   margin-right: 20px;
 }
 
-/* line 169, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003169}}
 .lista li:after {
   clear: both;
   content: "";
   display: table;
 }
 
-/* line 174, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003174}}
 .lista h3 {
   margin: 0.5em;
 }
 
-/* line 177, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003177}}
 .alfabet {
   background: none repeat scroll 0 0 #DDDDDD;
   padding: 10px;
 }
 
-/* line 181, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003181}}
 .sortera {
   padding: 10px 0;
   text-align: right;
 }
 
-/* line 185, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003185}}
 .sortera span {
   cursor: pointer;
 }
 
-/* line 188, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003188}}
 .sortera > span:last-child:after {
   content: "";
 }
 
-/* line 191, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003191}}
 .sortera > span:after {
   content: " | ";
   margin: 0 5px;
 }
 
-/* line 195, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003195}}
 .filter > span {
   background: none repeat scroll 0 0 #CCCCCC;
   border-radius: 5px;
@@ -2570,13 +2648,13 @@ ul.footer-nav a {
   padding: 5px 10px;
 }
 
-/* line 201, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003201}}
 .filter span.active {
   background: none repeat scroll 0 0 #666666;
   color: #FFFFFF;
 }
 
-/* line 205, ../scss/style.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/style\.scss}line{font-family:\00003205}}
 .toppad {
   padding-top: 60px;
 }
