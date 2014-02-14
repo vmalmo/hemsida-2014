@@ -228,13 +228,20 @@ function vm14_customize_register($wpc) {
         'settings' => 'vm14_pages_reps',
         'type' => 'dropdown-pages'
     )));
+
+    $wpc->add_setting('vm14_home_video');
+    $wpc->add_control(new WP_Customize_Control($wpc, 'home_video', array(
+        'label' => __('Home page video', 'vm14'),
+        'section' => 'static_front_page',
+        'settings' => 'vm14_home_video'
+    )));
 }
 add_action('customize_register', 'vm14_customize_register');
 
 function vm14_post_header(){
   $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'orginal' ); 
   $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
-  $classes = array('article-header', 'clearfix');
+  $classes = array('page-header', 'clearfix');
   $end_header = '';
   if ($large_image) {
     array_push($classes, 'responsive-image');
