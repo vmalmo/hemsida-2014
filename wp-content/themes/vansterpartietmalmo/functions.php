@@ -249,6 +249,10 @@ function vm14_post_header(){
         $large_image[0],
         $medium_image[0]);
   }
+  else {
+    array_push($classes, 'no-image');
+  }
+
   printf('<header class="%s" %s>',
     implode($classes, ' '),
     $end_header);

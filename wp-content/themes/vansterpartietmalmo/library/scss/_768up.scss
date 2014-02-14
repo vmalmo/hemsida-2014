@@ -323,9 +323,13 @@ SIDEBARS & ASIDES
 POST STYLES
 *********************/
 /* top image */
-.article-header, .videoplayer, .top-image {
+.page-header, .videoplayer, .top-image {
     min-height: 500px;
     max-height: 99999px;
+}
+
+.page-header.no-image {
+    min-height: 200px;
 }
 
 

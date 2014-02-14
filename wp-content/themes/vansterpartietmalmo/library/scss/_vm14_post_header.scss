@@ -1,6 +1,6 @@
 /* top image used on front page */
 .page-header, .videoplayer, .top-image {
-    background: none no-repeat scroll 0 0 #ED1B24;
+    background-color: black;
     background-size: cover;
     background-position: center center;
     min-height: 200px;
@@ -9,7 +9,7 @@
     position: relative;
     .page-header-content {
         position: absolute;
-        color: #FFF;
+        color: white;
         width: 100%;
         margin: 0 auto;
         bottom: 0;
