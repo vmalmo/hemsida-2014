@@ -4,6 +4,7 @@ include_once('acf/acf.php' );
 
 class VM14_Post_Type_Field {
     private $widget = 'text';
+    private $group = 'default';
     private $params;
     private $media_upload = false;
 
@@ -11,6 +12,9 @@ class VM14_Post_Type_Field {
         if ($params) {
             $this->params = $params;
             $this->widget = $params['widget'];
+
+            if (isset($params['group']))
+                $this->group = $params['group'];
         }
         else {
             $this->params = array();
@@ -27,6 +31,10 @@ class VM14_Post_Type_Field {
             'type' => $this->widget,
             'media_upload' => $this->media_upload
         );
+    }
+
+    function get_group_id() {
+        return $this->group;
     }
 
     private function prepare_meta($id, $params) {
@@ -228,37 +236,81 @@ abstract class VM14_Post_Type {
     }
 
     static function register_fields(&$meta, &$signature) {
-        $fields = array();
+        $groups = array();
 
+        // Configure user-defined groups
+        foreach ($meta['groups'] as $name => $group) {
+            // Defaults
+            if (!isset($group['title']))
+                $group['title'] = $name;
+            if (!isset($group['position']))
+                $group['position'] = 'normal';
+            if (!isset($group['layout']))
+                $group['layout'] = 'no_box';
+
+            $groups[$name] = array(
+                'id' => sprintf('acf_%s_%s_%s', $group['position'], $meta['id'], $name),
+                'title' => $group['title'],
+                'fields' => array(),
+                'location' => array (
+                  array (
+                    array (
+                      'param' => 'post_type',
+                      'operator' => '==',
+                      'value' => $meta['id'],
+                      'order_no' => 0,
+                      'group_no' => 0,
+                    ),
+                  ),
+                ),
+                'options' => array (
+                  'position' => $group['position'],
+                  'layout' => $group['layout'],
+                  'hide_on_screen' => array (
+                  ),
+                ),
+                'menu_order' => 0,
+            );
+        }
+
+        // Default group
+        if (!isset($groups['default'])) {
+            $groups['default'] = array(
+                'id' => 'acf_normal_'.$meta['id'],
+                'title' => __($meta['name']),
+                'fields' => array(),
+                'location' => array (
+                  array (
+                    array (
+                      'param' => 'post_type',
+                      'operator' => '==',
+                      'value' => $meta['id'],
+                      'order_no' => 0,
+                      'group_no' => 0,
+                    ),
+                  ),
+                ),
+                'options' => array (
+                  'position' => 'normal',
+                  'layout' => 'no_box',
+                  'hide_on_screen' => array (
+                  ),
+                ),
+                'menu_order' => 0,
+            );
+        }
+
+        // Add fields to the correct groups
         foreach ($signature as $name => $field) {
             if (is_a($field, VM14_Post_Type_Field)) {
+                $fields = &$groups[$field->get_group_id()]['fields'];
                 array_push($fields, $field->get_config($meta['id'], $name));
             }
         }
 
-        register_field_group(array(
-            'id' => 'acf_normal_'.$meta['id'],
-            'title' => __($meta['name']),
-            'fields' => $fields,
-            'location' => array (
-              array (
-                array (
-                  'param' => 'post_type',
-                  'operator' => '==',
-                  'value' => $meta['id'],
-                  'order_no' => 0,
-                  'group_no' => 0,
-                ),
-              ),
-            ),
-            'options' => array (
-              'position' => 'normal',
-              'layout' => 'no_box',
-              'hide_on_screen' => array (
-              ),
-            ),
-            'menu_order' => 0,
-        ));
+        foreach ($groups as $group) {
+            register_field_group($group);
+        }
     }
 
     static private function prepare_meta($class, $signature) {
@@ -287,6 +339,10 @@ abstract class VM14_Post_Type {
 
         self::meta($signature, 'slug_plural', $meta, function(&$meta) {
             return $meta['id'].'s';
+        });
+
+        self::meta($signature, 'groups', $meta, function(&$meta) {
+            return array();
         });
 
         return $meta;
