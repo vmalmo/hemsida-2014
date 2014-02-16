@@ -4,7 +4,22 @@
   */
 ?>
 <?php get_header(); ?>
-    <div id="inner-content" class="wrap clearfix">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php echo vm14_post_header(); ?>
+          <?php $post = vm14_get_post($post->ID); ?>
+            <div class="article-header-content">
+                <div class="wrap">
+                    <h1 class="page-title"><?php echo $post->title; ?></h1>
+                    <?php echo $post->summary; ?>
+                </div>
+            </div>
+        </header>
+        <?php vm14_sub_menu($post->id);?>
+        <div id="inner-content" class="wrap clearfix">
+            <?php vm14_breadcrumbs($post->id);?>
+    <?php endwhile; else : ?>
+        <div id="inner-content" class="wrap clearfix">
+    <?php endif; ?>
         <div id="widget-container" class="fourcol last clearfix">
         </div> 	
         <ul id="contact-list" class="first eightcol vm14-list">
@@ -19,7 +34,6 @@
                 $posts = vm14_get_posts($args);
                 $first_letter = null;
             ?>
-
             <?php for ($i = 0;$i < count($posts);$i++) {
                 if (!strcasecmp($first_letter, $posts[$i]->last_name[0]) == 0) {
                   $first_letter = $posts[$i]->last_name[0];
