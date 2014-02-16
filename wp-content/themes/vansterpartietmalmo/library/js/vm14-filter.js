@@ -65,8 +65,10 @@
                 var item = items[i];
 
                 selectors.forEach(function(selector, idx) {
-                    var text = $(item.domElement).find(selector).text();
-                    item.searchIndex.push(text.toLowerCase());
+                    $(item.domElement).find(selector).each(function() {
+                        var text = $(this).text().toLowerCase();
+                        item.searchIndex.push(text);
+                    });
                 });
             }
         };
