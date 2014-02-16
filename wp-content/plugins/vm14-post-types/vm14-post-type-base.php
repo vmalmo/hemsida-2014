@@ -160,7 +160,7 @@ abstract class VM14_Post_Type {
     function get_excerpt($len) {
         $excerpt = $this->excerpt;
         if (!strlen($excerpt)) {
-            $excerpt = $this->summary;
+            $excerpt = strip_tags($this->summary);
         }
         if (!strlen($excerpt)) {
             $excerpt = strip_tags($this->content);
