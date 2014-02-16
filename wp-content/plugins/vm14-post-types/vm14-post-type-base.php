@@ -89,6 +89,15 @@ class VM14_Post_Type_Relationship extends VM14_Post_Type_Field {
     }
 }
 
+class VM14_Post_Type_Taxonomy extends VM14_Post_Type_Field {
+    function get_config($prefix, $id) {
+        $config = parent::get_config($prefix, $id);
+        $config['type'] = 'taxonomy';
+
+        return $config;
+    }
+}
+
 abstract class VM14_Post_Type {
     protected $post;
     protected $post_data;
