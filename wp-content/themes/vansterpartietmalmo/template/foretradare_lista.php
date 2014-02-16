@@ -5,29 +5,9 @@
 ?>
 <?php get_header(); ?>
     <div id="inner-content" class="wrap clearfix">
-        <div class="fourcol last clearfix">
-            <h3>Sök:</h3>
-            <input id="search" type="text">
-            <br>
-            <h3>Visa:</h3>
-            <ul>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-            </ul>
-            <br><br>
-            <div class="filter">
-
-                <span> Jämställdhet</span>
-                <span class="active">Kultur</span>
-                <span>interndemokrati</span>
-                <span>arbetsgrupp</span>
-                <span class="active">Miljö</span>
-                <span>Sjukvård</span>
-            </div>
+        <div id="widget-container" class="fourcol last clearfix">
         </div> 	
-        <ul class="first eightcol vm14-list">
+        <ul id="contact-list" class="first eightcol vm14-list">
             <?php
                 $args = array(
                   'post_type' => 'contact_person',
@@ -50,6 +30,14 @@
                 </li>
             <?php } ?>
         </ul>
+        <script>
+            var list, widget;
+
+            list = document.getElementById('contact-list');
+            widget = new vm14.FilterWidget(list);
+            widget.enableSearch('Sök', [ 'h4', 'p' ]);
+            widget.render(document.getElementById('widget-container'));
+        </script>
 
         <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
             <div id="blurbs">
