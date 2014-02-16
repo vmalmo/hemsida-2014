@@ -7,7 +7,7 @@ Template Name: Kalender
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php echo vm14_post_header(); ?>
           <?php $post = vm14_get_post($post->ID); ?>
-            <div class="article-header-content">
+            <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php echo $post->title; ?></h1>
                     <?php echo $post->summary; ?>
@@ -43,86 +43,40 @@ Template Name: Kalender
             </article>
 
     <?php endif; ?>
-        <div class="first eightcol lista">
-            <div class="alfabet">Idag</div>
-            <ul>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-            </ul>
-            <div class="alfabet">Denna vecka</div>
-            <ul>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-                <li>
-                    <img src="http://placehold.it/200x100">
-                    <h3>Lorem</h3>
-                    <span>ipsum dolor sit amet</span>
-                </li>
-            </ul>
-        </div>
-        <div class="fourcol last clearfix">
-            <h3>Sök:</h3>
-            <input id="search" type="text">
-            <br>
-            <h3>Visa:</h3>
-            <ul>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-                <li>Styrelsen</li>
-            </ul>
-            <br><br>
-            <div class="filter">
 
-                <span> Jämställdhet</span>
-                <span class="active">Kultur</span>
-                <span>interndemokrati</span>
-                <span>arbetsgrupp</span>
-                <span class="active">Miljö</span>
-                <span>Sjukvård</span>
-            </div>
-        </div>
+        <div id="widget-container" class="fourcol last clearfix">
+        </div> 	
+        <ul id="contact-list" class="first eightcol vm14-list">
+            <?php
+                $today = date('Ymd', strtotime("now"));
+                $args = array(
+                  'post_type' => 'calendar_event',
+                  'post_per_page' => '100',
+                  'orderby' => 'meta_value',
+                  'meta_key' => 'calendar_event_start_date',
+                  'meta_query' => array(
+                    array(
+                      'key' => 'calendar_event_end_date',
+                      'value' => $today,
+                      'type' => 'numeric',
+                      'compare' => '>='
+                    )
+                  ),
+                  'order'=>'ASC'
+                );
+                $posts = vm14_get_posts($args);
+                $first_letter = null;
+            ?>
+            <?php for ($i = 0;$i < count($posts);$i++) {
+                if (!strcasecmp($first_letter, $posts[$i]->last_name[0]) == 0) {
+                  $first_letter = $posts[$i]->last_name[0];
+                  echo '<li class="sub-header">'.$first_letter.'</li>';
+                }?>
+                <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>">
+                  <?php echo $posts[$i]->preview_html(); ?>
+                </li>
+            <?php } ?>
+        </ul>
         <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
             <div id="blurbs">
                 <?php dynamic_sidebar( 'blurbs' ); ?>
