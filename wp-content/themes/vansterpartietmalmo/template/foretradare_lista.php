@@ -50,6 +50,7 @@
             list = document.getElementById('contact-list');
             widget = new vm14.FilterWidget(list);
             widget.enableSearch('Sök', [ 'h4', 'p' ]);
+            widget.addFilter('Taggar', 'tags', vm14.FilterWidget.TAG_CLOUD, true);
             widget.render(document.getElementById('widget-container'));
         </script>
 

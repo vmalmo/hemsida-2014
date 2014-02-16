@@ -29,7 +29,21 @@
         };
 
         FilterWidget.prototype.addFilter = function(title, key, style, multiple) {
-            // TODO: Implement filters
+            var pane;
+
+            switch (style) {
+                case FilterWidget.TAG_CLOUD:
+                    pane = new TagCloudPane(title, key, this);
+                    break;
+                default:
+                    pane = new ListPane(title, key, this);
+                    break;
+            }
+
+            pane.addCallback(this.update);
+            this.panes.push(pane);
+
+            buildFilterIndex(this.items, key, multiple);
         };
 
         FilterWidget.prototype.update = function(pane) {
@@ -70,6 +84,29 @@
                         item.searchIndex.push(text);
                     });
                 });
+            }
+        };
+
+
+        var buildFilterIndex = function(items, key, serialized) {
+            var i;
+
+            for (i=0; i<items.length; i++) {
+                var item, value;
+
+                item = items[i];
+                value = $(item.domElement).data(key);
+                if (serialized) {
+                    value = value.split(/(?!\\),/);
+                    value.forEach(function(val, idx) {
+                        value[idx] = val.replace('\\,', ',');
+                    });
+                }
+                else {
+                    value = [value];
+                }
+
+                item.filterContent[key] = value;
             }
         };
 
@@ -155,16 +192,98 @@
         };
 
 
-        var ListPane = function(title, widget) {
+        var ListPane = function(title, key, widget) {
             PaneBase.call(this, title, widget);
+            this.filterKey = key;
+            this.domElement = null;
         };
 
         ListPane.prototype = new PaneBase();
         ListPane.prototype.constructor = ListPane;
 
+        ListPane.prototype.matches = function(item) {
+            var elements, len;
 
-        var TagCloudPane = function(title, widget) {
-            ListPane.call(this, title, widget);
+            elements = $(this.domElement).find('.selected a');
+            len = elements.length;
+
+            if (len > 0) {
+                var i, content;
+
+                content = item.filterContent[this.filterKey];
+                for (i=0; i<content.length; i++) {
+                    var e;
+                
+                    for (e=0; e<len; e++) {
+                        var elem = elements.get(e);
+                        console.log(elem.innerText, content[i]);
+                        if (elem.innerText == content[i])
+                            return true;
+                    }
+                }
+                
+                return false;
+            }
+            else {
+                return true;
+            }
+        };
+
+        ListPane.prototype.render = function(ctr) {
+            var i, content, ul, pane;
+
+            this.domElement = document.createElement('div');
+            ctr.appendChild(this.domElement);
+
+            if (this.title) {
+                var h3;
+
+                h3 = document.createElement('h3');
+                h3.innerText = this.title;
+                this.domElement.appendChild(h3);
+            }
+
+            content = [];
+            for (i=0; i<this.widget.items.length; i++) {
+                var item;
+                
+                item = this.widget.items[i];
+                item.filterContent[this.filterKey].forEach(function(value) {
+                    if (content.indexOf(value)<0)
+                        content.push(value);
+                });
+            }
+
+            ul = document.createElement('ul');
+            this.domElement.appendChild(ul);
+
+            for (i=0; i<content.length; i++) {
+                var li, a;
+
+                li = document.createElement('li');
+                ul.appendChild(li);
+
+                a = document.createElement('a');
+                a.innerText = content[i];
+                li.appendChild(a);
+            }
+
+            pane = this;
+            $(ul).find('li').click(function() {
+                for (i=0; i<pane.callbacks.length; i++) {
+                    var cb = pane.callbacks[i];
+
+                    $(this).toggleClass('selected');
+
+                    cb.call(pane.widget, pane);
+                }
+            });
+        };
+
+
+
+        var TagCloudPane = function(title, key, widget) {
+            ListPane.call(this, title, key, widget);
         };
 
         TagCloudPane.prototype = new ListPane();
@@ -174,7 +293,7 @@
 
         var FilterWidgetItem = function(domElement) {
             this.domElement = domElement;
-            this.filterContent = [];
+            this.filterContent = {};
             this.searchIndex = [];
         };
 
