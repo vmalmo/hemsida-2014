@@ -9,7 +9,7 @@
             this.items = [];
 
             var items = this.items;
-            $(list).find('li').each(function() {
+            $(list).find('li.filterable').each(function() {
                 // Add items with references to DOM element
                 items.push(new FilterWidgetItem(this));
             });

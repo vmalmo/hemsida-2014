@@ -25,7 +25,7 @@
                   $first_letter = $posts[$i]->last_name[0];
                   echo '<li class="alfabet">'.$first_letter.'</li>';
                 }?>
-                <li class="filter" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>">
+                <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>">
                   <?php echo $posts[$i]->preview_html(); ?>
                 </li>
             <?php } ?>
