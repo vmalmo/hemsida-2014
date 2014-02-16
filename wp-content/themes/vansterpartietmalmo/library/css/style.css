@@ -1085,20 +1085,28 @@ article ul li {
 /*********************
 Contact listing
 *********************/
-.alfabet {
-  background: none repeat scroll 0 0 #DDDDDD;
-  padding: 10px;
-}
-
 .vm14-list li {
   overflow: hidden;
   padding: 0.5em 0;
 }
+.vm14-list li img {
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+}
 .vm14-list li h4 {
-  margin: 0 0 0.5em;
+  float: right;
+  width: 83%;
+  margin: 0;
 }
 .vm14-list li p {
+  float: right;
+  width: 83%;
   margin: 0.5em 0 1em;
+}
+.vm14-list li.sub-header {
+  background: none repeat scroll 0 0 #DDDDDD;
+  padding: 10px;
 }
 
 /******************************************************************
@@ -1730,20 +1738,6 @@ tweeners.
   }
 
   /* end .entry-content */
-  .vm14-list li {
-    overflow: hidden;
-    padding: 0.5em 0;
-  }
-  .vm14-list li img {
-    max-width: 25%;
-    float: left;
-  }
-  .vm14-list li h4, .vm14-list li p {
-    float: right;
-    width: 70%;
-    text-align: left;
-  }
-
   /****************
   ***************/
   #blurbs a, #blurbs .widget {
@@ -2346,26 +2340,6 @@ ul.footer-nav a {
   padding: 0;
 }
 
-.lista img {
-  float: left;
-  margin-right: 20px;
-}
-
-.lista li:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.lista h3 {
-  margin: 0.5em;
-}
-
-.alfabet {
-  background: none repeat scroll 0 0 #DDDDDD;
-  padding: 10px;
-}
-
 .sortera {
   padding: 10px 0;
   text-align: right;
@@ -2382,18 +2356,6 @@ ul.footer-nav a {
 .sortera > span:after {
   content: " | ";
   margin: 0 5px;
-}
-
-.filter > span {
-  background: none repeat scroll 0 0 #CCCCCC;
-  border-radius: 5px;
-  line-height: 35px;
-  padding: 5px 10px;
-}
-
-.filter span.active {
-  background: none repeat scroll 0 0 #666666;
-  color: #FFFFFF;
 }
 
 .toppad {

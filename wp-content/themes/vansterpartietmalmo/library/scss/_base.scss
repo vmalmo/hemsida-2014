@@ -471,18 +471,23 @@ article ul {
 /*********************
 Contact listing
 *********************/
-.alfabet {
-    background: none repeat scroll 0 0 #DDDDDD;
-    padding: 10px;
-}
 .vm14-list {
   li {
     overflow: hidden;
     padding: 0.5em 0;
+    img {
+      float: left;
+      width: 15%;
+      margin-right: 2%;
+    }
     h4 {
-      margin: 0 0 0.5em;
+      float: right;
+      width: 83%;
+      margin: 0;
     }
     p {
+      float: right;
+      width: 83%;
       margin: 0.5em 0 1em;
     }
   }

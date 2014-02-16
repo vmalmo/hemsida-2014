@@ -162,22 +162,6 @@ ul.footer-nav a {
     background: none repeat scroll 0 0 #DDDDDD;
     padding: 0;
 }
-.lista img {
-    float: left;
-     margin-right: 20px;
-}
-.lista li:after {
-    clear: both;
-    content: "";
-    display: table;
-}
-.lista h3 {
-    margin: 0.5em;
-}
-.alfabet {
-    background: none repeat scroll 0 0 #DDDDDD;
-    padding: 10px;
-}
 .sortera {
     padding: 10px 0;
     text-align: right;
@@ -191,16 +175,6 @@ ul.footer-nav a {
 .sortera > span:after {
     content: " | ";
     margin: 0 5px;
-}
-.filter > span {
-    background: none repeat scroll 0 0 #CCCCCC;
-    border-radius: 5px;
-    line-height: 35px;
-    padding: 5px 10px;
-}
-.filter span.active {
-    background: none repeat scroll 0 0 #666666;
-    color: #FFFFFF;
 }
 .toppad {
     padding-top: 60px;
