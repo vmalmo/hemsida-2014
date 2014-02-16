@@ -44,11 +44,6 @@ Template Name: Kalender
 
     <?php endif; ?>
         <div class="first eightcol lista">
-            <div class="sortera">
-                Sortera efter:
-                <span role="link" >Förnamn</span>
-                <span role="link" >Efternamn</span> 
-            </div>
             <div class="alfabet">Idag</div>
             <ul>
                 <li>
