@@ -103,6 +103,22 @@ POSTS & CONTENT STYLES
 	}
 			
 } /* end .entry-content */
+
+.vm14-list {
+  li {
+    overflow: hidden;
+    padding: 0.5em 0;
+    img {
+      max-width: 25%;
+      float: left;
+    }
+    h4, p {
+      float: right;
+      width: 70%;
+      text-align: left;
+    }
+  }
+}
 /****************
 ***************/
 #blurbs {

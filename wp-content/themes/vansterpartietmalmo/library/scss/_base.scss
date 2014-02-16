@@ -314,9 +314,6 @@ article ul {
     }
 }
 
-#content {
-
-}
 
 		.hentry {
 
@@ -469,6 +466,27 @@ article ul {
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+
+/*********************
+Contact listing
+*********************/
+.alfabet {
+    background: none repeat scroll 0 0 #DDDDDD;
+    padding: 10px;
+}
+.vm14-list {
+  li {
+    overflow: hidden;
+    padding: 0.5em 0;
+    h4 {
+      margin: 0 0 0.5em;
+    }
+    p {
+      margin: 0.5em 0 1em;
+    }
+  }
+}
 
 /******************************************************************
 PAGE NAVI STYLES

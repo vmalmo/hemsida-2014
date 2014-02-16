@@ -27,7 +27,7 @@
                 <span>Sjukvård</span>
             </div>
         </div> 	
-        <ul class="first eightcol lista">
+        <ul class="first eightcol vm14-list">
             <?php
                 $args = array(
                   'post_type' => 'contact_person',
