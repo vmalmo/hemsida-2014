@@ -258,4 +258,13 @@ function vm14_post_header(){
     $end_header);
 }
 
+function vm14_get_tag_comma_separated($post) {
+    $raw_tags = wp_get_post_tags($post->id);
+    $tags = array();
+    for ($i = 0; $i < count($raw_tags); $i++) {
+        array_push($tags, str_replace(',', '\,',$raw_tags[$i]->name));
+    }
+    return implode(',', $tags);
+}
+
 ?>
