@@ -267,4 +267,13 @@ function vm14_get_tag_comma_separated($post) {
     return implode(',', $tags);
 }
 
+function vm14_get_categories_comma_separated($post) {
+    $categories = get_the_category($post->id);
+    $category_names = array();
+    for ($i = 0; $i < count($categories); $i++) {
+        array_push($category_names, str_replace(',', '\,',$categories[$i]->name));
+    }
+    return implode(',', $category_names);
+}
+
 ?>
