@@ -37,7 +37,7 @@
             <?php for ($i = 0;$i < count($posts);$i++) {
                 if (!strcasecmp($first_letter, $posts[$i]->last_name[0]) == 0) {
                   $first_letter = $posts[$i]->last_name[0];
-                  echo '<li class="alfabet">'.$first_letter.'</li>';
+                  echo '<li class="sub-header">'.$first_letter.'</li>';
                 }?>
                 <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>">
                   <?php echo $posts[$i]->preview_html(); ?>
