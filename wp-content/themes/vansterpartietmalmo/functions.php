@@ -267,4 +267,15 @@ function vm14_get_tag_comma_separated($post) {
     return implode(',', $tags);
 }
 
+function vm14_post_list($posts) {
+    if ($posts && is_array($posts) && sizeof($posts)>0) {
+        echo '<ul class="post-list">';
+        foreach ($posts as $post) {
+            $html = $post->preview_html();
+            echo '<li>'.$html.'</li>';
+        }
+        echo '</ul>';
+    }
+}
+
 ?>
