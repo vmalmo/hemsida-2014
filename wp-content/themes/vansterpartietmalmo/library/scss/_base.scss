@@ -305,6 +305,15 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+article ul {
+    margin: 10px 40px;
+
+    li {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+}
+
 #content {
 
 }
