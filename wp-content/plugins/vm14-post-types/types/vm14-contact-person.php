@@ -12,7 +12,7 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
         $html  = sprintf('<a href="%s">', get_permalink($this->id));
         $html .= sprintf('<h4>%s</h4>', $this->first_name . ' ' .$this->last_name);
         $html .= get_the_post_thumbnail($this->id);
-        $html .= $excerpt;
+        $html .= sprintf('<p>%s</p>', $excerpt);
         $html .= '</a>';
 
         return $html;
