@@ -2,6 +2,29 @@
 /*
 Template Name: Kalender
 */
+  $today = date('Ymd', strtotime("now"));
+  $header_rules = array(
+    array(
+      'rule' => $today,
+      'name' => __('Today')
+    ),
+    array(
+      'rule' => date('Ymd', strtotime($today. ' + 1 days')),
+      'name' => __('Tomorrow')
+    ),
+    array(
+      'rule' => date('Ymd', strtotime($today. ' + 2 days')),
+      'name' => __('This week')
+    ),
+    array(
+      'rule' => date('Ymd', strtotime('Sunday this week')),
+      'name' => __('Next week')
+    ),
+    array(
+      'rule' => date('Ymd', strtotime('Sunday next week')),
+      'name' => __('Future')
+    ),
+  );
 ?>
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -48,7 +71,6 @@ Template Name: Kalender
         </div> 	
         <ul id="contact-list" class="first eightcol vm14-list">
             <?php
-                $today = date('Ymd', strtotime("now"));
                 $args = array(
                   'post_type' => 'calendar_event',
                   'posts_per_page' => '200',
@@ -67,13 +89,24 @@ Template Name: Kalender
                 $posts = vm14_get_posts($args);
                 $first_letter = null;
             ?>
-            <?php for ($i = 0;$i < count($posts);$i++) {
-                if (!strcasecmp($first_letter, $posts[$i]->last_name[0]) == 0) {
-                  $first_letter = $posts[$i]->last_name[0];
-                  echo '<li class="sub-header">'.$first_letter.'</li>';
-                }?>
+            <?php $current_rule_index = -1; ?>
+            <?php for ($j = 0;$j < count($header_rules); $j++) { ?>
+                <?php if ($header_rules[$j]['rule'] >= $posts[0]->start_date) { ?>
+                    <?php // bah I fix an better solution tomorrow...
+                      $current_rule_index = $j;
+                      break;
+                    ?>
+                <?php } ?>
+                <?php $current_rule_index = count($header_rules)-1; ?>
+            <?php } ?>
+
+            <?php for ($i = 0;$i < count($posts);$i++) { ?>
+                <?php if ($header_rules[$current_rule_index]['rule'] <= $posts[$i]->start_date) { ?>
+                    <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
+                    <?php $current_rule_index++; ?>
+                <?php } ?>
                 <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>" data-categories="<?php echo vm14_get_categories_comma_separated($posts[$i]); ?>">
-                  <?php echo $posts[$i]->preview_html(); ?>
+                    <?php echo $posts[$i]->preview_html(); ?>
                 </li>
             <?php } ?>
         </ul>
