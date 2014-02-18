@@ -26,7 +26,7 @@
             <?php
                 $args = array(
                   'post_type' => 'contact_person',
-                  'post_per_page' => '100',
+                  'posts_per_page' => '200',
                   'orderby'=>'meta_value',
                   'meta_key'=>'contact_person_last_name',
                   'order'=>'ASC'

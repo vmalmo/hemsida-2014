@@ -51,7 +51,7 @@ Template Name: Kalender
                 $today = date('Ymd', strtotime("now"));
                 $args = array(
                   'post_type' => 'calendar_event',
-                  'post_per_page' => '100',
+                  'posts_per_page' => '200',
                   'orderby' => 'meta_value',
                   'meta_key' => 'calendar_event_start_date',
                   'meta_query' => array(
