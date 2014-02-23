@@ -3,6 +3,7 @@
 Template Name: Kalender
 */
   $today = date('Ymd', strtotime("now"));
+  $today  = date('Ymd', strtotime($today. ' + 1 days'));
   $header_rules = array(
     array(
       'rule' => $today,
@@ -13,11 +14,11 @@ Template Name: Kalender
       'name' => __('Tomorrow')
     ),
     array(
-      'rule' => date('Ymd', strtotime($today. ' + 2 days')),
+      'rule' => date('Ymd', strtotime('Sunday this week')),
       'name' => __('This week')
     ),
     array(
-      'rule' => date('Ymd', strtotime('Sunday this week')),
+      'rule' => date('Ymd', strtotime('Sunday next week')),
       'name' => __('Next week')
     ),
     array(
@@ -25,6 +26,7 @@ Template Name: Kalender
       'name' => __('Future')
     ),
   );
+  
 ?>
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -100,10 +102,20 @@ Template Name: Kalender
                 <?php $current_rule_index = count($header_rules)-1; ?>
             <?php } ?>
 
+            <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
             <?php for ($i = 0;$i < count($posts);$i++) { ?>
-                <?php if ($header_rules[$current_rule_index]['rule'] <= $posts[$i]->start_date) { ?>
-                    <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
-                    <?php $current_rule_index++; ?>
+                <?php if ($header_rules[$current_rule_index]['rule'] <= $posts[$i]->start_date && $current_rule_index < count($header_rules)) { ?>
+                    <?php for ($j = $current_rule_index; $j < count($header_rules); $j++) { // loop through rules to find the one for this day ?>
+                        <?php if ($header_rules[$j]['rule'] > $posts[$i]->start_date) { ?>
+                            <?php $current_rule_index = $j; ?>
+                            <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
+                            <?php break; ?>
+                        <?php }?>
+                    <?php }?>
+                    <?php if ($j === count($header_rules)) { // if loop when throu the we at last step ?>
+                        <?php $current_rule_index = count($header_rules) + 1; ?>
+                        <li class="sub-header"><?php echo $header_rules[count($header_rules)-1]['name']; ?></li>
+                    <?php } ?>
                 <?php } ?>
                 <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>" data-categories="<?php echo vm14_get_categories_comma_separated($posts[$i]); ?>">
                     <?php echo $posts[$i]->preview_html(); ?>
