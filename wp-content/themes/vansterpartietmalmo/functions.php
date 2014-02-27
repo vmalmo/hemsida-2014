@@ -258,14 +258,6 @@ function vm14_post_header(){
     $end_header);
 }
 
-function vm14_get_tag_comma_separated($post) {
-    $raw_tags = wp_get_post_tags($post->id);
-    $tags = array();
-    for ($i = 0; $i < count($raw_tags); $i++) {
-        array_push($tags, str_replace(',', '\,',$raw_tags[$i]->name));
-    }
-    return implode(',', $tags);
-}
 
 function vm14_post_list($posts) {
     if ($posts && is_array($posts) && sizeof($posts)>0) {
@@ -278,13 +270,5 @@ function vm14_post_list($posts) {
     }
 }
 
-function vm14_get_categories_comma_separated($post) {
-    $categories = get_the_category($post->id);
-    $category_names = array();
-    for ($i = 0; $i < count($categories); $i++) {
-        array_push($category_names, str_replace(',', '\,',$categories[$i]->name));
-    }
-    return implode(',', $category_names);
-}
 
 ?>

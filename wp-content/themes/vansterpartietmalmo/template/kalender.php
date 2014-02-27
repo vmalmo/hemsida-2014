@@ -117,7 +117,7 @@ Template Name: Kalender
                         <li class="sub-header"><?php echo $header_rules[count($header_rules)-1]['name']; ?></li>
                     <?php } ?>
                 <?php } ?>
-                <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>" data-categories="<?php echo vm14_get_categories_comma_separated($posts[$i]); ?>">
+                <li class="filterable" data-tags="<?php echo $posts[$i]->tags_as_string(); ?>" data-categories="<?php echo $posts[$i]->categories_as_string(); ?>">
                     <?php echo $posts[$i]->preview_html(); ?>
                 </li>
             <?php } ?>

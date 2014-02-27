@@ -199,6 +199,23 @@ abstract class VM14_Post_Type {
     function date($format) {
         return get_the_time($format, $this->id);
     }
+    function categories_as_string() {
+      $categories = get_the_category($this->id);
+      $category_names = array();
+      for ($i = 0; $i < count($categories); $i++) {
+          array_push($category_names, str_replace(',', '\,',$categories[$i]->name));
+      }
+      return implode(',', $category_names);
+    }
+
+    function tags_as_string() {
+      $raw_tags = wp_get_post_tags($this->id);
+      $tags = array();
+      for ($i = 0; $i < count($raw_tags); $i++) {
+          array_push($tags, str_replace(',', '\,',$raw_tags[$i]->name));
+      }
+      return implode(',', $tags);
+    }
 
     static function register() {
         $class = get_called_class();

@@ -39,7 +39,7 @@
                   $first_letter = $posts[$i]->last_name[0];
                   echo '<li class="sub-header">'.$first_letter.'</li>';
                 }?>
-                <li class="filterable" data-tags="<?php echo vm14_get_tag_comma_separated($posts[$i]);?>" data-categories="<?php echo vm14_get_categories_comma_separated($posts[$i]); ?>">
+                <li class="filterable" data-tags="<?php echo $posts[$i]->tags_as_string(); ?>" data-categories="<?php echo $posts[$i]->categories_as_string(); ?>">
                   <?php echo $posts[$i]->preview_html(); ?>
                 </li>
             <?php } ?>
