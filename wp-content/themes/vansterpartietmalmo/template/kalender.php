@@ -71,7 +71,7 @@ Template Name: Kalender
 
         <div id="widget-container" class="fourcol last clearfix">
         </div> 	
-        <ul id="contact-list" class="first eightcol vm14-list">
+        <ul id="event-list" class="first eightcol vm14-list">
             <?php
                 $args = array(
                   'post_type' => 'calendar_event',
@@ -122,6 +122,17 @@ Template Name: Kalender
                 </li>
             <?php } ?>
         </ul>
+
+        <script>
+            var list, widget;
+
+            list = document.getElementById('event-list');
+            widget = new vm14.FilterWidget(list);
+            widget.enableSearch('Sök', [ 'h4', 'p' ]);
+            widget.addFilter('Taggar', 'tags', vm14.FilterWidget.TAG_CLOUD, true);
+            widget.render(document.getElementById('widget-container'));
+        </script>
+
         <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
             <div id="blurbs">
                 <?php dynamic_sidebar( 'blurbs' ); ?>
