@@ -7,11 +7,25 @@
             this.listElement = list;
             this.panes = [];
             this.items = [];
+            this.headers = [];
 
-            var items = this.items;
-            $(list).find('li.filterable').each(function() {
+            var items = this.items,
+                headers = this.headers,
+                curHeader = null;
+
+            $(list).find('li').each(function() {
                 // Add items with references to DOM element
-                items.push(new FilterWidgetItem(this));
+                if ($(this).hasClass('filterable')) {
+                    var item = new FilterWidgetItem(this);
+                    items.push(item);
+                    if (curHeader) {
+                        curHeader.add(item);
+                    }
+                }
+                else {
+                    curHeader = new FilterWidgetHeader(this);
+                    headers.push(curHeader);
+                }
             });
         };
 
@@ -53,7 +67,11 @@
                 var item;
 
                 item = this.items[i];
-                $(item.domElement).toggle(pane.matches(item));
+                item.update(pane);
+            }
+
+            for (i=0; i<this.headers.length; i++) {
+                this.headers[i].updateVisibility();
             }
         };
 
@@ -291,10 +309,40 @@
 
 
 
+        var FilterWidgetHeader = function(domElement) {
+            this.domElement = domElement;
+            this.items = [];
+        };
+
+        FilterWidgetHeader.prototype.add = function(item) {
+            this.items.push(item);
+        };
+
+        FilterWidgetHeader.prototype.hasVisibleItems = function() {
+            var i, len = this.items.length;
+            for (i=0; i<len; i++) {
+                var item = this.items[i];
+                if (item.visible)
+                    return true;
+            }
+
+            return false;
+        };
+
+        FilterWidgetHeader.prototype.updateVisibility = function() {
+            $(this.domElement).toggle(this.hasVisibleItems());
+        };
+
         var FilterWidgetItem = function(domElement) {
             this.domElement = domElement;
             this.filterContent = {};
             this.searchIndex = [];
+            this.visible = true;
+        };
+
+        FilterWidgetItem.prototype.update = function(pane) {
+            this.visible = pane.matches(this);
+            $(this.domElement).toggle(this.visible);
         };
 
 
