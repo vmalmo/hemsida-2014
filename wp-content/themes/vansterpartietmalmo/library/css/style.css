@@ -1650,8 +1650,35 @@ FOOTER STYLES
   margin-left: 0;
 }
 #blurbs > a p, #blurbs .widget p {
+  background-image: url("../images/bg.png");
+  padding: 0.5em 1em 1em;
   margin: 0;
-  font-size: 1.6em;
+  font-size: 1.2em;
+}
+
+#calendar-list .sub-header {
+  padding: 0.3em 0.8em;
+  border-top: solid 1px #CCC;
+  color: #000;
+}
+#calendar-list li.filterable {
+  -webkit-transition: all ease 0.5s;
+  -transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px #CCC;
+}
+#calendar-list li.filterable:hover {
+  background: #EEE;
+}
+#calendar-list p {
+  font-size: 0.8em;
+}
+#calendar-list .date {
+  font-style: italic;
+  font-size: 0.8em;
+  margin: 0;
 }
 
 /*
@@ -2123,7 +2150,7 @@ you can add resource intensive styles.
   *********************/
   /* top image */
   .page-header, .videoplayer, .top-image {
-    min-height: 400px;
+    min-height: 600px;
   }
 
   #menu-top-corner {
