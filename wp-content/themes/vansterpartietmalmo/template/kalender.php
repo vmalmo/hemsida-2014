@@ -71,7 +71,7 @@ Template Name: Kalender
 
         <div id="widget-container" class="fourcol last clearfix">
         </div> 	
-        <ul id="contact-list" class="first eightcol vm14-list">
+        <ul id="calendar-list" class="first eightcol vm14-list">
             <?php
                 $args = array(
                   'post_type' => 'calendar_event',
