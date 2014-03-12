@@ -7,6 +7,17 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $location;
 
     static $meta_groups;
+
+    function preview_html() {
+        $excerpt = $this->get_excerpt(300);
+        $html  = sprintf('<a href="%s">', get_permalink($this->id));
+        $html .= get_the_post_thumbnail($this->id);
+        $html .= sprintf('<p class="date">%s</p>', date('d M', strtotime($this->start_date)) . ' - ' . date('d M', strtotime($this->end_date)));
+        $html .= sprintf('<h4>%s</h4>', $this->title);
+        $html .= sprintf('<p>%s</p>', $excerpt);
+        $html .= '</a>';
+        return $html;
+    }
 }
 
 VM14_Calendar_Event_Post_Type::$meta_groups = array(
