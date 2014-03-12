@@ -59,7 +59,6 @@ img {
                 min-width: 40px;
                 text-align: center;
             }
-            
             small {
                 display: block;
             }
@@ -891,3 +890,31 @@ FOOTER STYLES
 }
 
 
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+.icon-time:before{ content: "\f021"; }
+.icon-calendar:before{ content: "\f022"; }
+.icon-twitter-sign:before{ content: "\f023"; }
+.icon-facebook-sign:before{ content: "\f024"; }
+.icon-twitter:before{ content: "\f025"; }
+.icon-facebook:before{ content: "\f026"; }
+.icon-angle-right:before{ content: "\f027"; }

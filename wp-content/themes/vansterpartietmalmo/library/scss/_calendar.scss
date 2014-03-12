@@ -4,6 +4,29 @@
     border-top: solid 1px #CCC;
     color: #000;
   }
+  .date-outer-holder {
+    float: right;
+    width: 83%;
+  }
+  .date-holder {
+    float: left;
+    width: 100%;
+    margin-bottom: 0.4em;
+    span {
+      float: left;
+      width: 3em;
+      font-size: 0.8em;
+    }
+    p {
+      width: auto;
+      float: left;
+      margin: 0.1em 0.5em 0.1em 0;
+      &:before {
+        color: $red;
+        margin-right: 0.3em;
+      }
+    }
+  }
   li.filterable {
     @include transition(all ease 0.5s);
     padding-top: 1em;
@@ -17,7 +40,6 @@
     font-size: 0.8em;
   }
   .date {
-    font-style: italic;
     font-size: 0.8em;
     margin: 0;
   }

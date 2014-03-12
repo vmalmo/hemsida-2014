@@ -600,6 +600,15 @@ TYPOGRAPHY
     	font-style: normal;
 	}
 */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../fonts/custom-fontawesome/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../../fonts/custom-fontawesome/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../../fonts/custom-fontawesome/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../../fonts/custom-fontawesome/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  Font Awesome styles ------------------------------------------------------- */
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -1375,6 +1384,53 @@ FOOTER STYLES
   padding: 0;
 }
 
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+.icon-time:before {
+  content: "\f021";
+}
+
+.icon-calendar:before {
+  content: "\f022";
+}
+
+.icon-twitter-sign:before {
+  content: "\f023";
+}
+
+.icon-facebook-sign:before {
+  content: "\f024";
+}
+
+.icon-twitter:before {
+  content: "\f025";
+}
+
+.icon-facebook:before {
+  content: "\f026";
+}
+
+.icon-angle-right:before {
+  content: "\f027";
+}
+
 .header {
   float: left;
   width: 100%;
@@ -1661,6 +1717,29 @@ FOOTER STYLES
   border-top: solid 1px #CCC;
   color: #000;
 }
+#calendar-list .date-outer-holder {
+  float: right;
+  width: 83%;
+}
+#calendar-list .date-holder {
+  float: left;
+  width: 100%;
+  margin-bottom: 0.4em;
+}
+#calendar-list .date-holder span {
+  float: left;
+  width: 3em;
+  font-size: 0.8em;
+}
+#calendar-list .date-holder p {
+  width: auto;
+  float: left;
+  margin: 0.1em 0.5em 0.1em 0;
+}
+#calendar-list .date-holder p:before {
+  color: #ed1b24;
+  margin-right: 0.3em;
+}
 #calendar-list li.filterable {
   -webkit-transition: all ease 0.5s;
   -transition: all ease 0.5s;
@@ -1676,7 +1755,6 @@ FOOTER STYLES
   font-size: 0.8em;
 }
 #calendar-list .date {
-  font-style: italic;
   font-size: 0.8em;
   margin: 0;
 }
