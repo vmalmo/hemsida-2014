@@ -94,4 +94,3 @@
     return InfiniteScroll;
   })()
 })(jQuery);
-console.log('got file');

@@ -17,8 +17,12 @@
         initHomeVideo();
         initMarquees();
         // run infinite scroll only on contact and calendare
-        //var infiniteScroll = new vm14.InfiniteScroll('calendar_event', '#contact-list');
-        var infiniteScroll = new vm14.InfiniteScroll('contact_person', '#contact-list');
+        if ($('#calendar-list').length > 0) {
+          var infiniteScroll = new vm14.InfiniteScroll('calendar_event', '#calendar-list');
+        }
+        if ($('#contact-list').length > 0){
+          var infiniteScroll = new vm14.InfiniteScroll('contact_person', '#contact-list');
+        }
     }
 
     var initMarquees = function() {
