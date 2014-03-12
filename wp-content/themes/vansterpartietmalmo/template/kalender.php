@@ -81,7 +81,7 @@ Template Name: Kalender
                   'meta_query' => array(
                     array(
                       'key' => 'calendar_event_end_date',
-                      'value' => $today,
+                      'value' => date('Ymd', strtotime($today. ' - 1 days')),
                       'type' => 'numeric',
                       'compare' => '>='
                     )
