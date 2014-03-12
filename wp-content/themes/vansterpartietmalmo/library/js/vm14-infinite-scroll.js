@@ -14,7 +14,7 @@
       this.fancy = false;
       this.params = params || {};
       this.params['html'] = true;
-      this.params['posts_per_page'] = this.params['posts_per_page'] || 200;
+      this.params['posts_per_page'] = this.params['posts_per_page'] || 2;
       this.params['page'] = this.params['size'] || 2; //start on page 2
       this.pageSize = this.params['size'] || 200;
       this.API_URL = '/?__vm14_api&custom_type='+type;
