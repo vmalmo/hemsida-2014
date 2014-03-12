@@ -67,6 +67,7 @@ class VM14_API_Endpoint{
       $args['meta_key'] = 'contact_person_last_name';
     }
     else if($type === 'calendar_event') {
+      $today = date('Ymd', strtotime(strtotime("now"). ' + 1 days'));
       $args['orderby'] = 'meta_value';
       $args['meta_key'] = 'calendar_event_start_date';
       $args['meta_query'] = array(
