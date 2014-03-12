@@ -75,7 +75,7 @@ Template Name: Kalender
             <?php
                 $args = array(
                   'post_type' => 'calendar_event',
-                  'posts_per_page' => '2',
+                  'posts_per_page' => '200',
                   'orderby' => 'meta_value',
                   'meta_key' => 'calendar_event_start_date',
                   'meta_query' => array(
