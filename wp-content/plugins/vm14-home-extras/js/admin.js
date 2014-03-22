@@ -1,10 +1,9 @@
 jQuery(function($) {
-    $('.vm14_custom_blurb_media_link').each(function() {
-        var link = $(this),
-            input = link.parent().find('.vm14_custom_blurb_media_id'),
-            img = link.parent().find('.vm14_custom_blurb_media_img');
+    $('body').on('click', '.vm14_custom_blurb_media_link', function() {
+            console.log(this);
+            var input = $(this).parent().find('.vm14_custom_blurb_media_id'),
+                img = $(this).parent().find('.vm14_custom_blurb_media_img');
         
-        link.click(function() {
             var frame = wp.media({
                 title: 'Select image',
                 multiple: false,
@@ -27,6 +26,5 @@ jQuery(function($) {
             frame.open();
 
             return false;
-        });
     });
 });
