@@ -66,7 +66,7 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
         if (did_action('wp_enqueue_media')===0)
             wp_enqueue_media();
 
-        $plugin_url = WP_PLUGIN_URL.'/'.plugin_basename(dirname(__FILE__));
+        $plugin_url = WP_PLUGIN_URL.'/'.basename(dirname(__FILE__));
 
         wp_register_script('vm14_custom_blurb_admin_js', $plugin_url.'/js/admin.js', array('jquery', 'media-upload', 'media-views'));
         wp_enqueue_script('vm14_custom_blurb_admin_js');
