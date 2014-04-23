@@ -3,8 +3,8 @@
         <?php $p = vm14_get_post($post->ID);?>
         <?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
         <?php $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
-        <header class="article-header clearfix responsive-image" data-image-large="<?php echo $image[0]; ?>"  style="background-image: url('<?php echo $medium_image[0]; ?>');">
-            <div class="article-header-content">
+        <header class="page-header clearfix responsive-image" data-image-large="<?php echo $image[0]; ?>"  style="background-image: url('<?php echo $medium_image[0]; ?>');">
+            <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php the_title(); ?></h1>
                     <?php echo $p->summary;?>
@@ -12,17 +12,29 @@
             </div>
         </header>
         <div id="inner-content" class="wrap clearfix">
-            <?php if ($p->start_date) {?>
-              <div class="icon icon-calendar">
-                <?php echo date('Y-m-d', strtotime($p->start_date)); ?><?php echo $p->start_time; ?>
-              </div>
-            <?php } ?>
-            <?php if ($p->end_date) {?>
-              <div class="icon icon-calendar">
-                <?php echo date('Y-m-d', strtotime($p->end_date)); ?> <?php echo $p->end_time; ?>
-              </div>
-            <?php } ?>
             <div id="main" class="eightcol first clearfix" role="main">
+                <?php if ($p->start_date) {?>
+                  <div class="calendar-event-single-date">
+                    <span>Börjar:</span>
+                    <div class="icon icon-calendar">
+                      <?php echo date('Y-m-d', strtotime($p->start_date)); ?>
+                    </div>
+                    <div class="icon icon-time">
+                      <?php echo $p->start_time; ?>
+                    </div>
+                  </div>
+                <?php } ?>
+                <?php if ($p->end_date) {?>
+                  <div class="calendar-event-single-date">
+                    <span>Slutar:</span>
+                    <div class="icon icon-calendar">
+                      <?php echo date('Y-m-d', strtotime($p->end_date)); ?>
+                    </div>
+                    <div class="icon icon-time">
+                      <?php echo $p->end_time; ?>
+                    </div>
+                  </div>
+                <?php } ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">
                         <?php the_content(); ?>
