@@ -8,8 +8,9 @@
     .header {
         position: absolute;
         background: none;
+        @include background(linear-gradient(rgba(0,0,0, 0.5) 0%, rgba(0,0,0, 0.0) 80%));
         a {
-            color: #000;
+            color: #FFF;
         }
     }
     #menu-top-corner {

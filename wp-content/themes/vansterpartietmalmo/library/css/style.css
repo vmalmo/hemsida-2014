@@ -1589,6 +1589,146 @@ FOOTER STYLES
   width: 100%;
 }
 
+.header {
+  float: left;
+  width: 100%;
+  z-index: 22;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #000000), color-stop(100%, #262626));
+  background: -webkit-linear-gradient(bottom, #000000, #262626);
+  background: -moz-linear-gradient(bottom, #000000, #262626);
+  background: -o-linear-gradient(bottom, #000000, #262626);
+  background: linear-gradient(bottom, #000000, #262626);
+}
+.header a {
+  color: #FFF;
+}
+.header a:hover {
+  color: #EFEFEF;
+}
+
+#logo {
+  margin: 0.5em 1%;
+  float: left;
+  font-size: 1.2em;
+  width: 100%;
+}
+#logo span {
+  float: left;
+  line-height: 2em;
+  font-size: 1.8;
+}
+#logo img {
+  float: left;
+  margin-right: 0.3em;
+  max-height: 2em;
+}
+
+.allpage {
+  display: none;
+  position: relative;
+  float: left;
+  width: 68%;
+  margin: 0.5em 0;
+}
+
+.right.corner {
+  display: none;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.8em;
+  line-height: 3em;
+}
+
+.top-more {
+  padding: 1em 2em;
+}
+
+#menu-top-corner {
+  display: none;
+}
+
+.right.corner ul {
+  margin: 0;
+}
+
+.home-navigation {
+  display: none;
+  float: left;
+  width: 75%;
+  text-align: center;
+}
+
+.home-navigation ul {
+  text-align: center;
+  padding: 0 0.5em;
+  border-radius: 5px;
+  display: inline-block;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.home-navigation .nav li {
+  display: inline-block;
+  float: none;
+  border-left: solid 1px rgba(0, 0, 0, 0.1);
+}
+.home-navigation .nav li:first-child {
+  border: none;
+}
+
+/*************
+* Mobile menu
+*************/
+.mobile-menu {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0 0.5em;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
+  background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -moz-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: linear-gradient(bottom, #ae0e15, #ed1b24);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  width: 2em;
+  height: 1.8em;
+  text-indent: -9999px;
+}
+.mobile-menu:before {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  content: "X";
+  width: 1em;
+  height: 1em;
+  background: transparent url("../images/menu-icon.png") no-repeat;
+  background-size: contain;
+}
+
+.mobile-home-nav {
+  background: #FFF;
+  display: none;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.mobile-home-nav li {
+  border-bottom: solid 1px #DDD;
+  text-align: center;
+}
+.mobile-home-nav .right.corner {
+  float: right;
+  position: static;
+  width: 100%;
+}
+
 /* top image used on front page */
 .page-header, .videoplayer, .top-image {
   background-color: black;
@@ -1624,9 +1764,14 @@ FOOTER STYLES
 .home .header {
   position: absolute;
   background: none;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(80%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
 }
 .home .header a {
-  color: #000;
+  color: #FFF;
 }
 .home #menu-top-corner {
   display: block;
@@ -1729,35 +1874,35 @@ FOOTER STYLES
   font-size: 1.2em;
 }
 
-#calendar-list .sub-header {
+#calendar-list .sub-header, #contact-list .sub-header {
   padding: 0.3em 0.8em;
   border-top: solid 1px #CCC;
   color: #000;
 }
-#calendar-list .date-outer-holder {
+#calendar-list .date-outer-holder, #contact-list .date-outer-holder {
   float: right;
   width: 83%;
 }
-#calendar-list .date-holder {
+#calendar-list .date-holder, #contact-list .date-holder {
   float: left;
   width: 100%;
   margin-bottom: 0.4em;
 }
-#calendar-list .date-holder span {
+#calendar-list .date-holder span, #contact-list .date-holder span {
   float: left;
   width: 3em;
   font-size: 0.8em;
 }
-#calendar-list .date-holder p {
+#calendar-list .date-holder p, #contact-list .date-holder p {
   width: auto;
   float: left;
   margin: 0.1em 0.5em 0.1em 0;
 }
-#calendar-list .date-holder p:before {
+#calendar-list .date-holder p:before, #contact-list .date-holder p:before {
   color: #ed1b24;
   margin-right: 0.3em;
 }
-#calendar-list li.filterable {
+#calendar-list li.filterable, #contact-list li.filterable {
   -webkit-transition: all ease 0.5s;
   -transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -1765,15 +1910,28 @@ FOOTER STYLES
   padding-bottom: 1em;
   border-bottom: solid 1px #CCC;
 }
-#calendar-list li.filterable:hover {
+#calendar-list li.filterable:hover, #contact-list li.filterable:hover {
   background: #EEE;
 }
-#calendar-list p {
+#calendar-list p, #contact-list p {
   font-size: 0.8em;
 }
-#calendar-list .date {
+#calendar-list .date, #contact-list .date {
   font-size: 0.8em;
   margin: 0;
+}
+
+.calendar-event-single-date {
+  margin: 1em 0 0;
+  float: left;
+  width: 100%;
+}
+.calendar-event-single-date span, .calendar-event-single-date div {
+  padding-right: 0.5em;
+}
+
+.single-calendar_event .entry-content {
+  margin-top: 0px;
 }
 
 /*
@@ -1866,6 +2024,14 @@ tweeners.
     width: 49%;
     margin-left: 2%;
     margin-right: 0;
+  }
+
+  /*********************
+  CALENDAR STYLES
+  *********************/
+  .calendar-event-single-date {
+    margin: 2em 0 0;
+    width: 50%;
   }
 
   /*********************
