@@ -13,7 +13,7 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
     }
 
     function widget($args, $instance) {
-        $src = wp_get_attachment_image_src($instance['media_id'], 'vm14_small'); // TODO: Use correct size
+        $src = wp_get_attachment_image_src($instance['media_id'], 'vm14_medium'); // TODO: Use correct size
         printf('<a href="%s"><div class="blurb-img-holder"><img src="%s"></div><p>%s</p></a>',
             $instance['href'], $src[0], $instance['caption']);
     }

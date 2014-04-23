@@ -1364,8 +1364,8 @@ SIDEBARS & ASIDES
 }
 
 .blurb-img-holder {
+  max-height: 150px;
   overflow: hidden;
-  border-bottom: solid 1px #AAA;
 }
 .blurb-img-holder img {
   float: left;
