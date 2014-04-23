@@ -1363,6 +1363,24 @@ SIDEBARS & ASIDES
   margin-right: 0;
 }
 
+.blurb-img-holder {
+  overflow: hidden;
+  border-bottom: solid 1px #AAA;
+}
+.blurb-img-holder img {
+  float: left;
+  -webkit-transition: all 0.5s ease-out;
+  -transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.blurb-img-holder:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .widget ul li {
   /* deep nesting */
 }
@@ -1706,7 +1724,6 @@ FOOTER STYLES
   margin-left: 0;
 }
 #blurbs > a p, #blurbs .widget p {
-  background-image: url("../images/bg.png");
   padding: 0.5em 1em 1em;
   margin: 0;
   font-size: 1.2em;

@@ -14,7 +14,7 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
 
     function widget($args, $instance) {
         $src = wp_get_attachment_image_src($instance['media_id'], 'vm14_small'); // TODO: Use correct size
-        printf('<a href="%s"><img src="%s"><p>%s</p></a>',
+        printf('<a href="%s"><div class="blurb-img-holder"><img src="%s"></div><p>%s</p></a>',
             $instance['href'], $src[0], $instance['caption']);
     }
 
@@ -32,7 +32,7 @@ class VM14_Custom_Blurb_Widget extends WP_Widget {
         if (is_numeric($instance['media_id'])) {
             $attachment = get_post($instance['media_id']);
             if ($attachment) {
-                $src = wp_get_attachment_image_src($instance['media_id'], 'medium');
+                $src = wp_get_attachment_image_src($instance['media_id'], 'thumb');
                 if ($src) {
                     $media_id = $instance['media_id'];
                     $media_src = $src[0];

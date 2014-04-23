@@ -841,6 +841,19 @@ SIDEBARS & ASIDES
         margin-right: 0;
     }
 }
+.blurb-img-holder {
+  overflow: hidden;
+  border-bottom: solid 1px #AAA;
+  img {
+    float: left;
+    @include transition(all 0.5s ease-out);
+  }
+  &:hover {
+    img {
+      @include transform(scale(1.1));
+    }
+  }
+}
 
 .sidebar {}
 
