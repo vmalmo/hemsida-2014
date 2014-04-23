@@ -12,6 +12,16 @@
             </div>
         </header>
         <div id="inner-content" class="wrap clearfix">
+            <?php if ($p->start_date) {?>
+              <div class="icon icon-calendar">
+                <?php echo date('Y-m-d', strtotime($p->start_date)); ?><?php echo $p->start_time; ?>
+              </div>
+            <?php } ?>
+            <?php if ($p->end_date) {?>
+              <div class="icon icon-calendar">
+                <?php echo date('Y-m-d', strtotime($p->end_date)); ?> <?php echo $p->end_time; ?>
+              </div>
+            <?php } ?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">
