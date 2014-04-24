@@ -179,13 +179,11 @@
         /* if front page make space above mobile menu for logo */
         if ($('.home').length > 0) {
             var h = $('.header').height();
-            console.log('found home', h);
             $('.mobile-home-nav').css({
                 'padding-top': h + 'px'
             });
         }
     }
-
     $(function() {
         init();
     });

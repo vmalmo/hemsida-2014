@@ -295,8 +295,56 @@ and more scalable.
 
 } /* end .nav */
 #menu-top-corner {
+  margin-right: 10px;
+  min-width: 120px;
+  top: 4em;
+  right: 1em;
   li a{
+    color: #FFF;
     padding: 14px 8px;
+  }
+}
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+#menu-top-hover-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 4px;
+  margin-right: 10px;
+  min-width: 120px;
+  top: 4em;
+  right: 1em;
+  padding: 5px 0;
+  li{
+    margin: 0;
+    width: 100%;
+    a{
+      line-height: 1.2em;
+      color: #666;
+      padding: 7px 8px;
+      width: 100%;
+      &:hover {
+        color: #000;
+        background: #DDD;
+      }
+    }
+  }
+}
+.home #menu-top-corner {
+  position: static;
+  background: transparent;
+  border-radius: 0px;
+  a {
+    color: #fff;
   }
 }
 
