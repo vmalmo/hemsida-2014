@@ -1454,6 +1454,9 @@ FOOTER STYLES
   margin: 0;
   padding: 0;
 }
+.footer ul li a:hover {
+  text-decoration: underline;
+}
 
 [class^="icon-"],
 [class*=" icon-"] {
@@ -1642,6 +1645,25 @@ FOOTER STYLES
   width: 100%;
 }
 
+.undermenu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.undermenu li a:hover {
+  color: #ae0e15;
+}
+
+.undermenu > ul {
+  text-align: center;
+}
+
+.undermenu {
+  background: none repeat scroll 0 0 #EEEEEE;
+  padding: 0;
+  border-bottom: solid 1px #DDD;
+  margin-bottom: 0.5em;
+}
+
 .header {
   float: left;
   width: 100%;
@@ -1780,6 +1802,25 @@ FOOTER STYLES
   float: right;
   position: static;
   width: 100%;
+}
+
+.undermenu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.undermenu li a:hover {
+  color: #ae0e15;
+}
+
+.undermenu > ul {
+  text-align: center;
+}
+
+.undermenu {
+  background: none repeat scroll 0 0 #EEEEEE;
+  padding: 0;
+  border-bottom: solid 1px #DDD;
+  margin-bottom: 0.5em;
 }
 
 /* top image used on front page */
@@ -1925,6 +1966,7 @@ FOOTER STYLES
   margin-left: 0;
 }
 #blurbs > a p, #blurbs .widget p {
+  text-align: center;
   padding: 0.5em 1em 1em;
   margin: 0;
   font-size: 1.2em;
@@ -2674,20 +2716,6 @@ ul.footer-nav a {
 
 .nav.top-nav.clearfix {
   margin: 0;
-}
-
-.undermenu li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.undermenu > ul {
-  text-align: center;
-}
-
-.undermenu {
-  background: none repeat scroll 0 0 #DDDDDD;
-  padding: 0;
 }
 
 .sortera {

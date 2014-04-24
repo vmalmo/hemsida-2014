@@ -945,6 +945,9 @@ FOOTER STYLES
             a {
                 margin: 0;
                 padding: 0;
+                &:hover {
+                  text-decoration: underline;
+                }
             }
         }
     }
