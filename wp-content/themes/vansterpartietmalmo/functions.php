@@ -182,20 +182,21 @@ function vm14_breadcrumbs($id, $extra=null) {
 }
 
 
-function vm14_sub_menu($id) {
-    $root_id = $id;
-    $ancestors = get_post_ancestors($id);
-    if (count($ancestors) > 0)
-        $root_id = $ancestors[count($ancestors)-1];
+function vm14_sub_menu($page) {
+    if (is_numeric($page))
+        $page = vm14_get_post($page);
 
-    echo '<div class="first twelvecol undermenu">';
-    echo '  <ul>';
-    wp_list_pages(array(
-        'child_of' =>$root_id,
-        'title_li' => __(''),
-        'depth' => 1
-    ));
-    echo '</ul></div>';
+    if (is_a($page, 'VM14_Page_Post_Type')) {
+        $menu_id = $page->get_menu_id();
+        if ($menu_id) {
+            echo '<div class="first twelvecol undermenu">';
+            echo '  <ul>';
+            wp_nav_menu(array(
+                'menu' => $menu_id
+            ));
+            echo '</ul></div>';
+        }
+    }
 }
 
 
