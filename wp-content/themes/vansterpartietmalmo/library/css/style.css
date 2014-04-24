@@ -1890,6 +1890,9 @@ FOOTER STYLES
 #home-intro * {
   color: white;
 }
+#home-intro a {
+  text-decoration: underline;
+}
 
 #home-news-marquee {
   margin: 20px 0;
