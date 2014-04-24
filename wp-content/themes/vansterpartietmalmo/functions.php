@@ -43,7 +43,9 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 // Thumbnail sizes
 add_image_size( 'vm14_small', 450, 300, true );
 add_image_size( 'vm14_medium', 450, 250, true );
-add_image_size( 'vm14_large', 450, 300, true );
+add_image_size( 'vm14_large', 1240, 698, true );
+add_image_size( 'vm14_medium_width', 640, 480);
+add_image_size( 'vm14_full_width', 2000, 1500);
 add_image_size( 'bones-thumb-600', 600, 150, true );
 /*
 to add more sizes, simply copy a line from above
@@ -249,8 +251,8 @@ function vm14_customize_register($wpc) {
 add_action('customize_register', 'vm14_customize_register');
 
 function vm14_post_header(){
-  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'orginal' ); 
-  $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
+  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_full_width' ); 
+  $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_medium_width' ); 
   $classes = array('page-header', 'clearfix');
   $end_header = '';
   if ($large_image) {
