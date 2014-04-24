@@ -2473,6 +2473,11 @@ you can add resource intensive styles.
     font-size: 0.9em;
   }
 
+  /* main top menu for all pages */
+  .allpage {
+    padding-left: 10%;
+  }
+
   .top-more {
     display: none;
   }
