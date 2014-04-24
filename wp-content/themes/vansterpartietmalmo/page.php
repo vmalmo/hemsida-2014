@@ -5,7 +5,9 @@
             <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php the_title(); ?></h1>
-                    <?php echo $p->summary; ?>
+                    <p class="eightcol first">
+                        <?php echo $p->summary; ?>
+                    </p>
                 </div>
             </div>
         </header>

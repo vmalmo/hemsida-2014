@@ -10,7 +10,9 @@ Template Name: Section
             <div class="page-header-content">
                 <div class="wrap">
                     <h1 class="page-title"><?php echo $post->title; ?></h1>
-                    <?php echo $post->summary; ?>
+                    <p class="eightcol first">
+                      <?php echo $post->summary; ?>
+                    </p>
                 </div>
             </div>
         </header>
