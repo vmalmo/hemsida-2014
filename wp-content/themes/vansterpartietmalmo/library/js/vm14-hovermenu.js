@@ -17,7 +17,8 @@
       self.$menu.show();
       clearTimeout(self.timeout);
     });
-    this.$moreBtn.on('touchstart', function() {
+    this.$moreBtn.on('touchstart', function(e) {
+      e.preventDefault();
       if (this.isVisible) {
         self.$menu.hide();
       }
