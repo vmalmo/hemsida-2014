@@ -13,6 +13,7 @@
                         <?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
                     </footer>
                 </article>
+                <?php $p = vm14_get_post($post->ID);?>
                 <?php if ($p->has_feed()):?>
                 <div class="page-feed">
                     <?php vm14_post_list($p->get_feed());?>
