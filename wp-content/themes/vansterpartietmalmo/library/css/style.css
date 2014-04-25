@@ -1030,7 +1030,6 @@ and more scalable.
   right: 1em;
 }
 #menu-top-corner li a {
-  color: #FFF;
   padding: 14px 8px;
 }
 
@@ -1075,9 +1074,6 @@ and more scalable.
   position: static;
   background: transparent;
   border-radius: 0px;
-}
-.home #menu-top-corner a {
-  color: #fff;
 }
 
 /*********************
@@ -1506,11 +1502,12 @@ FOOTER STYLES
   background: -o-linear-gradient(bottom, #000000, #262626);
   background: linear-gradient(bottom, #000000, #262626);
 }
-.header a {
+
+.header a, .right.corner a {
   color: #FFF;
 }
-.header a:hover {
-  color: #EFEFEF;
+.header a:hover, .right.corner a:hover {
+  color: #ed1b24;
 }
 
 #logo {
@@ -1665,11 +1662,12 @@ FOOTER STYLES
   background: -o-linear-gradient(bottom, #000000, #262626);
   background: linear-gradient(bottom, #000000, #262626);
 }
-.header a {
+
+.header a, .right.corner a {
   color: #FFF;
 }
-.header a:hover {
-  color: #EFEFEF;
+.header a:hover, .right.corner a:hover {
+  color: #ed1b24;
 }
 
 #logo {
@@ -1864,9 +1862,6 @@ FOOTER STYLES
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
   background: -o-linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
-}
-.home .header a {
-  color: #FFF;
 }
 .home #menu-top-corner {
   display: block;

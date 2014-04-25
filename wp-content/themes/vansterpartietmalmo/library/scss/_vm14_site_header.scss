@@ -3,12 +3,14 @@
     width: 100%;
     z-index: 22;
     @include black-gradient();
-    a {
-        color: #FFF;
-        &:hover {
-            color: #EFEFEF;
-        }
-    }
+}
+.header, .right.corner {
+  a {
+      color: #FFF;
+      &:hover {
+        color: $red;
+      }
+  }
 }
 
 #logo {
