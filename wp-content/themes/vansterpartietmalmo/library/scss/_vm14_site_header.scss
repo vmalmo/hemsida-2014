@@ -14,6 +14,9 @@
 }
 
 #logo {
+    &:hover {
+        color: #FFF;
+    }
     margin: 0.5em 1%;
     float: left;
     font-size: 1.2em;

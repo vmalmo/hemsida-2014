@@ -1534,6 +1534,9 @@ FOOTER STYLES
   font-size: 1.2em;
   width: 100%;
 }
+#logo:hover {
+  color: #FFF;
+}
 #logo span {
   float: left;
   line-height: 2em;
@@ -1693,6 +1696,9 @@ FOOTER STYLES
   float: left;
   font-size: 1.2em;
   width: 100%;
+}
+#logo:hover {
+  color: #FFF;
 }
 #logo span {
   float: left;
