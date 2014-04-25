@@ -1466,6 +1466,11 @@ SIDEBARS & ASIDES
   position: relative;
 }
 
+.widget ul {
+  list-style: inital;
+  padding-left: 1.4em;
+  font-size: 0.9em;
+}
 .widget ul li {
   /* deep nesting */
 }
