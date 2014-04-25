@@ -125,6 +125,14 @@ CALENDAR STYLES
 /*********************
 FOOTER STYLES
 *********************/
+.footer {
+    ul {
+      padding-top: 0;
+    }
+    nav {
+       @include columns(2);
+    }
+}
 	
 /*
 check your menus here. do they look good?

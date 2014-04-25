@@ -2,6 +2,9 @@
         <a name="footer"></a>
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="threecol first" >
+            <div class="footer-logo">
+              <img  src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="vänsterpartiet" />
+            </div>
 						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
 
                         <?php if (get_theme_mod('vm14_footer_twitter_name')):?>

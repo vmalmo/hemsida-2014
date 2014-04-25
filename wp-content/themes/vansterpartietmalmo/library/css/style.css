@@ -1427,14 +1427,13 @@ SIDEBARS & ASIDES
 }
 
 .blurb-img-holder {
-  max-height: 150px;
   overflow: hidden;
 }
 .blurb-img-holder img {
   -webkit-transition: all 0.5s ease;
   -transition: all 0.5s ease;
   transition: all 0.5s ease;
-  opacity: 0.8;
+  opacity: 0.9;
   float: left;
 }
 
@@ -1445,11 +1444,21 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.footer-logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .footer {
   clear: both;
   background: none repeat scroll 0 0 #EEEEEE;
   border-top: solid 1px #DDD;
   padding: 40px 20px;
+}
+.footer .first {
+  font-size: 0.9em;
+  margin-bottom: 20px;
 }
 .footer ul li {
   margin: 0;
@@ -1461,6 +1470,15 @@ FOOTER STYLES
 }
 .footer ul li a:hover {
   text-decoration: underline;
+}
+
+#fb-root {
+  display: none;
+}
+
+/* To fill the container and nothing else */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important;
 }
 
 [class^="icon-"],
@@ -2143,6 +2161,17 @@ tweeners.
   /*********************
   FOOTER STYLES
   *********************/
+  .footer ul {
+    padding-top: 0;
+  }
+  .footer nav {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+  }
+
   /*
   check your menus here. do they look good?
   do they need tweaking?
@@ -2480,11 +2509,14 @@ you can add resource intensive styles.
   FOOTER STYLES
   *********************/
   .footer nav {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    -o-column-count: 2;
-    column-count: 2;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+  .footer ul {
+    padding-top: 0;
   }
   .footer ul li {
     -webkit-column-break-inside: avoid;

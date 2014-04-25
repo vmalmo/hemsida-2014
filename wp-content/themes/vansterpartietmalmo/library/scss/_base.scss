@@ -900,11 +900,10 @@ SIDEBARS & ASIDES
     }
 }
 .blurb-img-holder {
-  max-height: 150px;
   overflow: hidden;
   img {
     @include transition(all 0.5s ease);
-    opacity: 0.8;
+    opacity: 0.9;
     float: left;
   }
 }
@@ -938,7 +937,18 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
+.footer-logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+
+}
+
 .footer {
+  .first {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
 	clear: both;
 	background: none repeat scroll 0 0 #EEEEEE;
   border-top: solid 1px #DDD;
@@ -959,7 +969,15 @@ FOOTER STYLES
         }
     }
 }
+#fb-root {
+      display: none;
+    }
 
+    /* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+          width: 100% !important;
+}
 
 
 [class^="icon-"],
