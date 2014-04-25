@@ -1,10 +1,9 @@
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
-        <?php $p = vm14_get_post($post->ID); ?>
-        <?php echo vm14_sub_menu($p->id); ?>
+        <?php echo vm14_sub_menu($post->ID); ?>
         <div id="inner-content" class="wrap clearfix">
-            <?php vm14_breadcrumbs($p->id); ?>
+            <?php vm14_breadcrumbs($post->ID); ?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">

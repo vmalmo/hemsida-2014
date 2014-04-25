@@ -31,11 +31,10 @@ Template Name: Kalender
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php echo vm14_post_header(); ?>
-        <?php $post = vm14_get_post($post->ID); ?>
-        <?php vm14_sub_menu($post->id);?>
+        <?php vm14_sub_menu($post->ID);?>
 
         <div id="inner-content" class="wrap clearfix">
-            <?php vm14_breadcrumbs($post->id);?>
+            <?php vm14_breadcrumbs($post->ID);?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">
