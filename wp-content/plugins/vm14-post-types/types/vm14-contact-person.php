@@ -6,6 +6,7 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
     static $video;
     static $titles;
     static $visible_as_representative;
+    static $meta_slug = 'kontaktperson'; //TODO: add localization
 
     function preview_html() {
         $excerpt = $this->get_excerpt(300);

@@ -9,6 +9,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $location;
 
     static $meta_groups;
+    static $meta_slug = 'handelse';//TODO: add localization
 
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
