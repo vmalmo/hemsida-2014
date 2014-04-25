@@ -48,7 +48,8 @@
     };
 
     var initHomeVideo = function() {
-        if (document.getElementById('home-video')) {
+        console.log($('#home-video').data('youtube-id'));
+        if (document.getElementById('home-video') && $('#home-video').data('youtube-id')) {
             var ctr, tag, firstScriptTag;
             
             tag = document.createElement('script');
