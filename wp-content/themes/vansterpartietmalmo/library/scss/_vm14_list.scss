@@ -1,0 +1,78 @@
+.vm14-list {
+  li {
+    overflow: hidden;
+    padding: 0.5em 0;
+    img {
+      float: left;
+      width: 15%;
+      margin-right: 2%;
+    }
+    h4 {
+      float: right;
+      width: 83%;
+      margin: 0;
+    }
+    p {
+      float: right;
+      width: 83%;
+      margin: 0.5em 0 1em;
+    }
+  }
+  li.sub-header {
+    background: none repeat scroll 0 0 #EFEFEF;
+    padding: 0.3em 0.8em;
+    border-bottom: solid 1px #CCC;
+    font-size: 0.7em;
+    color: #333;
+  }
+  .date-outer-holder {
+    float: right;
+    width: 83%;
+  }
+  .date-holder {
+    float: left;
+    width: 100%;
+    margin-bottom: 0.4em;
+    span {
+      float: left;
+      width: 3em;
+      font-size: 0.8em;
+    }
+    p {
+      width: auto;
+      float: left;
+      margin: 0.1em 0.5em 0.1em 0;
+      &:before {
+        color: $red;
+        margin-right: 0.3em;
+      }
+    }
+  }
+  li.filterable {
+    @include transition(all ease 0.5s);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: solid 1px #CCC;
+    &:hover {
+      background: #EEE;
+    }
+  }
+  p {
+    font-size: 0.8em;
+  }
+  .date {
+    font-size: 0.8em;
+    margin: 0;
+  }
+}
+.calendar-event-single-date {
+  margin: 1em 0 0;
+  float: left;
+  width: 100%;
+  span, div {
+    padding-right: 0.5em;
+  }
+}
+.single-calendar_event .entry-content {
+  margin-top: 0px;
+}
