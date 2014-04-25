@@ -2,10 +2,10 @@
         <a name="footer"></a>
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="threecol first" >
+						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
             <div class="footer-logo">
               <img  src="<?php echo get_template_directory_uri(); ?>/library/images/large-logo.png" alt="vänsterpartiet" />
             </div>
-						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
 
                         <?php if (get_theme_mod('vm14_footer_twitter_name')):?>
                         <a href="https://twitter.com/<?php echo get_theme_mod('vm14_footer_twitter_name');?>" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @<?php echo get_theme_mod('vm14_footer_twitter_name');?></a>
