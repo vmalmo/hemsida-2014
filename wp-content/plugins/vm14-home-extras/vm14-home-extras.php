@@ -101,6 +101,19 @@ class VM14_News_Widget extends WP_Widget {
             $this->get_field_name('header'),
             $instance['header']);
     }
+
+    static function setup_head() {
+        if (did_action('wp_enqueue_media')===0)
+            wp_enqueue_media();
+
+        $plugin_url = WP_PLUGIN_URL.'/'.basename(dirname(__FILE__));
+
+        wp_register_script('vm14_home_widgets_js', $plugin_url.'/js/home_widgets.js', array('jquery'));
+        wp_register_style('vm14_home_widgets_css', $plugin_url.'/css/home_widgets.css');
+
+        //wp_enqueue_script('vm14_home_widgets_js');
+        wp_enqueue_style('vm14_home_widgets_css');
+    }
 }
 
 
@@ -110,4 +123,5 @@ function vm14_home_extras_widgets() {
 }
 
 add_action('admin_head', array('VM14_Custom_Blurb_Widget', 'setup_head'));
+add_action('wp_head', array('VM14_News_Widget', 'setup_head'));
 add_action('widgets_init', 'vm14_home_extras_widgets');
