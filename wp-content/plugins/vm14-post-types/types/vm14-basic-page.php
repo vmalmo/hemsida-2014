@@ -54,10 +54,7 @@ class VM14_Page_Post_Type extends VM14_Post_Type {
         }
     }
 
-    public function get_feed($posts_per_page) {
-        if (!is_numeric($posts_per_page))
-            $posts_per_page = 30;
-
+    public function get_feed($posts_per_page = 30) {
         if ($this->has_feed()) {
             $categories = implode(',', $this->feed_categories);
             return vm14_get_posts(array(
