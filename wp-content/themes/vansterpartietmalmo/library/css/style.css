@@ -1467,7 +1467,7 @@ SIDEBARS & ASIDES
 }
 
 .widget ul {
-  list-style: square;
+  list-style: disc;
   padding-left: 1.4em;
   font-size: 0.9em;
 }
@@ -2492,7 +2492,7 @@ you can add resource intensive styles.
     margin: 2.2em 0;
   }
   .widget ul li {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.3em;
     /* deep nesting */
   }
   .widget ul li ul {
