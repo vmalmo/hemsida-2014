@@ -13,6 +13,11 @@
                         <?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
                     </footer>
                 </article>
+                <?php if ($p->has_feed()):?>
+                <div class="page-feed">
+                    <?php vm14_post_list($p->get_feed());?>
+                </div>
+                <?php endif;?>
             </div>
     <?php endwhile; else : ?>
         <div id="inner-content" class="wrap clearfix">
