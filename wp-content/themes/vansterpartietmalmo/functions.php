@@ -270,7 +270,7 @@ function vm14_post_header(){
   printf('<header class="%s" %s>
       <div class="page-header-content">
           <div class="wrap">
-              <h1 class="page-title">%s</h1>
+              <h1 class="page-title eightcol first">%s</h1>
               <div class="eightcol first">%s</div>
           </div>
       </div>
