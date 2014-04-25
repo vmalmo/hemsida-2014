@@ -146,16 +146,16 @@ a, a:visited {
 	}
 }
 
-.entry-content a{
-  @include transition(all 0.3s ease-out);
-  color: $red-darken;
-  text-decoration: underline;
-  padding: 0 2px;
-  
-  &:hover {
-    color: #000;
-    text-decoration: none;
-    background: lighten($red-darken, 50%);
+.entry-content, .widget {
+  a{
+    @include transition(all 0.3s ease-out);
+    color: $red-darken;
+    padding: 0 2px;
+    
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+    }
   }
 }
 

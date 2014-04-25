@@ -905,18 +905,16 @@ a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-.entry-content a {
+.entry-content a, .widget a {
   -webkit-transition: all 0.3s ease-out;
   -transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   color: #ae0e15;
-  text-decoration: underline;
   padding: 0 2px;
 }
-.entry-content a:hover {
+.entry-content a:hover, .widget a:hover {
   color: #000;
-  text-decoration: none;
-  background: #fac0c3;
+  text-decoration: underline;
 }
 
 .breadcrumbs {
