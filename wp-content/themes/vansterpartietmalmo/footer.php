@@ -1,7 +1,7 @@
 			<footer class="footer" role="contentinfo">
         <a name="footer"></a>
 				<div id="inner-footer" class="wrap clearfix">
-					<div class="fourcol first" >
+					<div class="threecol first" >
 						<?php echo get_bloginfo ( 'description' );  ?><br /> <br />
 
                         <?php if (get_theme_mod('vm14_footer_twitter_name')):?>
@@ -15,7 +15,7 @@
 
                         <?php echo get_theme_mod('vm14_footer_contact'); ?>
 					</div>
-					<nav role="navigation" class="eightcol last">
+					<nav role="navigation" class="ninecol last">
 							<?php bones_footer_links(); ?>
 					</nav>
 				</div>

@@ -148,12 +148,10 @@ a, a:visited {
 
 .entry-content, .widget {
   a{
-    @include transition(all 0.3s ease-out);
     color: $red-darken;
     padding: 0 2px;
     
     &:hover {
-      color: #000;
       text-decoration: underline;
     }
   }
@@ -879,12 +877,6 @@ SIDEBARS & ASIDES
   overflow: hidden;
   img {
     float: left;
-    @include transition(all 0.5s ease-out);
-  }
-  &:hover {
-    img {
-      @include transform(scale(1.1));
-    }
   }
 }
 
@@ -919,7 +911,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background: none repeat scroll 0 0 #DDDDDD;
+	background: none repeat scroll 0 0 #EEEEEE;
+  border-top: solid 1px #DDD;
     padding: 40px 20px;
 
     ul {

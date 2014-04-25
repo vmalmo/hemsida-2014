@@ -906,14 +906,10 @@ a:link, a:visited:link {
 }
 
 .entry-content a, .widget a {
-  -webkit-transition: all 0.3s ease-out;
-  -transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   color: #ae0e15;
   padding: 0 2px;
 }
 .entry-content a:hover, .widget a:hover {
-  color: #000;
   text-decoration: underline;
 }
 
@@ -1409,16 +1405,6 @@ SIDEBARS & ASIDES
 }
 .blurb-img-holder img {
   float: left;
-  -webkit-transition: all 0.5s ease-out;
-  -transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.blurb-img-holder:hover img {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .widget ul li {
@@ -1430,7 +1416,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background: none repeat scroll 0 0 #DDDDDD;
+  background: none repeat scroll 0 0 #EEEEEE;
+  border-top: solid 1px #DDD;
   padding: 40px 20px;
 }
 .footer ul li {
