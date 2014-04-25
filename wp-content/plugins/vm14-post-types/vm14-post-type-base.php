@@ -184,6 +184,10 @@ abstract class VM14_Post_Type {
         return $excerpt;
     }
 
+    function permalink() {
+        return get_permalink($this->id);
+    }
+
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
 
