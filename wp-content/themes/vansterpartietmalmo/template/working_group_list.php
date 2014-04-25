@@ -1,6 +1,6 @@
 <?php
   /*
-  Template Name: Arbetsgruppslista
+  Template Name: Working group list
   */
 ?>
 <?php get_header(); ?>
@@ -8,7 +8,17 @@
         <?php echo vm14_post_header(); ?>
         <?php vm14_sub_menu($post->ID);?>
         <div id="inner-content" class="wrap clearfix">
-            <?php vm14_breadcrumbs($post->id);?>
+            <?php vm14_breadcrumbs($post->ID);?>
+            <div id="main" class="eightcol first clearfix" role="main">
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+                    <section class="entry-content clearfix" itemprop="articleBody">
+                        <?php the_content(); ?>
+                    </section>
+                    <footer class="article-footer">
+                        <?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
+                    </footer>
+                </article>
+            </div>
     <?php endwhile; else : ?>
         <div id="inner-content" class="wrap clearfix">
     <?php endif; ?>

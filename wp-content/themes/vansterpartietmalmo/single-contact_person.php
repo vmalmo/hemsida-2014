@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Företrädare
+  Template Name: Representative
 */
 ?>
 <?php get_header(); ?>

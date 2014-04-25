@@ -1390,13 +1390,40 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-#frontpage-blurbs {
-  margin-top: 2em;
+/*********************
+* Blurbs !
+**********************/
+#blurbs {
+  width: 100%;
+  margin-top: 1em;
+  float: left;
+  overflow: hidden;
 }
-#frontpage-blurbs a {
-  width: 23.5%;
-  margin-left: 2%;
-  margin-right: 0;
+#blurbs a:hover img {
+  opacity: 1;
+}
+#blurbs > a, #blurbs .widget {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0 0% 1em 0;
+  position: relative;
+}
+#blurbs > a:first-child, #blurbs .widget:first-child {
+  margin-left: 0;
+}
+#blurbs > a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
+  margin-left: 0;
+  clear: left;
+}
+#blurbs > a:nth-child(4n+1), #blurbs .widget:nth-child(4n+1) {
+  margin-left: 0;
+}
+#blurbs > a p, #blurbs .widget p {
+  text-align: center;
+  padding: 0.5em 1em 1em;
+  margin: 0;
+  font-size: 1.2em;
 }
 
 .blurb-img-holder {
@@ -1404,6 +1431,10 @@ SIDEBARS & ASIDES
   overflow: hidden;
 }
 .blurb-img-holder img {
+  -webkit-transition: all 0.5s ease;
+  -transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0.8;
   float: left;
 }
 
@@ -1920,39 +1951,6 @@ FOOTER STYLES
 
 #home-news-marquee {
   margin: 20px 0;
-}
-
-/*********************
-* Blurbs !
-**********************/
-#blurbs {
-  width: 100%;
-  margin-top: 1em;
-  float: left;
-  overflow: hidden;
-}
-#blurbs > a, #blurbs .widget {
-  display: block;
-  float: left;
-  width: 100%;
-  margin: 0 0% 1em 0;
-  position: relative;
-}
-#blurbs > a:first-child, #blurbs .widget:first-child {
-  margin-left: 0;
-}
-#blurbs > a:nth-child(2n+1), #blurbs .widget:nth-child(2n+1) {
-  margin-left: 0;
-  clear: left;
-}
-#blurbs > a:nth-child(4n+1), #blurbs .widget:nth-child(4n+1) {
-  margin-left: 0;
-}
-#blurbs > a p, #blurbs .widget p {
-  text-align: center;
-  padding: 0.5em 1em 1em;
-  margin: 0;
-  font-size: 1.2em;
 }
 
 .vm14-list li {

@@ -82,35 +82,3 @@
     margin: 20px 0;
 }
 
-/*********************
-* Blurbs !
-**********************/
-#blurbs {
-    width: 100%;
-    margin-top: 1em;
-    float: left;
-    overflow: hidden;
-    > a, .widget{
-        display: block;
-        float: left;
-        width: 100%;
-        margin: 0 0% 1em 0;
-        position: relative;
-        &:first-child {
-            margin-left: 0;
-        }
-        &:nth-child(2n+1) {
-            margin-left: 0;
-            clear: left;
-        }
-        &:nth-child(4n+1) {
-            margin-left: 0;
-        }
-        p {
-            text-align: center;
-            padding: 0.5em 1em 1em;
-            margin: 0;
-            font-size: 1.2em;
-        }
-    }
-}
