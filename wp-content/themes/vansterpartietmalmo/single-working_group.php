@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: Företrädare
-*/
-?>
 <?php get_header(); ?>
 			<div id="content" class="wrap toppad clearfix">
                 <?php vm14_breadcrumbs($post->ID, get_theme_mod('vm14_pages_groups'));?> 

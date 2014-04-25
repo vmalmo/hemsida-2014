@@ -1,8 +1,3 @@
-<?php
-/*
-  Template Name: Representative
-*/
-?>
 <?php get_header(); ?>
 
 			<div id="content" class="wrap toppad clearfix">

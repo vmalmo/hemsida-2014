@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Calendar template
+Template Name: Calendar Template
 */
   $today = date('Ymd', strtotime("now"));
   $today  = date('Ymd', strtotime($today. ' + 1 days'));

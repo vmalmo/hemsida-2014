@@ -1,6 +1,6 @@
 <?php
   /*
-  Template Name: Representative list template
+  Template Name: Representative List Template
   */
 ?>
 <?php get_header(); ?>

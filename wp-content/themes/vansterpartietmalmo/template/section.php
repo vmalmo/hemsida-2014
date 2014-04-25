@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Section
+Template Name: Section Template
 */
 ?>
 <?php get_header(); ?>

@@ -1,6 +1,6 @@
 <?php
   /*
-  Template Name: Working group list
+  Template Name: Working Group List Template
   */
 ?>
 <?php get_header(); ?>
