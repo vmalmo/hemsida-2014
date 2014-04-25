@@ -3,7 +3,7 @@
 class VM14_Page_Post_Type extends VM14_Post_Type {
     static $menu;
     static $summary;
-    static $content_category;
+    static $feed_categories;
 
     static $meta_groups;
 
@@ -44,6 +44,24 @@ class VM14_Page_Post_Type extends VM14_Post_Type {
 
         return ($menu_id != 'parent')? $menu_id : null;
     }
+
+    public function has_feed() {
+        if ($this->feed_categories) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public function get_feed() {
+        if ($this->has_feed()) {
+            $categories = implode(',', $this->feed_categories);
+            return vm14_get_posts(array(
+                'category' => $categories
+            ));
+        }
+    }
 }
 
 VM14_Page_Post_Type::$meta_groups = array(
@@ -63,5 +81,5 @@ VM14_Page_Post_Type::$summary = new VM14_Post_Type_Field(array(
     'widget' => 'wysiwyg'
 ));
 
-VM14_Page_Post_Type::$content_category = new VM14_Post_Type_Taxonomy();
+VM14_Page_Post_Type::$feed_categories = new VM14_Post_Type_Taxonomy();
 
