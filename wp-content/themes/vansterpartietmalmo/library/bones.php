@@ -430,7 +430,6 @@ function remove_default_widget() {
     unregister_widget('WP_Widget_Categories');
     unregister_widget('WP_Widget_RSS');
     unregister_widget('WP_Widget_Tag_Cloud');
-    unregister_widget('WP_Nav_Menu_Widget');
 }
 
 add_action( 'widgets_init', 'remove_default_widget' );
