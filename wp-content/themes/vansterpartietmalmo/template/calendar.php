@@ -125,6 +125,7 @@ Template Name: Calendar template
             widget.render(document.getElementById('widget-container'));
         </script>
 
+        <?php get_sidebar(); ?>
         <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
             <div id="blurbs">
                 <?php dynamic_sidebar( 'blurbs' ); ?>
