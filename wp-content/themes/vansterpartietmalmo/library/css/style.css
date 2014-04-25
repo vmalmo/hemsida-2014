@@ -1164,30 +1164,6 @@ article ul li {
 /*********************
 Contact listing
 *********************/
-.vm14-list li {
-  overflow: hidden;
-  padding: 0.5em 0;
-}
-.vm14-list li img {
-  float: left;
-  width: 15%;
-  margin-right: 2%;
-}
-.vm14-list li h4 {
-  float: right;
-  width: 83%;
-  margin: 0;
-}
-.vm14-list li p {
-  float: right;
-  width: 83%;
-  margin: 0.5em 0 1em;
-}
-.vm14-list li.sub-header {
-  background: none repeat scroll 0 0 #DDDDDD;
-  padding: 10px;
-}
-
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -1857,6 +1833,9 @@ FOOTER STYLES
   margin: 0 auto;
   bottom: 0;
 }
+.page-header div.eightcol, .videoplayer div.eightcol, .top-image div.eightcol {
+  margin-bottom: 1em;
+}
 
 .page-title {
   margin-bottom: 0;
@@ -1993,35 +1972,56 @@ FOOTER STYLES
   font-size: 1.2em;
 }
 
-#calendar-list .sub-header, #contact-list .sub-header {
-  padding: 0.3em 0.8em;
-  border-top: solid 1px #CCC;
-  color: #000;
+.vm14-list li {
+  overflow: hidden;
+  padding: 0.5em 0;
 }
-#calendar-list .date-outer-holder, #contact-list .date-outer-holder {
+.vm14-list li img {
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+}
+.vm14-list li h4 {
+  float: right;
+  width: 83%;
+  margin: 0;
+}
+.vm14-list li p {
+  float: right;
+  width: 83%;
+  margin: 0.5em 0 1em;
+}
+.vm14-list li.sub-header {
+  background: none repeat scroll 0 0 #EFEFEF;
+  padding: 0.3em 0.8em;
+  border-bottom: solid 1px #CCC;
+  font-size: 0.7em;
+  color: #333;
+}
+.vm14-list .date-outer-holder {
   float: right;
   width: 83%;
 }
-#calendar-list .date-holder, #contact-list .date-holder {
+.vm14-list .date-holder {
   float: left;
   width: 100%;
   margin-bottom: 0.4em;
 }
-#calendar-list .date-holder span, #contact-list .date-holder span {
+.vm14-list .date-holder span {
   float: left;
   width: 3em;
   font-size: 0.8em;
 }
-#calendar-list .date-holder p, #contact-list .date-holder p {
+.vm14-list .date-holder p {
   width: auto;
   float: left;
   margin: 0.1em 0.5em 0.1em 0;
 }
-#calendar-list .date-holder p:before, #contact-list .date-holder p:before {
+.vm14-list .date-holder p:before {
   color: #ed1b24;
   margin-right: 0.3em;
 }
-#calendar-list li.filterable, #contact-list li.filterable {
+.vm14-list li.filterable {
   -webkit-transition: all ease 0.5s;
   -transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -2029,13 +2029,13 @@ FOOTER STYLES
   padding-bottom: 1em;
   border-bottom: solid 1px #CCC;
 }
-#calendar-list li.filterable:hover, #contact-list li.filterable:hover {
+.vm14-list li.filterable:hover {
   background: #EEE;
 }
-#calendar-list p, #contact-list p {
+.vm14-list p {
   font-size: 0.8em;
 }
-#calendar-list .date, #contact-list .date {
+.vm14-list .date {
   font-size: 0.8em;
   margin: 0;
 }

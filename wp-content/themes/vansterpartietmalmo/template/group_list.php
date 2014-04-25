@@ -26,8 +26,8 @@
                 $first_letter = null;
             ?>
             <?php for ($i = 0;$i < count($posts);$i++) {
-                if (!strcasecmp($first_letter, $posts[$i]->last_name[0]) == 0) {
-                  $first_letter = $posts[$i]->last_name[0];
+                if (!strcasecmp($first_letter, $posts[$i]->title[0]) == 0) {
+                  $first_letter = $posts[$i]->title[0];
                   echo '<li class="sub-header">'.$first_letter.'</li>';
                 }?>
                 <li class="filterable" data-tags="<?php echo $posts[$i]->tags_as_string(); ?>" data-categories="<?php echo $posts[$i]->categories_as_string(); ?>">
