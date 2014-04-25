@@ -905,6 +905,9 @@ a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
+.breadcrumbs {
+  margin-top: 0.7em;
+}
 .breadcrumbs a {
   font-size: 10pt;
   font-weight: bold;
@@ -1839,6 +1842,10 @@ FOOTER STYLES
   width: 100%;
   margin: 0 auto;
   bottom: 0;
+}
+
+.page-title {
+  margin-bottom: 0;
 }
 
 .responsive-image .page-header-content {
