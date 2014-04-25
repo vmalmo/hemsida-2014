@@ -37,7 +37,7 @@ function vm14_get_post($id) {
     return vm14_post($post);
 }
 
-function vm14_get_posts($args) {
+function vm14_get_posts($args = null) {
     $posts = get_posts($args);
     for ($i=0; $i < count($posts); $i++) {
         $posts[$i] = vm14_post($posts[$i]);
