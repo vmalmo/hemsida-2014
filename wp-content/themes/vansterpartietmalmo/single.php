@@ -2,15 +2,6 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
         <?php $p = vm14_get_post($post->ID);?>
-            <div class="page-header-content">
-                <div class="wrap">
-                    <h1 class="page-title"><?php the_title(); ?></h1>
-                    <p class="eightcol first">
-                      <?php echo $p->summary;?>
-                    </p>
-                </div>
-            </div>
-        </header>
         <div id="inner-content" class="wrap clearfix">
             <div id="main" class="eightcol first clearfix" role="main">
                 <?php if ($p->start_date) {?>

@@ -266,9 +266,23 @@ function vm14_post_header(){
     array_push($classes, 'no-image');
   }
 
-  printf('<header class="%s" %s>',
+  $p = vm14_get_post($post->ID);
+  printf('<header class="%s" %s>
+      <div class="page-header-content">
+          <div class="wrap">
+              <h1 class="page-title">%s</h1>
+              <div class="eightcol first">%s</div>
+          </div>
+      </div>
+  </header>',
     implode($classes, ' '),
-    $end_header);
+    $end_header,
+    $p->title,
+    $p->summary
+  );
+
+?>
+<?php 
 }
 
 

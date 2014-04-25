@@ -2,15 +2,6 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
         <?php $p = vm14_get_post($post->ID); ?>
-            <div class="page-header-content">
-                <div class="wrap">
-                    <h1 class="page-title"><?php the_title(); ?></h1>
-                    <p class="eightcol first">
-                        <?php echo $p->summary; ?>
-                    </p>
-                </div>
-            </div>
-        </header>
         <?php echo vm14_sub_menu($p->id); ?>
         <div id="inner-content" class="wrap clearfix">
             <?php vm14_breadcrumbs($p->id); ?>
