@@ -946,7 +946,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 h1, .h1 {
-  font-size: 2.5em;
+  font-size: 1.8em;
   line-height: 1.333em;
 }
 
@@ -1584,7 +1584,7 @@ FOOTER STYLES
   margin: 0.5em 1%;
   float: left;
   font-size: 1.2em;
-  width: 100%;
+  width: 98%;
 }
 #logo:hover {
   color: #FFF;
@@ -1749,7 +1749,7 @@ FOOTER STYLES
   margin: 0.5em 1%;
   float: left;
   font-size: 1.2em;
-  width: 100%;
+  width: 98%;
 }
 #logo:hover {
   color: #FFF;
@@ -2001,7 +2001,6 @@ FOOTER STYLES
   margin: 20px 0;
 }
 #home-intro h1 {
-  font-size: 36px;
   margin: 0 0 0.5em;
 }
 #home-intro * {
@@ -2119,6 +2118,10 @@ tweeners.
   upon your base.scss styles.
   
   ******************************************************************/
+  h1 {
+    font-size: 2.5em;
+  }
+
   /*********************
   NAVIGATION STYLES
   *********************/
