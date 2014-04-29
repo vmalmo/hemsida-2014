@@ -1495,6 +1495,9 @@ FOOTER STYLES
   font-size: 0.9em;
   margin-bottom: 20px;
 }
+.footer ul {
+  margin-top: 5px;
+}
 .footer ul li {
   margin: 0;
   padding: 0;
