@@ -1107,10 +1107,7 @@ POSTS & CONTENT STYLES
 *********************/
 article ul {
   margin: 10px 40px;
-}
-article ul li {
   list-style-type: disc;
-  margin-left: 20px;
 }
 
 /* end .hentry */
@@ -1137,6 +1134,10 @@ article ul li {
   and floating images at the next breakpoint,
   but it's up to you. Feel free to change it up.
   */
+}
+.entry-content ol {
+  margin: 10px 40px;
+  list-style: decimal;
 }
 .entry-content dd {
   margin-left: 0;

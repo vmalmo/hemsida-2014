@@ -381,11 +381,7 @@ POSTS & CONTENT STYLES
 
 article ul {
     margin: 10px 40px;
-
-    li {
-        list-style-type: disc;
-        margin-left: 20px;
-    }
+    list-style-type: disc;
 }
 
 
@@ -425,6 +421,10 @@ article ul {
 
 		/* entry content */
 		.entry-content {
+      ol {
+        margin: 10px 40px;
+        list-style: decimal;
+      }
 			margin: 30px 0;
 
 			p {}
