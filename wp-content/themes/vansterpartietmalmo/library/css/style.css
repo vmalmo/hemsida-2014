@@ -878,7 +878,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 92%;
   margin: 0 auto;
   padding-bottom: 1em;
 }
@@ -1446,11 +1446,12 @@ SIDEBARS & ASIDES
   border-bottom: solid 1px #DDD;
 }
 
-.widget_recent_entries ul {
+.widget_recent_entries.widget ul {
+  list-style: none;
   margin-top: 0;
   padding-left: 1em;
 }
-.widget_recent_entries ul li {
+.widget_recent_entries.widget ul li {
   margin: 0.5em 0;
 }
 .widget_recent_entries li:before {
@@ -2369,7 +2370,7 @@ you can add resource intensive styles.
   *********************/
   .home-navigation {
     display: block;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .allpage {
