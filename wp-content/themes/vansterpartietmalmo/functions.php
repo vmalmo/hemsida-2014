@@ -44,6 +44,7 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 add_image_size( 'vm14_small', 450, 300, true );
 add_image_size( 'vm14_medium', 450, 250, true );
 add_image_size( 'vm14_large', 1240, 698, true );
+add_image_size( 'vm14_post_header', 640, 280, true);
 add_image_size( 'vm14_medium_width', 640, 480);
 add_image_size( 'vm14_full_width', 2000, 1500);
 add_image_size( 'bones-thumb-600', 600, 150, true );
@@ -261,34 +262,55 @@ function vm14_customize_register($wpc) {
 }
 add_action('customize_register', 'vm14_customize_register');
 
-function vm14_post_header(){
-  $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_full_width' ); 
-  $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_medium_width' ); 
+function vm14_post_header($type = 'post'){
   $classes = array('page-header', 'clearfix');
   $end_header = '';
-  if ($large_image) {
-    array_push($classes, 'responsive-image');
-    $end_header = sprintf('data-image-large="%s"  style="background-image: url(%s);"',
-        $large_image[0],
-        $medium_image[0]);
+
+  if ($type == 'post' || $type == 'feed') {
+
+    $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_full_width' ); 
+    $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_post_header' ); 
+    if ($large_image) {
+      array_push($classes, 'header-with-image');
+      if ($type == 'post') {
+        array_push($classes, 'responsive-image');
+      }
+      $end_header = sprintf('data-image-large="%s"  style="background-image: url(%s);"',
+          $large_image[0],
+          $medium_image[0]);
+    }
+    else {
+      array_push($classes, 'no-image');
+    }
+  }
+  if ($type == 'post') {
+    $p = vm14_get_post($post->ID);
+    $title = $p->title;
+    $description = $p->summary;
+  }
+  else if($type == 'feed') {
+    $p = vm14_get_post($post->ID);
+    $title = $p->title;
   }
   else {
     array_push($classes, 'no-image');
   }
+  if ($type == 'category') {
+    $title = single_cat_title("", false);
+  }
 
-  $p = vm14_get_post($post->ID);
   printf('<header class="%s" %s>
       <div class="page-header-content">
           <div class="wrap">
-              <h1 class="page-title eightcol first">%s</h1>
+              <h1 class="page-title eightcol first"> <a href="#">%s</a></h1>
               <div class="eightcol first">%s</div>
           </div>
       </div>
   </header>',
     implode($classes, ' '),
     $end_header,
-    $p->title,
-    $p->summary
+    $title,
+    $description
   );
 
 ?>
@@ -305,6 +327,10 @@ function vm14_post_list($posts) {
         }
         echo '</ul>';
     }
+}
+add_filter( 'the_content', 'remove_br_gallery', 11, 2);
+function remove_br_gallery($output) {
+  return preg_replace('/\<br[^\>]*\>/', '', $output);
 }
 
 

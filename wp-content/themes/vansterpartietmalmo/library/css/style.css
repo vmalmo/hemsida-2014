@@ -859,6 +859,33 @@ style a page via class
 /* author page */
 /* user nicename (i.e. body.author-samueladams) */
 /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category #content {
+  margin-top: 10px;
+}
+.category #content .page-header {
+  min-height: 250px;
+}
+.category #content .page-header.no-image {
+  min-height: 0;
+  background: transparent;
+  min-height: 0;
+}
+.category #content .page-header.no-image .page-header-content {
+  color: #333;
+  position: static;
+}
+.category #content .page-header.no-image h1 {
+  font-size: 1.75em;
+}
+.category #content .page-header.no-image .wrap {
+  width: 100%;
+}
+.category .entry-content {
+  margin-top: 0px;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px #eee;
+}
+
 /* category page */
 /* individual category page (i.e. body.category-6) */
 /* replace the number to the corresponding page number */
@@ -951,7 +978,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 1.5em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
@@ -1152,6 +1179,21 @@ article ul li {
 
 /* end .wp-caption */
 /* image gallery styles */
+.gallery {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+.gallery dl {
+  width: 31.3333%;
+  margin: 0.5em 1% 0;
+  float: left;
+}
+
+.gallery-columns-1 dl {
+  width: 100%;
+}
+
 /* end .gallery */
 /* gallery caption styles */
 /*********************
@@ -1913,20 +1955,27 @@ FOOTER STYLES
   margin: 0 auto;
   bottom: 0;
 }
+.page-header .page-header-content a, .videoplayer .page-header-content a, .top-image .page-header-content a {
+  color: #fff;
+}
 .page-header div.eightcol, .videoplayer div.eightcol, .top-image div.eightcol {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .page-title {
   margin-bottom: 0;
 }
 
-.responsive-image .page-header-content {
+.header-with-image .page-header-content {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.category #inner-content .no-image a {
+  color: #333;
 }
 
 /*********************
@@ -2187,6 +2236,11 @@ tweeners.
   }
 
   /* end .entry-content */
+  /* image gallery styles */
+  .gallery dl {
+    width: 23%;
+  }
+
   /****************
   ***************/
   #blurbs a, #blurbs .widget {
@@ -2476,6 +2530,10 @@ you can add resource intensive styles.
     margin: 1em;
   }
 
+  .category #content .page-header {
+    min-height: 350px;
+  }
+
   #blurbs a, #blurbs .widget {
     width: 23.5%;
     margin-left: 2%;
@@ -2610,6 +2668,14 @@ you can add resource intensive styles.
     width: 25%;
   }
 
+  /* image gallery styles */
+  .gallery dl {
+    width: 18%;
+  }
+
+  /*********************
+  FOOTER STYLES
+  *********************/
   .footer nav {
     -webkit-column-count: 3;
     -moz-column-count: 3;

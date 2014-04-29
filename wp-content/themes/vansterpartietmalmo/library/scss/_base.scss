@@ -91,7 +91,35 @@ style a page via class
 .author {}                        /* author page */
 	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
 	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
+.category {
+  #content {
+    margin-top: 10px;
+    .page-header {
+      min-height: 250px;
+      &.no-image {
+        min-height: 0;
+        background: transparent;
+        min-height: 0;
+        .page-header-content {
+          color: #333;
+          position: static;
+        }
+        h1 {
+          font-size: 1.75em;
+        }
+        .wrap {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .entry-content {
+    margin-top: 0px;
+    padding-bottom: 0.5em;
+    border-bottom: solid 1px #eee;
+  }
+
+}                      /* category page */
 	.category-1 {}                  /* individual category page (i.e. body.category-6) */
 	.category-paged-1 {}            /* replace the number to the corresponding page number */
 .tag {}                           /* tag page */
@@ -198,7 +226,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
@@ -490,20 +518,42 @@ article ul {
 
 		/* image gallery styles */
 		.gallery {
+        float: left;
+        width: 100%;
+        clear: both;
 
-			dl {
+        dl {
+            width: 31.3333%;
+            margin: 0.5em 1% 0;
+            float: left;
 
-				a {}
+            a {}
 
-				img {}
+            img {}
 
-			}
+        }
 
 			dt {}
 
 			dd {}
 
-		} /* end .gallery */
+		}
+    //@for $i from 1 through 9 {
+    //  .gallery-columns-#{$i} {
+    //    dl {
+    //      width: 100% / $i;
+    //    }
+    //  }
+    //}
+
+
+
+    .gallery-columns-1 {
+      dl{
+        width: 100%;
+      }
+    }
+    /* end .gallery */
 
 		/* gallery caption styles */
 		.gallery-caption {}

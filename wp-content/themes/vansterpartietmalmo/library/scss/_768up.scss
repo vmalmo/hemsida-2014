@@ -181,6 +181,13 @@ SIDEBARS & ASIDES
     top: 0;
     margin: 1em;
 }
+.category {
+  #content {
+    .page-header {
+      min-height: 350px;
+    }
+  }
+}
 
 #blurbs {
     a, .widget {
