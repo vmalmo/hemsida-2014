@@ -92,6 +92,16 @@ function bones_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'front_widgets',
+		'name' => __( 'Front Widgets', 'bonestheme' ),
+		'description' => __( 'Place add and arrange your front page widgets.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'section_entrace_content',
 		'name' => __( 'Only for section entrance', 'bonestheme' ),
 		'description' => __( 'Place add and arrange your section entrance widgets.', 'bonestheme' ),

@@ -33,6 +33,11 @@ Template Name: Start Template
                     <?php endforeach;?>
                     </ul>
                 </div>
+                <?php if ( is_active_sidebar( 'front_widgets' ) ) : ?>
+                    <div id="front_widgets">
+                        <?php dynamic_sidebar( 'front_widgets' ); ?>
+                    </div>
+                <?php endif; ?>
                 <?php if ( is_active_sidebar( 'blurbs' ) ) : ?>
                     <div id="blurbs">
                         <?php dynamic_sidebar( 'blurbs' ); ?>
