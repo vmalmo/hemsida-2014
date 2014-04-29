@@ -265,6 +265,7 @@ add_action('customize_register', 'vm14_customize_register');
 function vm14_post_header($type = 'post'){
   $classes = array('page-header', 'clearfix');
   $end_header = '';
+  $link = '#';
 
   if ($type == 'post' || $type == 'feed') {
 
@@ -286,29 +287,30 @@ function vm14_post_header($type = 'post'){
   if ($type == 'post') {
     $p = vm14_get_post($post->ID);
     $title = $p->title;
+    $link = get_permalink($post->ID);
     $description = $p->summary;
   }
   else if($type == 'feed') {
     $p = vm14_get_post($post->ID);
+    $link = get_permalink($post->ID);
     $title = $p->title;
   }
-  else {
+  else if ($type == 'category') {
     array_push($classes, 'no-image');
-  }
-  if ($type == 'category') {
     $title = single_cat_title("", false);
   }
 
   printf('<header class="%s" %s>
       <div class="page-header-content">
           <div class="wrap">
-              <h1 class="page-title eightcol first"> <a href="#">%s</a></h1>
+              <h1 class="page-title eightcol first"> <a href="%s">%s</a></h1>
               <div class="eightcol first">%s</div>
           </div>
       </div>
   </header>',
     implode($classes, ' '),
     $end_header,
+    $link, 
     $title,
     $description
   );
