@@ -278,21 +278,9 @@ and more scalable.
 		ul.children {
 
 			li {
-
-				a {
-					padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
+        a {
+          color: #666;
+        }
 			}
 
 		}

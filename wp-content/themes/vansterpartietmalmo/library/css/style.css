@@ -1018,7 +1018,7 @@ and more scalable.
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-  padding-left: 30px;
+  color: #666;
 }
 
 /* end .nav */
@@ -2430,7 +2430,6 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
-    padding-left: 10px;
     border-right: 0;
     display: block;
     width: 180px;
