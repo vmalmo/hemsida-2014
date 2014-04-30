@@ -270,13 +270,13 @@
                 
                 item = this.widget.items[i];
                 item.filterContent[this.filterKey].forEach(function(value) {
-                    if (content.indexOf(value)<0)
+                    if (content.indexOf(value)<0 && value.length > 0) {
                         content.push(value);
+                    }
                 });
             }
 
             ul = document.createElement('ul');
-            this.domElement.appendChild(ul);
 
             for (i=0; i<content.length; i++) {
                 var li, a;
@@ -288,6 +288,7 @@
                 a.innerText = content[i];
                 li.appendChild(a);
             }
+            this.domElement.appendChild(ul);
 
             pane = this;
             $(ul).find('li').click(function() {
