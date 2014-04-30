@@ -8,7 +8,13 @@
     this.timeoutThreshold = 500;
     this.timeout = -1;
     this.isVisible = false;
-    this.init();
+    if (this.$menu.find('li').length > 1) {
+      this.init();
+    }
+    else {
+      $('#menu-top-corner').css('display', 'block');
+      this.$moreBtn.css('display', 'none');
+    }
   }
   HoverMenu.prototype.init = function() {
     var self = this;
