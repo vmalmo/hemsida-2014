@@ -30,6 +30,11 @@
     @include background-image(linear-gradient(bottom, rgba(black, 0.8), rgba(0, 0, 0, 0)));
   }
 }
+.no-image {
+  background-size: auto;
+  background-color: $red-darken;
+  background-image: url('../images/bg2.png');
+}
 .category #inner-content .no-image {
   a {
     color: #333;

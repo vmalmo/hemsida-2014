@@ -247,11 +247,11 @@ BUTTONS
 }
 
 .red-gradient {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ae0e15), color-stop(100%, #ed1b24));
-  background: -webkit-linear-gradient(bottom, #ae0e15, #ed1b24);
-  background: -moz-linear-gradient(bottom, #ae0e15, #ed1b24);
-  background: -o-linear-gradient(bottom, #ae0e15, #ed1b24);
-  background: linear-gradient(bottom, #ae0e15, #ed1b24);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #9c211b), color-stop(100%, #da322a));
+  background: -webkit-linear-gradient(bottom, #9c211b, #da322a);
+  background: -moz-linear-gradient(bottom, #9c211b, #da322a);
+  background: -o-linear-gradient(bottom, #9c211b, #da322a);
+  background: linear-gradient(bottom, #9c211b, #da322a);
 }
 
 .black-gradient {
@@ -374,6 +374,10 @@ so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
+h1 {
+  font-size: 2.5em;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -435,6 +439,11 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
+/* image gallery styles */
+.gallery dl {
+  width: 23%;
+}
+
 /****************
 ***************/
 #blurbs a, #blurbs .widget {
@@ -454,6 +463,17 @@ CALENDAR STYLES
 /*********************
 FOOTER STYLES
 *********************/
+.footer ul {
+  padding-top: 0;
+}
+.footer nav {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+}
+
 /*
 check your menus here. do they look good?
 do they need tweaking?
@@ -497,6 +517,10 @@ HEADER STYLES
   padding-top: 0;
 }
 
+.home-content {
+  width: 45%;
+}
+
 #logo {
   width: 30%;
 }
@@ -506,7 +530,7 @@ NAVIGATION STYLES
 *********************/
 .home-navigation {
   display: block;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .allpage {
@@ -566,7 +590,6 @@ NAVIGATION STYLES
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
-  padding-left: 10px;
   border-right: 0;
   display: block;
   width: 180px;
@@ -593,21 +616,22 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
 #home-intro {
-  max-width: 50%;
   position: relative;
-  top: -100px;
-}
-
-.home #blurbs {
-  margin-top: -80px;
 }
 
 #home-news-marquee {
-  position: absolute;
+  float: right;
   width: 45%;
-  left: 50%;
   top: 0;
-  margin: 1em;
+  margin: 1em 0;
+}
+#home-news-marquee ul {
+  width: 100%;
+  position: absolute;
+}
+
+.category #content .page-header {
+  min-height: 350px;
 }
 
 #blurbs a, #blurbs .widget {
@@ -627,17 +651,12 @@ SIDEBARS & ASIDES
   margin-left: 0;
 }
 
-.widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em;
-}
-
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
 .widget ul li {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.3em;
   /* deep nesting */
 }
 .widget ul li ul {
@@ -666,7 +685,7 @@ POST STYLES
 }
 
 .page-header.no-image {
-  min-height: 200px;
+  min-height: 300px;
 }
 
 .article-header-content .wrap {
@@ -687,11 +706,14 @@ POST STYLES
 FOOTER STYLES
 *********************/
 .footer nav {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  -ms-column-count: 2;
-  -o-column-count: 2;
-  column-count: 2;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+}
+.footer ul {
+  padding-top: 0;
 }
 .footer ul li {
   -webkit-column-break-inside: avoid;
@@ -721,8 +743,14 @@ POST STYLES
 }
 
 #menu-top-corner {
+  position: static;
   display: block;
   font-size: 0.9em;
+}
+
+/* main top menu for all pages */
+.allpage {
+  padding-left: 10%;
 }
 
 .top-more {
@@ -733,6 +761,14 @@ POST STYLES
   width: 25%;
 }
 
+/* image gallery styles */
+.gallery dl {
+  width: 18%;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
 .footer nav {
   -webkit-column-count: 3;
   -moz-column-count: 3;
