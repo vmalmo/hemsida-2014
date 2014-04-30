@@ -189,10 +189,12 @@
                 
                 h3 = document.createElement('h3');
                 h3.innerText = this.title;
+                h3.setAttribute('class', 'widgettitle');
                 domElement.appendChild(h3);
             }
 
             input = document.createElement('input');
+            input.setAttribute('placeholder', 'Start typing to search...');
             domElement.appendChild(input);
 
             pane = this;
@@ -258,6 +260,7 @@
 
                 h3 = document.createElement('h3');
                 h3.innerText = this.title;
+                h3.setAttribute('class', 'widgettitle');
                 this.domElement.appendChild(h3);
             }
 
