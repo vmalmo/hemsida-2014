@@ -40,6 +40,9 @@ HEADER STYLES
 .home #container {
   padding-top: 0;
 }
+.home-content {
+  width: 45%;
+}
 
 #logo {
     width: 30%;
@@ -166,20 +169,18 @@ SIDEBARS & ASIDES
 *********************/
 
 #home-intro {
-    max-width: 50%;
     position: relative;
-    top: -100px;
-}
-.home #blurbs {
-    margin-top: -80px;
 }
 
 #home-news-marquee {
-    position: absolute;
+    float: right;
     width: 45%;
-    left: 50%;
     top: 0;
-    margin: 1em;
+    margin: 1em 0;
+    ul {
+      width: 100%;
+      position: absolute;
+    }
 }
 .category {
   #content {
