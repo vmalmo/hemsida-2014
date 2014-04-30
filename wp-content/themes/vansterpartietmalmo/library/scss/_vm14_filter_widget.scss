@@ -2,7 +2,7 @@
     .search-pane {
         input {
             margin-top: 10px;
-            @include border-radius(7px);
+            @include border-radius(5px);
             border: none;
             background: #EEE;
             width: 100%;
@@ -19,22 +19,18 @@
     li {
         @include border-radius(5px);
         @include transition(all ease-out 0.3s);
-        border-bottom: solid 2px #FFF;
-        border-bottom: solid 2px #CCC;
         float: left;
         background: #DDD;
-        padding: 5px 12px;
+        padding: 7px 12px;
         margin: 5px;
         cursor: pointer;
         &:hover {
-            border-bottom: solid 2px transparent;
             background: $red;
             a {
                 color: #fff;
             }
         }
         &.selected {
-            border-bottom: solid 2px transparent;
             background: $red-darken;
             a {
                 color: #FFF;

@@ -2081,11 +2081,11 @@ FOOTER STYLES
 
 .filter-widget .search-pane input {
   margin-top: 10px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-  border-radius: 7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   border: none;
   background: #EEE;
   width: 100%;
@@ -2107,23 +2107,19 @@ FOOTER STYLES
   -webkit-transition: all ease-out 0.3s;
   -transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
-  border-bottom: solid 2px #FFF;
-  border-bottom: solid 2px #CCC;
   float: left;
   background: #DDD;
-  padding: 5px 12px;
+  padding: 7px 12px;
   margin: 5px;
   cursor: pointer;
 }
 .filter-widget li:hover {
-  border-bottom: solid 2px transparent;
   background: #ed1b24;
 }
 .filter-widget li:hover a {
   color: #fff;
 }
 .filter-widget li.selected {
-  border-bottom: solid 2px transparent;
   background: #ae0e15;
 }
 .filter-widget li.selected a {
