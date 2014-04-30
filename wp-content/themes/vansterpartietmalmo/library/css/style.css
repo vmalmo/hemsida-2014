@@ -1059,7 +1059,6 @@ and more scalable.
 /* end .nav */
 #menu-top-corner {
   margin-right: 10px;
-  min-width: 120px;
   top: 4em;
   right: 1em;
 }
