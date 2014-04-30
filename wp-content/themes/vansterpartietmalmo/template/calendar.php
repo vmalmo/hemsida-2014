@@ -85,7 +85,7 @@ Template Name: Calendar Template
             ?>
             <?php $current_rule_index = -1; ?>
             <?php for ($j = 0;$j < count($header_rules); $j++) { ?>
-                <?php if ($header_rules[$j]['rule'] >= $posts[0]->start_date) { ?>
+                <?php if ($header_rules[$j]['rule'] > $posts[0]->start_date) { ?>
                     <?php // bah I fix an better solution tomorrow...
                       $current_rule_index = $j;
                       break;
@@ -93,7 +93,6 @@ Template Name: Calendar Template
                 <?php } ?>
                 <?php $current_rule_index = count($header_rules)-1; ?>
             <?php } ?>
-
             <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
             <?php for ($i = 0;$i < count($posts);$i++) { ?>
                 <?php if ($header_rules[$current_rule_index]['rule'] <= $posts[$i]->start_date && $current_rule_index < count($header_rules)) { ?>
@@ -104,7 +103,7 @@ Template Name: Calendar Template
                             <?php break; ?>
                         <?php }?>
                     <?php }?>
-                    <?php if ($j === count($header_rules)) { // if loop when throu the we at last step ?>
+                    <?php if ($j === count($header_rules)) { // if loop went throu we are at last step ?>
                         <?php $current_rule_index = count($header_rules) + 1; ?>
                         <li class="sub-header"><?php echo $header_rules[count($header_rules)-1]['name']; ?></li>
                     <?php } ?>
