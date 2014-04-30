@@ -3,6 +3,7 @@
         <?php vm14_post_header(); ?>
         <?php $p = vm14_get_post($post->ID);?>
         <div id="inner-content" class="wrap clearfix">
+            <?php vm14_breadcrumbs($post->ID); ?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <?php if ($p->start_date) {?>
                   <div class="calendar-event-single-date">
