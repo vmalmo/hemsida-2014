@@ -41,8 +41,8 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'vm14_small', 450, 300, true );
-add_image_size( 'vm14_medium', 450, 250, true );
+add_image_size( 'vm14_small', 400, 300, true );
+add_image_size( 'vm14_medium', 400, 230, true );
 add_image_size( 'vm14_large', 1240, 698, true );
 add_image_size( 'vm14_post_header', 640, 280, true);
 add_image_size( 'vm14_medium_width', 640, 480);
