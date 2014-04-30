@@ -9,6 +9,7 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
+$experimental-support-for-svg: true;
 
 //
 // IMPORTING STYLES
