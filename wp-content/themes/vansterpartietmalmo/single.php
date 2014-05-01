@@ -1,6 +1,7 @@
 <?php get_header(); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
+        <?php echo vm14_sub_menu($post->ID); ?>
         <?php $p = vm14_get_post($post->ID);?>
         <div id="inner-content" class="wrap clearfix">
             <?php vm14_breadcrumbs($post->ID); ?>
