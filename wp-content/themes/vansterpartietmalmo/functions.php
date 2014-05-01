@@ -309,6 +309,9 @@ function vm14_post_header($type = 'post'){
     $title = $p->title;
     $link = get_permalink($post->ID);
     $description = $p->summary;
+    if (is_array($description) && count($description) > 0) {
+      $description = $description[0];
+    }
   }
   else if($type == 'feed') {
     $p = vm14_get_post($post->ID);
