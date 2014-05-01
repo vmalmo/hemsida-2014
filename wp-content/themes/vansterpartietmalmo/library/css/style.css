@@ -981,7 +981,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 h1, .h1 {
-  font-size: 1.8em;
+  font-size: 1.7em;
   line-height: 1.333em;
 }
 
@@ -1970,8 +1970,12 @@ FOOTER STYLES
 .page-header .page-header-content a, .videoplayer .page-header-content a, .top-image .page-header-content a {
   color: #fff;
 }
+.page-header .page-header-content .wrap, .videoplayer .page-header-content .wrap, .top-image .page-header-content .wrap {
+  padding-bottom: 0;
+}
 .page-header div.eightcol, .videoplayer div.eightcol, .top-image div.eightcol {
   margin-bottom: 0.5em;
+  font-size: 0.9em;
 }
 
 .page-title {
@@ -2388,6 +2392,9 @@ tweeners.
   .page-header, .videoplayer, .top-image {
     max-height: 400px;
     float: none;
+  }
+  .page-header div.eightcol, .videoplayer div.eightcol, .top-image div.eightcol {
+    font-size: 1em;
   }
 
   /* section entrance */
