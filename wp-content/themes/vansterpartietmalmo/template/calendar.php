@@ -93,7 +93,9 @@ Template Name: Calendar Template
                 <?php } ?>
                 <?php $current_rule_index = count($header_rules)-1; ?>
             <?php } ?>
-            <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
+            <?php if (count($header_rules)-1 != $current_rule_index) { ?>
+              <li class="sub-header"><?php echo $header_rules[$current_rule_index]['name']; ?></li>
+            <?php } ?>
             <?php for ($i = 0;$i < count($posts);$i++) { ?>
                 <?php if ($header_rules[$current_rule_index]['rule'] <= $posts[$i]->start_date && $current_rule_index < count($header_rules)) { ?>
                     <?php for ($j = $current_rule_index; $j < count($header_rules); $j++) { // loop through rules to find the one for this day ?>
