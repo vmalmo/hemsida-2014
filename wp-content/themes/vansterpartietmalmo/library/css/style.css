@@ -1432,6 +1432,20 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar .blurb {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #DDD;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+.sidebar .blurb p {
+  margin: 0.7em 0.5em 0.2em;
+  font-size: 1.2em;
+  text-align: center;
+}
+
 /*********************
 * Blurbs !
 **********************/
