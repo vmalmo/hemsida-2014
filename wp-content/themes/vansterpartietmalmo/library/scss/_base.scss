@@ -375,10 +375,6 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
-article ul {
-    margin: 10px 40px;
-    list-style-type: disc;
-}
 
 
 		.hentry {
@@ -416,35 +412,18 @@ article ul {
 		}
 
 		/* entry content */
-		.entry-content {
-      ol {
-        margin: 10px 40px;
-        list-style: decimal;
-      }
+  .entry-content {
 			margin: 30px 0;
-
-			p {}
-
-
-			ul, ol, table, dl {}
-
-			ul, ol {
-
-				li {}
-
-			}
-
-			ul {
-
-				li {}
-
-			}
-
-			ol {
-
-				li {}
-
-			}
+  }
+	.entry-content, .home-content {
+      ul {
+          margin: 10px 30px;
+          list-style-type: disc;
+      }
+      ol {
+          margin: 10px 30px;
+          list-style: decimal;
+      }
 
 			blockquote {
 
@@ -469,17 +448,11 @@ article ul {
 				height: auto;
 			}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
 			.alignleft, img.alignleft {}
 			.alignright, img.alignright {}
 			.aligncenter, img.aligncenter {}
 
-			video, object {
+			iframe, video, object {
 				max-width: 100%;
 				height: auto;
 			}

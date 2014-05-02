@@ -321,6 +321,7 @@ function vm14_post_header($type = 'post'){
   else if ($type == 'category') {
     array_push($classes, 'no-image');
     $title = single_cat_title("", false);
+    $description = category_description();
   }
 
   printf('<header class="%s" %s>
