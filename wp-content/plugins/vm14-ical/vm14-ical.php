@@ -72,7 +72,9 @@ class VM14_ICal_Endpoint{
 	}
 
     private function printl($str) {
-        echo $str."\n";
+        $args = func_get_args();
+        array_shift($args);
+        vprintf($str."\n", $args);
     }
 
     private function printe($event) {
