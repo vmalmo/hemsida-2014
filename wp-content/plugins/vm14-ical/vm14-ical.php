@@ -9,11 +9,14 @@
 
 class VM14_ICal_Endpoint{
 	
+    const DATE_FORMAT = 'Ymd\THis\Z';
 	
 	/** Hook WordPress
 	*	@return void
 	*/
 	public function __construct(){
+        $this->domain = preg_replace('/^www\./', '', $_SERVER['SERVER_NAME']);
+
         register_activation_hook(__FILE__, array($this, 'activate'));
         register_deactivation_hook(__FILE__, array($this, 'deactivate'));
 
@@ -56,7 +59,7 @@ class VM14_ICal_Endpoint{
 
         $this->printl('BEGIN:VCALENDAR');
         $this->printl('VERSION:2.0');
-        $this->printl('PRODID:-//vmalmo.se/calendar//NONSGML v1.0//EN');
+        $this->printl('PRODID:-//%s/calendar//NONSGML v1.0//EN', $this->domain);
 
         $posts = vm14_get_posts(array(
             'post_type' => 'calendar_event',
@@ -79,11 +82,11 @@ class VM14_ICal_Endpoint{
 
     private function printe($event) {
         $this->printl('BEGIN:VEVENT');
-        $this->printl('UID:uid@example.com');
-        $this->printl('DTSTAMP:20140201T114000Z');
+        $this->printl('UID:%d@%s', $event->id, $this->domain);
+        $this->printl('DTSTAMP:%s', $event->date(self::DATE_FORMAT));
         $this->printl('ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com');
-        $this->printl('DTSTART:20140308T110000Z');
-        $this->printl('DTEND:20140308T130000Z');
+        $this->printl('DTSTART:%s', $event->start_datetime(self::DATE_FORMAT));
+        $this->printl('DTEND:%s', $event->end_datetime(self::DATE_FORMAT));
         $this->printl('SUMMARY:'.$event->title);
         $this->printl('END:VEVENT');
     }
