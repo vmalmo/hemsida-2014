@@ -20,6 +20,7 @@ class VM14_ICal_Endpoint{
         register_activation_hook(__FILE__, array($this, 'activate'));
         register_deactivation_hook(__FILE__, array($this, 'deactivate'));
 
+        add_action('save_post', array($this, 'save_post'));
 		add_filter('query_vars', array($this, 'add_query_vars'), 0);
 		add_action('parse_request', array($this, 'sniff_requests'), 0);
 	}	
@@ -41,6 +42,19 @@ class VM14_ICal_Endpoint{
 		$vars[] = '__vm14_ics';
 		return $vars;
 	}
+
+    public function save_post($id) {
+        $post = get_post($id);
+        if ($post->post_type == 'calendar_event') {
+            $seq = get_post_meta($id, 'ics_sequence', true);
+            if ($seq) {
+                update_post_meta($id, 'ics_sequence', (int)$seq+1);
+            }
+            else {
+                add_post_meta($id, 'ics_sequence', 1);
+            }
+        }
+    }
 	
 
 	public function sniff_requests(){
@@ -60,6 +74,7 @@ class VM14_ICal_Endpoint{
         $this->printl('BEGIN:VCALENDAR');
         $this->printl('VERSION:2.0');
         $this->printl('PRODID:-//%s/calendar//NONSGML v1.0//EN', $this->domain);
+        $this->printl('X-PUBLISHED-TTL:PT30M');
 
         $posts = vm14_get_posts(array(
             'post_type' => 'calendar_event',
@@ -81,10 +96,15 @@ class VM14_ICal_Endpoint{
     }
 
     private function printe($event) {
+        $seq = get_post_meta($event->id, 'ics_sequence', true);
+        if (!$seq)
+            $seq = 0;
+
         $this->printl('BEGIN:VEVENT');
         $this->printl('UID:%d@%s', $event->id, $this->domain);
         $this->printl('DTSTAMP:%s', $event->date(self::DATE_FORMAT));
         $this->printl('ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com');
+        $this->printl('SEQUENCE:%s', $seq);
         $this->printl('DTSTART:%s', $event->start_datetime(self::DATE_FORMAT));
         $this->printl('DTEND:%s', $event->end_datetime(self::DATE_FORMAT));
         $this->printl('SUMMARY:'.$event->title);
