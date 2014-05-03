@@ -37,23 +37,33 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
         return $html;
     }
 
-    public function start_datetime($format) {
+    public function start_datetime($format, $utc=false) {
         $time = preg_split('[^0-9]', $this->start_time);
         if (count($time)<2)
             $time = array(0,0,0); // TODO: Move default to save?
 
         $date = new DateTime($this->start_date);
         $date->setTime((int)$time[0], (int)$time[1]);
+
+        if ($utc) {
+            $date->setTimeZone(new DateTimeZone('UTC'));
+        }
+
         return $date->format($format);
     }
 
-    public function end_datetime($format) {
+    public function end_datetime($format, $utc=false) {
         $time = preg_split('[^0-9]', $this->end_time);
         if (count($time)<2)
             $time = array(23,59,0); // TODO: Move default to save?
 
         $date = new DateTime($this->end_date);
         $date->setTime((int)$time[0], (int)$time[1]);
+
+        if ($utc) {
+            $date->setTimeZone(new DateTimeZone('UTC'));
+        }
+            
         return $date->format($format);
     }
 }
