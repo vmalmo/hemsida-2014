@@ -48,111 +48,129 @@
     };
 
     var initHomeVideo = function() {
-        console.log($('#home-video').data('youtube-id'));
-        if (document.getElementById('home-video') && $('#home-video').data('youtube-id')) {
-            var ctr, tag, firstScriptTag;
+        if ($('#home-video-player').length == 1) {
+            var f = $('#home-video-player'),
+                url = f.attr('src').split('?')[0],
+                vw, vh;
+
+            // Listen for messages from the player
+            if (window.addEventListener){
+                window.addEventListener('message', onMessageReceived, false);
+            }
+            else {
+                window.attachEvent('onmessage', onMessageReceived, false);
+            }
             
-            tag = document.createElement('script');
-
-            tag.src = "http://www.youtube.com/iframe_api";
-            firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            ctr = document.createElement('div');
-            ctr.id = 'home-video-player';
-            document.getElementById('home-video').appendChild(ctr);
-
-            window.onYouTubeIframeAPIReady = function() {
-                var player, iframe, onStateChange, playBtn, hasPlayed;
-
-                playBtn = document.createElement('a');
-                $(playBtn).addClass('play-btn');
-                $(playBtn).fadeIn();
-                document.getElementById('home-video').appendChild(playBtn);
-
-                onStateChange = function(ev) {
-                    if (ev.data == YT.PlayerState.ENDED || ev.data == YT.PlayerState.PAUSED) {
-                        hideVideo();
+            // Handle messages received from the player
+            function onMessageReceived(e) {
+                if (e.origin.indexOf('vimeo')>0) {
+                    var data = JSON.parse(e.data);
+                    
+                    if (data.event) {
+                        switch (data.event) {
+                            case 'ready':
+                                onReady();
+                                break;
+                               
+                            case 'pause':
+                                onPause();
+                                break;
+                               
+                            case 'finish':
+                                onFinish();
+                                break;
+                        }
                     }
-                    else if (ev.data == YT.PlayerState.PLAYING) {
-                        showVideo();
+                    else if (data.method) {
+                        switch (data.method) {
+                            case 'getVideoWidth':
+                                vw = data.value;
+                                break;
+                            case 'getVideoHeight':
+                                vh = data.value;
+                                break;
+                        }
                     }
-                };
+                }
+            }
+            
+            // Helper function for sending a message to the player
+            function post(action, value) {
+                var data = { method: action };
+                
+                if (value) {
+                    data.value = value;
+                }
+                
+                var str = JSON.stringify(data);
+                f[0].contentWindow.postMessage(str, 'http:'+url);
+            }
+            
+            function onReady() {
+                post('addEventListener', 'pause');
+                post('addEventListener', 'finish');
+                post('addEventListener', 'playProgress');
 
-                player = new YT.Player('home-video-player', {
-                    'width': '100%',
-                    'height': '100%',
-                    'videoId': $('#home-video').data('youtube-id'), 
-                    'playerVars': {
-                        'hd': 1,
-                        'rel': 0,
-                        'autohide': 1,
-                        'showinfo': 0,
-                        'controls': 0
-                    },
-                    'events': {
-                        'onStateChange': onStateChange
-                    }
-                });
+                post('getVideoWidth');
+                post('getVideoHeight');
+                $(window).resize(repositionVideo);
+            }
+            
+            function onPause() {
+                hideVideo();
+            }
+            
+            function onFinish() {
+                hideVideo();
+            }
 
-                iframe = document.getElementById('home-video-player');
+            function repositionVideo() {
+                if (vw && vh) {
+                    var ww = $('#home-video').width(),
+                        wh = $('#home-video').height(),
+                        aw = vw,
+                        ah = vh,
+                        scale;
 
-                var updateSize = function() {
-                    var w, h;
+                    // Calculate scale with 10px bleed
+                    scale = Math.max((ww+10) / vw, (wh+10) / vh);
 
-                    w = $(iframe).parent().width() + 16;
-                    h = $(iframe).parent().height() + 9;
+                    // Adjusted width/height
+                    aw = Math.ceil(scale * vw);
+                    ah = Math.ceil(scale * vh);
 
-                    if (w/16 > h/9) {
-                        h = Math.ceil(w/16*9);
-                    }
-                    else if (w/16 < h/9) {
-                        w = Math.ceil(h/9*16);
-                    }
-
-                    player.setSize(w, h);
-                    $(iframe).css({
-                        'margin-left': -Math.ceil(w/2)+'px',
-                        'margin-top': -Math.ceil(h/2)+'px'
+                    $('#home-video-player').css({
+                        'width': aw,
+                        'height': ah,
+                        'left': ww/2 - Math.ceil(aw/2)+'px',
+                        'top': wh/2 - Math.ceil(ah/2)+'px'
                     });
-                };
+                }
+            }
 
-                updateSize();
-                $(window).resize(updateSize);
+            function showVideo() {
+                repositionVideo();
 
-                var showVideo = function() {
-                    $(iframe).fadeIn();
-                    $(playBtn).hide();
-                    $('#menu-header').fadeOut();
-                    $('#home-intro').animate({
-                        'opacity': 0
-                    }, 400);
-                };
+                $('#home-video-player').fadeIn();
+                $('#menu-header').fadeOut();
+                $(playBtn).fadeOut();
+            }
 
-                var hideVideo = function() {
-                    $(iframe).fadeOut();
-                    $(playBtn).show();
-                    $('#menu-header').fadeIn();
-                    $('#home-intro').stop(true).animate({
-                        'opacity': 100
-                    }, 400);
-                };
+            function hideVideo() {
+                $('#home-video-player').fadeOut();
+                $('#menu-header').fadeIn();
+                $(playBtn).fadeIn();
+            }
 
-                $(playBtn).click(function() {
-                    if (!hasPlayed && $(iframe).parent().height() > 480) {
-                        player.setPlaybackQuality('large');
-                    }
+            playBtn = document.createElement('a');
+            $(playBtn).addClass('play-btn');
+            $(playBtn).fadeIn();
+            document.getElementById('home-video').appendChild(playBtn);
 
-                    $(playBtn).fadeOut();
-                    player.seekTo(0);
-                    player.playVideo();
-                    $('#home-intro').delay(300).stop(true).animate({
-                        'opacity': 0
-                    }, 400);
-
-                    hasPlayed = true;
-                });
-            };
+            $(playBtn).click(function() {
+                post('play');
+                showVideo();
+            });
         }
     };
 
