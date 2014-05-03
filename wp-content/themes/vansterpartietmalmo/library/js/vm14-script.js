@@ -77,9 +77,11 @@
                         switch (data.method) {
                             case 'getVideoWidth':
                                 vw = data.value;
+                                repositionVideo();
                                 break;
                             case 'getVideoHeight':
                                 vh = data.value;
+                                repositionVideo();
                                 break;
                         }
                     }
