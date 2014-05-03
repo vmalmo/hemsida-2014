@@ -53,14 +53,6 @@
                 url = f.attr('src').split('?')[0],
                 vw, vh;
 
-            // Listen for messages from the player
-            if (window.addEventListener){
-                window.addEventListener('message', onMessageReceived, false);
-            }
-            else {
-                window.attachEvent('onmessage', onMessageReceived, false);
-            }
-            
             // Handle messages received from the player
             function onMessageReceived(e) {
                 if (e.origin.indexOf('vimeo')>0) {
@@ -93,6 +85,15 @@
                     }
                 }
             }
+
+            // Listen for messages from the player
+            if (window.addEventListener){
+                window.addEventListener('message', onMessageReceived, false);
+            }
+            else {
+                window.attachEvent('onmessage', onMessageReceived, false);
+            }
+            
             
             // Helper function for sending a message to the player
             function post(action, value) {
