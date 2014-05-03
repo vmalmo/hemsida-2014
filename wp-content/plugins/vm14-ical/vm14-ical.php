@@ -9,7 +9,7 @@
 
 class VM14_ICal_Endpoint{
 	
-    const DATE_FORMAT = 'Ymd\THis\Z';
+    const DATE_FORMAT = 'Ymd\THis';
 	
 	/** Hook WordPress
 	*	@return void
@@ -93,6 +93,27 @@ class VM14_ICal_Endpoint{
         $this->printl('X-WR-CALDESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-PUBLISHED-TTL:PT30M');
 
+        // Timezone. TODO: Don't hardcode timezone?
+        $this->printl('BEGIN:VTIMEZONE');
+        $this->printl('TZID:Europe/Stockholm');
+        $this->printl('TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Stockholm');
+        $this->printl('X-LIC-LOCATION:Europe/Stockholm');
+        $this->printl('BEGIN:DAYLIGHT');
+        $this->printl('TZOFFSETFROM:+0100');
+        $this->printl('TZOFFSETTO:+0200');
+        $this->printl('TZNAME:CEST');
+        $this->printl('DTSTART:19700329T020000');
+        $this->printl('RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU');
+        $this->printl('END:DAYLIGHT');
+        $this->printl('BEGIN:STANDARD');
+        $this->printl('TZOFFSETFROM:+0200');
+        $this->printl('TZOFFSETTO:+0100');
+        $this->printl('TZNAME:CET');
+        $this->printl('DTSTART:19701025T030000');
+        $this->printl('RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU');
+        $this->printl('END:STANDARD');
+        $this->printl('END:VTIMEZONE');
+
         $posts = vm14_get_posts(array(
             'post_type' => 'calendar_event',
             'posts_per_page' => '-1',
@@ -119,11 +140,11 @@ class VM14_ICal_Endpoint{
 
         $this->printl('BEGIN:VEVENT');
         $this->printl('UID:%d@%s', $event->id, $this->domain);
-        $this->printl('DTSTAMP:%s', $event->date(self::DATE_FORMAT));
+        $this->printl('DTSTAMP;TZID=Europe/Stockholm:%s', $event->date(self::DATE_FORMAT));
         $this->printl('ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com');
         $this->printl('SEQUENCE:%s', $seq);
-        $this->printl('DTSTART:%s', $event->start_datetime(self::DATE_FORMAT));
-        $this->printl('DTEND:%s', $event->end_datetime(self::DATE_FORMAT));
+        $this->printl('DTSTART;TZID=Europe/Stockholm:%s', $event->start_datetime(self::DATE_FORMAT));
+        $this->printl('DTEND;TZID=Europe/Stockholm:%s', $event->end_datetime(self::DATE_FORMAT));
         $this->printl('SUMMARY:'.$event->title);
         $this->printl('END:VEVENT');
     }
