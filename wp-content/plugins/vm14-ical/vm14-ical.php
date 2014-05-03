@@ -141,7 +141,6 @@ class VM14_ICal_Endpoint{
         $this->printl('BEGIN:VEVENT');
         $this->printl('UID:%d@%s', $event->id, $this->domain);
         $this->printl('DTSTAMP;TZID=Europe/Stockholm:%s', $event->date(self::DATE_FORMAT));
-        $this->printl('ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com');
         $this->printl('SEQUENCE:%s', $seq);
         $this->printl('DTSTART;TZID=Europe/Stockholm:%s', $event->start_datetime(self::DATE_FORMAT));
         $this->printl('DTEND;TZID=Europe/Stockholm:%s', $event->end_datetime(self::DATE_FORMAT));
