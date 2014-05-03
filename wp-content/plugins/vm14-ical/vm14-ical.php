@@ -94,8 +94,9 @@ class VM14_ICal_Endpoint{
         header('Content-Type: text/calendar;encoding=utf8');
 
         $this->printl('BEGIN:VCALENDAR');
-        $this->printl('VERSION:2.0');
         $this->printl('PRODID:-//%s/calendar//NONSGML v1.0//EN', $this->domain);
+        $this->printl('VERSION:2.0');
+        $this->printl('METHOD:PUBLISH');
         $this->printl('NAME:%s', get_option('vm14_ics_cal_title', ''));
         $this->printl('X-WR-CALNAME:%s', get_option('vm14_ics_cal_title', ''));
         $this->printl('DESC:%s', get_option('vm14_ics_cal_description', ''));
