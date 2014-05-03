@@ -38,7 +38,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     }
 
     public function start_datetime($format, $utc=false) {
-        $time = preg_split('[^0-9]', $this->start_time);
+        $time = preg_split('/[^0-9]/', $this->start_time);
         if (count($time)<2)
             $time = array(0,0,0); // TODO: Move default to save?
 
@@ -53,7 +53,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     }
 
     public function end_datetime($format, $utc=false) {
-        $time = preg_split('[^0-9]', $this->end_time);
+        $time = preg_split('/[^0-9]/', $this->end_time);
         if (count($time)<2)
             $time = array(23,59,0); // TODO: Move default to save?
 
