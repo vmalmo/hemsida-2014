@@ -100,6 +100,7 @@ class VM14_ICal_Endpoint{
         $this->printl('X-WR-CALNAME:%s', get_option('vm14_ics_cal_title', ''));
         $this->printl('DESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-WR-CALDESC:%s', get_option('vm14_ics_cal_description', ''));
+        $this->printl('X-WR-TIMEZONE:Europe/Stockholm');
         $this->printl('X-PUBLISHED-TTL:PT30M');
 
         // Timezone. TODO: Don't hardcode timezone?
