@@ -96,7 +96,9 @@ class VM14_ICal_Endpoint{
         $this->printl('BEGIN:VCALENDAR');
         $this->printl('VERSION:2.0');
         $this->printl('PRODID:-//%s/calendar//NONSGML v1.0//EN', $this->domain);
+        $this->printl('NAME:%s', get_option('vm14_ics_cal_title', ''));
         $this->printl('X-WR-CALNAME:%s', get_option('vm14_ics_cal_title', ''));
+        $this->printl('DESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-WR-CALDESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-PUBLISHED-TTL:PT30M');
 
