@@ -23,6 +23,9 @@ class VM14_ICal_Endpoint{
         add_action('save_post', array($this, 'save_post'));
 		add_filter('query_vars', array($this, 'add_query_vars'), 0);
 		add_action('parse_request', array($this, 'sniff_requests'), 0);
+
+        add_action('admin_init', array($this, 'register_settings'), 0);
+        add_action('admin_menu', array($this, 'admin_menu'), 0);
 	}	
 	
     public function activate() {
@@ -31,7 +34,19 @@ class VM14_ICal_Endpoint{
     }
 
     public function deactivate() {
-        //flush_rewrite_rules();
+    }
+
+    public function register_settings() {
+        register_setting('vm14-ics', 'vm14_ics_cal_title');
+        register_setting('vm14-ics', 'vm14_ics_cal_description');
+    }
+
+    public function admin_menu() {
+        add_submenu_page('options-general.php', 'ICS endpoint settings', 'ICS endpoint', 'administrator', __FILE__, array($this, 'admin_page'));
+    }
+
+    public function admin_page() {
+        include(dirname(__FILE__).'/admin.php');
     }
 
 	/** Add public query vars
