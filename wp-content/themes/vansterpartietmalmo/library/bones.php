@@ -78,22 +78,11 @@ function bones_head_cleanup() {
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
-	// remove WP version from css
-	add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
-	// remove Wp version from scripts
-	add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
 } /* end bones head cleanup */
 
 // remove WP version from RSS
 function bones_rss_version() { return ''; }
-
-// remove WP version from scripts
-function bones_remove_wp_ver_css_js( $src ) {
-	if ( strpos( $src, 'ver=' ) )
-		$src = remove_query_arg( 'ver', $src );
-	return $src;
-}
 
 // remove injected CSS for recent comments widget
 function bones_remove_wp_widget_recent_comments_style() {
@@ -147,29 +136,31 @@ function bones_scripts_and_styles() {
       true
     );
 
+    $theme = wp_get_theme();
+
     wp_register_script( 'vm14-js-responsive-images',
       get_stylesheet_directory_uri() . '/library/js/vm14-responsive-images.js',
-      array( 'jquery' )
+      array( 'jquery' ), $theme->version
     );
 
     wp_register_script( 'vm14-js',
       get_stylesheet_directory_uri() . '/library/js/vm14-script.js',
-      array( 'jquery' )
+      array( 'jquery' ), $theme->version
     );
     
     wp_register_script( 'vm14-filter', 
       get_stylesheet_directory_uri() . '/library/js/vm14-filter.js', 
-      array( 'jquery' )
+      array( 'jquery' ), $theme->version
     );
     
     wp_register_script( 'vm14-infinite-scroll', 
       get_stylesheet_directory_uri() . '/library/js/vm14-infinite-scroll.js', 
-      array( 'jquery' )
+      array( 'jquery' ), $theme->version
     );
 
     wp_register_script( 'vm14-hovermenu', 
       get_stylesheet_directory_uri() . '/library/js/vm14-hovermenu.js', 
-      array( 'jquery' )
+      array( 'jquery' ), $theme->version
     );
 
 		// enqueue styles and scripts
