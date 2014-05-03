@@ -103,7 +103,7 @@
                 }
                 
                 var str = JSON.stringify(data);
-                f[0].contentWindow.postMessage(str, 'http:'+url);
+                f[0].contentWindow.postMessage(str, url);
             }
             
             function onReady() {
