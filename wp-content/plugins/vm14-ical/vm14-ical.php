@@ -29,14 +29,21 @@ class VM14_ICal_Endpoint{
 	}	
 	
     public function activate() {
-        add_rewrite_rule('^calendar.ics','index.php?__vm14_ics=1','top');
+        $url = get_option('vm14_ics_url', 'calendar.ics');
+        add_rewrite_rule('^'.$url, 'index.php?__vm14_ics=1','top');
         flush_rewrite_rules();
     }
 
     public function deactivate() {
     }
 
+    public function update_url($url) {
+        $this->activate();
+        return $url;
+    }
+
     public function register_settings() {
+        register_setting('vm14-ics', 'vm14_ics_url', array($this, 'update_url'));
         register_setting('vm14-ics', 'vm14_ics_cal_title');
         register_setting('vm14-ics', 'vm14_ics_cal_description');
     }

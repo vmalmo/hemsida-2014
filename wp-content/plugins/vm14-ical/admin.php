@@ -5,6 +5,11 @@
         <?php settings_fields('vm14-ics');?>
         <table class="form-table">
             <tr valign="top">
+                <th scope="row">ICS feed URL</th>
+                <td><input type="text" name="vm14_ics_url" value="<?php echo get_option('vm14_ics_url'); ?>" /></td>
+            </tr>
+             
+            <tr valign="top">
                 <th scope="row">Calendar Title</th>
                 <td><input type="text" name="vm14_ics_cal_title" value="<?php echo get_option('vm14_ics_cal_title'); ?>" /></td>
             </tr>
