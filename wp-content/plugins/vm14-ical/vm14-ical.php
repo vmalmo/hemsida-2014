@@ -145,6 +145,7 @@ class VM14_ICal_Endpoint{
         $this->printl('SEQUENCE:%s', $seq);
         $this->printl('DTSTART;TZID=Europe/Stockholm:%s', $event->start_datetime(self::DATE_FORMAT));
         $this->printl('DTEND;TZID=Europe/Stockholm:%s', $event->end_datetime(self::DATE_FORMAT));
+        $this->printl('URL:%s', $event->permalink());
         $this->printl('SUMMARY:'.$event->title);
         $this->printl('END:VEVENT');
     }
