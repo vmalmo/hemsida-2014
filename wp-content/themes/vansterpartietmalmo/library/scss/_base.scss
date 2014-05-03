@@ -452,10 +452,14 @@ POSTS & CONTENT STYLES
 			.alignright, img.alignright {}
 			.aligncenter, img.aligncenter {}
 
-			iframe, video, object {
+			video, object {
 				max-width: 100%;
 				height: auto;
 			}
+
+            iframe {
+                max-width: 100%;
+            }
 
 			pre {
 				background: #eee;
