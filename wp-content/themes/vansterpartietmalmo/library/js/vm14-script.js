@@ -149,6 +149,16 @@
                         'top': wh/2 - Math.ceil(ah/2)+'px'
                     });
                 }
+                else {
+                    // Fallback for when getVideoWidth/Height for some
+                    // reason does not work (bug in Chrome?)
+                    $('#home-video-player').css({
+                        'width': $('#home-video').width(),
+                        'heigth': $('#home-video').height(),
+                        'left': 0,
+                        'top': 0
+                    });
+                }
             }
 
             function showVideo() {
