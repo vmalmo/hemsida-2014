@@ -42,7 +42,16 @@
                 if ($image):?>
                     <img src="<?php echo $image[0];?>">
                 <?php endif;?>
-                    
+                <?php
+                    $events = $p->events();
+                    if (count($events)>0):?>
+                        <h3>Kommande arrangemang</h3>
+                        <ul>
+                        <?php foreach ($events as $event):?>
+                            <li><?php echo $event->preview_html();?></li>
+                        <?php endforeach;?>
+                        </ul>
+                <?php endif;?>
 
 					<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
