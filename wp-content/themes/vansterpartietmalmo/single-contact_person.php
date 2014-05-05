@@ -43,7 +43,16 @@
                 if ($image):?>
                     <img src="<?php echo $image[0];?>">
                 <?php endif;?>
-                    
+
+                <ul class="contact-info">
+                <?php if ($p->email):?>
+                    <li><a href="mailto:<?php echo $p->email;?>"><?php echo $p->email;?></a></li>
+                <?php endif;?>
+                <?php if ($p->phone):?>
+                    <li><?php echo $p->phone;?></li>
+                <?php endif;?>
+                </ul>
+
 
 					<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
