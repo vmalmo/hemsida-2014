@@ -11,7 +11,7 @@ class VM14_Post_Type_Field {
     function __construct(array $params = null) {
         if ($params) {
             $this->params = $params;
-            $this->widget = $params['widget'];
+            $this->widget = $this->param('widget', 'text');
 
             if (isset($params['group']))
                 $this->group = $params['group'];
