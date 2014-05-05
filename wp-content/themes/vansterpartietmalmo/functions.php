@@ -255,6 +255,14 @@ function vm14_customize_register($wpc) {
         'type' => 'dropdown-pages'
     )));
 
+    $wpc->add_setting('vm14_pages_calendar');
+    $wpc->add_control(new WP_Customize_Control($wpc, 'calendar_page', array(
+        'label' => __('Calendar page', 'vm14'),
+        'section' => 'vm14_section_pages',
+        'settings' => 'vm14_pages_calendar',
+        'type' => 'dropdown-pages'
+    )));
+
     $wpc->add_setting('vm14_home_video');
     $wpc->add_control(new WP_Customize_Control($wpc, 'home_video', array(
         'label' => __('Home page video', 'vm14'),
