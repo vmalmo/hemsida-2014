@@ -37,6 +37,11 @@ class VM14_Post_Type_Field {
         return $this->group;
     }
 
+    protected function param($key, $def) {
+        return isset($this->params[$key])?
+            $this->params[$key] : $def;
+    }
+
     private function prepare_meta($id, $params) {
         $meta = array();
         $meta['id'] = $id;
@@ -80,6 +85,7 @@ class VM14_Post_Type_Relationship extends VM14_Post_Type_Field {
     function get_config($prefix, $id) {
         $config = parent::get_config($prefix, $id);
         $config['type'] = 'relationship';
+        $config['max'] = $this->param('max', -1);
         $config['return_format'] = 'object';
         $config['post_type'] = array($this->other);
         $config['taxonomy'] = array('all');
