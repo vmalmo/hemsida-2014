@@ -8,6 +8,7 @@
 */
 
 class VM14_ICal_Endpoint{
+    private $new_url;
 	
     const DATE_FORMAT = 'Ymd\THis';
 	
@@ -26,19 +27,28 @@ class VM14_ICal_Endpoint{
 
         add_action('admin_init', array($this, 'register_settings'), 0);
         add_action('admin_menu', array($this, 'admin_menu'), 0);
+        add_filter('root_rewrite_rules', array($this, 'add_rewrites'));
 	}	
 	
     public function activate() {
-        $url = get_option('vm14_ics_url', 'calendar.ics');
-        add_rewrite_rule('^'.$url, 'index.php?__vm14_ics=1','top');
         flush_rewrite_rules();
     }
 
     public function deactivate() {
+        flush_rewrite_rules();
+    }
+
+    public function add_rewrites($rewrites) {
+        $url = $this->new_url or get_option('vm14_ics_url', 'calendar.ics');
+        $rewrites[$url] = 'index.php?__vm14_ics=1';
+        error_log(print_r($rewrites,true));
+
+        return $rewrites;
     }
 
     public function update_url($url) {
-        $this->activate();
+        $this->new_url = $url;
+        flush_rewrite_rules();
         return $url;
     }
 
