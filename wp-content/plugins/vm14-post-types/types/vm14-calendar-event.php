@@ -7,6 +7,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $end_date;
     static $end_time;
     static $location;
+    static $working_group;
 
     static $meta_groups;
     static $meta_slug = 'kalender';//TODO: add localization
@@ -66,6 +67,19 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             
         return $date->format($format);
     }
+
+    public function has_working_group() {
+        return ($this->working_group && count($this->working_group)>0);
+    }
+
+    public function working_group_post() {
+        if ($this->has_working_group()) {
+            return vm14_get_post($this->working_group[0]);
+        }
+        else {
+            return null;
+        }
+    }
 }
 
 VM14_Calendar_Event_Post_Type::$meta_groups = array(
@@ -104,3 +118,6 @@ VM14_Calendar_Event_Post_Type::$location = new VM14_Post_Type_Field(array(
     'widget' => 'google_map',
 ));
 
+VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship('working_group', array(
+    'max' => 1
+));
