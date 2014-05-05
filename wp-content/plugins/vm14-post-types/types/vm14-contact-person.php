@@ -6,6 +6,8 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
     static $video;
     static $titles;
     static $visible_as_representative;
+
+    static $meta_groups;
     static $meta_slug = 'kontaktperson'; //TODO: add localization
 
     function preview_html() {
@@ -20,12 +22,24 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
     }
 }
 
+VM14_Contact_Person_Post_Type::$meta_groups = array(
+    'contact' => array(
+        'title' => __('Contact information'),
+        'position' => 'side',
+        'layout' => 'box'
+    )
+);
+
 VM14_Contact_Person_Post_Type::$summary = new VM14_Post_Type_Field(array(
     'widget' => 'wysiwyg'
 ));
 
-VM14_Contact_Person_Post_Type::$first_name = new VM14_Post_Type_Field();
-VM14_Contact_Person_Post_Type::$last_name = new VM14_Post_Type_Field();
+VM14_Contact_Person_Post_Type::$first_name = new VM14_Post_Type_Field(array(
+    'group' => 'contact'
+));
+VM14_Contact_Person_Post_Type::$last_name = new VM14_Post_Type_Field(array(
+    'group' => 'contact'
+));
 VM14_Contact_Person_Post_Type::$video = new VM14_Post_Type_Field();
 
 VM14_Contact_Person_Post_Type::$titles = new VM14_Post_Type_Field(array(
@@ -33,6 +47,7 @@ VM14_Contact_Person_Post_Type::$titles = new VM14_Post_Type_Field(array(
 ));
 
 VM14_Contact_Person_Post_Type::$visible_as_representative = new VM14_Post_Type_Field(array(
-    'widget' => 'true_false'
+    'widget' => 'true_false',
+    'group' => 'contact'
 ));
 
