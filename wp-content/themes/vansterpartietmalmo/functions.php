@@ -44,6 +44,7 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 add_image_size( 'vm14_small', 400, 300, true );
 add_image_size( 'vm14_medium', 400, 230, true );
 add_image_size( 'vm14_large', 1240, 698, true );
+add_image_size( 'vm14_thumb', 50, 50, true);
 add_image_size( 'vm14_post_header', 640, 280, true);
 add_image_size( 'vm14_medium_width', 640, 480);
 add_image_size( 'vm14_full_width', 2000, 1500);

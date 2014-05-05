@@ -2,7 +2,10 @@
 class VM14_Working_Group_Post_Type extends VM14_Post_Type {
     static $summary;
     static $contact_persons;
+    static $show_share_buttons;
+
     static $meta_slug = 'arbetsgrupp';//TODO: add localization
+    static $meta_groups;
 
     public function events($limit = 3) {
         return vm14_get_posts(array(
@@ -27,6 +30,18 @@ class VM14_Working_Group_Post_Type extends VM14_Post_Type {
         ));
     }
 }
+VM14_Working_Group_Post_Type::$meta_groups = array(
+    'social_fields' => array(
+        'title' => __('Social share buttons'),
+        'position' => 'side',
+        'layout' => 'box',
+    )
+);
+
+VM14_Working_Group_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
+  'widget' => 'true_false',
+  'group' => 'social_fields'
+));
 
 VM14_Working_Group_Post_Type::$summary = new VM14_Post_Type_Field(array(
     'widget' => 'wysiwyg'

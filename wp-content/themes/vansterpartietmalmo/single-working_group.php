@@ -37,32 +37,52 @@
 					
 				</div>
 				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
-                <?php
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
-                if ($image):?>
-                    <img src="<?php echo $image[0];?>">
-                <?php endif;?>
+              <ul class="sidebar-presentation">
+                  <?php
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_medium_width' ); 
+                  if ($image):?>
+                        <li>
+                          <img class="sidebar-presentation-image" src="<?php echo $image[0];?>">
+                        </li>
+                  <?php endif;?>
 
-                <?php if ($p->contact_persons):?>
-                <h3>Kontakt</h3>
-                <ul>
-                <?php foreach ($p->contact_persons as $pid):?>
-                    <?php $person = vm14_get_post($pid);?>
-                    <li><a href="<?php echo $person->permalink();?>"><?php printf('%s %s', $person->first_name, $person->last_name);?></a></li>
-                <?php endforeach;?>
+                  <?php if ($p->contact_persons):?>
+                      <li>
+                          <h5>Kontakt</h5>
+                          <ul class="working-group-contact-list">
+                          <?php foreach ($p->contact_persons as $pid):?>
+                              <?php $person = vm14_get_post($pid);?>
+                              <li>
+                                    <a href="<?php echo $person->permalink();?>">
+<img src="<?php echo $person->image_url('vm14_thumb'); ?>" /><?php printf('%s %s', $person->first_name, $person->last_name);?></a>
+</li>
+                          <?php endforeach;?>
+                      </li>
+                  </ul>
+                  <?php endif;?>
+
+                  <?php
+                      $events = $p->events();
+                      if (count($events)>0):?>
+                          <li>
+                            <h5>Kommande arrangemang</h5>
+                            <ul>
+                            <?php foreach ($events as $event):?>
+                                <li><?php echo $event->preview_html();?></li>
+                            <?php endforeach;?>
+                            </ul>
+                          </li>
+                  <?php endif;?>
+                  <?php if ($p->show_share_buttons) : ?>
+                    <li>
+                        <h5>Dela</h5>
+                        <div class="social-share-buttons">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv">Tweeta</a>
+                            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                        </div>
+                    </li>
+                  <?php endif; ?>
                 </ul>
-                <?php endif;?>
-
-                <?php
-                    $events = $p->events();
-                    if (count($events)>0):?>
-                        <h3>Kommande arrangemang</h3>
-                        <ul>
-                        <?php foreach ($events as $event):?>
-                            <li><?php echo $event->preview_html();?></li>
-                        <?php endforeach;?>
-                        </ul>
-                <?php endif;?>
 
 					<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
