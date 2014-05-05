@@ -7,6 +7,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $end_date;
     static $end_time;
     static $location;
+    static $facebook_event;
     static $working_group;
 
     static $meta_groups;
@@ -80,6 +81,10 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             return null;
         }
     }
+
+    public function facebook_event_url() {
+        return $this->facebook_event;
+    }
 }
 
 VM14_Calendar_Event_Post_Type::$meta_groups = array(
@@ -116,6 +121,10 @@ VM14_Calendar_Event_Post_Type::$end_time = new VM14_Post_Type_Field(array(
 
 VM14_Calendar_Event_Post_Type::$location = new VM14_Post_Type_Field(array(
     'widget' => 'google_map',
+));
+
+VM14_Calendar_Event_Post_Type::$facebook_event = new VM14_Post_Type_Field(array(
+    'widget' => 'text'
 ));
 
 VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship('working_group', array(
