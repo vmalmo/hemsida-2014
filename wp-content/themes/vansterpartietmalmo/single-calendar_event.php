@@ -72,8 +72,6 @@ Till eventet på Facebook</a>
                             <?php echo $wg->preview_html();?>
                         </li>
                     <?php endif;?>
-                    <li>
-
 
                   </ul>
 
