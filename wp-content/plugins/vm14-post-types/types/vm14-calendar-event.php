@@ -7,9 +7,23 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $end_date;
     static $end_time;
     static $location;
+    static $facebook_event;
+    static $working_group;
+    static $show_share_buttons;
 
     static $meta_groups;
     static $meta_slug = 'kalender';//TODO: add localization
+
+    function __construct($post) {
+
+        parent::__construct($post);
+        if (is_array($this->post_data['start_date'])) {
+          $this->post_data['start_date'] = $this->post_data['start_date'][0];
+        }
+        if (is_array($this->post_data['end_date'])) {
+          $this->post_data['end_date'] = $this->post_data['end_date'][0];
+        }
+    }
 
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
@@ -66,11 +80,33 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             
         return $date->format($format);
     }
+
+    public function has_working_group() {
+        return ($this->working_group && count($this->working_group)>0);
+    }
+
+    public function working_group_post() {
+        if ($this->has_working_group()) {
+            return vm14_get_post($this->working_group[0]);
+        }
+        else {
+            return null;
+        }
+    }
+
+    public function facebook_event_url() {
+        return $this->facebook_event;
+    }
 }
 
 VM14_Calendar_Event_Post_Type::$meta_groups = array(
     'date' => array(
         'title' => __('Calendar event dates'),
+        'position' => 'side',
+        'layout' => 'box',
+    ),
+    'social_fields' => array(
+        'title' => __('Social share buttons'),
         'position' => 'side',
         'layout' => 'box',
     )
@@ -104,3 +140,16 @@ VM14_Calendar_Event_Post_Type::$location = new VM14_Post_Type_Field(array(
     'widget' => 'google_map',
 ));
 
+VM14_Calendar_Event_Post_Type::$facebook_event = new VM14_Post_Type_Field(array(
+    'widget' => 'text'
+));
+
+VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship('working_group', array(
+    'max' => 1
+));
+
+
+VM14_Calendar_Event_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
+  'widget' => 'true_false',
+  'group' => 'social_fields'
+));

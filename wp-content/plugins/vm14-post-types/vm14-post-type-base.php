@@ -11,7 +11,7 @@ class VM14_Post_Type_Field {
     function __construct(array $params = null) {
         if ($params) {
             $this->params = $params;
-            $this->widget = $params['widget'];
+            $this->widget = $this->param('widget', 'text');
 
             if (isset($params['group']))
                 $this->group = $params['group'];
@@ -35,6 +35,11 @@ class VM14_Post_Type_Field {
 
     function get_group_id() {
         return $this->group;
+    }
+
+    protected function param($key, $def) {
+        return isset($this->params[$key])?
+            $this->params[$key] : $def;
     }
 
     private function prepare_meta($id, $params) {
@@ -80,6 +85,7 @@ class VM14_Post_Type_Relationship extends VM14_Post_Type_Field {
     function get_config($prefix, $id) {
         $config = parent::get_config($prefix, $id);
         $config['type'] = 'relationship';
+        $config['max'] = $this->param('max', -1);
         $config['return_format'] = 'object';
         $config['post_type'] = array($this->other);
         $config['taxonomy'] = array('all');

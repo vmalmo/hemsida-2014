@@ -44,6 +44,7 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 add_image_size( 'vm14_small', 400, 300, true );
 add_image_size( 'vm14_medium', 400, 230, true );
 add_image_size( 'vm14_large', 1240, 698, true );
+add_image_size( 'vm14_thumb', 50, 50, true);
 add_image_size( 'vm14_post_header', 640, 280, true);
 add_image_size( 'vm14_medium_width', 640, 480);
 add_image_size( 'vm14_full_width', 2000, 1500);
@@ -304,7 +305,7 @@ function vm14_post_header($type = 'post'){
       array_push($classes, 'no-image');
     }
   }
-  if ($type == 'post') {
+  if ($type == 'post' || $type == 'single') {
     $p = vm14_get_post($post->ID);
     $title = $p->title;
     $link = get_permalink($post->ID);
@@ -322,6 +323,9 @@ function vm14_post_header($type = 'post'){
     array_push($classes, 'no-image');
     $title = single_cat_title("", false);
     $description = category_description();
+  }
+  if($type == 'single') {
+    array_push($classes, 'no-image');
   }
 
   printf('<header class="%s" %s>

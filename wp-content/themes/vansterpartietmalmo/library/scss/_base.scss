@@ -413,7 +413,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
   .entry-content {
-			margin: 30px 0;
+			margin: 30px 0 10px;
   }
 	.entry-content, .home-content {
       ul {
@@ -540,9 +540,22 @@ POSTS & CONTENT STYLES
 		.size-thumbnail {}
 
 
-/*********************
-Contact listing
-*********************/
+.social-share-buttons {
+  > * {
+    float: left;
+    display: inline-block;
+    margin: 5px 0;
+  }
+}
+.hentry {
+  .social-share-buttons {
+    margin: 5px 0;
+    padding-top: 5px;
+    float: left;
+    width: 100%;
+    border-top: solid 1px #DDD;
+  }
+}
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -895,6 +908,82 @@ SIDEBARS & ASIDES
     }
   }
 }
+.sidebar-presentation {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  li {
+    float: left;
+    width: 100%;
+  }
+  h5 {
+    color: #000;
+    margin: 15px 0 5px;
+    border-bottom: solid 1px #DDD;
+  }
+  a {
+    color: #666;
+  }
+  a:hover {
+    color: $red;
+  }
+}
+.sidebar-presentation-image {
+  float: left;
+  width: 100%;
+}
+
+.calendar-event-single-date {
+  margin: 0;
+  float: left;
+  width: 100%;
+  span, div {
+    padding-right: 0.5em;
+  }
+}
+.single-calendar_event .entry-content {
+  margin-top: 0px;
+}
+.calendar-event-fb-link {
+  padding: 10px 0 0;
+}
+.calendar-event-working-group {
+  color: #666;
+  h4 {
+    font-weight: normal;
+    margin: 0;
+  }
+  p {
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+}
+.working-group-contact-list {
+  li {
+    margin: 0 0 10px;;
+  }
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+  a {
+    display: block;
+    line-height: 50px;
+    float: left;
+    width: 100%;
+  }
+}
+.contact-info {
+  margin: 0;
+  h5 {
+    margin-top: 5px;
+  }
+  li {
+    margin: 5px 0;
+  }
+}
 
 /*********************
 * Blurbs !
@@ -1061,10 +1150,11 @@ FOOTER STYLES
   margin-top: 0;
 }
 
-.icon-time:before{ content: "\f021"; }
-.icon-calendar:before{ content: "\f022"; }
-.icon-twitter-sign:before{ content: "\f023"; }
-.icon-facebook-sign:before{ content: "\f024"; }
-.icon-twitter:before{ content: "\f025"; }
-.icon-facebook:before{ content: "\f026"; }
-.icon-angle-right:before{ content: "\f027"; }
+.icon-envelope:before{ content: "\f021"; }
+.icon-time:before{ content: "\f022"; }
+.icon-calendar:before{ content: "\f023"; }
+.icon-twitter-sign:before{ content: "\f024"; }
+.icon-facebook-sign:before{ content: "\f025"; }
+.icon-phone:before{ content: "\f026"; }
+.icon-twitter:before{ content: "\f027"; }
+.icon-angle-right:before{ content: "\f028"; }
