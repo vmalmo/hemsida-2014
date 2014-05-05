@@ -13,6 +13,17 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $meta_groups;
     static $meta_slug = 'kalender';//TODO: add localization
 
+    function __construct($post) {
+
+        parent::__construct($post);
+        if (is_array($this->post_data['start_date'])) {
+          $this->post_data['start_date'] = $this->post_data['start_date'][0];
+        }
+        if (is_array($this->post_data['end_date'])) {
+          $this->post_data['end_date'] = $this->post_data['end_date'][0];
+        }
+    }
+
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
         $html  = sprintf('<a href="%s">', get_permalink($this->id));
