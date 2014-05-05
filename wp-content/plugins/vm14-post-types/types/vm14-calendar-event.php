@@ -9,6 +9,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $location;
     static $facebook_event;
     static $working_group;
+    static $show_share_buttons;
 
     static $meta_groups;
     static $meta_slug = 'kalender';//TODO: add localization
@@ -103,6 +104,11 @@ VM14_Calendar_Event_Post_Type::$meta_groups = array(
         'title' => __('Calendar event dates'),
         'position' => 'side',
         'layout' => 'box',
+    ),
+    'social_fields' => array(
+        'title' => __('Social share buttons'),
+        'position' => 'side',
+        'layout' => 'box',
     )
 );
 
@@ -140,4 +146,10 @@ VM14_Calendar_Event_Post_Type::$facebook_event = new VM14_Post_Type_Field(array(
 
 VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship('working_group', array(
     'max' => 1
+));
+
+
+VM14_Calendar_Event_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
+  'widget' => 'true_false',
+  'group' => 'social_fields'
 ));

@@ -1124,7 +1124,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 
 .entry-content ul, .home-content ul {
@@ -1196,74 +1196,18 @@ POSTS & CONTENT STYLES
 
 /* end .gallery */
 /* gallery caption styles */
-/*********************
-Contact listing
-*********************/
-.sidebar-presentation {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-.sidebar-presentation li {
+.social-share-buttons > * {
   float: left;
-  width: 100%;
-}
-.sidebar-presentation h5 {
-  color: #000;
-  margin: 15px 0 5px;
-  border-bottom: solid 1px #DDD;
-}
-.sidebar-presentation a {
-  color: #666;
-}
-.sidebar-presentation a:hover {
-  color: #da291c;
-}
-
-.sidebar-presentation-image {
-  float: left;
-  width: 100%;
-}
-
-.calendar-event-single-date {
-  margin: 0;
-  float: left;
-  width: 100%;
-}
-.calendar-event-single-date span, .calendar-event-single-date div {
-  padding-right: 0.5em;
-}
-
-.single-calendar_event .entry-content {
-  margin-top: 0px;
-}
-
-.calendar-event-fb-link {
-  padding: 10px 0 0;
-}
-
-.calendar-event-working-group {
-  color: #666;
-}
-.calendar-event-working-group h4 {
-  font-weight: normal;
-  margin: 0;
-}
-.calendar-event-working-group p {
-  font-style: italic;
-  font-size: 0.9em;
+  display: inline-block;
   margin: 5px 0;
 }
 
-.contact-info {
-  margin: 0;
-}
-.contact-info h5 {
-  margin-top: 5px;
-}
-.contact-info li {
+.hentry .social-share-buttons {
   margin: 5px 0;
+  padding-top: 5px;
+  float: left;
+  width: 100%;
+  border-top: solid 1px #DDD;
 }
 
 /******************************************************************
@@ -1514,6 +1458,87 @@ SIDEBARS & ASIDES
   margin: 0.7em 0.5em 0.2em;
   font-size: 1.2em;
   text-align: center;
+}
+
+.sidebar-presentation {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.sidebar-presentation li {
+  float: left;
+  width: 100%;
+}
+.sidebar-presentation h5 {
+  color: #000;
+  margin: 15px 0 5px;
+  border-bottom: solid 1px #DDD;
+}
+.sidebar-presentation a {
+  color: #666;
+}
+.sidebar-presentation a:hover {
+  color: #da291c;
+}
+
+.sidebar-presentation-image {
+  float: left;
+  width: 100%;
+}
+
+.calendar-event-single-date {
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+.calendar-event-single-date span, .calendar-event-single-date div {
+  padding-right: 0.5em;
+}
+
+.single-calendar_event .entry-content {
+  margin-top: 0px;
+}
+
+.calendar-event-fb-link {
+  padding: 10px 0 0;
+}
+
+.calendar-event-working-group {
+  color: #666;
+}
+.calendar-event-working-group h4 {
+  font-weight: normal;
+  margin: 0;
+}
+.calendar-event-working-group p {
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.working-group-contact-list li {
+  margin: 0 0 10px;
+}
+.working-group-contact-list img {
+  float: left;
+  margin-right: 10px;
+}
+.working-group-contact-list a {
+  display: block;
+  line-height: 50px;
+  float: left;
+  width: 100%;
+}
+
+.contact-info {
+  margin: 0;
+}
+.contact-info h5 {
+  margin-top: 5px;
+}
+.contact-info li {
+  margin: 5px 0;
 }
 
 /*********************
