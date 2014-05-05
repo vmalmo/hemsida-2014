@@ -4,6 +4,7 @@ class VM14_Page_Post_Type extends VM14_Post_Type {
     static $menu;
     static $summary;
     static $feed_categories;
+    static $show_share_buttons;
 
     static $meta_groups;
 
@@ -70,6 +71,11 @@ VM14_Page_Post_Type::$meta_groups = array(
         'title' => __('Misc'),
         'position' => 'side',
         'layout' => 'box'
+    ),
+    'social_fields' => array(
+        'title' => __('Social share buttons'),
+        'position' => 'side',
+        'layout' => 'box',
     )
 );
 
@@ -83,4 +89,10 @@ VM14_Page_Post_Type::$summary = new VM14_Post_Type_Field(array(
 ));
 
 VM14_Page_Post_Type::$feed_categories = new VM14_Post_Type_Taxonomy();
+
+
+VM14_Page_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
+  'widget' => 'true_false',
+  'group' => 'social_fields'
+));
 

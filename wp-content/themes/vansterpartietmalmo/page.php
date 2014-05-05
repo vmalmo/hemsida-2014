@@ -2,6 +2,7 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php vm14_post_header(); ?>
         <?php echo vm14_sub_menu($post->ID); ?>
+        <?php $p = vm14_get_post($post->ID);?>
         <div id="inner-content" class="wrap clearfix">
             <?php vm14_breadcrumbs($post->ID); ?>
             <div id="main" class="eightcol first clearfix" role="main">
@@ -9,6 +10,12 @@
                     <section class="entry-content clearfix" itemprop="articleBody">
                         <?php the_content(); ?>
                     </section>
+                    <?php if ($p->show_share_buttons) : ?>
+                        <div class="social-share-buttons">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv">Tweeta</a>
+                            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                        </div>
+                    <?php endif; ?>
                     <footer class="article-footer">
                         <?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
                     </footer>

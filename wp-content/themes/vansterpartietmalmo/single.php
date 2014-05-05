@@ -31,6 +31,13 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">
                         <?php the_content(); ?>
+
+                      <?php if ($p->show_share_buttons) : ?>
+                          <div class="social-share-buttons">
+                              <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv">Tweeta</a>
+                                  <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                          </div>
+                      <?php endif; ?>
                     </section>
                 </article>
             </div>
