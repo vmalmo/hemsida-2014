@@ -9,14 +9,13 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 						<header>
-							<h1 class="page-title"><?php the_title(); ?></h1>
-                            <?php echo $p->summary;?>
+                <h1 class="page-title"><?php the_title(); ?></h1>
+                <?php echo $p->summary;?>
 						</header>
 
 						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
+                <?php the_content(); ?>
 						</section>
-
 
 					</article>
 
@@ -38,20 +37,34 @@
 					
 				</div>
 				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
-                <?php
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); 
-                if ($image):?>
-                    <img src="<?php echo $image[0];?>">
-                <?php endif;?>
+              <div class="sidebar-presentation">
+                  <?php
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_medium_width' ); 
+                    if ($image):?>
+                        <img class="sidebar-presentation-image" src="<?php echo $image[0];?>">
+                    <?php endif;?>
 
-                <ul class="contact-info">
-                <?php if ($p->email):?>
-                    <li><a href="mailto:<?php echo $p->email;?>"><?php echo $p->email;?></a></li>
-                <?php endif;?>
-                <?php if ($p->phone):?>
-                    <li><?php echo $p->phone;?></li>
-                <?php endif;?>
-                </ul>
+                    <ul class="contact-info">
+                        <li>
+                            <h5><?php the_title(); ?></h5>
+                        </li>
+  
+                    <?php if ($p->email):?>
+                        <li> 
+                            <a class="icon icon-envelope" href="mailto:<?php echo $p->email;?>">
+                              <?php echo $p->email;?>
+                            </a>
+                        </li>
+                    <?php endif;?>
+                    <?php if ($p->phone):?>
+                        <li>
+                              <p class="icon icon-phone">
+                                  <?php echo $p->phone;?>
+                              </p>
+                        </li>
+                    <?php endif;?>
+                    </ul>
+                </div>
 
 
 					<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>

@@ -304,7 +304,7 @@ function vm14_post_header($type = 'post'){
       array_push($classes, 'no-image');
     }
   }
-  if ($type == 'post') {
+  if ($type == 'post' || $type == 'single') {
     $p = vm14_get_post($post->ID);
     $title = $p->title;
     $link = get_permalink($post->ID);
@@ -322,6 +322,9 @@ function vm14_post_header($type = 'post'){
     array_push($classes, 'no-image');
     $title = single_cat_title("", false);
     $description = category_description();
+  }
+  if($type == 'single') {
+    array_push($classes, 'no-image');
   }
 
   printf('<header class="%s" %s>
