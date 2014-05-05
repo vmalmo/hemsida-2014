@@ -3,6 +3,8 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
     static $summary;
     static $first_name;
     static $last_name;
+    static $email;
+    static $phone;
     static $titles;
     static $visible_as_representative;
 
@@ -36,7 +38,16 @@ VM14_Contact_Person_Post_Type::$summary = new VM14_Post_Type_Field(array(
 VM14_Contact_Person_Post_Type::$first_name = new VM14_Post_Type_Field(array(
     'group' => 'contact'
 ));
+
 VM14_Contact_Person_Post_Type::$last_name = new VM14_Post_Type_Field(array(
+    'group' => 'contact'
+));
+
+VM14_Contact_Person_Post_Type::$email = new VM14_Post_Type_Field(array(
+    'group' => 'contact'
+));
+
+VM14_Contact_Person_Post_Type::$phone = new VM14_Post_Type_Field(array(
     'group' => 'contact'
 ));
 
