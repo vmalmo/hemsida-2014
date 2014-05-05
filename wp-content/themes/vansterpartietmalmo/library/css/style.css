@@ -1524,6 +1524,10 @@ SIDEBARS & ASIDES
   font-weight: normal;
   margin: 0;
 }
+.calendar-event-working-group img {
+  float: left;
+  margin: 0 10px 5px 0;
+}
 .calendar-event-working-group p {
   font-style: italic;
   font-size: 0.9em;
