@@ -3,7 +3,7 @@
         <?php echo vm14_sub_menu($post->ID); ?>
         <?php $p = vm14_get_post($post->ID);?>
         <div id="inner-content" class="wrap clearfix">
-            <?php vm14_breadcrumbs($post->ID); ?>
+            <?php vm14_breadcrumbs($post->ID, get_theme_mod('vm14_pages_calendar')); ?>
             <div id="main" class="eightcol first clearfix" role="main">
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <h1 class="page-title"><?php the_title(); ?></h1>
