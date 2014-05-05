@@ -42,6 +42,17 @@
                 if ($image):?>
                     <img src="<?php echo $image[0];?>">
                 <?php endif;?>
+
+                <?php if ($p->contact_persons):?>
+                <h3>Kontakt</h3>
+                <ul>
+                <?php foreach ($p->contact_persons as $pid):?>
+                    <?php $person = vm14_get_post($pid);?>
+                    <li><a href="<?php echo $person->permalink();?>"><?php printf('%s %s', $person->first_name, $person->last_name);?></a></li>
+                <?php endforeach;?>
+                </ul>
+                <?php endif;?>
+
                 <?php
                     $events = $p->events();
                     if (count($events)>0):?>
