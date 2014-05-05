@@ -1,5 +1,44 @@
 <?php
 
+add_action('manage_calendar_event_posts_custom_column', 'vm14_calendar_event_custom_column', 10, 2);
+add_filter('manage_calendar_event_posts_columns', 'vm14_calendar_event_columns');
+add_filter("manage_edit-calendar_event_sortable_columns", 'vm14_calendar_event_sortable_columns');
+add_filter('request', 'vm14_calendar_event_orderby');
+
+function vm14_calendar_event_columns($columns) {
+    unset($columns['date']);
+    $columns['start_date'] = 'Start date';
+    return $columns;
+}
+
+function vm14_calendar_event_sortable_columns($columns) {
+    $columns['start_date'] = 'calendar_event_start_date';
+    return $columns;
+}
+
+function vm14_calendar_event_custom_column($column, $post_id) {
+    switch ($column) {
+        case 'start_date':
+            echo get_field('calendar_event_start_date', $post_id);
+            break;
+    }
+}
+
+function vm14_calendar_event_orderby($vars) {
+    if (isset($vars['post_type']) && $vars['post_type']=='calendar_event' && isset($vars['orderby'])) {
+        switch ($vars['orderby']) {
+            case 'calendar_event_start_date':
+                $vars = array_merge($vars, array(
+                    'meta_key' => 'calendar_event_start_date',
+                    'orderby' => 'meta_value'
+                ));
+                break;
+        }
+    }
+    
+    return $vars;
+}
+
 class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $summary;
     static $start_date;
