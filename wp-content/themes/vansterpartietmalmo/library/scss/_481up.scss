@@ -113,6 +113,20 @@ POSTS & CONTENT STYLES
 .gallery {
     dl {
         width: 23%;
+        &:nth-child(3n) {
+            margin: 1em 1% 0;
+        }
+        &:nth-child(3n+1) {
+            margin: 1em 1% 0;
+        }
+        &:nth-child(4n) {
+            margin-right: 0;
+            margin-left: 2%;
+        }
+        &:nth-child(4n+1) {
+            margin-right: 2%;
+            margin-left: 0;
+        }
     }
 }
 

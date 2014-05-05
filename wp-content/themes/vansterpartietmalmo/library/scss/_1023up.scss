@@ -38,6 +38,20 @@ POST STYLES
 .gallery {
     dl {
         width: 18%;
+        &:nth-child(4n) {
+            margin: 1em 1% 0;
+        }
+        &:nth-child(4n+1) {
+            margin: 1em 1% 0;
+        }
+        &:nth-child(5n) {
+            margin-right: 0;
+            margin-left: 2%;
+        }
+        &:nth-child(5n+1) {
+            margin-right: 2%;
+            margin-left: 0;
+        }
     }
 }
 /*********************

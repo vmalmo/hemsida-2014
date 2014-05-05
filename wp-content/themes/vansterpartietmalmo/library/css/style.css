@@ -1319,12 +1319,25 @@ POSTS & CONTENT STYLES
   float: left;
   width: 100%;
   clear: both;
+  margin-bottom: 1em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003498}}
 .gallery dl {
   width: 31.3333%;
-  margin: 0.5em 1% 0;
+  margin: 1em 1% 0;
   float: left;
+}
+.gallery dl:nth-child(3n) {
+  margin-right: 0;
+  margin-left: 2%;
+}
+.gallery dl:nth-child(3n+1) {
+  margin-right: 2%;
+  margin-left: 0;
+}
+.gallery a, .gallery img {
+  float: left;
+  margin-bottom: 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_base\.scss}line{font-family:\00003525}}
@@ -2773,6 +2786,20 @@ tweeners.
   .gallery dl {
     width: 23%;
   }
+  .gallery dl:nth-child(3n) {
+    margin: 1em 1% 0;
+  }
+  .gallery dl:nth-child(3n+1) {
+    margin: 1em 1% 0;
+  }
+  .gallery dl:nth-child(4n) {
+    margin-right: 0;
+    margin-left: 2%;
+  }
+  .gallery dl:nth-child(4n+1) {
+    margin-right: 2%;
+    margin-left: 0;
+  }
 
   /****************
   ***************/
@@ -3277,6 +3304,20 @@ you can add resource intensive styles.
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/richardolsson\/Frilans\/Projekt\/2014\/Vansterpartiet\/MalmovansternSE\/Dev\/wp-content\/themes\/vansterpartietmalmo\/library\/scss\/_1023up\.scss}line{font-family:\0000339}}
   .gallery dl {
     width: 18%;
+  }
+  .gallery dl:nth-child(4n) {
+    margin: 1em 1% 0;
+  }
+  .gallery dl:nth-child(4n+1) {
+    margin: 1em 1% 0;
+  }
+  .gallery dl:nth-child(5n) {
+    margin-right: 0;
+    margin-left: 2%;
+  }
+  .gallery dl:nth-child(5n+1) {
+    margin-right: 2%;
+    margin-left: 0;
   }
 
   /*********************

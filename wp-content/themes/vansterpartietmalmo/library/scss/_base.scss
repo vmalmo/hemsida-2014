@@ -494,22 +494,25 @@ POSTS & CONTENT STYLES
         float: left;
         width: 100%;
         clear: both;
+        margin-bottom: 1em;
 
         dl {
             width: 31.3333%;
-            margin: 0.5em 1% 0;
+            margin: 1em 1% 0;
             float: left;
-
-            a {}
-
-            img {}
-
+            &:nth-child(3n) {
+                margin-right: 0;
+                margin-left: 2%;
+            }
+            &:nth-child(3n+1) {
+                margin-right: 2%;
+                margin-left: 0;
+            }
         }
-
-			dt {}
-
-			dd {}
-
+        a, img {
+            float: left;
+            margin-bottom: 0;
+        }
 		}
     //@for $i from 1 through 9 {
     //  .gallery-columns-#{$i} {
