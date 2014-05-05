@@ -53,6 +53,11 @@
                     Arrangeras av:
                     <?php echo $wg->preview_html();?>
                 <?php endif;?>
+
+                <?php if ($fb_url = $p->facebook_event_url()):?>
+                    <a href="<?php echo $fb_url;?>" target="_blank">Till eventet på Facebook</a>
+                <?php endif;?>
+
                 <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
                 <?php dynamic_sidebar( 'sidebar' ); ?>
                 <?php endif; ?>
