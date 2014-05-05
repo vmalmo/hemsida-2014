@@ -39,7 +39,7 @@ class VM14_ICal_Endpoint{
     }
 
     public function add_rewrites($rewrites) {
-        $url = $this->new_url or get_option('vm14_ics_url', 'calendar.ics');
+        $url = $this->new_url? $this->new_url : get_option('vm14_ics_url', 'calendar.ics');
         $rewrites[$url] = 'index.php?__vm14_ics=1';
         error_log(print_r($rewrites,true));
 
