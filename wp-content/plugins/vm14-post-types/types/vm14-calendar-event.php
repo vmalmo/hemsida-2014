@@ -183,7 +183,8 @@ VM14_Calendar_Event_Post_Type::$location = new VM14_Post_Type_Field(array(
 ));
 
 VM14_Calendar_Event_Post_Type::$facebook_event = new VM14_Post_Type_Field(array(
-    'widget' => 'text'
+    'widget' => 'text',
+    'group' => 'misc'
 ));
 
 VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship('working_group', array(
