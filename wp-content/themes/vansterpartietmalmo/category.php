@@ -12,10 +12,12 @@
 
 								<section class="entry-content clearfix">
 									<?php the_content(); ?>
+                  <div class="post-date">
+                    <?php the_time('l, F jS, Y') ?> <?php _e('by'); ?> <?php the_author(); ?>
+                  </div>
 								</section>
 
 								<footer class="article-footer">
-									<p class="tags"><?php the_tags( '<span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
 
 								</footer>
 

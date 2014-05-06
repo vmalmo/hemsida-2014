@@ -6,31 +6,13 @@
         <div id="inner-content" class="wrap clearfix">
             <?php vm14_breadcrumbs($post->ID); ?>
             <div id="main" class="eightcol first clearfix" role="main">
-                <?php if ($p->start_date) {?>
-                  <div class="calendar-event-single-date">
-                    <span>Börjar:</span>
-                    <div class="icon icon-calendar">
-                      <?php echo date('Y-m-d', strtotime($p->start_date)); ?>
-                    </div>
-                    <div class="icon icon-time">
-                      <?php echo $p->start_time; ?>
-                    </div>
-                  </div>
-                <?php } ?>
-                <?php if ($p->end_date) {?>
-                  <div class="calendar-event-single-date">
-                    <span>Slutar:</span>
-                    <div class="icon icon-calendar">
-                      <?php echo date('Y-m-d', strtotime($p->end_date)); ?>
-                    </div>
-                    <div class="icon icon-time">
-                      <?php echo $p->end_time; ?>
-                    </div>
-                  </div>
-                <?php } ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <section class="entry-content clearfix" itemprop="articleBody">
                         <?php the_content(); ?>
+                        <div class="post-date">
+                          <?php the_time('l, F jS, Y') ?> <?php _e('by'); ?> <?php the_author(); ?>
+                        </div>
+
 
                       <?php if ($p->show_share_buttons) : ?>
                           <div class="social-share-buttons">

@@ -1107,16 +1107,13 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* end .hentry */
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
+.post-date {
+  font-size: 0.9em;
+  padding: 5px 0 0;
+  text-align: right;
+  font-style: italic;
+}
+
 /* post meta */
 .byline {
   color: #999;

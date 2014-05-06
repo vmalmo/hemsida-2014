@@ -375,34 +375,13 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+.post-date {
+  font-size: 0.9em;
+  padding: 5px 0 0;
+  text-align: right;
+  font-style: italic;
+}
 
-
-		.hentry {
-
-			header {}
-
-			footer {}
-
-		} /* end .hentry */
-
-		.single-title,
-		.page-title {}
-
-		.single-title {}
-
-		.page-title {}
-
-		.archive-title { }
-
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
 		/* post meta */
 		.byline {
