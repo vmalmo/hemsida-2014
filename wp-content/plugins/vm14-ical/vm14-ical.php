@@ -40,8 +40,10 @@ class VM14_ICal_Endpoint{
     }
 
     public function add_rewrites($rewrites) {
-        $url = $this->new_url? $this->new_url : get_option('vm14_ics_url', 'calendar.ics');
-        $rewrites[$url] = 'index.php?__vm14_ics=1';
+        $public_url = get_option('vm14_ics_url', 'calendar.ics');
+        $all_url = get_option('vm14_ics_url_all', 'calendar-all.ics');
+        $rewrites[$public_url] = 'index.php?__vm14_ics=public';
+        $rewrites[$all_url] = 'index.php?__vm14_ics=all';
 
         return $rewrites;
     }
@@ -59,7 +61,9 @@ class VM14_ICal_Endpoint{
 
     public function register_settings() {
         register_setting('vm14-ics', 'vm14_ics_url', array($this, 'update_url'));
+        register_setting('vm14-ics', 'vm14_ics_url_all', array($this, 'update_url'));
         register_setting('vm14-ics', 'vm14_ics_cal_title');
+        register_setting('vm14-ics', 'vm14_ics_cal_title_all');
         register_setting('vm14-ics', 'vm14_ics_cal_description');
     }
 
@@ -97,7 +101,8 @@ class VM14_ICal_Endpoint{
 	public function sniff_requests(){
 		global $wp;
 		if(isset($wp->query_vars['__vm14_ics'])){
-			$this->handle_request();
+            $all = ($wp->query_vars['__vm14_ics']=='all');
+			$this->handle_request($all);
 			exit;
 		}
 	}
@@ -108,12 +113,14 @@ class VM14_ICal_Endpoint{
 	protected function handle_request($all = false){
         header('Content-Type: text/calendar;encoding=utf8');
 
+        $title_setting = $all? 'vm14_ics_cal_title_all' : 'vm14_ics_cal_title';
+
         $this->printl('BEGIN:VCALENDAR');
         $this->printl('PRODID:-//%s/calendar//NONSGML v1.0//EN', $this->domain);
         $this->printl('VERSION:2.0');
         $this->printl('METHOD:PUBLISH');
-        $this->printl('NAME:%s', get_option('vm14_ics_cal_title', ''));
-        $this->printl('X-WR-CALNAME:%s', get_option('vm14_ics_cal_title', ''));
+        $this->printl('NAME:%s', get_option($title_setting, ''));
+        $this->printl('X-WR-CALNAME:%s', get_option($title_setting, ''));
         $this->printl('DESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-WR-CALDESC:%s', get_option('vm14_ics_cal_description', ''));
         $this->printl('X-WR-TIMEZONE:Europe/Stockholm');
