@@ -2861,7 +2861,7 @@ you can add resource intensive styles.
   }
 
   .widget {
-    padding: 0 10px;
+    padding: 0;
     margin: 2.2em 0;
   }
   .widget ul li {
