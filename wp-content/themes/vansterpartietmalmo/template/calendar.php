@@ -71,6 +71,12 @@ Template Name: Calendar Template
                   'orderby' => 'meta_value',
                   'meta_key' => 'calendar_event_start_date',
                   'meta_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'key' => 'calendar_event_public',
+                        'value' => 1,
+                        'type' => 'numeric',
+                    ),
                     array(
                       'key' => 'calendar_event_end_date',
                       'value' => date('Ymd', strtotime($today. ' - 1 days')),
