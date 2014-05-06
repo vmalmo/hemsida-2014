@@ -120,6 +120,10 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
         return $date->format($format);
     }
 
+    public function is_all_day() {
+        return (($this->start_time=='' || $this->start_time=='00.00') && ($this->end_time=='' || $this->end_time=='00.00'));
+    }
+
     public function has_working_group() {
         return ($this->working_group && count($this->working_group)>0);
     }
