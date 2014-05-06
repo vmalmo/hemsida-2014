@@ -6,7 +6,6 @@ add_filter("manage_edit-calendar_event_sortable_columns", 'vm14_calendar_event_s
 add_filter('request', 'vm14_calendar_event_orderby');
 
 function vm14_calendar_event_columns($columns) {
-    unset($columns['date']);
     $columns['start_date'] = 'Start date';
     return $columns;
 }
