@@ -162,8 +162,14 @@ class VM14_ICal_Endpoint{
         $this->printl('UID:%d@%s', $event->id, $this->domain);
         $this->printl('DTSTAMP;TZID=Europe/Stockholm:%s', $event->date(self::DATE_FORMAT));
         $this->printl('SEQUENCE:%s', $seq);
-        $this->printl('DTSTART;TZID=Europe/Stockholm:%s', $event->start_datetime(self::DATE_FORMAT));
-        $this->printl('DTEND;TZID=Europe/Stockholm:%s', $event->end_datetime(self::DATE_FORMAT));
+        if ($event->is_all_day()) {
+            $this->printl('DTSTART;VALUE=DATE:%s', $event->start_datetime('Ymd'));
+            $this->printl('DTEND;VALUE=DATE:%s', $event->end_datetime('Ymd'));
+        }
+        else {
+            $this->printl('DTSTART;TZID=Europe/Stockholm:%s', $event->start_datetime(self::DATE_FORMAT));
+            $this->printl('DTEND;TZID=Europe/Stockholm:%s', $event->end_datetime(self::DATE_FORMAT));
+        }
         $this->printl('URL:%s', $event->permalink());
         $this->printl('SUMMARY:'.$event->title);
         $this->printl('END:VEVENT');
