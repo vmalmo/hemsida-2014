@@ -26,8 +26,17 @@ Template Name: Start Template
                   <h2>SENASTE NYTT :</h2>
                   <ul class="cycling-marquee">
                   <?php
+                      $categories = '';
+
+                      // Use feed category to filter front page news
+                      $p = vm14_get_post($post->ID);
+                      if ($p->feed_categories) {
+                        $categories = implode(',', $p->feed_categories);
+                      }
+
                       $news = vm14_get_posts(array(
-                          'post_type' => 'post'
+                          'post_type' => 'post',
+                          'category' => $categories
                       ));
                   ?>
                   <?php foreach ($news as $item): ?>
