@@ -8,7 +8,7 @@
 */
 
 class VM14_ICal_Endpoint{
-    private $new_url;
+    private $flush_pending = false;
 	
     const DATE_FORMAT = 'Ymd\THis';
 	
@@ -28,6 +28,7 @@ class VM14_ICal_Endpoint{
         add_action('admin_init', array($this, 'register_settings'), 0);
         add_action('admin_menu', array($this, 'admin_menu'), 0);
         add_filter('root_rewrite_rules', array($this, 'add_rewrites'));
+        add_action('shutdown', array($this, 'shutdown'));
 	}	
 	
     public function activate() {
@@ -46,9 +47,14 @@ class VM14_ICal_Endpoint{
     }
 
     public function update_url($url) {
-        $this->new_url = $url;
-        flush_rewrite_rules();
+        $this->flush_pending = true;
         return $url;
+    }
+
+    public function shutdown() {
+        if ($this->flush_pending) {
+            flush_rewrite_rules();
+        }
     }
 
     public function register_settings() {
