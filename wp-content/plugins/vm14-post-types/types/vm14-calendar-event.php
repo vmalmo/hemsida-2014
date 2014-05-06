@@ -47,6 +47,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     static $location;
     static $facebook_event;
     static $working_group;
+    static $public;
     static $show_share_buttons;
 
     static $meta_groups;
@@ -191,6 +192,11 @@ VM14_Calendar_Event_Post_Type::$working_group = new VM14_Post_Type_Relationship(
     'max' => 1
 ));
 
+VM14_Calendar_Event_Post_Type::$public = new VM14_Post_Type_Field(array(
+    'widget' => 'true_false',
+    'default' => '1',
+    'group' => 'misc'
+));
 
 VM14_Calendar_Event_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
   'widget' => 'true_false',
