@@ -142,8 +142,8 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
 }
 
 VM14_Calendar_Event_Post_Type::$meta_groups = array(
-    'date' => array(
-        'title' => __('Calendar event dates'),
+    'misc' => array(
+        'title' => __('Calendar event misc'),
         'position' => 'side',
         'layout' => 'box',
     ),
@@ -160,22 +160,22 @@ VM14_Calendar_Event_Post_Type::$summary = new VM14_Post_Type_Field(array(
 
 VM14_Calendar_Event_Post_Type::$start_date = new VM14_Post_Type_Field(array(
     'widget' => 'date_picker',
-    'group' => 'date',
+    'group' => 'misc',
 ));
 
 VM14_Calendar_Event_Post_Type::$start_time = new VM14_Post_Type_Field(array(
     'widget' => 'text',
-    'group' => 'date',
+    'group' => 'misc',
 ));
 
 VM14_Calendar_Event_Post_Type::$end_date = new VM14_Post_Type_Field(array(
     'widget' => 'date_picker',
-    'group' => 'date',
+    'group' => 'misc',
 ));
 
 VM14_Calendar_Event_Post_Type::$end_time = new VM14_Post_Type_Field(array(
     'widget' => 'text',
-    'group' => 'date',
+    'group' => 'misc',
 ));
 
 VM14_Calendar_Event_Post_Type::$location = new VM14_Post_Type_Field(array(
