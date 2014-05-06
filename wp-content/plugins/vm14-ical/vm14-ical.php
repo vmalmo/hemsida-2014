@@ -99,7 +99,7 @@ class VM14_ICal_Endpoint{
 	/** Handle Requests
 	*	@return void 
 	*/
-	protected function handle_request(){
+	protected function handle_request($all = false){
         header('Content-Type: text/calendar;encoding=utf8');
 
         $this->printl('BEGIN:VCALENDAR');
@@ -134,10 +134,22 @@ class VM14_ICal_Endpoint{
         $this->printl('END:STANDARD');
         $this->printl('END:VTIMEZONE');
 
-        $posts = vm14_get_posts(array(
+        $query = array(
             'post_type' => 'calendar_event',
             'posts_per_page' => '-1',
-        ));
+        );
+
+        if (!$all) {
+            $query['meta_query'] = array(
+                array(
+                    'key' => 'calendar_event_public',
+                    'value' => 1,
+                    'type' => 'numeric',
+                )
+            );
+        }
+
+        $posts = vm14_get_posts($query);
 
         foreach ($posts as $post) {
             $this->printe($post);
