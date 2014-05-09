@@ -8,7 +8,7 @@ Template Name: Start Template
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_full_width' ); ?>
         <?php $medium_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'vm14_medium_width' ); ?>
-        <div id="home-video" class="videoplayer responsive-image" data-youtube-id="<?php echo get_theme_mod('vm14_home_video');?>" data-height-ratio="0.75" data-image-large="<?php echo $large_image[0] ?>"  style="background-image: url('<?php echo $medium_image[0] ?>');">
+        <div id="home-video" class="videoplayer responsive-image" data-youtube-id="<?php echo get_theme_mod('vm14_home_video');?>" data-height-ratio="0.68" data-image-large="<?php echo $large_image[0] ?>"  style="background-image: url('<?php echo $medium_image[0] ?>');">
         <?php if ($vid = get_theme_mod('vm14_home_video')):?>
             <iframe id="home-video-player" src="http://player.vimeo.com/video/<?php echo $vid;?>?api=1" width="100%" height="100%" frameborder="0"></iframe>
         <?php endif;?>
