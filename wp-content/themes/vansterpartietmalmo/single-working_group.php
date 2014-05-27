@@ -78,7 +78,7 @@
                         <h5>Dela</h5>
                         <div class="social-share-buttons">
                             <a href="https://twitter.com/share" class="twitter-share-button" data-lang="sv">Tweeta</a>
-                            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                            <div class="fb-like" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"></div>
                         </div>
                     </li>
                   <?php endif; ?>
