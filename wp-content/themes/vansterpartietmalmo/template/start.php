@@ -42,7 +42,6 @@ Template Name: Start Template
                   <?php foreach ($news as $item): ?>
                       <li>
                           <a href="<?php echo get_permalink($item->id);?>">
-                              <span class="date"><?php echo $item->date('M\<\b\r\>j');?></span>
                               <?php echo $item->title;?>
                               <small><?php echo $item->get_excerpt(50);?></small></a></li>
                   <?php endforeach;?>
