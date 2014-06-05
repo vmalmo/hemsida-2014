@@ -175,38 +175,22 @@ BUTTONS
 *********************/
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid black;
-  border-top-color: black;
-  border-left-color: black;
   padding: 4px 12px;
   color: white;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
   line-height: 21px;
   border-radius: 4px;
-  background-color: black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  background-image: -webkit-linear-gradient(top, black, black);
-  background-image: -moz-linear-gradient(top, black, black);
-  background-image: -o-linear-gradient(top, black, black);
-  background-image: linear-gradient(to bottom, #000000, #000000);
+  min-width: 60px;
+  background: #da291c;
+  border: none;
 }
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid black;
   border-top-color: black;
   border-left-color: black;
-  background-color: black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  background-image: -webkit-linear-gradient(top, black, black);
-  background-image: -moz-linear-gradient(top, black, black);
-  background-image: -o-linear-gradient(top, black, black);
-  background-image: linear-gradient(to bottom, #000000, #000000);
 }
 .button:active, .button:visited:active {
   background-color: black;
@@ -215,35 +199,6 @@ BUTTONS
   background-image: -moz-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(to bottom, #000000, #000000);
-}
-
-.blue-button, .blue-button:visited {
-  border-color: #1472ad;
-  text-shadow: 0 1px 1px #1472ad;
-  background-color: #1681c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
-  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
-  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
-  background-image: -o-linear-gradient(top, #1990db, #1681c4);
-  background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  box-shadow: inset 0 0 3px #59b3ec;
-}
-.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
-  border-color: #116396;
-  background-color: #1472ad;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
-  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
-  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
-}
-.blue-button:active, .blue-button:visited:active {
-  background-color: #1990db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
-  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
-  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
-  background-image: -o-linear-gradient(top, #1681c4, #1990db);
-  background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
 .red-gradient {
@@ -411,6 +366,9 @@ POSTS & CONTENT STYLES
   max-height: 400px;
   float: none;
 }
+.page-header div.eightcol, .videoplayer div.eightcol, .top-image div.eightcol {
+  font-size: 1em;
+}
 
 /* section entrance */
 #section-entrance-content-widgets .widget {
@@ -443,6 +401,20 @@ POSTS & CONTENT STYLES
 .gallery dl {
   width: 23%;
 }
+.gallery dl:nth-child(3n) {
+  margin: 1em 1% 0;
+}
+.gallery dl:nth-child(3n+1) {
+  margin: 1em 1% 0;
+}
+.gallery dl:nth-child(4n) {
+  margin-right: 0;
+  margin-left: 2%;
+}
+.gallery dl:nth-child(4n+1) {
+  margin-right: 2%;
+  margin-left: 0;
+}
 
 /****************
 ***************/
@@ -455,11 +427,6 @@ POSTS & CONTENT STYLES
 /*********************
 CALENDAR STYLES
 *********************/
-.calendar-event-single-date {
-  margin: 2em 0 0;
-  width: 50%;
-}
-
 /*********************
 FOOTER STYLES
 *********************/
@@ -617,6 +584,11 @@ SIDEBARS & ASIDES
 *********************/
 #home-intro {
   position: relative;
+  padding: 20px 20px 20px;
+  margin: 0;
+}
+#home-intro h1 {
+  font-size: 2.3em;
 }
 
 #home-news-marquee {
@@ -652,7 +624,7 @@ SIDEBARS & ASIDES
 }
 
 .widget {
-  padding: 0 10px;
+  padding: 0;
   margin: 2.2em 0;
 }
 .widget ul li {
@@ -764,6 +736,20 @@ POST STYLES
 /* image gallery styles */
 .gallery dl {
   width: 18%;
+}
+.gallery dl:nth-child(4n) {
+  margin: 1em 1% 0;
+}
+.gallery dl:nth-child(4n+1) {
+  margin: 1em 1% 0;
+}
+.gallery dl:nth-child(5n) {
+  margin-right: 0;
+  margin-left: 2%;
+}
+.gallery dl:nth-child(5n+1) {
+  margin-right: 2%;
+  margin-left: 0;
 }
 
 /*********************

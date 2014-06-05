@@ -26,6 +26,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+input:focus { outline: none; }
+button:focus { outline: none; }
+.hide {
+  display: none!important;
+}
 
 #container {
     float: left;
@@ -325,7 +330,6 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
 .post-date {
   font-size: 0.9em;
   padding: 5px 0 0;
@@ -1084,11 +1088,12 @@ FOOTER STYLES
   margin-top: 0;
 }
 
-.icon-envelope:before{ content: "\f021"; }
-.icon-time:before{ content: "\f022"; }
-.icon-calendar:before{ content: "\f023"; }
-.icon-twitter-sign:before{ content: "\f024"; }
-.icon-facebook-sign:before{ content: "\f025"; }
-.icon-phone:before{ content: "\f026"; }
-.icon-twitter:before{ content: "\f027"; }
-.icon-angle-right:before{ content: "\f028"; }
+.icon-search:before{ content: "\f021"; }
+.icon-envelope:before{ content: "\f022"; }
+.icon-time:before{ content: "\f023"; }
+.icon-calendar:before{ content: "\f024"; }
+.icon-twitter-sign:before{ content: "\f025"; }
+.icon-facebook-sign:before{ content: "\f026"; }
+.icon-phone:before{ content: "\f027"; }
+.icon-twitter:before{ content: "\f028"; }
+.icon-angle-right:before{ content: "\f029"; }

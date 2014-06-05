@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     float: left;
     width: 100%;
     z-index: 22;
@@ -33,6 +34,77 @@
     }
 }
 
+#menu-header li {
+  @include transition(opacity ease-out 0.3s);
+}
+.search-focus .allpage li {
+  opacity: 0.1;
+}
+.menu-search {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+.header-search-form {
+  top: 10px;
+  right: 0;
+  position: absolute;
+}
+.icon-holder{
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+
+.icon-search {
+  display: block;
+  line-height: 34px;
+  width: 34px;
+  margin: 5px;
+  height: 34px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #FFF;
+  border-radius: 50%;
+  @include transition(background ease-out 0.3s);
+  border: none;
+  background: transparent;
+}
+.search-focus .icon-search {
+  background: $red;
+
+}
+.search-input {
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2em;
+  line-height: 22px;
+  padding: 3px 7px;
+  margin-top: 0px;
+  width: 183px;
+}
+.search-holder {
+  position: absolute;
+  overflow: hidden;
+  right: 44px;
+  width: 0px;
+  top: 4px;
+  @include transition(all ease-out 0.3s);
+  .button {
+    margin-top: 0;
+  }
+}
+.search-inner-holder {
+  width: 200px;
+}
+.search-holder-visible {
+  width: 200px;
+}
+
 .allpage {
     display: none;
     position: relative;
@@ -50,7 +122,7 @@
     line-height: 3em;
 }
 .top-more {
-  padding: 1em 2em;
+  padding: 1em 44px;
 }
 #menu-top-corner {
   display: none;

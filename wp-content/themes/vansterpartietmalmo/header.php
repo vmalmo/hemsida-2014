@@ -66,7 +66,19 @@
                 </nav>
             <?php } ?>
             <div class="right corner">
-                <?php bones_top_corner(); ?>
+                <?php if (is_front_page()) : ?>
+                    <?php bones_top_corner(); ?>
+                <?php endif; ?>
+                <form action="/" class="header-search-form">
+                    <button type="submit" class="icon-holder">
+                       <i class="icon-search"></i>
+                    </button> 
+                    <div class="search-holder">
+                        <div class="search-inner-holder">
+                            <input class="search-input" name="s" type="search" placeholder="Sök.." />
+                        </div>
+                    </div>
+                </form>
                 <a class="top-more" href="#footer"><?php _e('More') ?></a>
             </div>
         </header>

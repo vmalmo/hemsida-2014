@@ -1,4 +1,5 @@
 (function($) {
+    var $header, $menuTopConer, $topMore, $searchHolder;
     var init = function() {
         /* setting mobile menu from current menu */
         /* 
@@ -23,6 +24,41 @@
         if ($('#contact-list').length > 0){
           var infiniteScroll = new vm14.InfiniteScroll('contact_person', '#contact-list');
         }
+        if ($('.icon-search').length > 0) {
+          addSearchShow();
+          $header = $('.header');
+          $menuTopConer = $('#menu-top-corner');
+          $topMore = $('.top-more');
+          $searchHolder = $('.search-holder');
+        }
+    }
+    var toggleSearch = function(e) {
+        if (e) {
+          e.preventDefault();
+        }
+        // toggling visuals
+        $header.toggleClass('search-focus');
+        $menuTopConer.toggleClass('hide');
+        //$('#menu-top-hover-menu').toggleClass('hide');
+        $topMore.toggleClass('hide');
+        $searchHolder.toggleClass('search-holder-visible');
+
+        if ($searchHolder.hasClass('search-holder-visible')) {
+          $('.search-input').focus();
+        }
+    }
+    var addSearchShow = function() {
+      $('.icon-search').on('click', function(e) {
+        toggleSearch(e);
+        $('.icon-search').off('click');
+        $('.search-input').on('blur', function(e) {
+          $('.search-input').off('blur');
+          toggleSearch(false);
+          setTimeout(function() {
+            addSearchShow();
+          }, 30);
+        });
+      });
     }
 
     var initMarquees = function() {
@@ -205,6 +241,11 @@
         var ul = $(menuSelector).clone();
         ul.attr('id', ul.attr('id')+'-mobile');
         ul.append($('.right.corner li').clone().addClass('mobile-menu-secondary'));
+        var $searchItem = $('<li class="menu-item mobile-menu-secondary menu-search"><form action="/"><input placeholder="Sök..." type="search" name="s" /></form></li>');
+                
+        //$searchItem.append($('.header-search-form').clone());
+        //console.log($searchItem);
+        ul.append($searchItem);
         $('.header').after($('<div class="mobile-home-nav"></div>').append(ul));
     }
     var frontpageSpecific = function() {

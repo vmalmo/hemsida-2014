@@ -682,38 +682,22 @@ BUTTONS
 *********************/
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid black;
-  border-top-color: black;
-  border-left-color: black;
   padding: 4px 12px;
   color: white;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
   line-height: 21px;
   border-radius: 4px;
-  background-color: black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  background-image: -webkit-linear-gradient(top, black, black);
-  background-image: -moz-linear-gradient(top, black, black);
-  background-image: -o-linear-gradient(top, black, black);
-  background-image: linear-gradient(to bottom, #000000, #000000);
+  min-width: 60px;
+  background: #da291c;
+  border: none;
 }
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid black;
   border-top-color: black;
   border-left-color: black;
-  background-color: black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  background-image: -webkit-linear-gradient(top, black, black);
-  background-image: -moz-linear-gradient(top, black, black);
-  background-image: -o-linear-gradient(top, black, black);
-  background-image: linear-gradient(to bottom, #000000, #000000);
 }
 .button:active, .button:visited:active {
   background-color: black;
@@ -722,35 +706,6 @@ BUTTONS
   background-image: -moz-linear-gradient(top, black, black);
   background-image: -o-linear-gradient(top, black, black);
   background-image: linear-gradient(to bottom, #000000, #000000);
-}
-
-.blue-button, .blue-button:visited {
-  border-color: #1472ad;
-  text-shadow: 0 1px 1px #1472ad;
-  background-color: #1681c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
-  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
-  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
-  background-image: -o-linear-gradient(top, #1990db, #1681c4);
-  background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  box-shadow: inset 0 0 3px #59b3ec;
-}
-.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
-  border-color: #116396;
-  background-color: #1472ad;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
-  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
-  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
-}
-.blue-button:active, .blue-button:visited:active {
-  background-color: #1990db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
-  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
-  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
-  background-image: -o-linear-gradient(top, #1681c4, #1990db);
-  background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
 .red-gradient {
@@ -803,6 +758,18 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.hide {
+  display: none !important;
 }
 
 #container {
@@ -1051,58 +1018,6 @@ and more scalable.
 }
 
 /* end .nav */
-#menu-top-corner {
-  margin-right: 10px;
-  top: 4em;
-  right: 1em;
-}
-#menu-top-corner li a {
-  padding: 14px 8px;
-}
-
-.triangle {
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 8px 10px 8px;
-  border-color: transparent transparent #ffffff transparent;
-  position: absolute;
-  right: 10px;
-  top: -5px;
-}
-
-#menu-top-hover-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  border-radius: 4px;
-  margin-right: 10px;
-  min-width: 120px;
-  top: 4em;
-  right: 1em;
-  padding: 5px 0;
-}
-#menu-top-hover-menu li {
-  margin: 0;
-  width: 100%;
-}
-#menu-top-hover-menu li a {
-  line-height: 1.2em;
-  color: #666;
-  padding: 7px 8px;
-  width: 100%;
-}
-#menu-top-hover-menu li a:hover {
-  color: #000;
-  background: #DDD;
-}
-
-.home #menu-top-corner {
-  position: static;
-  background: transparent;
-  border-radius: 0px;
-}
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1699,39 +1614,44 @@ FOOTER STYLES
   margin-top: 0;
 }
 
-.icon-envelope:before {
+.icon-search:before {
   content: "\f021";
 }
 
-.icon-time:before {
+.icon-envelope:before {
   content: "\f022";
 }
 
-.icon-calendar:before {
+.icon-time:before {
   content: "\f023";
 }
 
-.icon-twitter-sign:before {
+.icon-calendar:before {
   content: "\f024";
 }
 
-.icon-facebook-sign:before {
+.icon-twitter-sign:before {
   content: "\f025";
 }
 
-.icon-phone:before {
+.icon-facebook-sign:before {
   content: "\f026";
 }
 
-.icon-twitter:before {
+.icon-phone:before {
   content: "\f027";
 }
 
-.icon-angle-right:before {
+.icon-twitter:before {
   content: "\f028";
 }
 
+.icon-angle-right:before {
+  content: "\f029";
+}
+
 .header {
+  position: relative;
   float: left;
   width: 100%;
   z-index: 22;
@@ -1770,6 +1690,91 @@ FOOTER STYLES
   max-height: 2em;
 }
 
+#menu-header li {
+  -webkit-transition: opacity ease-out 0.3s;
+  -transition: opacity ease-out 0.3s;
+  transition: opacity ease-out 0.3s;
+}
+
+.search-focus .allpage li {
+  opacity: 0.1;
+}
+
+.menu-search {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header-search-form {
+  top: 10px;
+  right: 0;
+  position: absolute;
+}
+
+.icon-holder {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+
+.icon-search {
+  display: block;
+  line-height: 34px;
+  width: 34px;
+  margin: 5px;
+  height: 34px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #FFF;
+  border-radius: 50%;
+  -webkit-transition: background ease-out 0.3s;
+  -transition: background ease-out 0.3s;
+  transition: background ease-out 0.3s;
+  border: none;
+  background: transparent;
+}
+
+.search-focus .icon-search {
+  background: #da291c;
+}
+
+.search-input {
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2em;
+  line-height: 22px;
+  padding: 3px 7px;
+  margin-top: 0px;
+  width: 183px;
+}
+
+.search-holder {
+  position: absolute;
+  overflow: hidden;
+  right: 44px;
+  width: 0px;
+  top: 4px;
+  -webkit-transition: all ease-out 0.3s;
+  -transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+.search-holder .button {
+  margin-top: 0;
+}
+
+.search-inner-holder {
+  width: 200px;
+}
+
+.search-holder-visible {
+  width: 200px;
+}
+
 .allpage {
   display: none;
   position: relative;
@@ -1789,11 +1794,60 @@ FOOTER STYLES
 }
 
 .top-more {
-  padding: 1em 2em;
+  padding: 1em 44px;
 }
 
 #menu-top-corner {
   display: none;
+  margin-right: 44px;
+  top: 4em;
+  right: 2em;
+}
+#menu-top-corner li a {
+  padding: 14px 8px;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+
+#menu-top-hover-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 4px;
+  margin-right: 10px;
+  min-width: 120px;
+  top: 4em;
+  right: 1em;
+  padding: 5px 0;
+}
+#menu-top-hover-menu li {
+  margin: 0;
+  width: 100%;
+}
+#menu-top-hover-menu li a {
+  line-height: 1.2em;
+  color: #666;
+  padding: 7px 8px;
+  width: 100%;
+}
+#menu-top-hover-menu li a:hover {
+  color: #000;
+  background: #DDD;
+}
+
+.home #menu-top-corner {
+  position: static;
+  background: transparent;
+  border-radius: 0px;
 }
 
 .right.corner ul {
@@ -1899,6 +1953,7 @@ FOOTER STYLES
 }
 
 .header {
+  position: relative;
   float: left;
   width: 100%;
   z-index: 22;
@@ -1937,6 +1992,91 @@ FOOTER STYLES
   max-height: 2em;
 }
 
+#menu-header li {
+  -webkit-transition: opacity ease-out 0.3s;
+  -transition: opacity ease-out 0.3s;
+  transition: opacity ease-out 0.3s;
+}
+
+.search-focus .allpage li {
+  opacity: 0.1;
+}
+
+.menu-search {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header-search-form {
+  top: 10px;
+  right: 0;
+  position: absolute;
+}
+
+.icon-holder {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+
+.icon-search {
+  display: block;
+  line-height: 34px;
+  width: 34px;
+  margin: 5px;
+  height: 34px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #FFF;
+  border-radius: 50%;
+  -webkit-transition: background ease-out 0.3s;
+  -transition: background ease-out 0.3s;
+  transition: background ease-out 0.3s;
+  border: none;
+  background: transparent;
+}
+
+.search-focus .icon-search {
+  background: #da291c;
+}
+
+.search-input {
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2em;
+  line-height: 22px;
+  padding: 3px 7px;
+  margin-top: 0px;
+  width: 183px;
+}
+
+.search-holder {
+  position: absolute;
+  overflow: hidden;
+  right: 44px;
+  width: 0px;
+  top: 4px;
+  -webkit-transition: all ease-out 0.3s;
+  -transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+.search-holder .button {
+  margin-top: 0;
+}
+
+.search-inner-holder {
+  width: 200px;
+}
+
+.search-holder-visible {
+  width: 200px;
+}
+
 .allpage {
   display: none;
   position: relative;
@@ -1956,11 +2096,60 @@ FOOTER STYLES
 }
 
 .top-more {
-  padding: 1em 2em;
+  padding: 1em 44px;
 }
 
 #menu-top-corner {
   display: none;
+  margin-right: 44px;
+  top: 4em;
+  right: 2em;
+}
+#menu-top-corner li a {
+  padding: 14px 8px;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+
+#menu-top-hover-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 4px;
+  margin-right: 10px;
+  min-width: 120px;
+  top: 4em;
+  right: 1em;
+  padding: 5px 0;
+}
+#menu-top-hover-menu li {
+  margin: 0;
+  width: 100%;
+}
+#menu-top-hover-menu li a {
+  line-height: 1.2em;
+  color: #666;
+  padding: 7px 8px;
+  width: 100%;
+}
+#menu-top-hover-menu li a:hover {
+  color: #000;
+  background: #DDD;
+}
+
+.home #menu-top-corner {
+  position: static;
+  background: transparent;
+  border-radius: 0px;
 }
 
 .right.corner ul {
