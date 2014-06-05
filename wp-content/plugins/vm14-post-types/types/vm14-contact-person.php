@@ -57,6 +57,7 @@ VM14_Contact_Person_Post_Type::$titles = new VM14_Post_Type_Field(array(
 
 VM14_Contact_Person_Post_Type::$visible_as_representative = new VM14_Post_Type_Field(array(
     'widget' => 'true_false',
+    'default' => 1,
     'group' => 'contact'
 ));
 

@@ -25,5 +25,6 @@ VM14_Post_Post_Type::$summary = new VM14_Post_Type_Field(array(
 ));
 VM14_Post_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
   'widget' => 'true_false',
+  'default' => 1,
   'group' => 'social_fields'
 ));

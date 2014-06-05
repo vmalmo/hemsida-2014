@@ -200,5 +200,6 @@ VM14_Calendar_Event_Post_Type::$public = new VM14_Post_Type_Field(array(
 
 VM14_Calendar_Event_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
   'widget' => 'true_false',
+  'default' => 1,
   'group' => 'social_fields'
 ));
