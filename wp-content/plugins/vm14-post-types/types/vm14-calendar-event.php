@@ -78,14 +78,14 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
         $html .= '<div class="date-outer-holder">';
         $html .= '<div class="date-holder">';
         //$html .= sprintf('<span>%s:</span>', __('Start'));
-        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', date('d F', strtotime($this->start_date)));
+        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', $this->date('d F'));
         if (strlen($this->start_time) > 0) {
           $html .= sprintf('<p class="date icon icon-time">%s</p>', $this->start_time);
         }
         $html .= '</div>';
         $html .= '<div class="date-holder">';
         //$html .= sprintf('<span>%s:</span>', __('End'));
-        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', date('d F', strtotime($this->end_date)));
+        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', $this->date('d F'));
         if (strlen($this->end_time) > 0) {
           $html .= sprintf('<p class="date icon icon-time">%s</p>', $this->end_time);
         }
