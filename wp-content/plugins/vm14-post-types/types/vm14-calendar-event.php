@@ -64,6 +64,35 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
         }
     }
 
+    function date_str() {
+        $same_year = false;
+        $times = array();
+
+        if ($this->start_datetime('%Y')==date('Y')) {
+            $same_year = true;
+            $times[0] = $this->start_datetime('%e %B');
+        }
+        else {
+            $times[0] = $this->start_datetime('%e %B %Y');
+        }
+
+        if ($this->start_date != $this->end_date) {
+            if ($same_year) {
+                $times[1] .= $this->end_datetime('%e %B');
+            }
+            else {
+                $times[1] .= $this->end_datetime('%e %B %Y');
+            }
+        }
+
+        if ($this->start_time && $this->end_time) {
+            $times[0] .= ' '.$this->start_time;
+            $times[1] .= ' '.$this->end_time;
+        }
+
+        return strtolower(implode(' - ', $times));
+    }
+
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
         $html  = sprintf('<a href="%s">', get_permalink($this->id));
@@ -75,23 +104,13 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             $html .= get_the_post_thumbnail($this->working_group[0]);
         }
 
+        $html .= sprintf('<h4>%s</h4>', $this->title);
         $html .= '<div class="date-outer-holder">';
         $html .= '<div class="date-holder">';
         //$html .= sprintf('<span>%s:</span>', __('Start'));
-        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', $this->date('d F'));
-        if (strlen($this->start_time) > 0) {
-          $html .= sprintf('<p class="date icon icon-time">%s</p>', $this->start_time);
-        }
-        $html .= '</div>';
-        $html .= '<div class="date-holder">';
-        //$html .= sprintf('<span>%s:</span>', __('End'));
-        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', $this->date('d F'));
-        if (strlen($this->end_time) > 0) {
-          $html .= sprintf('<p class="date icon icon-time">%s</p>', $this->end_time);
-        }
+        $html .= sprintf('<p class="date icon icon-calendar">%s</p>', $this->date_str());
         $html .= '</div>';
         $html .= '</div>';
-        $html .= sprintf('<h4>%s</h4>', $this->title);
         $html .= sprintf('<p>%s</p>', $excerpt);
         $html .= '</a>';
         return $html;
@@ -109,7 +128,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             $date->setTimeZone(new DateTimeZone('UTC'));
         }
 
-        return $date->format($format);
+        return strftime($format, $date->getTimestamp());
     }
 
     public function end_datetime($format, $utc=false) {
@@ -124,7 +143,7 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
             $date->setTimeZone(new DateTimeZone('UTC'));
         }
             
-        return $date->format($format);
+        return strftime($format, $date->getTimestamp());
     }
 
     public function is_all_day() {
