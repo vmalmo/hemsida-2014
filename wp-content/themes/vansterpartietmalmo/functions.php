@@ -38,6 +38,8 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 */
 // require_once( 'library/translation/translation.php' ); // this comes turned off by default
 
+setlocale(LC_ALL, get_locale());
+
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
