@@ -67,7 +67,14 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
     function preview_html() {
         $excerpt = $this->get_excerpt(300);
         $html  = sprintf('<a href="%s">', get_permalink($this->id));
-        $html .= get_the_post_thumbnail($this->id);
+
+        if (has_post_thumbnail($this->id)) {
+            $html .= get_the_post_thumbnail($this->id);
+        }
+        elseif (is_array($this->working_group)) {
+            $html .= get_the_post_thumbnail($this->working_group[0]);
+        }
+
         $html .= '<div class="date-outer-holder">';
         $html .= '<div class="date-holder">';
         //$html .= sprintf('<span>%s:</span>', __('Start'));
