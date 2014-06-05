@@ -29,6 +29,7 @@ class VM14_Post_Type_Field {
             'label' => __($meta['name']),
             'name' => sprintf('%s_%s', $prefix, $id),
             'type' => $this->widget,
+            'default_value' => $this->param('default', ''),
             'media_upload' => $this->media_upload
         );
     }
