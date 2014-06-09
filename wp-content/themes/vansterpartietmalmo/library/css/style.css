@@ -798,8 +798,8 @@ button:focus {
   float: left;
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-  border-top: 8px solid #333333;
-  color: #333333;
+  border-top: 8px solid #262626;
+  color: #262626;
   padding: 2px 2px 4px;
   margin: -3px 6px 0 0;
   min-width: 40px;
@@ -1598,6 +1598,9 @@ FOOTER STYLES
   width: 100% !important;
 }
 
+/***********
+ * Icons *
+ *********/
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
@@ -1651,6 +1654,58 @@ FOOTER STYLES
 
 .icon-angle-right:before {
   content: "\f029";
+}
+
+/* css that was in style.scss before */
+.nav.footer-nav {
+  margin: 0;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.footer-nav li ul.sub-menu {
+  display: block;
+  position: relative;
+  border: 0 none;
+}
+
+.footer-nav li ul li {
+  float: none;
+}
+
+.nav li ul.sub-menu li a, .nav li ul.children li a {
+  background: 0;
+  border: 0;
+  font-size: 14px;
+}
+
+ul.footer-nav a {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.nav.top-nav.clearfix {
+  margin: 0;
+}
+
+.sortera {
+  padding: 10px 0;
+  text-align: right;
+}
+
+.sortera span {
+  cursor: pointer;
+}
+
+.sortera > span:last-child:after {
+  content: "";
+}
+
+.sortera > span:after {
+  content: " | ";
+  margin: 0 5px;
+}
+
+.toppad {
+  padding-top: 60px;
 }
 
 .header {
