@@ -1567,6 +1567,9 @@ FOOTER STYLES
   border-top: solid 1px #DDD;
   padding: 40px 20px;
 }
+.footer nav {
+  z-index: 0;
+}
 .footer .first {
   font-size: 0.9em;
   margin-bottom: 20px;

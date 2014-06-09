@@ -997,6 +997,9 @@ FOOTER STYLES
 }
 
 .footer {
+  nav {
+    z-index: 0;
+  }
   .first {
       font-size: 0.9em;
       margin-bottom: 20px;
