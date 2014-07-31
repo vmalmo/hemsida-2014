@@ -3,7 +3,7 @@
     float: left;
     width: 100%;
     z-index: 22;
-    @include black-gradient();
+    background: #000;
 }
 .header, .right.corner {
   a {
