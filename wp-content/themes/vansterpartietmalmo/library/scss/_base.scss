@@ -68,6 +68,9 @@ style a page via class
     margin-top: 10px;
     .page-header {
       min-height: 250px;
+      h1 {
+        font-size: 1.75em;
+      }
       &.no-image {
         min-height: 0;
         background: transparent;
@@ -75,9 +78,6 @@ style a page via class
         .page-header-content {
           color: #333;
           position: static;
-        }
-        h1 {
-          font-size: 1.75em;
         }
         .wrap {
           width: 100%;

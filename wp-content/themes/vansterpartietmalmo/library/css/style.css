@@ -839,6 +839,9 @@ style a page via class
 .category #content .page-header {
   min-height: 250px;
 }
+.category #content .page-header h1 {
+  font-size: 1.75em;
+}
 .category #content .page-header.no-image {
   min-height: 0;
   background: transparent;
@@ -847,9 +850,6 @@ style a page via class
 .category #content .page-header.no-image .page-header-content {
   color: #333;
   position: static;
-}
-.category #content .page-header.no-image h1 {
-  font-size: 1.75em;
 }
 .category #content .page-header.no-image .wrap {
   width: 100%;
