@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<?php
+    $p = vm14_get_post($post->ID);
+?>
 
 			<div id="content" class="wrap toppad clearfix">
                 <?php vm14_breadcrumbs($post->ID, get_theme_mod('vm14_pages_reps'));?> 
@@ -46,7 +49,10 @@
 
                     <ul class="contact-info">
                         <li>
-                            <h5><?php the_title(); ?></h5>
+                            <h5><?php echo $p->full_name(); ?></h5>
+                        </li>
+                        <li>
+                            <?php echo $p->titles;?>
                         </li>
   
                     <?php if ($p->email):?>

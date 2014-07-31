@@ -21,6 +21,11 @@ class VM14_Contact_Person_Post_Type extends VM14_Post_Type {
 
         return $html;
     }
+
+
+    function full_name() {
+        return $this->first_name.' '.$this->last_name;
+    }
 }
 
 VM14_Contact_Person_Post_Type::$meta_groups = array(
