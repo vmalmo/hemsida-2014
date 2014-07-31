@@ -735,9 +735,36 @@ ul.footer-nav a { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
 .mobile-menu { position: absolute; top: 1em; right: 0.5em; padding: 0 0.5em; border-radius: 5px; background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2MWMxMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RhMjkxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #961c13), color-stop(100%, #da291c)); background: -webkit-linear-gradient(bottom, #961c13, #da291c); background: -moz-linear-gradient(bottom, #961c13, #da291c); background: -o-linear-gradient(bottom, #961c13, #da291c); background: linear-gradient(bottom, #961c13, #da291c); -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); overflow: hidden; width: 2em; height: 1.8em; text-indent: -9999px; }
 .mobile-menu:before { position: absolute; top: 0.5em; left: 0.5em; content: "X"; width: 1em; height: 1em; background: transparent url("../images/menu-icon.png") no-repeat; background-size: contain; }
 
+<<<<<<< HEAD
 .mobile-home-nav { background: #FFF; display: none; float: left; width: 100%; overflow: hidden; }
 .mobile-home-nav li { border-bottom: solid 1px #DDD; text-align: center; }
 .mobile-home-nav .right.corner { float: right; position: static; width: 100%; }
+=======
+.mobile-home-nav {
+  background: #000;
+  display: none;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.mobile-home-nav a {
+  color: #EEE;
+}
+.mobile-home-nav li {
+  border-bottom: solid 1px #333;
+  text-align: center;
+}
+.mobile-home-nav .right.corner {
+  float: right;
+  position: static;
+  width: 100%;
+}
+.mobile-home-nav .menu-search input {
+  border: solid 1px #333;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+>>>>>>> styling search input in mobile viewport
 
 .undermenu li { display: inline-block; margin: 0 20px; }
 .undermenu li a:hover { color: #961c13; }
@@ -855,6 +882,11 @@ ul.footer-nav a { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
   float: right;
   position: static;
   width: 100%;
+}
+.mobile-home-nav .menu-search input {
+  border: solid 1px #333;
+  border-radius: 15px;
+  padding: 5px 10px;
 }
 
 .undermenu li {
