@@ -21,7 +21,7 @@ VM14_Post_Post_Type::$meta_groups = array(
 );
 
 VM14_Post_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));
 VM14_Post_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(array(
   'widget' => 'true_false',

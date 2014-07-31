@@ -85,7 +85,7 @@ VM14_Page_Post_Type::$menu = new VM14_Post_Type_Field(array(
 ));
 
 VM14_Page_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));
 
 VM14_Page_Post_Type::$feed_categories = new VM14_Post_Type_Taxonomy();

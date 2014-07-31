@@ -182,7 +182,7 @@ VM14_Calendar_Event_Post_Type::$meta_groups = array(
 );
 
 VM14_Calendar_Event_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg',
+    'widget' => 'textarea',
 ));
 
 VM14_Calendar_Event_Post_Type::$start_date = new VM14_Post_Type_Field(array(

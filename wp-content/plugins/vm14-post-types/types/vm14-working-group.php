@@ -45,7 +45,7 @@ VM14_Working_Group_Post_Type::$show_share_buttons = new VM14_Post_Type_Field(arr
 ));
 
 VM14_Working_Group_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));
 
 VM14_Working_Group_Post_Type::$contact_persons = new VM14_Post_Type_Relationship('contact_person');

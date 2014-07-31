@@ -4,5 +4,5 @@ class VM14_Section_Entrance_Post_Type extends VM14_Post_Type {
 }
 
 VM14_Section_Entrance_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));

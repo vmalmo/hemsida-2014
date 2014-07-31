@@ -43,7 +43,7 @@ VM14_Contact_Person_Post_Type::$meta_groups = array(
 );
 
 VM14_Contact_Person_Post_Type::$summary = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));
 
 VM14_Contact_Person_Post_Type::$first_name = new VM14_Post_Type_Field(array(
