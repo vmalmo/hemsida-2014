@@ -30,6 +30,7 @@
           $menuTopConer = $('#menu-top-corner');
           $topMore = $('.top-more');
           $searchHolder = $('.search-holder');
+          $searchInput = $('.search-input');
         }
     }
     var toggleSearch = function(e) {
@@ -44,20 +45,21 @@
         $searchHolder.toggleClass('search-holder-visible');
 
         if ($searchHolder.hasClass('search-holder-visible')) {
-          $('.search-input').focus();
+          $searchInput.focus();
         }
     }
     var addSearchShow = function() {
-      $('.icon-search').on('click', function(e) {
-        toggleSearch(e);
-        $('.icon-search').off('click');
-        $('.search-input').on('blur', function(e) {
-          $('.search-input').off('blur');
+      $('.icon-holder').on('click', function(e) {
+        $('.icon-holder').off('click');
+        $searchInput.on('blur', function(e) {
+          $searchInput.off('blur');
           toggleSearch(false);
           setTimeout(function() {
             addSearchShow();
-          }, 30);
+          }, 150);
         });
+        e.stopPropagation();
+        toggleSearch(e);
       });
     }
 
@@ -244,7 +246,6 @@
         var $searchItem = $('<li class="menu-item mobile-menu-secondary menu-search"><form action="/"><input placeholder="Sök..." type="search" name="s" /></form></li>');
                 
         //$searchItem.append($('.header-search-form').clone());
-        //console.log($searchItem);
         ul.append($searchItem);
         $('.header').after($('<div class="mobile-home-nav"></div>').append(ul));
     }
