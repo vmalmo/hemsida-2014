@@ -230,13 +230,16 @@
 }
 
 .mobile-home-nav {
-    background: #FFF;
+    background: #000;
     display: none;
     float: left;
     width: 100%;
     overflow: hidden;
+    a  {
+      color: #EEE;
+    }
     li {
-        border-bottom: solid 1px #DDD;
+        border-bottom: solid 1px #333;
         text-align: center;
     }
     .right.corner {
