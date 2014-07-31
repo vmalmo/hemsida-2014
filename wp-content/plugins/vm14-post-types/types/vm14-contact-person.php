@@ -52,7 +52,7 @@ VM14_Contact_Person_Post_Type::$phone = new VM14_Post_Type_Field(array(
 ));
 
 VM14_Contact_Person_Post_Type::$titles = new VM14_Post_Type_Field(array(
-    'widget' => 'wysiwyg'
+    'widget' => 'textarea'
 ));
 
 VM14_Contact_Person_Post_Type::$visible_as_representative = new VM14_Post_Type_Field(array(
