@@ -336,17 +336,20 @@ function vm14_post_header($type = 'post'){
     array_push($classes, 'no-image');
   }
 
-  printf('<header class="%s" %s>
-      <div class="page-header-content">
-          <div class="wrap">
-              <h1 class="page-title eightcol first"> <a href="%s">%s</a></h1>
-              <div class="eightcol first">%s</div>
-          </div>
-      </div>
-  </header>',
+  printf('
+    <a href="%s">
+      <header class="%s" %s>
+        <div class="page-header-content">
+            <div class="wrap">
+                <h1 class="page-title eightcol first"> %s</h1>
+                <div class="eightcol first">%s</div>
+            </div>
+        </div>
+      </header>
+    </a>',
+    $link, 
     implode($classes, ' '),
     $end_header,
-    $link, 
     $title,
     $description
   );
