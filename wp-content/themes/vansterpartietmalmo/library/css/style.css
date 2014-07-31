@@ -2563,6 +2563,11 @@ ul.footer-nav a {
 
 #home-news-marquee {
   margin: 20px 0;
+#home-news-marquee a.home-news-more-link {
+  float: right;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.8em;
 }
 
 .filter-widget .search-pane input {

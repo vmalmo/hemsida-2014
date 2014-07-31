@@ -18,27 +18,32 @@ Template Name: Start Template
             <div class="left-mounting mounting"></div>
             <div class="right-mounting mounting"></div>
             <div class="wrap">
+              <?php
+                  $categories = '';
+
+                  // Use feed category to filter front page news
+                  $p = vm14_get_post($post->ID);
+                  if ($p->feed_categories) {
+                    $categories = implode(',', $p->feed_categories);
+                    $category_link = get_category_link($p->feed_categories[0]); 
+                  }
+
+                  $news = vm14_get_posts(array(
+                      'post_type' => 'post',
+                      'category' => $categories
+                  ));
+              ?>
               <h1><?php the_title();?></h1>
               <div class="home-content">
                 <?php the_content();?>
               </div>
               <div id="home-news-marquee">
-                  <h2>SENASTE NYTT :</h2>
+                  <h2>SENASTE NYTT :
+                    <?php if($category_link): ?>
+                      <a class="home-news-more-link" href="<?php echo $category_link; ?>">Se fler nyheter &#187</a>
+                    <?php endif; ?>
+                  </h2>
                   <ul class="cycling-marquee">
-                  <?php
-                      $categories = '';
-
-                      // Use feed category to filter front page news
-                      $p = vm14_get_post($post->ID);
-                      if ($p->feed_categories) {
-                        $categories = implode(',', $p->feed_categories);
-                      }
-
-                      $news = vm14_get_posts(array(
-                          'post_type' => 'post',
-                          'category' => $categories
-                      ));
-                  ?>
                   <?php foreach ($news as $item): ?>
                       <li>
                           <a href="<?php echo get_permalink($item->id);?>">
