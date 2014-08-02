@@ -5,14 +5,20 @@
 
     .titles {
         display: block;
-        font-size: 12px;
+        float: right;
+        width: 83%;
         margin-bottom: 4px;
+
+        font-size: 12px;
         font-weight: bold;
     }
 
     .contact {
         display: block;
-        font-size: 12px;
+        float: right;
+        width: 83%;
         margin-bottom: 4px;
+
+        font-size: 12px;
     }
 }
