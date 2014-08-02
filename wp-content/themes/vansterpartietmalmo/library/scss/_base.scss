@@ -951,8 +951,6 @@ SIDEBARS & ASIDES
 .blurb-img-holder {
   overflow: hidden;
   img {
-    @include transition(all 0.5s ease);
-    opacity: 0.9;
     float: left;
   }
 }

@@ -1502,10 +1502,6 @@ SIDEBARS & ASIDES
   overflow: hidden;
 }
 .blurb-img-holder img {
-  -webkit-transition: all 0.5s ease;
-  -transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  opacity: 0.9;
   float: left;
 }
 
