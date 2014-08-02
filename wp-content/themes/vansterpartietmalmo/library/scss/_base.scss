@@ -290,7 +290,32 @@ and more scalable.
 
 	}  /* end current highlighters */
 
-} /* end .nav */
+    &.footer-nav {
+        margin: 0;
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+        li ul.sub-menu {
+            display: block;
+            position: relative;
+            border: 0 none;
+        }
+        li ul li {
+            float: none;
+        }
+        li ul.sub-menu li a, li ul.children li a{
+            background: 0;
+            border: 0;
+            font-size: 14px;
+        }
+        a {
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+}
+.top-nav.clearfix {
+    margin: 0;
+}
+/* end .nav */
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1070,32 +1095,6 @@ FOOTER STYLES
 .icon-angle-right:before{ content: "\f029"; }
 
 /* css that was in style.scss before */
-.nav.footer-nav {
-    margin: 0;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-.footer-nav li ul.sub-menu {
-    display: block;
-    position: relative;
-      border: 0 none;
-}
-.footer-nav li ul li {
-    float: none;
-
-}
-.nav li ul.sub-menu li a, .nav li ul.children li a{
-	background: 0;
-	border: 0;
-	font-size: 14px;
-}
-
-ul.footer-nav a {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-
-.nav.top-nav.clearfix {
-    margin: 0;
-}
 .sortera {
     padding: 10px 0;
     text-align: right;
