@@ -856,6 +856,7 @@ LINK STYLES
 *********************/
 a.header-link {
   display: block;
+  overflow: hidden;
 }
 
 a, a:visited {
@@ -1368,6 +1369,9 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  clear: right;
+}
 .sidebar .blurb {
   padding-bottom: 10px;
   margin-bottom: 10px;

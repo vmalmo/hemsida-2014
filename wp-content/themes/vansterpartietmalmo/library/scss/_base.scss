@@ -124,6 +124,7 @@ LINK STYLES
 *********************/
 a.header-link {
   display: block;
+  overflow: hidden;
 }
 a, a:visited {
 	color: $link-color;
@@ -825,6 +826,7 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
+  clear: right;
   .blurb {
     padding-bottom: 10px;
     margin-bottom: 10px;
