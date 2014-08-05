@@ -217,8 +217,6 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }
 
 /*********************
@@ -841,6 +839,23 @@ SIDEBARS & ASIDES
     }
   }
 }
+.working-group-upcoming-events {
+  img {
+    width: 20%;
+    float: left;
+  }
+  a {
+    width: 100%;
+    font-size: 0.9em;
+    float: left;
+    margin-bottom: 10px;
+  }
+  a > h4, a > p, .date-outer-holder {
+    width: 75%;
+    float: right;
+    margin: 0 0 0 0;
+  }
+}
 .sidebar-presentation {
   position: relative;
   overflow: hidden;
@@ -859,7 +874,9 @@ SIDEBARS & ASIDES
     color: #666;
   }
   a:hover {
-    color: $red;
+    h4 {
+      color: $red;
+    }
   }
 }
 .sidebar-presentation-image {

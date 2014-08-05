@@ -66,9 +66,9 @@
                       if (count($events)>0):?>
                           <li>
                             <h5>Kommande arrangemang</h5>
-                            <ul>
+                            <ul class="working-group-upcoming-events">
                             <?php foreach ($events as $event):?>
-                                <li><?php echo $event->preview_html();?></li>
+                                <li><?php echo $event->preview_html(0);?></li>
                             <?php endforeach;?>
                             </ul>
                           </li>
