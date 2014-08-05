@@ -4,7 +4,7 @@
   Description: Adds an API endpoint for json paging
   Version: 0.1
   Author: Vänsterpartiet Malmö tech
-  Author URI: http://malmo.vansterpartiet.se/
+  Author URI: http://www.vmalmo.se/
 */
 
 class VM14_API_Endpoint{

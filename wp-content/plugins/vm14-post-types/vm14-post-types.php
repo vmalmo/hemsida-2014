@@ -5,7 +5,7 @@
   Description: Sets up content types and metaboxes/field for the site structure
   Author: Vänsterpartiet Malmö tech
   Version: 0.1
-  Author URI: http://malmo.vansterpartiet.se/
+  Author URI: http://www.vmalmo.se/
  */
 
 require_once('vm14-post-type-base.php');
