@@ -1755,9 +1755,15 @@ FOOTER STYLES
   border: none;
   background: transparent;
 }
+.icon-search:hover {
+  color: #da291c;
+}
 
 .search-focus .icon-search {
   background: #da291c;
+}
+.search-focus .icon-search:hover {
+  color: #000;
 }
 
 .search-input {
@@ -2060,9 +2066,15 @@ FOOTER STYLES
   border: none;
   background: transparent;
 }
+.icon-search:hover {
+  color: #da291c;
+}
 
 .search-focus .icon-search {
   background: #da291c;
+}
+.search-focus .icon-search:hover {
+  color: #000;
 }
 
 .search-input {

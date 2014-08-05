@@ -72,10 +72,15 @@
   @include transition(background ease-out 0.3s);
   border: none;
   background: transparent;
+  &:hover {
+    color: $red;
+  }
 }
 .search-focus .icon-search {
   background: $red;
-
+  &:hover {
+    color: #000;
+  }
 }
 .search-input {
   border: none;
