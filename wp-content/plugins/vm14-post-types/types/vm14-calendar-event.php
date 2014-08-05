@@ -93,8 +93,8 @@ class VM14_Calendar_Event_Post_Type extends VM14_Post_Type {
         return strtolower(implode(' - ', $times));
     }
 
-    function preview_html() {
-        $excerpt = $this->get_excerpt(300);
+    function preview_html($len = 300) {
+        $excerpt = $this->get_excerpt($len);
         $html  = sprintf('<a href="%s">', get_permalink($this->id));
 
         if (has_post_thumbnail($this->id)) {

@@ -182,7 +182,10 @@ abstract class VM14_Post_Type {
             $excerpt = strip_tags($this->content);
         }
 
-        if (strlen($excerpt)>$len) {
+        if ($len == 0) {
+            $excerpt = '';
+        }
+        else if (strlen($excerpt)>$len) {
             $last_ws = strrpos(substr($excerpt, 0, $len), ' ');
             $excerpt = substr($excerpt, 0, $last_ws);
             $excerpt .= '...';
@@ -195,14 +198,14 @@ abstract class VM14_Post_Type {
         return get_permalink($this->id);
     }
 
-    function preview_html() {
-        $excerpt = $this->get_excerpt(300);
+    function preview_html($len = 300) {
+        $excerpt = $this->get_excerpt($len);
 
-	    $html  = sprintf('<a href="%s">', get_permalink($this->id));
-	    $html .= sprintf('<h4>%s</h4>', $this->title);
-	    $html .= get_the_post_thumbnail($this->id);
-	    $html .= sprintf('<p>%s</p>', $excerpt);
-	    $html .= '</a>';
+        $html  = sprintf('<a href="%s">', get_permalink($this->id));
+        $html .= sprintf('<h4>%s</h4>', $this->title);
+        $html .= get_the_post_thumbnail($this->id);
+        $html .= sprintf('<p>%s</p>', $excerpt);
+        $html .= '</a>';
 
         return $html;
     }
