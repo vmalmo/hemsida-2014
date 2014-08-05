@@ -48,13 +48,27 @@
           $searchInput.focus();
         }
     }
+    var blurTimeout = -1;
     var addSearchShow = function() {
       $('.icon-holder').on('click', function(e) {
         $('.icon-holder').off('click');
+
+        // Add additioinal check if icon is pressed again but input field are empty
+        $('.icon-holder').on('click', function(e) {
+          $searchInput.off('blur');
+          $('.icon-holder').off('click');
+          clearTimeout(blurTimeout);
+          if ($searchInput.val().length < 1) {
+            e.preventDefault();
+            toggleSearch(false);
+            addSearchShow();
+          }
+        });
+
         $searchInput.on('blur', function(e) {
           $searchInput.off('blur');
-          toggleSearch(false);
-          setTimeout(function() {
+          blurTimeout = setTimeout(function() {
+            toggleSearch(false);
             addSearchShow();
           }, 150);
         });
