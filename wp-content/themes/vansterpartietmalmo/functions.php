@@ -339,7 +339,7 @@ function vm14_post_header($type = 'post'){
   }
 
   printf('
-    <a href="%s">
+    <a class="header-link" href="%s">
       <header class="%s" %s>
         <div class="page-header-content">
             <div class="wrap">

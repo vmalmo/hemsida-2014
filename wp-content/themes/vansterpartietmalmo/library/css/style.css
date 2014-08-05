@@ -802,8 +802,21 @@ style a page via class
 /* author page */
 /* user nicename (i.e. body.author-samueladams) */
 /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category #inner-content {
+  margin-top: 1.2em;
+}
+.category #sidebar1 .widget:first-child {
+  margin-top: 0em;
+}
+.category #sidebar1 .widget:first-child h4 {
+  margin: 0;
+}
+.category article:first-child h1 {
+  margin-top: 0em;
+}
 .category #content {
-  margin-top: 10px;
+  width: 100%;
+  float: left;
 }
 .category #content .page-header {
   min-height: 250px;
@@ -829,21 +842,6 @@ style a page via class
   border-bottom: solid 1px #eee;
 }
 
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -856,6 +854,10 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
+a.header-link {
+  display: block;
+}
+
 a, a:visited {
   color: black;
   text-decoration: none;
@@ -886,6 +888,9 @@ a:link, a:visited:link {
   text-decoration: underline;
 }
 
+/******************************************************************
+  Breadcrumbs
+******************************************************************/
 .breadcrumbs {
   margin-top: 0.7em;
 }
