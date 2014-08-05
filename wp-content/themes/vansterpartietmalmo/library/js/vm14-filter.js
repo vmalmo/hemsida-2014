@@ -277,6 +277,11 @@
             }
 
             ul = document.createElement('ul');
+            content.sort(function(a, b) {
+              if(a.toLowerCase() < b.toLowerCase()) return -1;
+              if(a.toLowerCase() > b.toLowerCase()) return 1;
+              return 0;
+            });
 
             for (i=0; i<content.length; i++) {
                 var li, a;
